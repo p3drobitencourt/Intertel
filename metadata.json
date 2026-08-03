@@ -1,0 +1,6 @@
+{
+  "name": "Intertel Telecom",
+  "description": "Landing page de alta performance para a operadora de fibra óptica Intertel Telecom, focada em conversão.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
