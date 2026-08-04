@@ -905,11 +905,11 @@ export default function App() {
                   </p>
                   <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                     <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">Suporte:</span> 
-                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:noc@interteltelecomunicacao.com.br', '_blank'); }} className="text-blue-600 hover:underline break-all">noc@interteltelecomunicacao.com.br</a>
+                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:noc@interteltelecom.net.br', '_blank'); }} className="text-blue-600 hover:underline break-all">noc@interteltelecom.net.br</a>
                   </p>
                   <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                     <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">Financeiro:</span> 
-                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:financeiro@interteltelecomunicacao.com.br', '_blank'); }} className="text-blue-600 hover:underline break-all">financeiro@interteltelecomunicacao.com.br</a>
+                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:financeiro@interteltelecom.net.br', '_blank'); }} className="text-blue-600 hover:underline break-all">financeiro@interteltelecom.net.br</a>
                   </p>
                 </div>
               </div>
@@ -1080,7 +1080,7 @@ export default function App() {
                   ASN: 268801
                 </span>
                 <span>•</span>
-                <span>CNPJ: 42.236.545/0001-52</span>
+                <span>CNPJ: 30.607.069/0001-49</span>
               </div>
             </div>
 
@@ -1110,8 +1110,8 @@ export default function App() {
                 <li className="flex items-start gap-2">
                   <MessageSquare className="w-5 h-5 text-amber-500 dark:text-amber-400 shrink-0" />
                   <div className="flex flex-col gap-1">
-                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:noc@interteltelecomunicacao.com.br', '_blank'); }} className="text-slate-600 dark:text-slate-200 font-bold hover:text-blue-600 dark:hover:text-amber-400 hover:underline break-all">noc@interteltelecomunicacao.com.br</a>
-                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:financeiro@interteltelecomunicacao.com.br', '_blank'); }} className="text-slate-600 dark:text-slate-200 font-bold hover:text-blue-600 dark:hover:text-amber-400 hover:underline break-all">financeiro@interteltelecomunicacao.com.br</a>
+                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:noc@interteltelecom.net.br', '_blank'); }} className="text-slate-600 dark:text-slate-200 font-bold hover:text-blue-600 dark:hover:text-amber-400 hover:underline break-all">noc@interteltelecom.net.br</a>
+                    <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:financeiro@interteltelecom.net.br', '_blank'); }} className="text-slate-600 dark:text-slate-200 font-bold hover:text-blue-600 dark:hover:text-amber-400 hover:underline break-all">financeiro@interteltelecom.net.br</a>
                     <p className="text-[10px]">E-mails</p>
                   </div>
                 </li>
@@ -1182,7 +1182,7 @@ export default function App() {
           <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-600 dark:text-slate-200 gap-4">
             <div>
               <p>© {new Date().getFullYear()} Intertel Telecom. Todos os direitos reservados.</p>
-              <p className="mt-1">Regulamentado pela ANATEL • CNPJ: 42.236.545/0001-52 • ASN: 268801 • São João da Mata, MG</p>
+              <p className="mt-1">Regulamentado pela ANATEL • CNPJ: 30.607.069/0001-49 • ASN: 268801 • São João da Mata, MG</p>
             </div>
             <div className="flex items-center gap-4">
               <a href="#" className="hover:underline">Políticas de Privacidade</a>
