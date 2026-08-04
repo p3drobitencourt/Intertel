@@ -3,7 +3,7 @@ import React, { useState, FormEvent, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Phone, Briefcase, MessageSquare, Globe, Shield, Layers, Users, Check,
-  ChevronDown, User, MapPin, Search, ArrowRight, Instagram, Facebook, Cpu
+  ChevronDown, User, MapPin, Search, ArrowRight, Instagram, Facebook, Cpu, CheckCircle2
 } from 'lucide-react';
 
 export default function Empresas() {
@@ -188,6 +188,56 @@ export default function Empresas() {
                   </p>
                 </div>
 
+              </div>
+
+              {/* Planos Empresariais Cards */}
+              <div className="mb-16">
+                <div className="text-center mb-10">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white font-display">Planos Corporativos</h3>
+                  <p className="text-slate-600 dark:text-slate-400 mt-2">Escolha a velocidade ideal para o tamanho do seu negócio.</p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                  {[
+                    { speed: "200", name: "Empresarial 200M", desc: "Ideal para pequenos escritórios que precisam de estabilidade e rapidez." },
+                    { speed: "400", name: "Empresarial 400M", desc: "Perfeito para médias empresas com uso intenso de sistemas em nuvem." },
+                    { speed: "800", name: "Empresarial 800M", desc: "A máxima performance para quem não pode ter gargalos de rede." }
+                  ].map((plan, idx) => (
+                    <div key={idx} className="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-2xl hover:border-amber-500/50 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full group relative overflow-hidden">
+                      <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <Briefcase className="w-24 h-24 text-slate-900 dark:text-white" />
+                      </div>
+                      
+                      <div className="relative z-10 flex-grow">
+                        <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{plan.name}</h4>
+                        <p className="text-sm text-slate-600 dark:text-slate-400 min-h-[40px]">{plan.desc}</p>
+                        
+                        <div className="my-6">
+                          <div className="flex items-baseline gap-1 text-slate-900 dark:text-white">
+                            <span className="text-5xl font-black font-display tracking-tighter">{plan.speed}</span>
+                            <span className="text-sm font-bold text-slate-500 dark:text-slate-400">Mega + Wi-Fi</span>
+                          </div>
+                          <p className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mt-1">Sob Consulta</p>
+                        </div>
+                        
+                        <ul className="space-y-3 mb-8">
+                          {["SLA de 4 horas", "Garantia de banda", "Simetria de banda", "Suporte VIP 24/7"].map((feature, i) => (
+                            <li key={i} className="flex items-start gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+                              <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="relative z-10 mt-auto">
+                        <a href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+saber+os+valores+do+Plano+Empresarial&type=phone_number&app_absent=0" target="_blank" rel="noreferrer" className="block w-full py-4 text-center rounded-2xl font-bold transition-all duration-300 bg-slate-100 text-slate-900 hover:bg-amber-500 hover:text-white dark:bg-slate-700 dark:text-white dark:hover:bg-amber-500 shadow-sm hover:shadow-lg">
+                          Consultar Valor
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Corporate CTA Banner */}

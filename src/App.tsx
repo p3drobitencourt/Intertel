@@ -194,7 +194,7 @@ const plansData: Plan[] = [
     speed: "500 Mega",
     priceMonthly: 89.90,
     priceYearlyMonthly: 89.90,
-    isPopular: true,
+    isPopular: false,
     description: "Perfeito para múltiplos dispositivos, home office e streaming em HD para toda a família.",
     features: [
       "Velocidade de Download: 500 Mbps",
@@ -211,7 +211,7 @@ const plansData: Plan[] = [
     speed: "600 Mega",
     priceMonthly: 99.90,
     priceYearlyMonthly: 99.90,
-    isPopular: false,
+    isPopular: true,
     description: "A melhor experiência para alta demanda, jogos online estáveis e streaming 4K.",
     features: [
       "Velocidade de Download: 600 Mbps",
@@ -241,9 +241,12 @@ const plansData: Plan[] = [
   }
 ];
 
+import Dedicado from "./pages/Dedicado";
+import Lan2Lan from "./pages/Lan2Lan";
+
 export default function App() {
   const location = useLocation();
-  const isEmpresas = location.pathname === "/empresas";
+  const isEmpresas = location.pathname === "/empresas" || location.pathname === "/dedicado" || location.pathname === "/lan2lan";
   // Navigation & UI States
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
@@ -389,14 +392,29 @@ export default function App() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
                 
-                    <Link to="/fibra" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
-                      Planos Fibra
-                    </Link>
-                    <Link to="/radio" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
+                <Link to="/fibra" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
+                  Planos Fibra
+                </Link>
+                <Link to="/radio" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
                   Planos Rádio
                 </Link>
+              </div>
+            </div>
+            
+            {/* Soluções Corporativas Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2">
+                Para Empresas <ChevronDown className="w-5 h-5 opacity-70 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
                 <Link to="/empresas" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
                   Planos Empresariais
+                </Link>
+                <Link to="/dedicado" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
+                  Link Dedicado (Provedores)
+                </Link>
+                <Link to="/lan2lan" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
+                  Interligação LAN-to-LAN
                 </Link>
               </div>
             </div>
@@ -456,7 +474,12 @@ export default function App() {
               <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Início</Link>
               <Link to="/fibra" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Planos Fibra</Link>
               <Link to="/radio" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Planos Rádio</Link>
+              <div className="h-px bg-slate-200 dark:bg-slate-700 my-1 mx-4" />
+              <div className="px-4 text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Para Empresas</div>
               <Link to="/empresas" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Planos Empresariais</Link>
+              <Link to="/dedicado" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Link Dedicado (Provedores)</Link>
+              <Link to="/lan2lan" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Interligação LAN-to-LAN</Link>
+              <div className="h-px bg-slate-200 dark:bg-slate-700 my-1 mx-4" />
               <Link to="/#vantagens" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Vantagens</Link>
               <Link to="/app" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">App Intertel</Link>
               <Link to="/#faq" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Perguntas Frequentes (FAQ)</Link>
@@ -1076,6 +1099,8 @@ export default function App() {
             </div>
           </section>
         } />
+        <Route path="/dedicado" element={<Dedicado />} />
+        <Route path="/lan2lan" element={<Lan2Lan />} />
       </Routes>
 
       {/* 6. INSTITUTIONAL FOOTER */}
