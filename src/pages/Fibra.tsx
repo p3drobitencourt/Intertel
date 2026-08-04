@@ -28,14 +28,20 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
             {/* Note: the billing cycle toggle could be here, or we can just show the plans directly */}
           </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-4 justify-center mt-8">
+          <div className="relative mt-8">
+            {/* Scroll indicator for mobile */}
+            <div className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 lg:hidden flex flex-col items-center justify-center opacity-50">
+              <svg className="w-6 h-6 animate-bounce-x text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            
+            <div className="flex lg:grid lg:grid-cols-4 gap-5 lg:gap-4 justify-start lg:justify-center overflow-x-auto snap-x snap-mandatory pb-8 pt-4 px-2 -mx-2 hide-scrollbar">
                 {plansData.map((plan: any, index: number) => {
                   const isPopular = index === 1;
 
                   return (
                     <div
                       key={plan.id}
-                      className={`relative flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-5 sm:p-6 border transition-all duration-300 group hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:border-amber-500/50 ${
+                      className={`relative flex-none snap-center min-w-[85vw] sm:min-w-[320px] w-full max-w-sm lg:max-w-none lg:w-auto flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-5 sm:p-6 border transition-all duration-300 group hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:border-amber-500/50 ${
                         isPopular 
                           ? "border-[#F4B000] ring-1 ring-[#F4B000] shadow-[0_4px_20px_rgb(244,176,0,0.15)] dark:shadow-[0_4px_20px_rgb(244,176,0,0.08)] md:-translate-y-2" 
                           : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm"
@@ -112,6 +118,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                   );
                 })}
               </div>
+            </div>
         </div>
       </section>
     </div>
