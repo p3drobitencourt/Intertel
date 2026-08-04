@@ -1,4 +1,4 @@
-﻿
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Star } from 'lucide-react';
@@ -46,6 +46,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                         <h3 className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wider">{plan.name}</h3>
                         <div className="mt-4 flex items-baseline gap-1 text-slate-900 dark:text-white">
                           <span className="text-5xl font-black font-display tracking-tighter">{plan.speed}</span>
+                          <span className="text-sm font-bold text-slate-500 dark:text-slate-400">+ Wi-Fi</span>
                         </div>
                       </div>
                       {/* Value Added Services */}

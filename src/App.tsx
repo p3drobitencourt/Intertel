@@ -124,29 +124,31 @@ const beducaSva: Sva = {
 
 const radioPlansData: Plan[] = [
   {
-    id: "plan-radio-5m",
-    name: "Plano Rádio 5M",
-    speed: "5 Mega",
+    id: "plan-radio-10m",
+    name: "Plano Rádio 10M",
+    speed: "10 Mega",
     priceMonthly: 69.90,
     priceYearlyMonthly: 69.90,
     isPopular: false,
     description: "Conexão de entrada via rádio para regiões rurais.",
     features: [
-      "Velocidade de Download: 5 Mbps",
+      "Velocidade de Download: 10 Mbps",
+      "Roteador Wi-Fi Grátis",
       "Suporte Técnico Especializado",
     ],
     svas: [bebancaSva, beducaSva]
   },
   {
-    id: "plan-radio-10m",
-    name: "Plano Rádio 10M",
-    speed: "10 Mega",
+    id: "plan-radio-15m",
+    name: "Plano Rádio 15M",
+    speed: "15 Mega",
     priceMonthly: 89.90,
     priceYearlyMonthly: 89.90,
     isPopular: true,
     description: "Ideal para navegação diária e redes sociais em áreas rurais.",
     features: [
-      "Velocidade de Download: 10 Mbps",
+      "Velocidade de Download: 15 Mbps",
+      "Roteador Wi-Fi Grátis",
       "Suporte Técnico Especializado",
     ],
     svas: [bebancaSva, beducaSva]
