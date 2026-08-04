@@ -290,7 +290,7 @@ export default function Empresas() {
                 <div>
                   <p className="font-bold text-slate-800 dark:text-slate-200">Presencial:</p>
                   <p>Seg a Sex: 08h às 18h</p>
-                  <p>Sábado: 08h às 12h</p>
+                  
                 </div>
               </div>
               <div className="flex gap-3 pt-2">

@@ -888,7 +888,7 @@ export default function App() {
                   <div>
                     <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">Presencial</h4>
                     <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sexta: 08h às 18h</p>
-                    <p className="text-slate-600 dark:text-slate-300 text-xs">Sábado: 08h às 12h</p>
+                    
                   </div>
                 </div>
               </div>
@@ -1137,7 +1137,7 @@ export default function App() {
                 <div>
                   <p className="font-bold text-slate-800 dark:text-slate-200">Presencial:</p>
                   <p>Seg a Sex: 08h às 18h</p>
-                  <p>Sábado: 08h às 12h</p>
+                  
                 </div>
               </div>
               <div className="flex gap-3 pt-2">
