@@ -284,8 +284,8 @@ export default function Empresas() {
               <div className="text-xs text-slate-600 dark:text-slate-300 space-y-2">
                 <div>
                   <p className="font-bold text-slate-800 dark:text-slate-200">Callcenter:</p>
-                  <p>Seg a Sáb: 08h às 22h</p>
-                  <p>Domingo: 08h às 17h</p>
+                  <p>Seg a Sáb: 08h às 20h</p>
+                  <p>Domingos e Feriados: 08h às 17h</p>
                 </div>
                 <div>
                   <p className="font-bold text-slate-800 dark:text-slate-200">Presencial:</p>
