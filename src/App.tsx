@@ -887,7 +887,7 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">Presencial</h4>
-                    <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sexta: 08h às 18h</p>
+                    <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sexta: 08h às 17h</p>
                     
                   </div>
                 </div>
@@ -1075,11 +1075,6 @@ export default function App() {
                 Operadora de Telecomunicações mineira focada no fornecimento de internet em ultravelocidade 100% fibra óptica com tecnologia Wi-Fi e alta redundância. Conectando pessoas e corporações com solidez técnica.
               </p>
               <div className="flex items-center gap-4 text-xs font-semibold text-slate-600 dark:text-slate-200">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse text-white" />
-                  ASN: 268801
-                </span>
-                <span>•</span>
                 <span>CNPJ: 30.607.069/0001-49</span>
               </div>
             </div>
@@ -1136,7 +1131,7 @@ export default function App() {
                 </div>
                 <div>
                   <p className="font-bold text-slate-800 dark:text-slate-200">Presencial:</p>
-                  <p>Seg a Sex: 08h às 18h</p>
+                  <p>Seg a Sex: 08h às 17h</p>
                   
                 </div>
               </div>
@@ -1182,7 +1177,7 @@ export default function App() {
           <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-600 dark:text-slate-200 gap-4">
             <div>
               <p>© {new Date().getFullYear()} Intertel Telecom. Todos os direitos reservados.</p>
-              <p className="mt-1">Regulamentado pela ANATEL • CNPJ: 30.607.069/0001-49 • ASN: 268801 • São João da Mata, MG</p>
+              <p className="mt-1">Regulamentado pela ANATEL • CNPJ: 30.607.069/0001-49 • São João da Mata, MG</p>
             </div>
             <div className="flex items-center gap-4">
               <a href="#" className="hover:underline">Políticas de Privacidade</a>
