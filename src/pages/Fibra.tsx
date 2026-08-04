@@ -12,7 +12,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
     <div className="min-h-screen bg-zinc-50 dark:bg-slate-900 font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900 dark:text-white">
       {/* 3. RESIDENTIAL CONVERGENT PLANS SECTION */}
       <section className="py-6 md:py-5 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-fibra">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <h2 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-[0.25em] font-bold">
@@ -30,18 +30,18 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
 
           <div className="relative mt-8">
             {/* Scroll indicator for mobile */}
-            <div className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 lg:hidden flex flex-col items-center justify-center opacity-50">
+            <div className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 xl:hidden flex flex-col items-center justify-center opacity-50">
               <svg className="w-6 h-6 animate-bounce-x text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
             </div>
             
-            <div className="flex lg:grid lg:grid-cols-4 gap-5 lg:gap-4 justify-start lg:justify-center overflow-x-auto snap-x snap-mandatory pb-8 pt-4 px-2 -mx-2 hide-scrollbar">
+            <div className="flex xl:grid xl:grid-cols-4 gap-4 xl:gap-6 justify-start xl:justify-center overflow-x-auto snap-x snap-mandatory pb-8 pt-4 px-4 -mx-4 hide-scrollbar">
                 {plansData.map((plan: any, index: number) => {
                   const isPopular = index === 1;
 
                   return (
                     <div
                       key={plan.id}
-                      className={`relative flex-none snap-center min-w-[85vw] sm:min-w-[320px] w-full max-w-sm lg:max-w-none lg:w-auto flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-5 sm:p-6 border transition-all duration-300 group hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:border-amber-500/50 ${
+                      className={`relative flex-none snap-center min-w-[85vw] sm:min-w-[320px] w-full max-w-sm xl:max-w-none xl:w-auto flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-6 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
                         isPopular 
                           ? "border-[#F4B000] ring-1 ring-[#F4B000] shadow-[0_4px_20px_rgb(244,176,0,0.15)] dark:shadow-[0_4px_20px_rgb(244,176,0,0.08)] md:-translate-y-2" 
                           : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm"
