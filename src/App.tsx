@@ -219,6 +219,23 @@ const plansData: Plan[] = [
       "Suporte Técnico Prioritário",
     ],
     svas: [bebancaSva, beducaSva]
+  },
+  {
+    id: "plan-900m",
+    name: "Plano Gammer",
+    speed: "900 Mega",
+    priceMonthly: 119.90,
+    priceYearlyMonthly: 119.90,
+    isPopular: false,
+    description: "Desempenho máximo para gamers, baixa latência e streaming 4K/8K sem interrupções.",
+    features: [
+      "Velocidade de Download: 900 Mbps",
+      "Simetria de Conexão",
+      "Roteador Wi-Fi Grátis",
+      "Sem Taxa de Instalação",
+      "Suporte Técnico Prioritário",
+    ],
+    svas: [bebancaSva, beducaSva]
   }
 ];
 

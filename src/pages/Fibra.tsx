@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Star } from 'lucide-react';
 import { BebancaIcon, BeeducaIcon } from '../App';
@@ -54,7 +54,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                           <p className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-1">{plan.name}</p>
                           <div className="flex items-baseline gap-1 text-slate-900 dark:text-white">
                             <span className="text-4xl font-black font-display tracking-tighter">{plan.speed}</span>
-                            <span className="text-sm font-bold text-slate-500 dark:text-slate-400">Mega</span>
+                            <span className="text-sm font-bold text-slate-500 dark:text-slate-400">+ Wi-Fi</span>
                           </div>
                           <p className="text-[13px] text-slate-600 dark:text-slate-400 mt-2 leading-relaxed min-h-[36px]">{plan.description}</p>
                         </div>
