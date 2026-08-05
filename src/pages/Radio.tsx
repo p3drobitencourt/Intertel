@@ -28,16 +28,16 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                 {radioPlansData.map((plan) => (
                   <div
                     key={plan.id}
-                    className={`relative flex flex-col justify-between bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-6 border transition-all duration-300 group hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:border-amber-500/50 ${
+                    className={`relative flex flex-col justify-between bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
                       plan.isPopular 
-                        ? "border-[#F4B000] ring-1 ring-[#F4B000] shadow-[0_8px_30px_rgb(244,176,0,0.15)] dark:shadow-[0_8px_30px_rgb(244,176,0,0.08)] md:-translate-y-4" 
-                        : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-2xl hover:-translate-y-1.5"
+                        ? "border-[#F4B000] border-2 shadow-[0_10px_40px_rgb(244,176,0,0.2)] dark:shadow-[0_10px_40px_rgb(244,176,0,0.15)] xl:scale-105 xl:z-10" 
+                        : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm"
                     }`}
                   >
                     {plan.isPopular && (
                       <div className="absolute -top-4 inset-x-0 flex justify-center">
-                        <span className="bg-gradient-to-r from-[#F4B000] to-amber-400 text-slate-950 font-black text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-md flex items-center gap-1.5 border border-amber-300">
-                          <Star className="w-3.5 h-3.5 fill-slate-950" /> MAIS ASSINADO
+                        <span className="bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 font-black text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg border border-amber-300 flex items-center gap-1.5">
+                          <Star className="w-3.5 h-3.5 fill-slate-950" /> MAIS ESCOLHIDO
                         </span>
                       </div>
                     )}
@@ -73,10 +73,10 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                         </div>
                       )}
 
-                      <ul className="space-y-4 pt-6">
-                        {plan.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 font-medium">
-                            <div className={`mt-0.5 rounded-full p-0.5 shrink-0 ${plan.isPopular ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400' : 'bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400'}`}>
+                      <ul className="space-y-3 pt-5">
+                        {plan.features.map((feature: string, idx: number) => (
+                          <li key={idx} className="flex items-center gap-3 text-[14px] text-slate-700 dark:text-slate-200 font-medium">
+                            <div className={`rounded-full p-1 shrink-0 ${plan.isPopular ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' : 'bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400'}`}>
                               <Check className="w-3 h-3 stroke-[3]" />
                             </div>
                             <span className="leading-snug">{feature}</span>
@@ -84,17 +84,17 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                         ))}
                       </ul>
                     </div>
-                    <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+                    <div className="mt-8 pt-5 border-t border-slate-100 dark:border-slate-800">
                       <button 
                         onClick={() => startOnboarding(plan)}
-                        className={`w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 ${
+                        className={`w-full py-3.5 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
                           plan.isPopular
-                            ? "bg-[#F4B000] hover:bg-amber-400 text-slate-950 shadow-md shadow-amber-500/20 active:scale-95"
+                            ? "bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95"
                             : "bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-white text-white dark:text-slate-900 active:scale-95"
                         }`}
                       >
                         Saber mais informações
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
                   </div>

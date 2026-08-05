@@ -246,6 +246,7 @@ import Lan2Lan from "./pages/Lan2Lan";
 
 export default function App() {
   const location = useLocation();
+  const navigate = useNavigate();
   const isEmpresas = location.pathname === "/empresas" || location.pathname === "/dedicado" || location.pathname === "/lan2lan";
   // Navigation & UI States
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -254,6 +255,15 @@ export default function App() {
   
   // Theme State
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Hero Carousel State
   const [heroSlide, setHeroSlide] = useState(0);
@@ -372,11 +382,11 @@ export default function App() {
       
       {/* 1. STICKY NAVBAR */}
       {!isEmpresas && (
-      <header className="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all duration-300 shadow-sm">
+      <header className={`sticky top-0 z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300" id="nav-logo">
+          <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none hover:-translate-y-1 hover:scale-105 hover:shadow-2xl transition-all duration-300" id="nav-logo">
             <img src="./logo-principal.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
           </Link>
 
@@ -438,15 +448,15 @@ export default function App() {
               href="https://intertel.sgplocal.com.br/accounts/central/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 h-11 text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full transition-all duration-300"
+              className="flex items-center gap-2 px-6 h-11 text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-full shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] transition-all duration-300 hover:-translate-y-1"
               id="btn-customer-area"
             >
               <User className="w-5 h-5" />
-              Central do Assinante
+              2ª Via / Área do Cliente
             </a>
             <button
               onClick={() => startOnboarding(null)}
-              className="flex items-center gap-2 px-6 h-11 text-xs font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1.5 hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
+              className="flex items-center gap-2 px-6 h-11 text-xs font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95"
               id="btn-nav-hire"
             >
               <Phone className="w-5 h-5" />
@@ -567,11 +577,37 @@ export default function App() {
                 )}
 
                 {/* CTAs */}
-                <div className="pt-4 flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+                <div className="pt-4 flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 w-full">
                   {slide.ctaText && (
-                    <Link to="/fibra" className="inline-flex items-center justify-center bg-blue-950 text-white dark:bg-amber-500 dark:text-blue-950 px-8 py-4 rounded-full font-black text-lg hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(23,37,84,0.6)] dark:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.6)]">
-                      {slide.ctaText}
-                    </Link>
+                    <form 
+                      className="flex flex-col sm:flex-row gap-3 w-full max-w-xl"
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        navigate("/fibra");
+                      }}
+                    >
+                      <div className="relative flex-grow">
+                        <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                        <input 
+                          type="text" 
+                          placeholder="Digite seu CEP para consultar cobertura" 
+                          className="w-full h-14 pl-12 pr-4 rounded-full border-2 border-white/20 dark:border-slate-700 bg-white/95 dark:bg-slate-900/90 text-slate-900 dark:text-white font-semibold focus:outline-none focus:border-[#F4B000] dark:focus:border-[#F4B000] transition-colors shadow-lg placeholder:text-slate-500 text-base"
+                          maxLength={9}
+                          onChange={(e) => {
+                            let value = e.target.value.replace(/\D/g, '');
+                            if (value.length > 5) value = value.replace(/^(\d{5})(\d)/, '$1-$2');
+                            e.target.value = value;
+                          }}
+                        />
+                      </div>
+                      <button 
+                        type="submit"
+                        className="h-14 px-8 rounded-full bg-[#F4B000] hover:bg-amber-400 text-slate-900 font-black tracking-wide uppercase text-sm shadow-[0_0_20px_rgba(244,176,0,0.3)] hover:shadow-[0_0_30px_rgba(244,176,0,0.5)] transition-all hover:-translate-y-0.5 shrink-0 flex items-center justify-center gap-2"
+                      >
+                        <Search className="w-5 h-5" />
+                        Consultar Cobertura
+                      </button>
+                    </form>
                   )}
 
                   {slide.type === 'app' && (
@@ -643,48 +679,79 @@ export default function App() {
       
 
       {/* 5. APP PROMO SECTION (Portal do Assinante) */}
-      <section className="bg-gray-50 dark:bg-slate-900 py-6 relative z-10" id="app-promo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <img src="./icone-app.png" alt="Ícone App Intertel" className="h-16 w-16 mb-4 mx-auto rounded-2xl shadow-md" />
-          <h2 className="text-blue-900 dark:text-white font-bold text-4xl mb-4">Sua conexão na palma da mão.</h2>
-          <p className="text-slate-600 dark:text-slate-300 text-lg max-w-2xl mx-auto">
-            Baixe o app Intertel Telecom e tenha controle total: pague faturas, libere sua conexão com a promessa de pagamento e acompanhe seu consumo.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 max-w-6xl mx-auto px-4">
-            {/* Col 1 */}
-            <div className="flex flex-col items-center">
-              <img src="./app-tela1.png" alt="Dashboard do App" className="rounded-3xl shadow-2xl border-4 border-gray-800 mx-auto w-64" />
-              <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-6">Visão Geral Rápida</h3>
-            </div>
+      <section className="bg-slate-50 dark:bg-slate-900/50 py-24 sm:py-32 relative z-10 overflow-hidden" id="app-promo">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
-            {/* Col 2 */}
-            <div className="flex flex-col items-center">
-              <img src="./app-tela2.png" alt="Tela de Faturas" className="rounded-3xl shadow-2xl border-4 border-gray-800 mx-auto w-64 mt-8 md:mt-0" />
-              <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-6">Gestão de Faturas e Pix</h3>
-            </div>
-            
-            {/* Col 3 */}
-            <div className="flex flex-col items-center">
-              <img src="./app-tela3.png" alt="Promessa de Pagamento" className="rounded-3xl shadow-2xl border-4 border-gray-800 mx-auto w-64 mt-8 md:mt-0" />
-              <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-6">Desbloqueio em 1 Clique</h3>
-            </div>
-          </div>
+            {/* Left Column: Value Proposition */}
+            <div className="space-y-8 max-w-xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
+                <Smartphone className="w-4 h-4" />
+                App Intertel
+              </div>
+              
+              <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white leading-tight font-display tracking-tight">
+                Resolva tudo sem precisar ligar no suporte.
+              </h2>
+              
+              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                Sua conexão na palma da mão. Com o app Intertel Telecom, você tem total autonomia para gerenciar sua internet. Pague faturas com PIX, acompanhe seu consumo diário e utilize o recurso de promessa de pagamento para liberar sua conexão em um clique.
+              </p>
 
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            <a href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-blue-950 text-white px-8 py-4 rounded-full hover:-translate-y-1 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
-              <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 512 512">
-                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
-              </svg>
-              <span className="font-bold">Baixar para Android</span>
-            </a>
-            <a href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-blue-950 text-white px-8 py-4 rounded-full hover:-translate-y-1 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
-              <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 384 512">
-                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.4-19.1-77.5-19.1-38.2 0-77.5 21.4-97.5 56.5-40.4 71-10.4 175.7 28.7 232.5 19.1 27.5 41.5 58.2 71.3 57.1 29-1.1 40-18.5 75.1-18.5 35 0 45 18.5 75.1 18.5 30.1 1.1 50.4-27.5 69.5-55.1 22.2-32.2 31.2-63.5 31.5-65.1-1.1-.3-60.6-23.2-61.1-92.7zM281.9 83.3c15-18.5 25.8-44.2 23-70.1-23.2 1-51.4 15.5-68.1 35-14.4 16.7-27.2 42.7-24 68.3 25.8 2 52.8-14.7 69.1-33.2z"/>
-              </svg>
-              <span className="font-bold">Baixar para iPhone</span>
-            </a>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <a 
+                  href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-xl hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/20 dark:hover:shadow-white/20 transition-all duration-300"
+                >
+                  <svg className="w-7 h-7 fill-current shrink-0" viewBox="0 0 512 512">
+                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
+                  </svg>
+                  <div className="text-left leading-none">
+                    <p className="text-[10px] uppercase tracking-wider opacity-70 mb-1">Disponível no</p>
+                    <p className="text-base font-bold">Google Play</p>
+                  </div>
+                </a>
+                <a 
+                  href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-xl hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/20 dark:hover:shadow-white/20 transition-all duration-300"
+                >
+                  <svg className="w-7 h-7 fill-current shrink-0" viewBox="0 0 384 512">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.4-19.1-77.5-19.1-38.2 0-77.5 21.4-97.5 56.5-40.4 71-10.4 175.7 28.7 232.5 19.1 27.5 41.5 58.2 71.3 57.1 29-1.1 40-18.5 75.1-18.5 35 0 45 18.5 75.1 18.5 30.1 1.1 50.4-27.5 69.5-55.1 22.2-32.2 31.2-63.5 31.5-65.1-1.1-.3-60.6-23.2-61.1-92.7zM281.9 83.3c15-18.5 25.8-44.2 23-70.1-23.2 1-51.4 15.5-68.1 35-14.4 16.7-27.2 42.7-24 68.3 25.8 2 52.8-14.7 69.1-33.2z"/>
+                  </svg>
+                  <div className="text-left leading-none">
+                    <p className="text-[10px] uppercase tracking-wider opacity-70 mb-1">Baixar na</p>
+                    <p className="text-base font-bold">App Store</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Column: App Assets overlapping layout */}
+            <div className="relative w-full h-[500px] sm:h-[600px] flex items-center justify-center">
+              {/* Decorative background blob */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
+              
+              {/* Image 1: Fatura/Pix (Back/Slightly lower right) */}
+              <img 
+                src="./appfatura.png" 
+                alt="Pagamento de Fatura via PIX" 
+                loading="lazy"
+                className="absolute right-0 sm:right-4 top-1/4 w-44 sm:w-56 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-4 border-slate-800 dark:border-slate-700 rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10"
+              />
+              
+              {/* Image 2: Inicio (Front/Slightly higher left) */}
+              <img 
+                src="./appinicio.png" 
+                alt="Dashboard Principal do App" 
+                loading="lazy"
+                className="absolute left-0 sm:left-4 bottom-1/4 w-48 sm:w-64 rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.2)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-4 border-slate-900 dark:border-slate-800 -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20"
+              />
+            </div>
+
           </div>
         </div>
       </section>
@@ -694,7 +761,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-3 max-w-2xl mx-auto mb-12">
-            <h2 className="text-xs font-mono text-blue-600 dark:text-blue-400 dark:text-blue-500 dark:text-blue-400 uppercase tracking-[0.25em] font-bold">VANTAGENS EXCLUSIVAS</h2>
+            <h2 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-[0.25em] font-bold">VANTAGENS EXCLUSIVAS</h2>
             <h1 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-slate-900 dark:text-white">
               Por que a Intertel é uma boa escolha?
             </h1>
@@ -1018,7 +1085,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center">
                     <a href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-800 text-white px-8 py-4.5 rounded-full hover:bg-slate-800 dark:hover:bg-slate-700 hover:scale-105 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
                       <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 512 512">
                         <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
@@ -1037,6 +1104,16 @@ export default function App() {
                         <p className="text-base font-black tracking-tight text-white">App Store</p>
                       </div>
                     </a>
+
+                    <div className="hidden md:flex items-center gap-3 lg:ml-4 bg-white dark:bg-slate-800 p-2.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+                      <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
+                        <img src="/qrcode.png" alt="QR Code App Intertel" className="w-14 h-14 object-contain" />
+                      </div>
+                      <div className="text-xs pr-2">
+                        <p className="font-bold text-slate-800 dark:text-slate-200">Acesse Fácil</p>
+                        <p className="text-slate-500 dark:text-slate-400">Escaneie o QR Code</p>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="pt-8 mt-8 border-t border-slate-200 dark:border-slate-800">
@@ -1190,6 +1267,19 @@ export default function App() {
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
+              </div>
+
+              <div className="pt-5 mt-5 border-t border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-3 bg-zinc-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 w-fit hover:shadow-md hover:bg-white dark:hover:bg-slate-800 transition-all cursor-pointer group">
+                  <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
+                    <img src="/qrcode.png" alt="QR Code App Intertel" className="w-12 h-12 object-contain" />
+                  </div>
+                  <div className="text-xs pr-2">
+                    <p className="font-bold text-slate-800 dark:text-slate-200">Baixe nosso App</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-[10px]">Escaneie para acessar</p>
+                  </div>
+                </div>
+              </div>
                 <a href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-lg bg-zinc-50 dark:bg-slate-800 hover:bg-[#25D366] hover:text-white text-slate-600 dark:text-slate-300 dark:text-slate-200 flex items-center justify-center transition-all">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.662-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>

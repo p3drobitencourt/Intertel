@@ -41,16 +41,16 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                   return (
                     <div
                       key={plan.id}
-                      className={`relative flex-none snap-center min-w-[85vw] sm:min-w-[320px] w-full max-w-sm xl:max-w-none xl:w-auto flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-6 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
+                      className={`relative flex-none snap-center min-w-[85vw] sm:min-w-[320px] w-full max-w-sm xl:max-w-none xl:w-auto flex flex-col justify-between bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
                         isPopular 
-                          ? "border-[#F4B000] ring-1 ring-[#F4B000] shadow-[0_4px_20px_rgb(244,176,0,0.15)] dark:shadow-[0_4px_20px_rgb(244,176,0,0.08)] md:-translate-y-2" 
+                          ? "border-[#F4B000] border-2 shadow-[0_10px_40px_rgb(244,176,0,0.2)] dark:shadow-[0_10px_40px_rgb(244,176,0,0.15)] xl:scale-105 xl:z-10" 
                           : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm"
                       }`}
                     >
                       {isPopular && (
-                        <div className="absolute -top-3.5 inset-x-0 flex justify-center">
-                          <span className="bg-gradient-to-r from-[#F4B000] to-amber-400 text-slate-950 font-black text-[9px] tracking-widest uppercase px-3 py-1 rounded-full shadow-sm border border-amber-300 flex items-center gap-1">
-                            <Star className="w-3 h-3 fill-slate-950" /> MAIS VENDIDO
+                        <div className="absolute -top-4 inset-x-0 flex justify-center">
+                          <span className="bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 font-black text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg border border-amber-300 flex items-center gap-1.5">
+                            <Star className="w-3.5 h-3.5 fill-slate-950" /> MAIS ESCOLHIDO
                           </span>
                         </div>
                       )}
@@ -89,11 +89,11 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                           </div>
                         )}
 
-                        <ul className="space-y-2.5 pt-4">
+                        <ul className="space-y-3 pt-5">
                           {plan.features.map((feature: string, idx: number) => (
-                            <li key={idx} className="flex items-start gap-2.5 text-[13px] text-slate-600 dark:text-slate-300 font-medium">
-                              <div className={`mt-0.5 rounded-full p-0.5 shrink-0 ${isPopular ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400' : 'bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400'}`}>
-                                <Check className="w-2.5 h-2.5 stroke-[3]" />
+                            <li key={idx} className="flex items-center gap-3 text-[14px] text-slate-700 dark:text-slate-200 font-medium">
+                              <div className={`rounded-full p-1 shrink-0 ${isPopular ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' : 'bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400'}`}>
+                                <Check className="w-3 h-3 stroke-[3]" />
                               </div>
                               <span className="leading-snug">{feature}</span>
                             </li>
@@ -101,17 +101,17 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                         </ul>
                       </div>
                       
-                      <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+                      <div className="mt-8 pt-5 border-t border-slate-100 dark:border-slate-800">
                         <button 
                           onClick={() => startOnboarding(plan)}
-                          className={`w-full py-3 rounded-lg font-bold text-[13px] uppercase tracking-wider transition-all flex items-center justify-center gap-2 ${
+                          className={`w-full py-3.5 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
                             isPopular
-                              ? "bg-[#F4B000] hover:bg-amber-400 text-slate-950 shadow-sm shadow-amber-500/20 active:scale-95"
+                              ? "bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95"
                               : "bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-white text-white dark:text-slate-900 active:scale-95"
                           }`}
                         >
                           Saber mais informações
-                          <ArrowRight className="w-3.5 h-3.5" />
+                          <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
