@@ -950,13 +950,15 @@ export default function App() {
                   </div>
 
                   <div className="flex-1 w-full max-w-md lg:max-w-none">
-                    <div className="relative p-8 bg-zinc-50 dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 flex items-center justify-center">
-                      <svg viewBox="0 -10 260 85" className="w-full h-auto max-w-[280px]" aria-label="Intertel Telecom">
-                        <path d="M-10,55 Q50,75 140,50 T280,-10" fill="none" stroke="#f59e0b" strokeWidth="8" strokeLinecap="round" opacity="0.9" />
-                        <path d="M-5,65 Q60,95 160,55 T300,5" fill="none" stroke="#f59e0b" strokeWidth="8" strokeLinecap="round" opacity="0.6" />
-                        <text x="5" y="45" fontFamily="Arial, Helvetica, sans-serif" fontSize="52" fontWeight="900" fontStyle="italic" className="fill-slate-900 dark:fill-white" letterSpacing="-2">Intertel</text>
-                        <text x="80" y="60" fontFamily="Arial, Helvetica, sans-serif" fontSize="14" fontWeight="600" fontStyle="italic" fill="#3b82f6" letterSpacing="2">TELECOM</text>
-                      </svg>
+                    <div className="relative p-8 bg-zinc-50 dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 flex items-center justify-center aspect-[16/9] lg:aspect-auto lg:h-full">
+                      <img 
+                        src="/logo-principal.png" 
+                        alt="Intertel Telecom Logo" 
+                        loading="lazy" 
+                        width="300" 
+                        height="100" 
+                        className="w-full h-auto max-w-[280px] object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-3 dark:rounded-xl dark:shadow-sm" 
+                      />
                     </div>
                   </div>
                 </div>
