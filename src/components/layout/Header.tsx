@@ -19,11 +19,11 @@ export default function Header() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-transform duration-300 hover:-translate-y-1 will-change-transform" id="nav-logo">
+        <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-transform duration-300 hover:-translate-y-1 hover:will-change-transform" id="nav-logo">
           <img src="/logo-principal.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
         </Link>
 

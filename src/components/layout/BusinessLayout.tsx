@@ -7,7 +7,7 @@ export default function BusinessLayout() {
   return (
     <>
       <BusinessHeader />
-      <main>
+      <main className="pt-20">
         <Outlet />
       </main>
       <Footer />
