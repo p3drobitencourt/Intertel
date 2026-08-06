@@ -387,7 +387,7 @@ export default function App() {
           
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-all duration-300" id="nav-logo">
-            <img src="./logo-principal.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
+            <img src="./logo.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -396,12 +396,11 @@ export default function App() {
               Início
             </Link>
             {/* Planos Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2">
-                Planos <ChevronDown className="w-5 h-5 opacity-70 group-hover:rotate-180 transition-transform" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-                
+            <details className="relative group">
+              <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
+                Planos <ChevronDown className="w-5 h-5 opacity-70 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden z-50">
                 <Link to="/fibra" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
                   Planos Fibra
                 </Link>
@@ -409,14 +408,14 @@ export default function App() {
                   Planos Rádio
                 </Link>
               </div>
-            </div>
+            </details>
             
             {/* Soluções Corporativas Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2">
-                Para Empresas <ChevronDown className="w-5 h-5 opacity-70 group-hover:rotate-180 transition-transform" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+            <details className="relative group">
+              <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
+                Para Empresas <ChevronDown className="w-5 h-5 opacity-70 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden z-50">
                 <Link to="/empresas" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
                   Planos Empresariais
                 </Link>
@@ -427,7 +426,7 @@ export default function App() {
                   Interligação LAN-to-LAN
                 </Link>
               </div>
-            </div>
+            </details>
             <Link to="/#vantagens" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2 hidden lg:block">
               Vantagens
             </Link>
@@ -1189,8 +1188,8 @@ export default function App() {
             
             {/* Footer Col 1: About */}
             <div className="lg:col-span-4 space-y-5">
-              <Link to="/" className="inline-block hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300" aria-label="Home">
-                <img src="/logo-principal.png" alt="Intertel Telecom" className="h-8 md:h-10 w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-1.5 dark:rounded-lg dark:shadow-sm" />
+              <Link to="/" className="inline-block hover:-translate-y-1 hover:scale-105 hover:shadow-2xl transition-all duration-300" aria-label="Home">
+                <img src="/logo.png" alt="Intertel Telecom" className="h-8 md:h-10 w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-1.5 dark:rounded-lg dark:shadow-sm" />
               </Link>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Operadora de Telecomunicações mineira focada no fornecimento de internet em ultravelocidade 100% fibra óptica com tecnologia Wi-Fi e alta redundância. Conectando pessoas e corporações com solidez técnica.
