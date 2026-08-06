@@ -904,7 +904,7 @@ export default function Home() {
                 <div className="w-full md:w-1/2 space-y-6">
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
-                      <img src="/icone-app.png" alt="App Minha Intertel" className="w-16 h-16 rounded-2xl shadow-lg" />
+                      <img src="/logoapp.png" alt="App Minha Intertel" className="w-16 h-16 rounded-2xl shadow-lg" />
                       <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">
                         <Smartphone className="w-5 h-5" /> App Minha Intertel
                       </div>

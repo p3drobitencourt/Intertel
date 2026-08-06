@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
+import MainLayout from './components/layout/MainLayout';
+import BusinessLayout from './components/layout/BusinessLayout';
 import Home from './pages/Home';
 import Empresas from './pages/Empresas';
 import Dedicado from './pages/Dedicado';
@@ -34,20 +34,21 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-slate-900 font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900 dark:text-white">
-      <Header />
-
-      <main>
-        <Routes>
+      <Routes>
+        {/* B2C Layout (Main) */}
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/fibra" element={<Home />} />
           <Route path="/radio" element={<Home />} />
+        </Route>
+
+        {/* B2B Layout (Business) */}
+        <Route element={<BusinessLayout />}>
           <Route path="/empresas" element={<Empresas />} />
           <Route path="/dedicado" element={<Dedicado />} />
           <Route path="/lan2lan" element={<Lan2Lan />} />
-        </Routes>
-      </main>
-
-      <Footer />
+        </Route>
+      </Routes>
     </div>
   );
 }

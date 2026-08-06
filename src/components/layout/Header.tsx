@@ -24,7 +24,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-all duration-300" id="nav-logo">
+        <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-transform duration-300 hover:-translate-y-1 will-change-transform" id="nav-logo">
           <img src="/logo-principal.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
         </Link>
 
