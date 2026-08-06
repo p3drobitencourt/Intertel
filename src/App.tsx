@@ -1322,24 +1322,23 @@ export default function App() {
           </div>
 
         </div>
+        </div>
       </footer>
-  )
-}
+      )}
 
-{/* Floating WhatsApp Button */ }
-<a
-  href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
-  aria-label="Fale conosco no WhatsApp"
->
-  <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span>
-  <Phone className="w-8 h-8 fill-current" />
-</a>
+      {/* Floating WhatsApp Button */}
+      <a 
+        href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+        aria-label="Fale conosco no WhatsApp"
+      >
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span>
+        <Phone className="w-8 h-8 fill-current" />
+      </a>
 
-    </div >
+    </div>
   );
 }
-
 
