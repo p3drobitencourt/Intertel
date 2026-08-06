@@ -386,7 +386,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none hover:-translate-y-1 hover:scale-105 hover:shadow-2xl transition-all duration-300" id="nav-logo">
+          <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-all duration-300" id="nav-logo">
             <img src="./logo-principal.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
           </Link>
 
@@ -1275,8 +1275,8 @@ export default function App() {
                     <img src="/qrcode.png" alt="QR Code App Intertel" className="w-12 h-12 object-contain" />
                   </div>
                   <div className="text-xs pr-2">
-                    <p className="font-bold text-slate-800 dark:text-slate-200">Baixe nosso App</p>
-                    <p className="text-slate-500 dark:text-slate-400 text-[10px]">Escaneie para acessar</p>
+                    <p className="font-bold text-slate-800 dark:text-slate-200">Fale no WhatsApp</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-[10px]">Escaneie para iniciar chat</p>
                   </div>
                 </div>
               </div>

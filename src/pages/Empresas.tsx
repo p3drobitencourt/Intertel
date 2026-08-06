@@ -38,7 +38,7 @@ export default function Empresas() {
       {/* 1. COMPACT HEADER */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none hover:scale-105 transition-transform">
+          <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-transform">
             <img src="/logo-principal.png" alt="Intertel Telecom" className="h-8 md:h-10 w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-1.5 dark:rounded-lg dark:shadow-sm" />
           </Link>
 
