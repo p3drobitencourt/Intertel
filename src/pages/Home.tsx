@@ -891,7 +891,7 @@ export default function Home() {
               </div>
             </section>
 
-          </>
+
 
           <section className="py-6 md:py-8 bg-white dark:bg-slate-900 relative z-10 min-h-[60vh] flex items-center" id="app-intertel">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
