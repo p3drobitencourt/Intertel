@@ -12,7 +12,7 @@ export default function Footer() {
 
             {/* Footer Col 1: About */}
             <div className="lg:col-span-4 space-y-5">
-              <Link to="/" className="inline-block hover:-translate-y-1 hover:scale-105 hover:shadow-2xl transition-all duration-300" aria-label="Home">
+              <Link to="/" className="inline-block" aria-label="Home">
                 <img src="/logo-principal.png" alt="Intertel Telecom" className="h-8 md:h-10 w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-1.5 dark:rounded-lg dark:shadow-sm" />
               </Link>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">

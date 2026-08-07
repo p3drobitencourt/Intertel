@@ -42,7 +42,7 @@ export default function BusinessHeader() {
           <div className="w-px h-6 bg-slate-300 dark:bg-slate-700 mx-2"></div>
           
           <Link to="/" className="flex items-center gap-1 text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 transition-colors py-2">
-            <ArrowLeft className="w-4 h-4" /> Voltar para Para Você
+            ← Voltar para Para Você (Residencial)
           </Link>
         </nav>
 
@@ -92,7 +92,7 @@ export default function BusinessHeader() {
             <div className="h-px bg-slate-200 dark:bg-slate-700 my-1 mx-4" />
             
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 px-4 py-3 text-base font-semibold text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-slate-800 rounded-xl transition-all">
-              <ArrowLeft className="w-5 h-5" /> Voltar para Para Você
+              ← Voltar para Para Você (Residencial)
             </Link>
 
             <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3">

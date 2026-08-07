@@ -1,12 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import BusinessHeader from './BusinessHeader';
+import Header from './Header';
 import Footer from './Footer';
 
 export default function BusinessLayout() {
   return (
     <>
-      <BusinessHeader />
+      <Header />
       <main className="pt-20">
         <Outlet />
       </main>

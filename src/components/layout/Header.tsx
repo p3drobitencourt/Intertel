@@ -23,19 +23,19 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-center bg-transparent group focus:outline-none transition-transform duration-300 hover:-translate-y-1 hover:will-change-transform" id="nav-logo">
+        <Link to="/" className="flex items-center justify-center bg-transparent focus:outline-none" id="nav-logo">
           <img src="/logo-principal.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-4 lg:gap-4 text-sm font-semibold z-50">
-          <Link to="/" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2">
+          <Link to="/" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2">
             Início
           </Link>
           
           {/* Planos Dropdown */}
           <details className="relative group">
-            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
+            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
               Planos <ChevronDown className="w-5 h-5 opacity-70 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden z-50">
@@ -48,9 +48,9 @@ export default function Header() {
             </div>
           </details>
 
-          {/* Soluções Corporativas Dropdown */}
+          {/* Soluções Corporativas */}
           <details className="relative group">
-            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
+            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
               Para Empresas <ChevronDown className="w-5 h-5 opacity-70 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden z-50">
@@ -66,16 +66,16 @@ export default function Header() {
             </div>
           </details>
 
-          <Link to="/#vantagens" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2 hidden lg:block">
+          <Link to="/#vantagens" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 hidden lg:block">
             Vantagens
           </Link>
-          <Link to="/app" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2">
+          <Link to="/app" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2">
             App Intertel
           </Link>
-          <Link to="/#faq" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2">
+          <Link to="/#faq" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2">
             FAQ
           </Link>
-          <Link to="/#contato" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2 font-semibold text-amber-500 hover:text-amber-600">
+          <Link to="/#contato" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 font-semibold text-amber-500 hover:text-amber-600">
             Contato
           </Link>
         </nav>
