@@ -892,12 +892,7 @@ export default function Home() {
             </section>
 
           </>
-        } />
-        <Route path="/fibra" element={<Fibra plansData={plansData} billingCycle={billingCycle} startOnboarding={startOnboarding} bebancaSva={bebancaSva} beducaSva={beducaSva} />} />
-        <Route path="/empresas" element={<EmpresasPage />} />
-        <Route path="/radio" element={<Radio radioPlansData={radioPlansData} billingCycle={billingCycle} startOnboarding={startOnboarding} />} />
 
-        <Route path="/app" element={
           <section className="py-6 md:py-8 bg-white dark:bg-slate-900 relative z-10 min-h-[60vh] flex items-center" id="app-intertel">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
@@ -1026,7 +1021,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
     </>
   );
 }
