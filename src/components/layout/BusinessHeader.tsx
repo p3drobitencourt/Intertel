@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ArrowLeft, Phone, User } from 'lucide-react';
+import { Menu, X, Phone, User } from 'lucide-react';
 
 export default function BusinessHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
