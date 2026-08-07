@@ -34,7 +34,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
               <svg className="w-6 h-6 animate-bounce-x text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
             </div>
             
-            <div className="flex xl:grid xl:grid-cols-4 gap-4 xl:gap-6 justify-start xl:justify-center overflow-x-auto snap-x snap-mandatory pb-8 pt-4 px-4 -mx-4 hide-scrollbar">
+            <div className="flex xl:grid xl:grid-cols-4 gap-4 xl:gap-6 justify-start xl:justify-center overflow-x-auto snap-x snap-mandatory pb-8 pt-6 px-4 -mx-4 hide-scrollbar">
                 {plansData.map((plan: any, index: number) => {
                   const isPopular = index === 1;
 

@@ -500,35 +500,7 @@ export default function Home() {
                 </div>
               ))}
 
-              {/* Carousel Controls */}
-              <div className="absolute inset-x-0 bottom-4 z-40 flex justify-center items-center gap-4">
-                <button
-                  onClick={prevSlide}
-                  className="w-14 h-14 rounded-full bg-slate-900/10 hover:bg-slate-900/30 backdrop-blur-md flex items-center justify-center text-slate-900 dark:text-white transition-colors border border-slate-900/20 dark:border-white/20 opacity-0 group-hover:opacity-100 hidden sm:flex"
-                  aria-label="Slide anterior"
-                >
-                  <ChevronLeft className="w-8 h-8" />
-                </button>
 
-                <div className="flex gap-3 bg-white/40 dark:bg-slate-900/50 backdrop-blur-md px-5 py-3 rounded-full border border-white/50 dark:border-white/10 shadow-lg">
-                  {heroSlides.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setHeroSlide(idx)}
-                      className={`transition-all duration-300 rounded-full shadow-sm ${heroSlide === idx ? 'bg-blue-950 dark:bg-amber-500 w-12 h-3' : 'bg-blue-950/40 hover:bg-blue-950/60 dark:bg-white/40 dark:hover:bg-white/80 w-3 h-3'}`}
-                      aria-label={`Ir para slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={nextSlide}
-                  className="w-14 h-14 rounded-full bg-slate-900/10 hover:bg-slate-900/30 backdrop-blur-md flex items-center justify-center text-slate-900 dark:text-white transition-colors border border-slate-900/20 dark:border-white/20 opacity-0 group-hover:opacity-100 hidden sm:flex"
-                  aria-label="Próximo slide"
-                >
-                  <ChevronRight className="w-8 h-8" />
-                </button>
-              </div>
             </section>
 
 
