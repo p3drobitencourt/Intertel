@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Smartphone, FileText, Headphones } from 'lucide-react';
-import { BebancaIcon, BeeducaIcon } from '../App';
-import { bebancaSva, beducaSva } from './Home';
+import { BebancaIcon, BeeducaIcon, bebancaSva, beducaSva } from './Home';
 
 export default function AppPage() {
   useEffect(() => {
