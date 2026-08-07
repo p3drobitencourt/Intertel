@@ -24,7 +24,7 @@ export default function Header() {
         
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center bg-transparent focus:outline-none" id="nav-logo">
-          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-12 w-auto object-contain" />
+          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-14 md:h-16 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -34,30 +34,41 @@ export default function Header() {
           </Link>
           
           {/* Planos Dropdown */}
-          <details className="relative group">
-            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
-              Planos <ChevronDown className="w-4 h-4 opacity-70 group-open:rotate-180 transition-transform" />
-            </summary>
-            <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden z-50">
-              <Link to="/fibra" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium">
-                Planos Fibra
-              </Link>
-              <Link to="/radio" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium">
-                Planos Rádio
-              </Link>
+          <div className="relative group">
+            <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors py-2 cursor-pointer select-none">
+              Planos Residenciais <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+            </button>
+            <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+              <div className="w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+                <Link to="/fibra" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                  Planos Fibra
+                </Link>
+                <Link to="/radio" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                  Planos Rádio
+                </Link>
+              </div>
             </div>
-          </details>
+          </div>
 
-          {/* Abas Separadas para o B2B (Molde Empresarial) */}
-          <Link to="/empresas" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
-            Planos Empresariais
-          </Link>
-          <Link to="/dedicado" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
-            Link Dedicado
-          </Link>
-          <Link to="/lan2lan" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
-            LAN-to-LAN
-          </Link>
+          {/* Empresas Dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors py-2 cursor-pointer select-none">
+              Para Empresas <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+            </button>
+            <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+              <div className="w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+                <Link to="/empresas" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                  Planos Empresariais
+                </Link>
+                <Link to="/dedicado" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                  Link Dedicado (Provedores)
+                </Link>
+                <Link to="/lan2lan" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                  Interligação LAN-to-LAN
+                </Link>
+              </div>
+            </div>
+          </div>
 
           <Link to="/#vantagens" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 hidden lg:block">
             Vantagens
