@@ -28,7 +28,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-3 lg:gap-4 text-sm font-semibold z-50">
+        <nav className="hidden md:flex items-center gap-2 lg:gap-3 text-xs lg:text-[13px] font-semibold z-50">
           <Link to="/" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
             Início
           </Link>
@@ -85,29 +85,30 @@ export default function Header() {
         </nav>
 
         {/* Customer Portal CTA Right */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2">
           <a
             href="https://intertel.sgplocal.com.br/accounts/central/login"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 h-11 text-[11px] font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-full shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] transition-all duration-300 hover:-translate-y-1"
+            className="flex items-center gap-1.5 px-3 h-10 text-[10px] lg:text-[11px] font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-full shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] transition-all duration-300 hover:-translate-y-1"
             id="btn-customer-area"
           >
-            <User className="w-4 h-4" />
-            Área do Cliente
+            <User className="w-3.5 h-3.5" />
+            <span className="hidden lg:inline">Área do Cliente</span>
+            <span className="lg:hidden">Área Cliente</span>
           </a>
           <a
             href="/contrato"
-            className="flex items-center gap-2 px-5 h-11 text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-all duration-300 hover:-translate-y-1 border border-slate-200 dark:border-slate-700"
+            className="flex items-center gap-1.5 px-3 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-all duration-300 hover:-translate-y-1 border border-slate-200 dark:border-slate-700 whitespace-nowrap"
           >
             Contrato Padrão
           </a>
           <button
             onClick={() => startOnboarding()}
-            className="flex items-center gap-2 px-5 h-11 text-[11px] font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95"
+            className="flex items-center gap-1.5 px-4 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95 whitespace-nowrap"
             id="btn-nav-hire"
           >
-            <Phone className="w-4 h-4" />
+            <Phone className="w-3.5 h-3.5" />
             Assinar Já
           </button>
         </div>
