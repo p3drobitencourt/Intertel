@@ -28,54 +28,44 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-4 lg:gap-4 text-sm font-semibold z-50">
-          <Link to="/" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2">
+        <nav className="hidden md:flex items-center gap-3 lg:gap-4 text-sm font-semibold z-50">
+          <Link to="/" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
             Início
           </Link>
           
           {/* Planos Dropdown */}
           <details className="relative group">
-            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
-              Planos <ChevronDown className="w-5 h-5 opacity-70 group-open:rotate-180 transition-transform" />
+            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
+              Planos <ChevronDown className="w-4 h-4 opacity-70 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden z-50">
-              <Link to="/fibra" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
+              <Link to="/fibra" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium">
                 Planos Fibra
               </Link>
-              <Link to="/radio" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
+              <Link to="/radio" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium">
                 Planos Rádio
               </Link>
             </div>
           </details>
 
-          {/* Soluções Corporativas */}
-          <details className="relative group">
-            <summary className="list-none flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 cursor-pointer [&::-webkit-details-marker]:hidden select-none">
-              Para Empresas <ChevronDown className="w-5 h-5 opacity-70 group-open:rotate-180 transition-transform" />
-            </summary>
-            <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden z-50">
-              <Link to="/empresas" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
-                Planos Empresariais
-              </Link>
-              <Link to="/dedicado" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
-                Link Dedicado (Provedores)
-              </Link>
-              <Link to="/lan2lan" onClick={(e) => e.currentTarget.closest('details')?.removeAttribute('open')} className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 font-medium">
-                Interligação LAN-to-LAN
-              </Link>
-            </div>
-          </details>
+          {/* Abas Separadas para o B2B (Molde Empresarial) */}
+          <Link to="/empresas" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
+            Planos Empresariais
+          </Link>
+          <Link to="/dedicado" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
+            Link Dedicado
+          </Link>
+          <Link to="/lan2lan" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2">
+            LAN-to-LAN
+          </Link>
 
-          <Link to="/#vantagens" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 hidden lg:block">
+          <Link to="/#vantagens" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 hidden lg:block">
             Vantagens
           </Link>
-          <Link to="/app" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2">
-            App Intertel
-          </Link>
-          <Link to="/#faq" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2">
+          <Link to="/#faq" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 hidden xl:block">
             FAQ
           </Link>
-          <Link to="/#contato" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1 hover:will-change-transform py-2 font-semibold text-amber-500 hover:text-amber-600">
+          <Link to="/#contato" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 font-semibold text-amber-500">
             Contato
           </Link>
         </nav>
