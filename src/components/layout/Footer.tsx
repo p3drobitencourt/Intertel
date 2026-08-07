@@ -145,7 +145,7 @@ export default function Footer() {
           </div>
         </div>
 
-      </div>
+
     </footer>
 
     {/* Floating WhatsApp Button */}
