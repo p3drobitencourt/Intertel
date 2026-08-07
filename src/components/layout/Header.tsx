@@ -73,6 +73,9 @@ export default function Header() {
           <Link to="/#vantagens" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 hidden lg:block">
             Vantagens
           </Link>
+          <Link to="/app" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 hidden lg:block">
+            App Intertel
+          </Link>
           <Link to="/#faq" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 hidden xl:block">
             FAQ
           </Link>

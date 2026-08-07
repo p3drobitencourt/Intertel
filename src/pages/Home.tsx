@@ -106,7 +106,7 @@ const IntertelAppIcon = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
-const bebancaSva: Sva = {
+export const bebancaSva: Sva = {
   name: "Bebanca",
   icon: <BebancaIcon />,
   bg: "bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-400 border border-amber-200 dark:border-amber-500/30",
@@ -114,7 +114,7 @@ const bebancaSva: Sva = {
   linkAndroid: "https://play.google.com/store/apps/details?id=com.bebanca"
 };
 
-const beducaSva: Sva = {
+export const beducaSva: Sva = {
   name: "Beduca",
   icon: <BeeducaIcon />,
   bg: "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700",
@@ -122,7 +122,7 @@ const beducaSva: Sva = {
   linkAndroid: "https://play.google.com/store/apps/details?id=com.bebanca.ensina"
 };
 
-const radioPlansData: Plan[] = [
+export const radioPlansData: Plan[] = [
   {
     id: "plan-radio-10m",
     name: "Plano Rádio 10M",
@@ -170,7 +170,7 @@ const radioPlansData: Plan[] = [
   }
 ];
 
-const plansData: Plan[] = [
+export const plansData: Plan[] = [
   {
     id: "plan-300m",
     name: "Plano Conexão Inicial",
@@ -588,7 +588,7 @@ export default function Home() {
 
                     {/* Image 1: Fatura/Pix (Back/Slightly lower right) */}
                     <img
-                      src="/appfatura.png"
+                      src="/app-tela1.png"
                       alt="Pagamento de Fatura via PIX"
                       loading="lazy"
                       className="absolute right-0 sm:right-4 top-1/4 w-44 sm:w-56 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-4 border-slate-800 dark:border-slate-700 rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10"
@@ -596,7 +596,7 @@ export default function Home() {
 
                     {/* Image 2: Inicio (Front/Slightly higher left) */}
                     <img
-                      src="/appinicio.png"
+                      src="/app-tela2.png"
                       alt="Dashboard Principal do App"
                       loading="lazy"
                       className="absolute left-0 sm:left-4 bottom-1/4 w-48 sm:w-64 rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.2)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-4 border-slate-900 dark:border-slate-800 -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20"

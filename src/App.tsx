@@ -2,12 +2,18 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import BusinessLayout from './components/layout/BusinessLayout';
-import Home from './pages/Home';
+import Home, { plansData, radioPlansData, bebancaSva, beducaSva } from './pages/Home';
 import Empresas from './pages/Empresas';
 import Dedicado from './pages/Dedicado';
 import Lan2Lan from './pages/Lan2Lan';
+import Fibra from './pages/Fibra';
+import Radio from './pages/Radio';
 
 export default function App() {
+  const startOnboarding = (plan: any = null, cepCode?: string) => {
+    window.open("https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0", "_blank", "noopener,noreferrer");
+  };
+
   const location = useLocation();
 
   // Scroll to hash on page load or navigation
@@ -38,8 +44,8 @@ export default function App() {
         {/* B2C Layout (Main) */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/fibra" element={<Home />} />
-          <Route path="/radio" element={<Home />} />
+          <Route path="/fibra" element={<Fibra plansData={plansData} billingCycle="monthly" startOnboarding={startOnboarding} bebancaSva={bebancaSva} beducaSva={beducaSva} />} />
+          <Route path="/radio" element={<Radio radioPlansData={radioPlansData} billingCycle="monthly" startOnboarding={startOnboarding} />} />
         </Route>
 
         {/* B2B Layout (Business) */}
