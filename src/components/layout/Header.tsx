@@ -20,11 +20,11 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
         
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center bg-transparent focus:outline-none" id="nav-logo">
-          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-14 md:h-16 w-auto object-contain" />
+          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-16 md:h-20 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -85,23 +85,29 @@ export default function Header() {
         </nav>
 
         {/* Customer Portal CTA Right */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
           <a
             href="https://intertel.sgplocal.com.br/accounts/central/login"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 h-11 text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-full shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] transition-all duration-300 hover:-translate-y-1"
+            className="flex items-center gap-2 px-5 h-11 text-[11px] font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-full shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] transition-all duration-300 hover:-translate-y-1"
             id="btn-customer-area"
           >
-            <User className="w-5 h-5" />
-            2ª Via / Área do Cliente
+            <User className="w-4 h-4" />
+            Área do Cliente
+          </a>
+          <a
+            href="/contrato"
+            className="flex items-center gap-2 px-5 h-11 text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-all duration-300 hover:-translate-y-1 border border-slate-200 dark:border-slate-700"
+          >
+            Contrato Padrão
           </a>
           <button
             onClick={() => startOnboarding()}
-            className="flex items-center gap-2 px-6 h-11 text-xs font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95"
+            className="flex items-center gap-2 px-5 h-11 text-[11px] font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95"
             id="btn-nav-hire"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-4 h-4" />
             Assinar Já
           </button>
         </div>

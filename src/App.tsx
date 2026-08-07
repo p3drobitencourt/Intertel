@@ -8,6 +8,7 @@ import Dedicado from './pages/Dedicado';
 import Lan2Lan from './pages/Lan2Lan';
 import Fibra from './pages/Fibra';
 import Radio from './pages/Radio';
+import AppPage from './pages/AppPage';
 
 export default function App() {
   const startOnboarding = (plan: any = null, cepCode?: string) => {
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/fibra" element={<Fibra plansData={plansData} billingCycle="monthly" startOnboarding={startOnboarding} bebancaSva={bebancaSva} beducaSva={beducaSva} />} />
           <Route path="/radio" element={<Radio radioPlansData={radioPlansData} billingCycle="monthly" startOnboarding={startOnboarding} />} />
+          <Route path="/app" element={<AppPage />} />
         </Route>
 
         {/* B2B Layout (Business) */}

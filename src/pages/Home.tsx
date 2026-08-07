@@ -363,20 +363,24 @@ export default function Home() {
       <div className="absolute top-0 left-0 right-0 h-[800px] bg-gradient-to-b from-blue-900/15 via-purple-900/5 to-transparent pointer-events-none z-0" />
       <div className="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />
       <div className="absolute top-[20%] right-[5%] w-96 h-96 rounded-full bg-purple-500/10 blur-[150px] pointer-events-none" />
-            {/* Static Centered Banner */}
-            <div className="relative w-full bg-[#F4B000] border-b border-amber-500 py-3 z-30 shadow-md">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-wrap justify-center items-center text-slate-900 font-black tracking-[0.15em] uppercase text-[10px] sm:text-[11px] gap-x-3 sm:gap-x-4 gap-y-2 text-center">
-                  <span>100% FIBRA ÓPTICA</span>
-                  <span className="hidden sm:inline">•</span>
-                  <span>INSTALAÇÃO GRATUITA</span>
-                  <span className="hidden sm:inline">•</span>
-                  <span>WI-FI GRÁTIS EM COMODATO</span>
-                  <span className="hidden md:inline">•</span>
-                  <span>SIMETRIA ABSOLUTA DE BANDA</span>
-                  <span className="hidden sm:inline">•</span>
-                  <span>SUPORTE HUMANIZADO</span>
-                </div>
+            {/* Infinite Marquee Banner */}
+            <div className="relative w-full bg-[#F4B000] border-b border-amber-500 py-3 z-30 overflow-hidden flex items-center shadow-md">
+              <div className="flex whitespace-nowrap animate-marquee items-center text-slate-950 font-black tracking-[0.2em] uppercase text-[10px] sm:text-[11px]">
+                <span className="mx-4">100% FIBRA ÓPTICA</span><span className="opacity-50">•</span>
+                <span className="mx-4">INSTALAÇÃO GRATUITA</span><span className="opacity-50">•</span>
+                <span className="mx-4">WI-FI GRÁTIS EM COMODATO</span><span className="opacity-50">•</span>
+                <span className="mx-4">SIMETRIA ABSOLUTA DE BANDA</span><span className="opacity-50">•</span>
+                <span className="mx-4">SUPORTE HUMANIZADO</span><span className="opacity-50">•</span>
+                <span className="mx-4">100% FIBRA ÓPTICA</span><span className="opacity-50">•</span>
+                <span className="mx-4">INSTALAÇÃO GRATUITA</span><span className="opacity-50">•</span>
+                <span className="mx-4">WI-FI GRÁTIS EM COMODATO</span><span className="opacity-50">•</span>
+                <span className="mx-4">SIMETRIA ABSOLUTA DE BANDA</span><span className="opacity-50">•</span>
+                <span className="mx-4">SUPORTE HUMANIZADO</span><span className="opacity-50">•</span>
+                <span className="mx-4">100% FIBRA ÓPTICA</span><span className="opacity-50">•</span>
+                <span className="mx-4">INSTALAÇÃO GRATUITA</span><span className="opacity-50">•</span>
+                <span className="mx-4">WI-FI GRÁTIS EM COMODATO</span><span className="opacity-50">•</span>
+                <span className="mx-4">SIMETRIA ABSOLUTA DE BANDA</span><span className="opacity-50">•</span>
+                <span className="mx-4">SUPORTE HUMANIZADO</span>
               </div>
             </div>
 
@@ -403,7 +407,7 @@ export default function Home() {
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full relative z-30 flex flex-col lg:flex-row items-center justify-between">
 
                     {/* Text Content */}
-                    <div className={`w-full ${slide.type === 'app' ? 'lg:w-1/2' : 'lg:w-2/3'} space-y-5 lg:space-y-6 text-left py-6 lg:py-0`}>
+                    <div className={`w-full ${slide.type === 'app' ? 'lg:w-1/2' : 'lg:w-2/3'} space-y-5 lg:space-y-6 text-left py-10 lg:py-0 pb-16 lg:pb-0`}>
                       {slide.badge && (
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase bg-blue-950/10 border border-blue-950/20 text-blue-950 dark:bg-white/10 dark:border-white/20 dark:text-white backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
                           <Sparkles className="w-5 h-5 text-blue-950 dark:text-amber-500" />
@@ -497,7 +501,7 @@ export default function Home() {
               ))}
 
               {/* Carousel Controls */}
-              <div className="absolute inset-x-0 bottom-8 z-40 flex justify-center items-center gap-4">
+              <div className="absolute inset-x-0 bottom-4 z-40 flex justify-center items-center gap-4">
                 <button
                   onClick={prevSlide}
                   className="w-14 h-14 rounded-full bg-slate-900/10 hover:bg-slate-900/30 backdrop-blur-md flex items-center justify-center text-slate-900 dark:text-white transition-colors border border-slate-900/20 dark:border-white/20 opacity-0 group-hover:opacity-100 hidden sm:flex"
@@ -893,136 +897,6 @@ export default function Home() {
 
 
 
-          <section className="py-6 md:py-8 bg-white dark:bg-slate-900 relative z-10 min-h-[60vh] flex items-center" id="app-intertel">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                <div className="w-full md:w-1/2 space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
-                      <img src="/logoapp.png" alt="App Minha Intertel" className="w-16 h-16 rounded-2xl shadow-lg" />
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">
-                        <Smartphone className="w-5 h-5" /> App Minha Intertel
-                      </div>
-                    </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-                      Sua conexão na <br className="hidden md:block" /> <span className="text-blue-600 dark:text-blue-400">palma da mão.</span>
-                    </h2>
-                    <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium max-w-lg leading-relaxed">
-                      Gerencie sua internet de forma rápida, fácil e 100% digital. Baixe agora o <strong className="text-slate-900 dark:text-white">App Minha Intertel</strong> e tenha controle total.
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="flex flex-col gap-3 p-5 rounded-2xl bg-zinc-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 transition-colors">
-                      <div className="w-16 h-16 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-                        <FileText className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-slate-900 dark:text-white">2ª Via de Boletos</h4>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">Acesse suas faturas e pague direto do seu celular com segurança.</p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 p-5 rounded-2xl bg-zinc-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 transition-colors">
-                      <div className="w-16 h-16 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
-                        <Headphones className="w-8 h-8 text-amber-600 dark:text-amber-400" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-slate-900 dark:text-white">Suporte Rápido</h4>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">Abra chamados técnicos e acompanhe o status em tempo real.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center">
-                    <a href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-800 text-white px-8 py-4.5 rounded-full hover:bg-slate-800 dark:hover:bg-slate-700 hover:scale-105 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-                      <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 512 512">
-                        <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
-                      </svg>
-                      <div className="text-left leading-tight mt-0.5">
-                        <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-0.5">Baixar no</p>
-                        <p className="text-base font-black tracking-tight text-white">Google Play</p>
-                      </div>
-                    </a>
-                    <a href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-800 text-white px-8 py-4.5 rounded-full hover:bg-slate-800 dark:hover:bg-slate-700 hover:scale-105 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-                      <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 384 512">
-                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.4-19.1-77.5-19.1-38.2 0-77.5 21.4-97.5 56.5-40.4 71-10.4 175.7 28.7 232.5 19.1 27.5 41.5 58.2 71.3 57.1 29-1.1 40-18.5 75.1-18.5 35 0 45 18.5 75.1 18.5 30.1 1.1 50.4-27.5 69.5-55.1 22.2-32.2 31.2-63.5 31.5-65.1-1.1-.3-60.6-23.2-61.1-92.7zM281.9 83.3c15-18.5 25.8-44.2 23-70.1-23.2 1-51.4 15.5-68.1 35-14.4 16.7-27.2 42.7-24 68.3 25.8 2 52.8-14.7 69.1-33.2z" />
-                      </svg>
-                      <div className="text-left leading-tight mt-0.5">
-                        <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-0.5">Baixar na</p>
-                        <p className="text-base font-black tracking-tight text-white">App Store</p>
-                      </div>
-                    </a>
-
-                    <div className="hidden md:flex items-center gap-3 lg:ml-4 bg-white dark:bg-slate-800 p-2.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all cursor-pointer group">
-                      <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
-                        <img src="/qrcode.png" alt="QR Code App Intertel" className="w-14 h-14 object-contain" />
-                      </div>
-                      <div className="text-xs pr-2">
-                        <p className="font-bold text-slate-800 dark:text-slate-200">Acesse Fácil</p>
-                        <p className="text-slate-500 dark:text-slate-400">Escaneie o QR Code</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-8 mt-8 border-t border-slate-200 dark:border-slate-800">
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
-                      Como acessar seus benefícios
-                    </h3>
-
-                    <div className="space-y-3">
-                      {/* Passo 1 */}
-                      <div className="flex gap-4 items-start p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-shadow">
-                        <div className="w-14 h-14 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center font-black text-lg shrink-0 border border-blue-200 dark:border-blue-800">1</div>
-                        <div>
-                          <h4 className="font-bold text-slate-900 dark:text-white text-base">Baixe o App</h4>
-                          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">Faça o download nas lojas oficiais clicando nos botões acima.</p>
-                        </div>
-                      </div>
-
-                      {/* Passo 2 */}
-                      <div className="flex gap-4 items-start p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-shadow">
-                        <div className="w-14 h-14 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center font-black text-lg shrink-0 border border-blue-200 dark:border-blue-800">2</div>
-                        <div>
-                          <h4 className="font-bold text-slate-900 dark:text-white text-base">Faça Login</h4>
-                          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">No campo de acesso, digite apenas o <strong className="text-slate-900 dark:text-slate-200">CPF do titular</strong> do plano.</p>
-                        </div>
-                      </div>
-
-                      {/* Passo 3 */}
-                      <div className="flex gap-4 items-start p-5 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/10 rounded-2xl border border-amber-200 dark:border-amber-800/50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-shadow">
-                        <div className="w-14 h-14 rounded-full bg-[#F4B000] text-slate-900 flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-amber-500/20 border border-amber-300">3</div>
-                        <div>
-                          <h4 className="font-bold text-slate-900 dark:text-white text-base">Aproveite os serviços extras!</h4>
-                          <p className="text-sm text-slate-700 dark:text-slate-300 mt-1 leading-relaxed">
-                            Para acessar serviços como <a href={bebancaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mx-1 text-amber-600 dark:text-amber-500 font-bold hover:underline"><span className="w-3.5 h-3.5"><BebancaIcon /></span> Bebanca</a> e <a href={beducaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mx-1 text-blue-600 dark:text-blue-400 font-bold hover:underline"><span className="w-3.5 h-3.5"><BeeducaIcon /></span> Beduca</a>, selecione <strong>Intertel Telecom</strong> como provedor e use os mesmos dados.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="w-full md:w-1/2 relative flex justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000 mt-8 md:mt-0">
-                  {/* Decorative Elements */}
-                  <div className="absolute inset-0 bg-blue-500/5 dark:bg-blue-500/10 blur-3xl rounded-full scale-75" />
-                  <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                    <div className="flex gap-4 sm:gap-4 w-max animate-marquee hover:[animation-play-state:paused]">
-                      {[...appScreenshots, ...appScreenshots].map((src, idx) => (
-                        <div key={idx} className="relative w-[140px] sm:w-[180px] shrink-0 hover:-translate-y-2 transition-transform duration-300">
-                          <img
-                            src={src}
-                            alt={`Tela do App Intertel ${idx + 1}`}
-                            className="w-full h-auto aspect-[9/19.5] rounded-[1.5rem] shadow-2xl border border-slate-200 dark:border-slate-700 object-cover object-top"
-                            loading="lazy"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
     </>
   );
 }
