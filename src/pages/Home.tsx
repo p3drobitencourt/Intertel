@@ -811,14 +811,13 @@ export default function Home() {
                       <h3 className="font-bold text-slate-900 dark:text-white text-lg mt-8 mb-3">Horário de Atendimento</h3>
                       <div className="space-y-4">
                         <div>
-                          <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">Callcenter</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sábado: 08h às 20h</p>
-                          <p className="text-slate-600 dark:text-slate-300 text-xs">Domingos e Feriados: 08h às 17h</p>
-                        </div>
-                        <div>
                           <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">Presencial</h4>
                           <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sexta: 08h às 17h</p>
-
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">Callcenter</h4>
+                          <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sexta: 17h às 20h</p>
+                          <p className="text-slate-600 dark:text-slate-300 text-xs">Sáb, Dom e Feriados: 08h às 17h</p>
                         </div>
                       </div>
                     </div>
@@ -845,11 +844,20 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="col-span-1 md:col-span-2 flex h-full">
+                  <div 
+                    className="col-span-1 md:col-span-2 flex h-full relative group cursor-pointer rounded-2xl overflow-hidden" 
+                    onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=Intertel+Telecom,+Rua+Maria+Onilia+Vieira,+249+-+Centro,+S%C3%A3o+Jo%C3%A3o+da+Mata+-+MG', '_blank', 'noopener,noreferrer')}
+                  >
+                    <div className="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                      <div className="bg-white text-blue-950 font-bold px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0">
+                        <MapPin className="w-5 h-5 text-amber-500" />
+                        Traçar Rota até a Intertel
+                      </div>
+                    </div>
                     <iframe
                       title="Mapa de Localização da Intertel Telecom"
                       src="https://maps.google.com/maps?q=Rua+Maria+Onilia+Vieira,+249,+S%C3%A3o+Jo%C3%A3o+da+Mata+-+MG&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                      className="w-full h-full min-h-[300px] rounded-2xl shadow-xl border-0 ring-1 ring-slate-900/5"
+                      className="w-full h-full min-h-[300px] shadow-xl border-0 ring-1 ring-slate-900/5 relative z-0 pointer-events-none"
                       allowFullScreen={true}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"

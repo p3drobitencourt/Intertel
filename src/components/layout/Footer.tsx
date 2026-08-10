@@ -60,9 +60,16 @@ export default function Footer() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-bold text-slate-900 dark:text-white">Seg a Sáb: 08h às 20h</p>
-                    <p className="text-xs mt-0.5">Dom e Feriados: 08h às 17h</p>
+                  <div className="flex flex-col gap-1.5">
+                    <div>
+                      <p className="font-bold text-slate-900 dark:text-white text-xs">Presencial</p>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">Seg a Sex: 08h às 17h</p>
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 dark:text-white text-xs">Callcenter</p>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">Seg a Sex: 17h às 20h</p>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">Sáb, Dom e Feriados: 08h às 17h</p>
+                    </div>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
