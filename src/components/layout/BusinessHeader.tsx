@@ -20,15 +20,15 @@ export default function BusinessHeader() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-[110px] flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/empresas" className="flex items-center justify-center bg-transparent group focus:outline-none transition-transform duration-300 hover:-translate-y-1 hover:will-change-transform" id="nav-logo-business">
-          <img src="/logo-principal.png" alt="Intertel Telecom B2B" className="h-12 w-auto object-contain" />
+        <Link to="/empresas" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 overflow-hidden h-24 md:h-[110px]" id="nav-logo-business">
+          <img src="/logo-principal.png" alt="Intertel Telecom B2B" className="h-[120px] md:h-[160px] w-auto max-w-none object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl" />
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-semibold z-50">
+        <nav className="hidden lg:flex items-center gap-4 lg:gap-6 text-sm font-semibold z-50 whitespace-nowrap">
           <Link to="/empresas" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors py-2">
             Planos Empresariais
           </Link>
@@ -47,7 +47,7 @@ export default function BusinessHeader() {
         </nav>
 
         {/* Customer Portal CTA Right */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4 shrink-0">
           <a
             href="https://intertel.sgplocal.com.br/accounts/central/login"
             target="_blank"
@@ -69,7 +69,7 @@ export default function BusinessHeader() {
         </div>
 
         {/* Mobile Sandwich Button */}
-        <div className="md:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2.5 rounded-lg text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none transition-all"
@@ -83,7 +83,7 @@ export default function BusinessHeader() {
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden absolute top-24 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200">
           <div className="px-4 pt-4 pb-6 space-y-3 flex flex-col">
             <Link to="/empresas" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Planos Empresariais</Link>
             <Link to="/dedicado" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Link Dedicado (Provedores)</Link>

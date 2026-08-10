@@ -129,11 +129,11 @@ export default function Footer() {
               <p className="mt-1">Regulamentado pela ANATEL • CNPJ: 30.607.069/0001-49</p>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 font-medium">
-              <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">Políticas de Privacidade</a>
+              <a href="javascript:void(0)" className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-default opacity-80" title="Página em construção">Políticas de Privacidade</a>
               <span className="opacity-40">•</span>
-              <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">Contratos e Termos</a>
+              <Link to="/contrato" className="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Contratos e Termos</Link>
               <span className="opacity-40">•</span>
-              <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">Ouvidoria ANATEL</a>
+              <a href="javascript:void(0)" className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-default opacity-80" title="Página em construção">Ouvidoria ANATEL</a>
             </div>
           </div>
 
