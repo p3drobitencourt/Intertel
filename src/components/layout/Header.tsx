@@ -20,11 +20,11 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-28 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-[110px] flex items-center justify-between">
         
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center bg-transparent focus:outline-none shrink-0" id="nav-logo">
-          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-20 md:h-28 w-auto object-contain scale-110 md:scale-[1.25] origin-left" />
+          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-24 md:h-[110px] w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-1.5 dark:rounded-xl" />
         </Link>
 
         {/* Desktop Navigation Links */}

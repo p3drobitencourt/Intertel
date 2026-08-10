@@ -14,7 +14,7 @@ export default function Footer() {
             {/* Col 1: About & Social */}
             <div className="space-y-6">
               <Link to="/" className="inline-block" aria-label="Home">
-                <img src="/logo-principal.png" alt="Intertel Telecom" className="h-16 md:h-20 w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-2 dark:rounded-xl dark:shadow-sm" />
+                <img src="/logo-principal.png" alt="Intertel Telecom" className="h-24 md:h-[110px] w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-white/95 dark:backdrop-blur-md dark:p-2 dark:rounded-xl dark:shadow-sm" />
               </Link>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed pr-4">
                 Operadora de Telecomunicações mineira focada no fornecimento de internet em ultravelocidade 100% fibra óptica com tecnologia Wi-Fi e alta redundância.
