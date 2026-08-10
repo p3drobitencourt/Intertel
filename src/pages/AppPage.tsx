@@ -114,9 +114,29 @@ export default function AppPage() {
                   <div className="flex gap-4 items-start p-5 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/10 rounded-2xl border border-amber-200 dark:border-amber-800/50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-shadow">
                     <div className="w-14 h-14 rounded-full bg-[#F4B000] text-slate-900 flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-amber-500/20 border border-amber-300">3</div>
                     <div>
-                      <h4 className="font-bold text-slate-900 dark:text-white text-lg">Aproveite os serviços extras!</h4>
-                      <p className="text-sm text-slate-700 dark:text-slate-300 mt-1.5 leading-relaxed">
-                        Para acessar serviços como <a href={bebancaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mx-1 text-amber-600 dark:text-amber-500 font-bold hover:underline"><span className="w-3.5 h-3.5"><BebancaIcon /></span> Bebanca</a> e <a href={beducaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mx-1 text-blue-600 dark:text-blue-400 font-bold hover:underline"><span className="w-3.5 h-3.5"><BeeducaIcon /></span> Beduca</a>, selecione <strong>Intertel Telecom</strong> como provedor e use os mesmos dados.
+                      <h4 className="font-bold text-slate-900 dark:text-white text-base">Aproveite os serviços extras!</h4>
+                      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <a href={bebancaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-white dark:bg-slate-800/50 rounded-xl border border-amber-200/50 dark:border-amber-800/30 hover:border-amber-400 dark:hover:border-amber-500 shadow-sm hover:shadow-md transition-all group">
+                          <div className="w-10 h-10 rounded-lg shrink-0 group-hover:scale-110 transition-transform flex items-center justify-center">
+                            <BebancaIcon />
+                          </div>
+                          <div>
+                            <h5 className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1">Bebanca</h5>
+                            <p className="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold leading-none">Jornais e Revistas</p>
+                          </div>
+                        </a>
+                        <a href={beducaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-white dark:bg-slate-800/50 rounded-xl border border-blue-200/50 dark:border-blue-800/30 hover:border-blue-400 dark:hover:border-blue-500 shadow-sm hover:shadow-md transition-all group">
+                          <div className="w-10 h-10 rounded-lg shrink-0 group-hover:scale-110 transition-transform flex items-center justify-center">
+                            <BeeducaIcon />
+                          </div>
+                          <div>
+                            <h5 className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1">Beduca</h5>
+                            <p className="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold leading-none">Cursos Online</p>
+                          </div>
+                        </a>
+                      </div>
+                      <p className="text-sm text-slate-700 dark:text-slate-300 mt-4 leading-relaxed">
+                        Selecione <strong>Intertel Telecom</strong> como provedor nos aplicativos e use o <strong>CPF do titular</strong>.
                       </p>
                     </div>
                   </div>
