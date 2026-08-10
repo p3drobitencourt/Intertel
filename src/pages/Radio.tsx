@@ -24,7 +24,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 justify-center pt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 justify-center pt-10">
                 {radioPlansData.map((plan) => (
                   <div
                     key={plan.id}
