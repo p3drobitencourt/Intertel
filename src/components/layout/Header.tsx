@@ -23,7 +23,7 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-[110px] flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-center bg-transparent focus:outline-none shrink-0 overflow-hidden h-24 md:h-[110px]" id="nav-logo">
+        <Link to="/" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 overflow-hidden h-24 md:h-[110px] w-[200px] md:w-[350px]" id="nav-logo">
           <img src="/logo-principal.png" alt="Intertel Telecom" className="h-24 md:h-[110px] w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl scale-125 md:scale-[1.4] origin-left" />
         </Link>
 
