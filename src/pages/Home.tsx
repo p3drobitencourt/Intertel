@@ -1,6 +1,7 @@
 import React, { useState, useEffect, ReactNode } from "react";
 import { startOnboarding } from "../utils/whatsapp";
 import { useLocation } from "react-router-dom";
+import SEO from "../components/layout/SEO";
 
 // Import Extracted Sections
 import MarqueeBanner from "../components/home/MarqueeBanner";
@@ -250,6 +251,33 @@ export default function Home() {
 
   return (
     <>
+      <SEO 
+        title="Intertel Telecom | Internet Fibra Óptica e Soluções B2B"
+        description="Conecte-se com a melhor ultravelocidade de ponta a ponta. Tecnologia Wi-Fi 6, planos 100% fibra óptica e suporte premium especializado."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Intertel Telecom",
+          "url": "https://interteltelecom.net.br",
+          "logo": "https://interteltelecom.net.br/icone-app.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-35-99904-2885",
+            "contactType": "customer service",
+            "areaServed": "BR",
+            "availableLanguage": "Portuguese"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Maria Onilia Vieira, 249 - Centro",
+            "addressLocality": "São João da Mata",
+            "addressRegion": "MG",
+            "postalCode": "37568-000",
+            "addressCountry": "BR"
+          }
+        }}
+      />
+
       {/* BACKGROUND FIBER OVERLAY GLOWS */}
       <div className="absolute top-0 left-0 right-0 h-[800px] bg-gradient-to-b from-blue-900/15 via-purple-900/5 to-transparent pointer-events-none z-0" />
       <div className="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />

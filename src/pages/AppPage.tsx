@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Smartphone, FileText, Headphones } from 'lucide-react';
 import { BebancaIcon, BeeducaIcon, bebancaSva, beducaSva } from './Home';
+import SEO from '../components/layout/SEO';
 
 export default function AppPage() {
   useEffect(() => {
@@ -15,6 +16,10 @@ export default function AppPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900 dark:text-white">
+      <SEO 
+        title="App Minha Intertel e Serviços Digitais | Intertel Telecom"
+        description="Tenha mais praticidade para cuidar da sua assinatura Intertel. Acesse suas faturas e desbloqueie sua conexão pelo aplicativo."
+      />
       <section className="py-12 md:py-16 bg-white dark:bg-slate-900 relative z-10 min-h-[80vh] flex items-center" id="app-intertel">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-8">
@@ -26,9 +31,9 @@ export default function AppPage() {
                     <Smartphone className="w-5 h-5" /> App Minha Intertel
                   </div>
                 </div>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black font-display tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-display tracking-tight text-slate-900 dark:text-white leading-[1.1]">
                   Resolva tudo sem <br className="hidden md:block" /> <span className="text-blue-600 dark:text-blue-400">ligar no suporte.</span>
-                </h2>
+                </h1>
                 <p className="text-lg text-slate-600 dark:text-slate-300 font-medium max-w-lg leading-relaxed">
                   Tenha mais praticidade para cuidar dos seus serviços Intertel. Com o nosso aplicativo, você tem total autonomia para resolver as pendências do dia a dia sem filas de atendimento.
                 </p>

@@ -9,6 +9,7 @@ import Lan2Lan from './pages/Lan2Lan';
 import Fibra from './pages/Fibra';
 import Radio from './pages/Radio';
 import AppPage from './pages/AppPage';
+import NotFound from './pages/NotFound';
 import { startOnboarding } from './utils/whatsapp';
 
 export default function App() {
@@ -52,6 +53,11 @@ export default function App() {
           <Route path="/empresas" element={<Empresas />} />
           <Route path="/dedicado" element={<Dedicado />} />
           <Route path="/lan2lan" element={<Lan2Lan />} />
+        </Route>
+        
+        {/* 404 Fallback */}
+        <Route element={<MainLayout />}>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </div>

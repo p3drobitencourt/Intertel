@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { 
   Briefcase, Globe, Shield, Layers, ArrowRight, CheckCircle2
 } from 'lucide-react';
+import SEO from '../components/layout/SEO';
+import FaqSection from '../components/home/FaqSection';
 
 export default function Empresas() {
   useEffect(() => {
@@ -13,6 +15,10 @@ export default function Empresas() {
 
   return (
     <>
+      <SEO 
+        title="Soluções Corporativas de Internet e Link Dedicado | Intertel"
+        description="Conectividade de missão crítica para empresas. Trânsito IP, interligação LAN-to-LAN e Internet Corporativa com SLA de 4 horas."
+      />
       <main className="bg-white dark:bg-slate-950">
         {/* Corporate Hero Section */}
         <section className="relative bg-slate-900 pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
@@ -174,6 +180,11 @@ export default function Empresas() {
             </div>
           </div>
         </section>
+
+        <FaqSection 
+          category="empresas" 
+          onContactSupport={() => window.open('https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+consultor+sobre+solu%C3%A7%C3%B5es+corporativas&type=phone_number&app_absent=0', '_blank')}
+        />
 
         {/* Seção Institucional de Contato */}
         <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">

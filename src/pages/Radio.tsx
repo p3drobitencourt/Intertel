@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from 'lucide-react';
 import VantagensSection from '../components/home/VantagensSection';
 import TestimonialSection from '../components/home/TestimonialSection';
+import SEO from '../components/layout/SEO';
 
 export default function Radio({ radioPlansData, billingCycle, startOnboarding }: any) {
   useEffect(() => {
@@ -12,6 +13,10 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
 
   return (
               <>
+      <SEO 
+        title="Internet Via Rádio para Zonas Rurais | Intertel Telecom"
+        description="Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade e suporte técnico especializado da Intertel."
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-16 sm:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
@@ -48,12 +53,12 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
       <section className="py-12 md:py-16 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-radio">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center space-y-3 max-w-3xl mx-auto mb-10">
-                <h2 className="text-xs font-mono text-amber-500 uppercase tracking-[0.25em] font-bold">
+                <span className="block text-xs font-mono text-amber-500 uppercase tracking-[0.25em] font-bold mb-2">
                   TECNOLOGIA RURAL
-                </h2>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 dark:text-white">
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 dark:text-white">
                   Planos Rádio
-                </h1>
+                </h2>
                 <p className="text-slate-600 dark:text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
                   Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Todos os planos contam com suporte especializado da Intertel.
                 </p>

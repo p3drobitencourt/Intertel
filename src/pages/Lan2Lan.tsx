@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Layers, ShieldCheck, Lock, Activity, RefreshCw, Briefcase, ChevronRight } from 'lucide-react';
+import SEO from '../components/layout/SEO';
 
 export default function Lan2Lan() {
   useEffect(() => {
@@ -8,7 +9,10 @@ export default function Lan2Lan() {
 
   return (
     <>
-      
+      <SEO 
+        title="Interligação LAN-to-LAN para Empresas | Intertel Telecom"
+        description="Interligue sua matriz e filiais na camada 2 com segurança total, banda simétrica e alta velocidade. Rede privada corporativa."
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-16 sm:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop')] opacity-20 bg-cover bg-center mix-blend-luminosity"></div>

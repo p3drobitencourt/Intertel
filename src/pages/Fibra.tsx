@@ -4,6 +4,8 @@ import { ArrowRight, Check, Star, Wifi, ChevronDown } from 'lucide-react';
 import { BebancaIcon, BeeducaIcon } from './Home';
 import VantagensSection from '../components/home/VantagensSection';
 import TestimonialSection from '../components/home/TestimonialSection';
+import FaqSection from '../components/home/FaqSection';
+import SEO from '../components/layout/SEO';
 
 export default function Fibra({ plansData, billingCycle, startOnboarding, bebancaSva, beducaSva }: any) {
   useEffect(() => {
@@ -12,6 +14,10 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-slate-900 font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900 dark:text-white">
+      <SEO 
+        title="Internet Fibra Óptica Residencial | Intertel Telecom"
+        description="Conecte sua casa com planos 100% fibra óptica. Navegação, streaming e jogos sem travamentos. Conheça a Ultravelocidade Intertel."
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-16 sm:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
@@ -50,12 +56,12 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <h2 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-[0.25em] font-bold">
+            <span className="block text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-[0.25em] font-bold mb-2">
               TECNOLOGIA RESIDENCIAL
-            </h2>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 dark:text-white">
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 dark:text-white">
               Planos Fibra Cidade
-            </h1>
+            </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
               Selecione o plano ideal para suas necessidades na cidade. Todos contam com Wi-Fi grátis, sem taxa de instalação e aplicativos exclusivos.
             </p>
@@ -160,6 +166,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
 
       <VantagensSection />
       <TestimonialSection />
+      <FaqSection category="fibra" onContactSupport={() => startOnboarding(null)} />
 
       {/* CTA Final */}
       <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950">
