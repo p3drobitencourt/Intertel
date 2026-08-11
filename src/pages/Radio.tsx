@@ -120,13 +120,14 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                     <div className="mt-8 pt-5 border-t border-slate-100 dark:border-slate-800">
                       <button 
                         onClick={() => startOnboarding(plan)}
+                        aria-label={`Contratar plano ${plan.name}`}
                         className={`w-full py-3.5 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
                           plan.isPopular
                             ? "bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95"
                             : "bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-white text-white dark:text-slate-900 active:scale-95"
                         }`}
                       >
-                        Saber mais informações
+                        Quero este plano
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>

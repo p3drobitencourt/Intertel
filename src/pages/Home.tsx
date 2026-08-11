@@ -443,6 +443,7 @@ export default function Home() {
                                   navigate("/fibra");
                                 }
                               }}
+                              aria-label={slide.ctaText}
                               className="h-14 px-10 rounded-full bg-blue-950 hover:bg-blue-900 dark:bg-slate-900 dark:hover:bg-slate-800 text-white font-black tracking-wide uppercase text-sm shadow-[0_10px_40px_rgba(23,37,84,0.3)] hover:shadow-[0_15px_50px_rgba(23,37,84,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 shrink-0 flex items-center justify-center gap-3 border border-blue-900/50"
                             >
                               {slide.type === 'corporate' ? (
