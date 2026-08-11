@@ -555,20 +555,24 @@ export default function Home() {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
 
                     {/* Image 1: Fatura/Pix (Back/Slightly lower right) */}
-                    <img
-                      src="/app-tela1.png"
-                      alt="Pagamento de Fatura via PIX"
-                      loading="lazy"
-                      className="absolute right-0 sm:right-4 top-1/4 w-44 sm:w-56 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-[6px] border-slate-800 dark:border-slate-700 rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10"
-                    />
+                    <div className="absolute right-0 sm:right-4 top-1/4 w-44 sm:w-56 aspect-[9/19] rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-[6px] border-slate-800 dark:border-slate-700 rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10 overflow-hidden bg-slate-900 group">
+                      <img
+                        src="/app-tela1.png"
+                        alt="Pagamento de Fatura via PIX"
+                        loading="lazy"
+                        className="w-full h-auto object-top"
+                      />
+                    </div>
 
                     {/* Image 2: Inicio (Front/Slightly higher left) */}
-                    <img
-                      src="/app-tela2.png"
-                      alt="Dashboard Principal do App"
-                      loading="lazy"
-                      className="absolute left-0 sm:left-4 bottom-1/4 w-48 sm:w-64 rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-[6px] border-slate-900 dark:border-slate-800 -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20"
-                    />
+                    <div className="absolute left-0 sm:left-4 bottom-1/4 w-48 sm:w-64 aspect-[9/19] rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-[6px] border-slate-900 dark:border-slate-800 -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20 overflow-hidden bg-slate-900 group">
+                      <img
+                        src="/app-tela2.png"
+                        alt="Dashboard Principal do App"
+                        loading="lazy"
+                        className="w-full h-auto object-top"
+                      />
+                    </div>
                   </div>
 
                 </div>
