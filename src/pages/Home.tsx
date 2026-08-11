@@ -555,23 +555,39 @@ export default function Home() {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
 
                     {/* Image 1: Fatura/Pix (Back/Slightly lower right) */}
-                    <div className="absolute right-0 sm:right-4 top-1/4 w-44 sm:w-56 aspect-[9/19] rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-[6px] border-slate-800 dark:border-slate-700 rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10 overflow-hidden bg-slate-900 group">
-                      <img
-                        src="/app-tela1.png"
-                        alt="Pagamento de Fatura via PIX"
-                        loading="lazy"
-                        className="w-full h-auto object-top"
-                      />
+                    <div className="absolute right-0 sm:right-4 top-1/4 z-10 rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-500 group">
+                      <div className="relative rounded-[2.5rem] p-2 bg-slate-900 shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-slate-700 dark:border-slate-600 inline-block">
+                        <div className="relative rounded-[2rem] overflow-hidden w-44 sm:w-56 bg-white dark:bg-slate-950">
+                          {/* Fake Camera Notch */}
+                          <div className="absolute top-0 inset-x-0 h-5 flex justify-center z-20">
+                            <div className="w-1/3 h-full bg-slate-900 rounded-b-xl"></div>
+                          </div>
+                          <img
+                            src="/app-tela1.png"
+                            alt="Pagamento de Fatura via PIX"
+                            loading="lazy"
+                            className="w-full h-auto block"
+                          />
+                        </div>
+                      </div>
                     </div>
 
                     {/* Image 2: Inicio (Front/Slightly higher left) */}
-                    <div className="absolute left-0 sm:left-4 bottom-1/4 w-48 sm:w-64 aspect-[9/19] rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-[6px] border-slate-900 dark:border-slate-800 -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20 overflow-hidden bg-slate-900 group">
-                      <img
-                        src="/app-tela2.png"
-                        alt="Dashboard Principal do App"
-                        loading="lazy"
-                        className="w-full h-auto object-top"
-                      />
+                    <div className="absolute left-0 sm:left-4 bottom-1/4 z-20 -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 group">
+                      <div className="relative rounded-[2.5rem] p-2 bg-slate-900 shadow-[0_30px_60px_rgba(0,0,0,0.2)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-slate-800 dark:border-slate-700 inline-block">
+                        <div className="relative rounded-[2rem] overflow-hidden w-48 sm:w-64 bg-white dark:bg-slate-950">
+                          {/* Fake Camera Notch */}
+                          <div className="absolute top-0 inset-x-0 h-5 flex justify-center z-20">
+                            <div className="w-1/3 h-full bg-slate-900 rounded-b-xl"></div>
+                          </div>
+                          <img
+                            src="/app-tela2.png"
+                            alt="Dashboard Principal do App"
+                            loading="lazy"
+                            className="w-full h-auto block"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
 
