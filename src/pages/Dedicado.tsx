@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Network, Shield, Zap, Server, BarChart3, Clock, ChevronRight, ChevronDown, User } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Network, Shield, Zap, Server, BarChart3, Clock, ChevronRight } from 'lucide-react';
 
 export default function Dedicado() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -69,19 +70,27 @@ export default function Dedicado() {
         </div>
       </section>
 
-      {/* CTA Bottom */}
+      {/* Seção Institucional de Contato */}
       <section className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-6">Pronto para elevar o nível do seu ISP?</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 mb-10">Agende uma reunião técnica com nossa equipe de engenharia e descubra como podemos escalar a capacidade do seu provedor.</p>
-          <a 
-            href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
-            target="_blank" 
-            rel="noreferrer"
-            className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-500 shadow-lg hover:shadow-blue-500/25 transition-all duration-300 focus:outline-none"
-          >
-            Falar com consultor
-          </a>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-black text-slate-900 dark:text-white font-display mb-4">
+              Pronto para elevar o nível do seu ISP?
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-400">
+              Agende uma reunião técnica com nossa equipe de engenharia e descubra como podemos escalar a capacidade do seu provedor.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <a 
+              href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
+              target="_blank" 
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors duration-300 focus:outline-none"
+            >
+              Falar com consultor
+            </a>
+          </div>
         </div>
       </section>
     </>
