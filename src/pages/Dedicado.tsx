@@ -30,7 +30,7 @@ export default function Dedicado() {
                 href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Link+Dedicado+para+provedor&type=phone_number&app_absent=0" 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-amber-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-amber-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
               >
                 Falar com Engenheiro <ChevronRight className="w-5 h-5" />
               </a>
@@ -78,7 +78,7 @@ export default function Dedicado() {
             href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-block bg-blue-950 dark:bg-white text-white dark:text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-900 dark:hover:bg-slate-100 hover:shadow-xl transition-all duration-300"
+            className="inline-block bg-blue-950 dark:bg-white text-white dark:text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-900 dark:hover:bg-slate-100 hover:shadow-xl transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
           >
             Agendar Reunião Técnica
           </a>

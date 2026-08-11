@@ -144,7 +144,7 @@ export default function Empresas() {
                       </div>
                       
                       <div className="relative z-10 mt-auto">
-                        <a href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+saber+os+valores+do+Plano+Empresarial&type=phone_number&app_absent=0" target="_blank" rel="noreferrer" className="block w-full py-4 text-center rounded-2xl font-bold transition-all duration-300 bg-slate-100 text-slate-900 hover:bg-amber-500 hover:text-white dark:bg-slate-700 dark:text-white dark:hover:bg-amber-500 shadow-sm hover:shadow-lg">
+                        <a href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+saber+os+valores+do+Plano+Empresarial&type=phone_number&app_absent=0" target="_blank" rel="noreferrer" className="block w-full py-4 text-center rounded-2xl font-bold transition-all duration-300 bg-slate-100 text-slate-900 hover:bg-amber-500 hover:text-white dark:bg-slate-700 dark:text-white dark:hover:bg-amber-500 shadow-sm hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500">
                           Consultar Valor
                         </a>
                       </div>
@@ -164,7 +164,7 @@ export default function Empresas() {
                     href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+executivo+de+contas+sobre+planos+B2B&type=phone_number&app_absent=0" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="inline-flex items-center gap-3 bg-[#F4B000] text-slate-900 px-10 py-5 rounded-full text-lg md:text-xl font-black uppercase tracking-wider hover:bg-amber-400 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300"
+                    className="inline-flex items-center gap-3 bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 px-10 py-5 rounded-full text-lg md:text-xl font-black uppercase tracking-wider hover:from-amber-400 hover:to-orange-400 hover:scale-105 hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] shadow-[0_0_15px_rgba(244,176,0,0.4)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
                   >
                     Falar com um Executivo de Contas
                   </a>

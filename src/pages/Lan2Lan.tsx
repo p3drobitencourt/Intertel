@@ -31,7 +31,7 @@ export default function Lan2Lan() {
                 href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Interliga%C3%A7%C3%A3o+LAN-to-LAN&type=phone_number&app_absent=0" 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
               >
                 Falar com Consultor <ChevronRight className="w-5 h-5" />
               </a>
@@ -78,7 +78,7 @@ export default function Lan2Lan() {
             href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+solicitar+viabilidade+para+LAN-to-LAN&type=phone_number&app_absent=0" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
+            className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
           >
             Solicitar Viabilidade
           </a>

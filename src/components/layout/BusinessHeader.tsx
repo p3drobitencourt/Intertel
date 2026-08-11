@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { startOnboarding } from '../../utils/whatsapp';
 import { Menu, X, Phone, User } from 'lucide-react';
 
 export default function BusinessHeader() {
@@ -14,9 +15,7 @@ export default function BusinessHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const startOnboarding = () => {
-    window.open("https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0", "_blank", "noopener,noreferrer");
-  };
+  const location = useLocation();
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
