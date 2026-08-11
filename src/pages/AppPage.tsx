@@ -111,7 +111,7 @@ export default function AppPage() {
 
                 <div className="hidden lg:flex items-center gap-3 lg:ml-4 bg-white dark:bg-slate-800 p-2.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all cursor-pointer group">
                   <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
-                    <img src="/qrcode.png" alt="QR Code App Intertel" className="w-14 h-14 object-contain" />
+                    <img src="/qrcode.png" alt="QR Code App Intertel" loading="lazy" className="w-14 h-14 object-contain" />
                   </div>
                   <div className="text-xs pr-2">
                     <p className="font-bold text-slate-800 dark:text-slate-200">Baixe o App Agora</p>
@@ -184,7 +184,7 @@ export default function AppPage() {
               <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-8">
                 <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused]">
                   {[...appScreenshots, ...appScreenshots].map((src, idx) => (
-                    <div key={idx} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500">
+                    <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500">
                       <img
                         src={src}
                         alt={`Tela do App Intertel ${idx + 1}`}

@@ -42,7 +42,7 @@ export default function SEO({ title, description, schema }: SEOProps) {
     }
 
     // Handle Schema.org JSON-LD
-    let scriptElement = document.getElementById('seo-schema');
+    let scriptElement = document.getElementById('seo-schema') as HTMLScriptElement | null;
     if (schema) {
       if (!scriptElement) {
         scriptElement = document.createElement('script');

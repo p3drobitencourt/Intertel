@@ -22,7 +22,7 @@ export default function App() {
       const element = document.getElementById(id);
       if (element) {
         // Use a small timeout to ensure the element is rendered and the page is ready
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
           const headerOffset = 100;
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.scrollY - headerOffset;
@@ -31,6 +31,7 @@ export default function App() {
             behavior: "smooth"
           });
         }, 100);
+        return () => clearTimeout(timeout);
       }
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });

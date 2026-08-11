@@ -215,27 +215,6 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Scroll to hash on page load or navigation
-  useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace('#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        // Use a small timeout to ensure the element is rendered and the page is ready
-        setTimeout(() => {
-          const headerOffset = 100;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.scrollY - headerOffset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }, 100);
-      }
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, [location]);
-
   // Apply Theme Effect
   useEffect(() => {
     if (isDarkMode) {
