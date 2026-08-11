@@ -14,7 +14,7 @@ export default function Footer() {
             {/* Col 1: About & Social */}
             <div className="space-y-6">
               <Link to="/" className="inline-block" aria-label="Home">
-                <img src="/logo-principal.png" alt="Intertel Telecom" className="h-[120px] md:h-[140px] w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-2 dark:rounded-xl scale-125 md:scale-[1.4] origin-left" />
+                <img src="/logo-principal.png" alt="Intertel Telecom" className="h-20 md:h-24 w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-2 dark:rounded-xl" />
               </Link>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed pr-4">
                 Operadora de Telecomunicações mineira focada no fornecimento de internet em ultravelocidade 100% fibra óptica com tecnologia Wi-Fi e alta redundância.
@@ -148,7 +148,7 @@ export default function Footer() {
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:shadow-[0_8px_30px_rgb(37,211,102,0.6)] hover:-translate-y-1 transition-all duration-300 group"
         aria-label="Fale conosco no WhatsApp"
       >
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span>
+        <span className="absolute inset-0 rounded-full bg-[#25D366] motion-safe:animate-ping opacity-25"></span>
         <Phone className="w-7 h-7 fill-current" />
       </a>
     </>

@@ -22,7 +22,7 @@ export default function Header() {
         
         {/* Logo */}
         <Link to="/" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 overflow-hidden h-24 md:h-[110px]" id="nav-logo">
-          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-[120px] md:h-[160px] w-auto max-w-none object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl" />
+          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-16 md:h-20 w-auto max-w-none object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl" />
         </Link>
 
         {/* Desktop Navigation Links */}

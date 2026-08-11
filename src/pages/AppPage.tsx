@@ -177,13 +177,13 @@ export default function AppPage() {
               {/* Decorative Elements */}
               <div className="absolute inset-0 bg-blue-500/10 dark:bg-blue-500/20 blur-[100px] rounded-full" />
               <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-8">
-                <div className="flex gap-6 sm:gap-8 w-max animate-marquee hover:[animation-play-state:paused]">
+                <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused]">
                   {[...appScreenshots, ...appScreenshots].map((src, idx) => (
                     <div key={idx} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500">
                       <img
                         src={src}
                         alt={`Tela do App Intertel ${idx + 1}`}
-                        className="w-full h-auto aspect-[9/19.5] rounded-[2rem] shadow-2xl border-4 border-slate-900/10 dark:border-slate-700/50 object-cover object-top"
+                        className="w-full h-auto aspect-[9/19.5] rounded-[2rem] shadow-2xl border-4 border-slate-900/10 dark:border-slate-700/50 object-contain object-top"
                         loading="lazy"
                       />
                     </div>

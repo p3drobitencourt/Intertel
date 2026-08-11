@@ -64,7 +64,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
           <div className="relative mt-8">
             {/* Scroll indicator for mobile */}
             <div className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 xl:hidden flex flex-col items-center justify-center opacity-50">
-              <svg className="w-6 h-6 animate-bounce-x text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+              <svg className="w-6 h-6 motion-safe:animate-bounce-x text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
             </div>
             
             <div className="flex xl:grid xl:grid-cols-4 gap-4 xl:gap-6 justify-start xl:justify-center overflow-x-auto xl:overflow-visible snap-x snap-mandatory pb-8 pt-10 px-4 -mx-4 hide-scrollbar">

@@ -64,7 +64,7 @@ export default function AppPromoSection() {
                 src="/app-tela1.png"
                 alt="Pagamento de Fatura via PIX"
                 loading="lazy"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain object-top"
               />
             </div>
 
@@ -74,7 +74,7 @@ export default function AppPromoSection() {
                 src="/app-tela2.png"
                 alt="Dashboard Principal do App"
                 loading="lazy"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain object-top"
               />
             </div>
           </div>
