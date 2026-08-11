@@ -498,7 +498,7 @@ export default function Home() {
 
 
             {/* 5. APP PROMO SECTION (Portal do Assinante) */}
-            <section className="bg-slate-50 dark:bg-slate-900/50 py-24 sm:py-32 relative z-10 overflow-hidden" id="app-promo">
+            <section className="bg-slate-50 dark:bg-slate-900/50 py-24 sm:py-32 relative z-10" id="app-promo">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -550,7 +550,7 @@ export default function Home() {
                   </div>
 
                   {/* Right Column: App Assets overlapping layout */}
-                  <div className="relative w-full h-[500px] sm:h-[600px] flex items-center justify-center">
+                  <div className="relative w-full h-[500px] sm:h-[600px] flex items-center justify-center -translate-y-16 md:-translate-y-24 lg:-translate-y-32">
                     {/* Decorative background blob */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
 
