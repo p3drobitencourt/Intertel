@@ -816,7 +816,7 @@ export default function Home() {
                         </div>
                         <div>
                           <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">Callcenter</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sexta: 17h às 20h</p>
+                          <p className="text-slate-600 dark:text-slate-300 text-xs mt-1">Segunda a Sexta: 08h às 20h</p>
                           <p className="text-slate-600 dark:text-slate-300 text-xs">Sáb, Dom e Feriados: 08h às 17h</p>
                         </div>
                       </div>

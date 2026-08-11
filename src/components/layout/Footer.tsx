@@ -67,7 +67,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="font-bold text-slate-900 dark:text-white text-xs">Callcenter</p>
-                      <p className="text-xs text-slate-600 dark:text-slate-400">Seg a Sex: 17h às 20h</p>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">Seg a Sex: 08h às 20h</p>
                       <p className="text-xs text-slate-600 dark:text-slate-400">Sáb, Dom e Feriados: 08h às 17h</p>
                     </div>
                   </div>
