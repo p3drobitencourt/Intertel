@@ -1,5 +1,5 @@
 export const startOnboarding = (plan: any = null, cepCode?: string) => {
-  let msg = "Olá! Gostaria de falar com um atendente.";
+  let msg = "Olá! Gostaria de falar com um atendente sobre os planos de internet.";
   
   if (plan && plan.name) {
     msg = `Olá! Tenho interesse no plano de ${plan.name} da Intertel.`;

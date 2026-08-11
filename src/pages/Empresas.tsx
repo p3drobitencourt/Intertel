@@ -168,7 +168,7 @@ export default function Empresas() {
                   </ul>
                   
                   <a 
-                    href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+consultor+sobre+o+plano+empresarial&type=phone_number&app_absent=0" 
+                    href={`https://api.whatsapp.com/send/?phone=5535999042885&text=${encodeURIComponent(`Olá, gostaria de falar com um consultor sobre o plano ${plan.name} (Empresarial)`)}&type=phone_number&app_absent=0`} 
                     target="_blank" 
                     rel="noreferrer"
                     className="block w-full py-3.5 text-center rounded-xl font-bold transition-all duration-300 bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
