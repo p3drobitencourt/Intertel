@@ -265,10 +265,3 @@ export default function Home() {
     </>
   );
 }
-
-
-
-    </>
-  );
-}
-
