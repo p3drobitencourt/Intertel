@@ -24,7 +24,7 @@ export default function Lan2Lan() {
               <span className="text-blue-400">Ponto a Ponto (L2L)</span>
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl leading-relaxed">
-              Interligue matriz e filiais na camada 2 do modelo OSI. A solução definitiva para centralização de servidores, backup remoto e comunicação segura sem passar pela internet pública.
+              Interligue sua matriz e filiais na camada 2 (L2) com segurança total. A solução ideal para redes corporativas que precisam centralizar servidores e sistemas sem tráfego na internet pública.
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
@@ -33,7 +33,7 @@ export default function Lan2Lan() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
               >
-                Falar com Consultor <ChevronRight className="w-5 h-5" />
+                Falar com consultor <ChevronRight className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -75,12 +75,12 @@ export default function Lan2Lan() {
           <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-6">Simplifique a estrutura da sua empresa</h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-10">Fale com um dos nossos consultores e descubra a viabilidade para interligar os pontos da sua empresa com fibra óptica.</p>
           <a 
-            href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+solicitar+viabilidade+para+LAN-to-LAN&type=phone_number&app_absent=0" 
+            href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+viabilidade+para+LAN-to-LAN&type=phone_number&app_absent=0" 
             target="_blank" 
             rel="noreferrer"
             className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
           >
-            Solicitar Viabilidade
+            Falar com consultor
           </a>
         </div>
       </section>

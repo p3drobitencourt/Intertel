@@ -53,9 +53,20 @@ export default function Empresas() {
                   Intertel Empresas: A infraestrutura que garante a <span className="text-blue-600 dark:text-blue-400">continuidade do seu negócio.</span>
                 </h2>
 
-                <p className="text-slate-600 dark:text-slate-300 text-lg md:text-xl leading-relaxed font-medium">
+                <p className="text-slate-600 dark:text-slate-300 text-lg md:text-xl leading-relaxed font-medium mb-8">
                   Conectividade de missão crítica, IP Dedicado e estabilidade inegociável para empresas que não podem parar.
                 </p>
+
+                <div className="flex justify-center pt-2">
+                  <a 
+                    href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+especialista+sobre+solu%C3%A7%C3%B5es+corporativas&type=phone_number&app_absent=0" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-blue-600 dark:bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 dark:hover:bg-blue-500 hover:scale-105 hover:shadow-xl hover:shadow-blue-600/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                  >
+                    Falar com especialista <ArrowRight className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
 
               {/* Grid 2x2 of Corporate Benefits */}
@@ -145,7 +156,7 @@ export default function Empresas() {
                       
                       <div className="relative z-10 mt-auto">
                         <a href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+saber+os+valores+do+Plano+Empresarial&type=phone_number&app_absent=0" target="_blank" rel="noreferrer" className="block w-full py-4 text-center rounded-2xl font-bold transition-all duration-300 bg-slate-100 text-slate-900 hover:bg-amber-500 hover:text-white dark:bg-slate-700 dark:text-white dark:hover:bg-amber-500 shadow-sm hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500">
-                          Consultar Valor
+                          Falar com consultor
                         </a>
                       </div>
                     </div>
@@ -161,12 +172,12 @@ export default function Empresas() {
                     Pronto para evoluir a conectividade da sua empresa?
                   </h3>
                   <a 
-                    href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+executivo+de+contas+sobre+planos+B2B&type=phone_number&app_absent=0" 
+                    href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+especialista+sobre+solu%C3%A7%C3%B5es+corporativas&type=phone_number&app_absent=0" 
                     target="_blank" 
                     rel="noreferrer"
                     className="inline-flex items-center gap-3 bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 px-10 py-5 rounded-full text-lg md:text-xl font-black uppercase tracking-wider hover:from-amber-400 hover:to-orange-400 hover:scale-105 hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] shadow-[0_0_15px_rgba(244,176,0,0.4)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
                   >
-                    Falar com um Executivo de Contas
+                    Falar com especialista
                   </a>
                 </div>
               </div>

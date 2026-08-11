@@ -23,7 +23,7 @@ export default function Dedicado() {
               Link Dedicado de <span className="text-amber-500">Alta Performance</span>
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl leading-relaxed">
-              Trânsito IP premium para ISPs e grandes corporações. Rotas otimizadas, redundância de backbone e estabilidade absoluta para o seu AS.
+              Trânsito IP premium para provedores (ISPs) e conectividade corporativa garantida. Estabilidade absoluta, rotas otimizadas e proteção ativa para o seu ASN.
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
@@ -32,7 +32,7 @@ export default function Dedicado() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-amber-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
               >
-                Falar com Engenheiro <ChevronRight className="w-5 h-5" />
+                Falar com especialista <ChevronRight className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -75,12 +75,12 @@ export default function Dedicado() {
           <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-6">Pronto para elevar o nível do seu ISP?</h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-10">Agende uma reunião técnica com nossa equipe de engenharia e descubra como podemos escalar a capacidade do seu provedor.</p>
           <a 
-            href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
+            href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+especialista+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
             target="_blank" 
             rel="noreferrer"
             className="inline-block bg-blue-950 dark:bg-white text-white dark:text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-900 dark:hover:bg-slate-100 hover:shadow-xl transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
           >
-            Agendar Reunião Técnica
+            Falar com especialista
           </a>
         </div>
       </section>
