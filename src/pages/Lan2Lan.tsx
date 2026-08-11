@@ -41,6 +41,20 @@ export default function Lan2Lan() {
         </div>
       </section>
 
+      {/* Context / Application Section */}
+      <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-display mb-6">
+              A solução ideal para integrar seu negócio
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+              Empresas com múltiplas filiais enfrentam o desafio de manter sistemas sincronizados e dados seguros. Com nossa Interligação LAN-to-LAN (Camada 2), você unifica todas as suas unidades em uma única rede privada de alta velocidade, reduzindo custos operacionais e simplificando a gestão de TI.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-12 md:py-16 bg-white dark:bg-slate-900 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,13 +85,13 @@ export default function Lan2Lan() {
       </section>
 
       {/* Seção Institucional de Contato */}
-      <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white font-display mb-4">
+            <h2 className="text-3xl font-black text-white font-display mb-4">
               Simplifique a estrutura da sua empresa
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400">
+            <p className="text-lg text-blue-100">
               Fale com um dos nossos consultores e descubra a viabilidade para interligar os pontos da sua empresa com fibra óptica.
             </p>
           </div>
@@ -86,9 +100,9 @@ export default function Lan2Lan() {
               href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+viabilidade+para+LAN-to-LAN&type=phone_number&app_absent=0" 
               target="_blank" 
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:text-slate-900 dark:hover:bg-amber-400 text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
             >
-              Falar com consultor
+              Solicitar Projeto <ChevronRight className="w-5 h-5" />
             </a>
           </div>
         </div>

@@ -261,6 +261,27 @@ export default function Home() {
       <VantagensSection />
       <FaqSection onContactSupport={() => startOnboarding(null)} />
       <SobreSection />
+      
+      {/* CTA Final da Home */}
+      <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-black text-white font-display mb-6">
+            Acelere sua internet hoje mesmo
+          </h2>
+          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            Escolha a estabilidade que a sua casa ou empresa merece. Nossos especialistas estão prontos para ajudar você a escolher o plano ideal.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button 
+              onClick={() => startOnboarding(null)}
+              className="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+            >
+              Falar com especialista
+            </button>
+          </div>
+        </div>
+      </section>
+
       <ContatoSection />
     </>
   );

@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from 'lucide-react';
+import VantagensSection from '../components/home/VantagensSection';
+import TestimonialSection from '../components/home/TestimonialSection';
 
 export default function Radio({ radioPlansData, billingCycle, startOnboarding }: any) {
   useEffect(() => {
@@ -136,8 +138,27 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
               </div>
             </div>
           </section>
+
+          <VantagensSection />
+          <TestimonialSection />
+
+          {/* CTA Final */}
+          <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-3xl font-black text-white font-display mb-6">
+                Leve internet para onde você precisa
+              </h2>
+              <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+                Seja no sítio, na fazenda ou em áreas afastadas, nós temos a solução. Fale com um consultor e verifique a viabilidade.
+              </p>
+              <button 
+                onClick={() => startOnboarding(null)}
+                className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+              >
+                Consultar Viabilidade <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </section>
           </>
   );
 }
-
-

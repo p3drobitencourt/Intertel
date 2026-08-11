@@ -40,6 +40,20 @@ export default function Dedicado() {
         </div>
       </section>
 
+      {/* Context / Application Section */}
+      <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-display mb-6">
+              Por que seu provedor precisa de um Link Dedicado?
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+              Provedores de internet não podem depender de conexões comuns. Você precisa de um trânsito IP robusto que suporte o alto tráfego dos seus clientes simultâneos sem gargalos, garantindo que a sua marca entregue a melhor experiência.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-12 md:py-16 bg-white dark:bg-slate-900 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,13 +85,13 @@ export default function Dedicado() {
       </section>
 
       {/* Seção Institucional de Contato */}
-      <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white font-display mb-4">
+            <h2 className="text-3xl font-black text-white font-display mb-4">
               Pronto para elevar o nível do seu ISP?
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400">
+            <p className="text-lg text-blue-100">
               Agende uma reunião técnica com nossa equipe de engenharia e descubra como podemos escalar a capacidade do seu provedor.
             </p>
           </div>
@@ -86,9 +100,9 @@ export default function Dedicado() {
               href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
               target="_blank" 
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:text-slate-900 dark:hover:bg-amber-400 text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
             >
-              Falar com consultor
+              Agendar Reunião Técnica <ChevronRight className="w-5 h-5" />
             </a>
           </div>
         </div>
