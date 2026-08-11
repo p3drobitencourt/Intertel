@@ -11,7 +11,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
   return (
               <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-16 sm:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
         
@@ -43,7 +43,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
         </div>
       </section>
 
-      <section className="py-20 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-radio">
+      <section className="py-12 md:py-16 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-radio">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center space-y-3 max-w-3xl mx-auto mb-10">
                 <h2 className="text-xs font-mono text-amber-500 uppercase tracking-[0.25em] font-bold">
@@ -61,10 +61,10 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                 {radioPlansData.map((plan) => (
                   <div
                     key={plan.id}
-                    className={`relative flex flex-col justify-between bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
+                    className={`relative flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
                       plan.isPopular 
                         ? "border-[#F4B000] border-2 shadow-[0_10px_40px_rgb(244,176,0,0.2)] dark:shadow-[0_10px_40px_rgb(244,176,0,0.15)] xl:scale-105 xl:z-10" 
-                        : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm"
+                        : "border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 shadow-sm hover:shadow-xl"
                     }`}
                   >
                     {plan.isPopular && (
@@ -124,7 +124,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                         className={`w-full py-3.5 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
                           plan.isPopular
                             ? "bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
-                            : "bg-blue-950 hover:bg-blue-900 dark:bg-slate-900 dark:hover:bg-slate-800 text-white active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+                            : "bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-slate-900 active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
                         }`}
                       >
                         Quero este plano

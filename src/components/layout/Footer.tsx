@@ -115,7 +115,7 @@ export default function Footer() {
               href="contrato.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white hover:border-blue-900 hover:text-blue-900 dark:hover:border-amber-400 dark:hover:text-amber-400 font-bold transition-all duration-300 shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 focus-visible:ring-2 focus-visible:ring-blue-500 font-bold transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <FileText className="w-5 h-5" />
               Visualizar Contrato Padrão
@@ -145,7 +145,7 @@ export default function Footer() {
         href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:shadow-[0_8px_30px_rgb(37,211,102,0.6)] hover:-translate-y-1 transition-all duration-300 group"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:shadow-[0_8px_30px_rgb(37,211,102,0.6)] hover:-translate-y-1 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#25D366] group"
         aria-label="Fale conosco no WhatsApp"
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] motion-safe:animate-ping opacity-25"></span>

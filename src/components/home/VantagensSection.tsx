@@ -16,7 +16,7 @@ export default function VantagensSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white dark:bg-slate-900/80 p-5 sm:p-6 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-1.5 transition-all text-center space-y-4">
+          <div className="bg-white dark:bg-slate-900/80 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all text-center space-y-4">
             <div className="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500 mx-auto">
               <Check className="w-7 h-7" />
             </div>
@@ -26,7 +26,7 @@ export default function VantagensSection() {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-slate-900/80 p-5 sm:p-6 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-1.5 transition-all text-center space-y-4">
+          <div className="bg-white dark:bg-slate-900/80 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all text-center space-y-4">
             <div className="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500 mx-auto">
               <Wifi className="w-7 h-7" />
             </div>
@@ -36,7 +36,7 @@ export default function VantagensSection() {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-slate-900/80 p-5 sm:p-6 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-1.5 transition-all text-center space-y-4">
+          <div className="bg-white dark:bg-slate-900/80 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all text-center space-y-4">
             <div className="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500 mx-auto">
               <Zap className="w-7 h-7" />
             </div>
@@ -48,7 +48,7 @@ export default function VantagensSection() {
         </div>
 
         {/* Testimonial Section */}
-        <div className="mt-6 p-5 sm:p-6 rounded-3xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 shadow-sm">
+        <div className="mt-6 p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
           <div className="relative shrink-0">
             <img
               src="https://picsum.photos/seed/interteluser/160/160"

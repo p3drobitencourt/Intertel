@@ -19,7 +19,7 @@ export default function SobreSection() {
           </div>
 
           <div className="flex-1 w-full max-w-md lg:max-w-none">
-            <div className="relative p-8 bg-zinc-50 dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 flex items-center justify-center aspect-[16/9] lg:aspect-auto lg:h-full">
+            <div className="relative p-8 bg-zinc-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex items-center justify-center aspect-[16/9] lg:aspect-auto lg:h-full">
               <img 
                 src="/logo-principal.png" 
                 alt="Intertel Telecom Logo" 

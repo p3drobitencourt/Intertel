@@ -10,7 +10,7 @@ export default function Dedicado() {
     <>
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-16 sm:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop')] opacity-20 bg-cover bg-center mix-blend-luminosity"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
         
@@ -31,7 +31,7 @@ export default function Dedicado() {
                 href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Link+Dedicado+para+provedor&type=phone_number&app_absent=0" 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-500 shadow-lg hover:shadow-blue-500/25 transition-all duration-300 focus:outline-none"
+                className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
               >
                 Falar com consultor <ChevronRight className="w-5 h-5" />
               </a>
@@ -41,7 +41,7 @@ export default function Dedicado() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white dark:bg-slate-900 relative">
+      <section className="py-12 md:py-16 bg-white dark:bg-slate-900 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-black text-slate-900 dark:text-white font-display mb-4">Por que escolher o Trânsito IP Intertel?</h2>
@@ -71,7 +71,7 @@ export default function Dedicado() {
       </section>
 
       {/* Seção Institucional de Contato */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-black text-slate-900 dark:text-white font-display mb-4">
@@ -86,7 +86,7 @@ export default function Dedicado() {
               href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
               target="_blank" 
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors duration-300 focus:outline-none"
+              className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:text-slate-900 dark:hover:bg-amber-400 text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
             >
               Falar com consultor
             </a>

@@ -94,9 +94,9 @@ export default function FaqSection({ onContactSupport }: FaqSectionProps) {
           </div>
           <button
             onClick={onContactSupport}
-            className="w-full sm:w-auto h-11 px-5 bg-zinc-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-semibold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+            className="w-full sm:w-auto h-11 px-5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366] shadow-sm active:scale-95"
           >
-            <MessageSquare className="w-5 h-5 text-blue-500 dark:text-blue-400" />
+            <MessageSquare className="w-5 h-5 text-white" />
             Chamar no WhatsApp
           </button>
         </div>

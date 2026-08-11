@@ -97,13 +97,13 @@ export default function Header() {
           </a>
           <a
             href="/contrato"
-            className="flex items-center gap-1.5 px-3 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-all duration-300 hover:-translate-y-1 border border-slate-200 dark:border-slate-700 whitespace-nowrap"
+            className="flex items-center gap-1.5 px-3 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-full transition-all duration-300 hover:-translate-y-1 border border-slate-200 dark:border-slate-700 focus-visible:ring-2 focus-visible:ring-blue-500 whitespace-nowrap"
           >
             Contrato Padrão
           </a>
           <button
             onClick={() => startOnboarding()}
-            className="flex items-center gap-1.5 px-4 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95 whitespace-nowrap"
+            className="flex items-center gap-1.5 px-4 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95 focus-visible:ring-2 focus-visible:ring-amber-500 whitespace-nowrap"
             id="btn-nav-hire"
           >
             <Phone className="w-3.5 h-3.5" />
@@ -142,10 +142,10 @@ export default function Header() {
             <Link to="/#faq" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Perguntas Frequentes (FAQ)</Link>
             <Link to="/#contato" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-slate-800 rounded-xl transition-all">Contato</Link>
             <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3">
-              <a href="https://intertel.sgplocal.com.br/accounts/central/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 rounded-xl">
+              <a href="https://intertel.sgplocal.com.br/accounts/central/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 focus-visible:ring-2 focus-visible:ring-blue-500 rounded-xl transition-all">
                 <User className="w-5 h-5" /> Central do Assinante
               </a>
-              <button onClick={() => { setIsMobileMenuOpen(false); startOnboarding(); }} className="flex items-center justify-center gap-2 px-4 py-3.5 text-sm font-bold text-white dark:text-slate-900 bg-blue-950 dark:bg-amber-500 rounded-xl shadow-md">
+              <button onClick={() => { setIsMobileMenuOpen(false); startOnboarding(); }} className="flex items-center justify-center gap-2 px-4 py-3.5 text-sm font-bold text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-xl shadow-md active:scale-95 transition-all focus-visible:ring-2 focus-visible:ring-amber-500">
                 <Phone className="w-5 h-5" /> Assinar Já
               </button>
             </div>
