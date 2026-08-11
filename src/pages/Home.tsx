@@ -555,7 +555,7 @@ export default function Home() {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
 
                     {/* Image 1: Fatura/Pix (Back/Slightly lower right) */}
-                    <div className="absolute right-0 sm:right-4 top-1/4 w-44 sm:w-56 aspect-[9/19.5] bg-slate-800 dark:bg-slate-700 rounded-[2.5rem] p-2 shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10 group border border-slate-700 dark:border-slate-600">
+                    <div className="absolute right-0 sm:right-4 top-1/4 w-44 sm:w-56 aspect-[9/19.5] bg-slate-800 dark:bg-slate-700 rounded-[2.5rem] p-2 shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10 group border border-slate-700 dark:border-slate-600">
                       <div className="relative w-full h-full bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden">
                         {/* Camera Notch */}
                         <div className="absolute top-0 inset-x-0 h-6 flex justify-center z-20">
