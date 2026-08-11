@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, Star } from 'lucide-react';
+import { ArrowRight, Check, Star, Wifi, ChevronDown } from 'lucide-react';
 import { BebancaIcon, BeeducaIcon } from '../App';
 
 export default function Fibra({ plansData, billingCycle, startOnboarding, bebancaSva, beducaSva }: any) {
@@ -10,8 +10,41 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-slate-900 font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900 dark:text-white">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-24 sm:py-32">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider mb-6">
+              <Wifi className="w-4 h-4" />
+              100% Fibra Óptica
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight mb-6 leading-tight">
+              Planos Residenciais com <span className="text-amber-500">Ultravelocidade</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl leading-relaxed">
+              Conecte toda a família com a verdadeira estabilidade. Tecnologia de ponta, roteadores modernos e streaming em 4K sem travamentos para a sua casa.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a 
+                href="#planos-fibra" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('planos-fibra')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-amber-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-300"
+              >
+                Ver Planos Disponíveis <ChevronDown className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. RESIDENTIAL CONVERGENT PLANS SECTION */}
-      <section className="py-6 md:py-5 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-fibra">
+      <section className="py-20 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-fibra">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 max-w-3xl mx-auto">
