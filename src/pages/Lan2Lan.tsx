@@ -9,9 +9,9 @@ export default function Lan2Lan() {
     <>
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-24 sm:py-32">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
+      <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-24 sm:py-32">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop')] opacity-20 bg-cover bg-center mix-blend-luminosity"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
@@ -31,7 +31,7 @@ export default function Lan2Lan() {
                 href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Interliga%C3%A7%C3%A3o+LAN-to-LAN&type=phone_number&app_absent=0" 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-500 shadow-lg hover:shadow-blue-500/25 transition-all duration-300 focus:outline-none"
               >
                 Falar com consultor <ChevronRight className="w-5 h-5" />
               </a>
@@ -57,8 +57,8 @@ export default function Lan2Lan() {
               { icon: Layers, title: "Centralização", desc: "Reduza custos centralizando servidores, PABX IP, firewalls e storage em um único Data Center." },
               { icon: Briefcase, title: "SLA Corporativo", desc: "Garantia de 99,9% de disponibilidade com equipe técnica de plantão 24/7 para suporte especializado." }
             ].map((item, idx) => (
-              <div key={idx} className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-2 hover:border-blue-500/30 transition-all duration-300 group">
-                <div className="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div key={idx} className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-6 transition-colors duration-300">
                   <item.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{item.title}</h3>
@@ -78,7 +78,7 @@ export default function Lan2Lan() {
             href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+viabilidade+para+LAN-to-LAN&type=phone_number&app_absent=0" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+            className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-500 shadow-lg hover:shadow-blue-500/25 transition-all duration-300 focus:outline-none"
           >
             Falar com consultor
           </a>

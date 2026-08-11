@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Star, Wifi, ChevronDown } from 'lucide-react';
-import { BebancaIcon, BeeducaIcon } from '../App';
+import { BebancaIcon, BeeducaIcon } from './Home';
 
 export default function Fibra({ plansData, billingCycle, startOnboarding, bebancaSva, beducaSva }: any) {
   useEffect(() => {

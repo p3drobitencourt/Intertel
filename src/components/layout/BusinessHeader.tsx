@@ -19,11 +19,11 @@ export default function BusinessHeader() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-md py-2' : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm'}`}>
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-[110px] flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/empresas" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 overflow-hidden h-24 md:h-[110px]" id="nav-logo-business">
-          <img src="/logo-principal.png" alt="Intertel Telecom B2B" className="h-[120px] md:h-[160px] w-auto max-w-none object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl" />
+        <Link to="/empresas" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 overflow-hidden h-20 md:h-24" id="nav-logo-business">
+          <img src="/logo-principal.png" alt="Intertel Telecom B2B" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl" />
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -59,11 +59,11 @@ export default function BusinessHeader() {
           </a>
           <button
             onClick={() => startOnboarding()}
-            className="flex items-center gap-2 px-6 h-11 text-xs font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-slate-100 dark:hover:bg-white rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95"
+            className="flex items-center gap-2 px-6 h-11 text-xs font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-slate-100 dark:hover:bg-white rounded-full shadow-sm hover:shadow-md transition-all duration-300"
             id="btn-nav-hire"
           >
             <Phone className="w-5 h-5" />
-            Fale com Especialista
+            Falar com consultor
           </button>
         </div>
 
@@ -98,8 +98,8 @@ export default function BusinessHeader() {
               <a href="https://intertel.sgplocal.com.br/accounts/central/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 rounded-xl">
                 <User className="w-5 h-5" /> Área do Cliente
               </a>
-              <button onClick={() => { setIsMobileMenuOpen(false); startOnboarding(); }} className="flex items-center justify-center gap-2 px-4 py-3.5 text-sm font-bold text-white dark:text-slate-900 bg-blue-950 dark:bg-slate-100 rounded-xl shadow-md">
-                <Phone className="w-5 h-5" /> Fale com Especialista
+              <button onClick={() => { setIsMobileMenuOpen(false); startOnboarding(); }} className="flex items-center justify-center gap-2 px-4 py-3.5 text-sm font-bold text-white dark:text-slate-900 bg-blue-950 dark:bg-slate-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <Phone className="w-5 h-5" /> Falar com consultor
               </button>
             </div>
           </div>
