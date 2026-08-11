@@ -190,7 +190,7 @@ export const plansData: Plan[] = [
   },
   {
     id: "plan-900m",
-    name: "Plano Gammer",
+    name: "Plano Gamer",
     speed: "900 Mega",
     priceMonthly: 119.90,
     priceYearlyMonthly: 119.90,
