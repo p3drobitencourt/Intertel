@@ -23,7 +23,7 @@ export default function BusinessHeader() {
         
         {/* Logo */}
         <Link to="/empresas" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 h-14 md:h-16 w-36 md:w-48 relative overflow-hidden dark:bg-slate-900/50 dark:rounded-xl" id="nav-logo-business">
-          <img src="/logo-principal.png" alt="Intertel Telecom B2B" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220%] max-w-none h-auto object-contain mix-blend-multiply dark:mix-blend-normal" />
+          <img src="/logo-principal.png" alt="Intertel Telecom B2B" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] max-w-none h-auto object-contain mix-blend-multiply dark:mix-blend-normal" />
         </Link>
 
         {/* Desktop Navigation Links */}
