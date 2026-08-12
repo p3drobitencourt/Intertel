@@ -73,14 +73,14 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
               <svg className="w-6 h-6 motion-safe:animate-bounce-x text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
             </div>
             
-            <div className="flex xl:grid xl:grid-cols-4 gap-4 xl:gap-6 justify-start xl:justify-center overflow-x-auto xl:overflow-visible snap-x snap-mandatory pb-8 pt-10 px-4 -mx-4 hide-scrollbar">
+            <div className="flex xl:grid xl:grid-cols-4 gap-4 xl:gap-6 justify-start xl:justify-center items-stretch overflow-x-auto xl:overflow-visible snap-x snap-mandatory pb-8 pt-10 px-4 -mx-4 hide-scrollbar">
                 {plansData.map((plan: any, index: number) => {
                   const isPopular = plan.isPopular;
 
                   return (
                     <div
                       key={plan.id}
-                      className={`relative flex-none snap-center min-w-[85vw] sm:min-w-[320px] w-full max-w-sm xl:max-w-none xl:w-auto flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
+                      className={`relative flex-none snap-center min-w-[85vw] sm:min-w-[320px] w-full max-w-sm xl:max-w-none xl:w-auto flex flex-col h-full justify-between bg-white dark:bg-slate-900 rounded-2xl p-5 md:p-6 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
                         isPopular 
                           ? "border-[#F4B000] border-2 shadow-[0_10px_40px_rgb(244,176,0,0.2)] dark:shadow-[0_10px_40px_rgb(244,176,0,0.15)] xl:scale-105 xl:z-10" 
                           : "border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 shadow-sm hover:shadow-xl"
@@ -128,9 +128,9 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                           </div>
                         )}
 
-                        <ul className="space-y-3 pt-5">
+                        <ul className="space-y-2 pt-4">
                           {plan.features.map((feature: string, idx: number) => (
-                            <li key={idx} className="flex items-center gap-3 text-[14px] text-slate-700 dark:text-slate-200 font-medium">
+                            <li key={idx} className="flex items-center gap-2.5 text-[13px] text-slate-700 dark:text-slate-200 font-medium">
                               <div className={`rounded-full p-1 shrink-0 ${isPopular ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' : 'bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400'}`}>
                                 <Check className="w-3 h-3 stroke-[3]" />
                               </div>
@@ -140,7 +140,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                         </ul>
                       </div>
                       
-                      <div className="mt-8 pt-5 border-t border-slate-100 dark:border-slate-800">
+                      <div className="mt-auto pt-5 border-t border-slate-100 dark:border-slate-800">
                         <button 
                           onClick={() => startOnboarding(plan)}
                           aria-label={`Contratar plano ${plan.name}`}

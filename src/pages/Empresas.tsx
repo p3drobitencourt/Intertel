@@ -136,13 +136,13 @@ export default function Empresas() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
               {[
                 { speed: "200", name: "Empresarial 200M", desc: "Para pequenos escritórios que precisam de estabilidade e rapidez." },
                 { speed: "400", name: "Empresarial 400M", desc: "Para médias empresas com uso intenso de sistemas em nuvem." },
                 { speed: "800", name: "Empresarial 800M", desc: "A máxima performance corporativa para quem não tem margem para gargalos." }
               ].map((plan, idx) => (
-                <div key={idx} className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 flex flex-col h-full">
+                <div key={idx} className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 flex flex-col h-full">
                   <div className="mb-6">
                     <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{plan.name}</h4>
                     <p className="text-sm text-slate-600 dark:text-slate-400 min-h-[40px]">{plan.desc}</p>
@@ -158,9 +158,9 @@ export default function Empresas() {
                     </p>
                   </div>
                   
-                  <ul className="space-y-3 mb-8 flex-grow">
+                  <ul className="space-y-2 mb-8">
                     {["SLA de 4 horas", "Garantia de banda", "Simetria de banda", "Suporte VIP 24/7"].map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+                      <li key={i} className="flex items-start gap-2.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">
                         <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                         {feature}
                       </li>
@@ -171,7 +171,7 @@ export default function Empresas() {
                     href={`https://api.whatsapp.com/send/?phone=5535999042885&text=${encodeURIComponent(`Olá, gostaria de falar com um consultor sobre o plano ${plan.name} (Empresarial)`)}&type=phone_number&app_absent=0`} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="block w-full py-3.5 text-center rounded-xl font-bold transition-all duration-300 bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    className="block w-full py-3.5 text-center rounded-xl font-bold transition-all duration-300 mt-auto bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                   >
                     Falar com consultor
                   </a>
