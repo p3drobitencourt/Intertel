@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white dark:bg-slate-900 shadow-md py-2' : 'bg-white dark:bg-slate-900 shadow-sm'}`}>
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
         
         {/* Logo */}
         <Link to="/" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 h-14 md:h-16 w-36 md:w-48 relative overflow-hidden dark:bg-slate-900/50 dark:rounded-xl" id="nav-logo">

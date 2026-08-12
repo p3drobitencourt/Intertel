@@ -15,7 +15,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
         description="Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade e suporte técnico especializado da Intertel."
       />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-12 sm:py-16">
+      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-10 lg:py-14">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
         

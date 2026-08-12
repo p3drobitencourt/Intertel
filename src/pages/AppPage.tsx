@@ -21,7 +21,7 @@ export default function AppPage() {
         description="Acesse faturas, acompanhe seu consumo e solicite suporte técnico direto pelo aplicativo do assinante da Intertel."
         canonical="https://interteltelecom.net.br/app"
       />
-      <section className="py-12 md:py-16 bg-white dark:bg-slate-900 relative z-10 min-h-[80vh] flex items-center" id="app-intertel">
+      <section className="py-12 md:py-20 bg-white dark:bg-slate-900 relative z-10 flex items-center min-h-[50vh]" id="app-intertel">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-8">
             <div className="w-full md:w-1/2 space-y-6">
@@ -186,6 +186,8 @@ export default function AppPage() {
                 <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused]">
                   {[...appScreenshots, ...appScreenshots].map((src, idx) => (
                     <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 aspect-[386/799] rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-slate-900 dark:border-slate-800 bg-slate-900">
+                      {/* Detalhe da Câmera (Notch) simulado */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-5 bg-slate-900 rounded-b-xl z-30"></div>
                       <img
                         src={src}
                         alt={`Tela do App Intertel ${idx + 1}`}

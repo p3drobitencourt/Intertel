@@ -59,7 +59,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
   }, [heroSlides.length]);
 
   return (
-    <section className="relative w-full min-h-[50vh] lg:min-h-[380px] xl:min-h-[420px] flex flex-col justify-center overflow-hidden bg-blue-950 group" id="hero-section">
+    <section className="relative w-full min-h-[40vh] lg:min-h-[340px] xl:min-h-[380px] flex flex-col justify-center overflow-hidden bg-blue-950 group" id="hero-section">
       {heroSlides.map((slide, idx) => (
         <div
           key={idx}
@@ -79,7 +79,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
           {/* Content Container */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full relative z-30 flex flex-col lg:flex-row items-center justify-between">
             {/* Text Content */}
-            <div className={`w-full ${slide.type === 'app' ? 'lg:w-1/2' : 'lg:w-2/3'} space-y-5 lg:space-y-6 text-left py-10 lg:py-0 pb-16 lg:pb-0`}>
+            <div className={`w-full ${slide.type === 'app' ? 'lg:w-1/2' : 'lg:w-2/3'} space-y-5 lg:space-y-6 text-left py-12 lg:py-16 pt-24 lg:pt-0`}>
               {slide.badge && (
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase bg-blue-950/10 border border-blue-950/20 text-blue-950 dark:bg-white/10 dark:border-white/20 dark:text-white backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
                   <Sparkles className="w-5 h-5 text-blue-950 dark:text-amber-500" />

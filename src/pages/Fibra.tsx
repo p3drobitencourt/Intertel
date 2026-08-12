@@ -17,7 +17,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
         description="Conecte sua casa com planos 100% fibra óptica. Navegação, streaming e jogos sem travamentos. Conheça a Ultravelocidade Intertel."
       />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-12 sm:py-16">
+      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-10 lg:py-14">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
         
