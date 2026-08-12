@@ -77,7 +77,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
             
             <div className="flex xl:grid xl:grid-cols-4 gap-4 xl:gap-6 justify-start xl:justify-center overflow-x-auto xl:overflow-visible snap-x snap-mandatory pb-8 pt-10 px-4 -mx-4 hide-scrollbar">
                 {plansData.map((plan: any, index: number) => {
-                  const isPopular = index === 1;
+                  const isPopular = plan.isPopular;
 
                   return (
                     <div

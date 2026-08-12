@@ -1,5 +1,5 @@
 import React from "react";
-import { Check, Wifi, Zap, Star } from "lucide-react";
+import { Check, Wifi, Zap, Star, User } from "lucide-react";
 
 export default function VantagensSection() {
   return (
@@ -48,30 +48,30 @@ export default function VantagensSection() {
         </div>
 
         {/* Testimonial Section */}
-        <div className="mt-6 p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+        <div className="mt-6 p-5 sm:p-6 rounded-3xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 shadow-sm relative hover:shadow-md transition-shadow">
+          <div className="absolute top-4 right-4 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">
+            Conteúdo Provisório
+          </div>
           <div className="relative shrink-0">
-            <img
-              src="https://picsum.photos/seed/interteluser/160/160"
-              alt="Foto de Cliente da Intertel"
-              className="w-24 h-24 rounded-full border-4 border-slate-300 object-cover shadow-xl"
-              referrerPolicy="no-referrer"
-            />
+            <div className="w-24 h-24 rounded-full border-4 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 flex items-center justify-center shadow-xl">
+              <User className="w-10 h-10 text-slate-400 dark:text-slate-500" />
+            </div>
             <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center shadow-lg text-slate-950">
               <Star className="w-5 h-5 text-slate-900 dark:text-white fill-slate-950" />
             </div>
           </div>
-          <div className="space-y-4 text-center md:text-left">
+          <div className="space-y-4 text-center md:text-left mt-2 md:mt-0">
             <div className="flex justify-center md:justify-start gap-1">
               {[1, 2, 3, 4, 5].map((s) => (
                 <Star key={s} className="w-5 h-5 text-amber-500 fill-amber-500" />
               ))}
             </div>
             <blockquote className="text-slate-700 dark:text-slate-300 text-sm sm:text-base italic leading-relaxed">
-              "Contratei o plano de 700 Mega da Intertel Telecom e estou impressionado. A latência para jogos competitivos reduziu para menos de 5ms e nunca mais tive quedas de conexão trabalhando em home office. O roteador Wi-Fi cobre meu apartamento inteiro!"
+              "A estabilidade da conexão da Intertel superou minhas expectativas. Consigo trabalhar em home office sem quedas, e o Wi-Fi cobre muito bem todos os ambientes da minha casa. Recomendo o serviço!"
             </blockquote>
             <div>
-              <p className="font-bold text-slate-900 dark:text-white text-sm">Rodrigo Mendes Salles</p>
-              <p className="text-xs text-slate-600 dark:text-slate-300">Desenvolvedor Sênior - São João da Mata, MG</p>
+              <p className="font-bold text-slate-900 dark:text-white text-sm">Cliente Intertel</p>
+              <p className="text-xs text-slate-600 dark:text-slate-300">Assinante Residencial</p>
             </div>
           </div>
         </div>

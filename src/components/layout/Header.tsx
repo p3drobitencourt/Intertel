@@ -33,15 +33,15 @@ export default function Header() {
           
           {/* Planos Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors py-2 cursor-pointer select-none">
+            <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 focus:outline-none focus:text-amber-500 transition-colors py-2 cursor-pointer select-none">
               Planos Residenciais <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
             </button>
-            <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+            <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all z-50">
               <div className="w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
-                <Link to="/fibra" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                <Link to="/fibra" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 focus:bg-slate-50 dark:focus:bg-slate-700/50 focus:text-amber-500 dark:focus:text-amber-400 font-medium transition-colors outline-none">
                   Planos Fibra
                 </Link>
-                <Link to="/radio" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                <Link to="/radio" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 focus:bg-slate-50 dark:focus:bg-slate-700/50 focus:text-amber-500 dark:focus:text-amber-400 font-medium transition-colors outline-none">
                   Planos Rádio
                 </Link>
               </div>
@@ -50,18 +50,18 @@ export default function Header() {
 
           {/* Empresas Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors py-2 cursor-pointer select-none">
+            <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 focus:outline-none focus:text-amber-500 transition-colors py-2 cursor-pointer select-none">
               Para Empresas <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
             </button>
-            <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+            <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all z-50">
               <div className="w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
-                <Link to="/empresas" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                <Link to="/empresas" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 focus:bg-slate-50 dark:focus:bg-slate-700/50 focus:text-amber-500 dark:focus:text-amber-400 font-medium transition-colors outline-none">
                   Planos Empresariais
                 </Link>
-                <Link to="/dedicado" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                <Link to="/dedicado" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 focus:bg-slate-50 dark:focus:bg-slate-700/50 focus:text-amber-500 dark:focus:text-amber-400 font-medium transition-colors outline-none">
                   Link Dedicado (Provedores)
                 </Link>
-                <Link to="/lan2lan" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 font-medium transition-colors">
+                <Link to="/lan2lan" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 focus:bg-slate-50 dark:focus:bg-slate-700/50 focus:text-amber-500 dark:focus:text-amber-400 font-medium transition-colors outline-none">
                   Interligação LAN-to-LAN
                 </Link>
               </div>
@@ -95,11 +95,6 @@ export default function Header() {
             <span className="hidden lg:inline">Área do Cliente</span>
             <span className="lg:hidden">Área Cliente</span>
           </a>
-          <a
-            href="/contrato"
-            className="flex items-center gap-1.5 px-3 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-full transition-all duration-300 hover:-translate-y-1 border border-slate-200 dark:border-slate-700 focus-visible:ring-2 focus-visible:ring-blue-500 whitespace-nowrap"
-          >
-            Contrato Padrão
           </a>
           <button
             onClick={() => startOnboarding()}
@@ -126,7 +121,7 @@ export default function Header() {
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-20 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200">
           <div className="px-4 pt-4 pb-6 space-y-3 flex flex-col">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Início</Link>
             <Link to="/fibra" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">Planos Fibra</Link>
