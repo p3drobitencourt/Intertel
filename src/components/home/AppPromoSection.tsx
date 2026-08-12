@@ -54,7 +54,7 @@ export default function AppPromoSection() {
           </div>
 
           {/* Right Column: App Assets overlapping layout */}
-          <div className="relative w-full h-[500px] sm:h-[600px] flex items-center justify-center -translate-y-16 md:-translate-y-24 lg:-translate-y-32">
+          <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center mt-8 lg:mt-0">
             {/* Decorative background blob */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
 

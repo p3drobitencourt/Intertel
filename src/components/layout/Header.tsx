@@ -18,11 +18,11 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${isScrolled ? 'bg-white dark:bg-slate-900 shadow-md py-2' : 'bg-white dark:bg-slate-900 shadow-sm'}`}>
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-[110px] flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-[120px] lg:h-[130px] flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 overflow-hidden h-24 md:h-[110px]" id="nav-logo">
-          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-16 md:h-20 w-auto max-w-none object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl" />
+        <Link to="/" className="flex items-center justify-start bg-transparent focus:outline-none shrink-0 overflow-hidden h-24 md:h-[120px] lg:h-[130px]" id="nav-logo">
+          <img src="/logo-principal.png" alt="Intertel Telecom" className="h-20 md:h-24 lg:h-28 w-auto max-w-none object-contain mix-blend-multiply dark:mix-blend-normal dark:bg-slate-900 dark:p-1.5 dark:rounded-xl" />
         </Link>
 
         {/* Desktop Navigation Links */}
