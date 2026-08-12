@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ReactNode } from "react";
 import { startOnboarding } from "../utils/whatsapp";
 import { useLocation } from "react-router-dom";
-import SEO from "../components/layout/SEO";
+import SEO from '../components/seo/SEO';
 
 // Import Extracted Sections
 import MarqueeBanner from "../components/home/MarqueeBanner";

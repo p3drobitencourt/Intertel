@@ -5,7 +5,6 @@ import SEO from '../components/seo/SEO';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from 'lucide-react';
 import VantagensSection from '../components/home/VantagensSection';
 import TestimonialSection from '../components/home/TestimonialSection';
-import SEO from '../components/layout/SEO';
 
 export default function Radio({ radioPlansData, billingCycle, startOnboarding }: any) {
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Network, Shield, Zap, Server, BarChart3, Clock, ChevronRight } from 'lucide-react';
-import SEO from '../components/layout/SEO';
+import SEO from '../components/seo/SEO';
 
 export default function Dedicado() {
   useEffect(() => {

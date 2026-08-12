@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   Briefcase, Globe, Shield, Layers, ArrowRight, CheckCircle2
 } from 'lucide-react';
-import SEO from '../components/layout/SEO';
+import SEO from '../components/seo/SEO';
 import FaqSection from '../components/home/FaqSection';
 
 export default function Empresas() {

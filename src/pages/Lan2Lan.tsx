@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Layers, ShieldCheck, Lock, Activity, RefreshCw, Briefcase, ChevronRight } from 'lucide-react';
-import SEO from '../components/layout/SEO';
+import SEO from '../components/seo/SEO';
 
 export default function Lan2Lan() {
   useEffect(() => {
