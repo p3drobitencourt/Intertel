@@ -270,7 +270,7 @@ export default function Home() {
       <SobreSection />
       
       {/* CTA Final da Home */}
-      <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950">
+      <section className="py-12 md:py-16 bg-blue-950 dark:bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-white font-display mb-6">
             Acelere sua internet hoje mesmo

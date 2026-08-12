@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Star, Wifi, ChevronDown } from 'lucide-react';
 import { BebancaIcon, BeeducaIcon } from './Home';
-import VantagensSection from '../components/home/VantagensSection';
-import TestimonialSection from '../components/home/TestimonialSection';
 import FaqSection from '../components/home/FaqSection';
 import SEO from '../components/seo/SEO';
 
@@ -19,7 +17,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
         description="Conecte sua casa com planos 100% fibra óptica. Navegação, streaming e jogos sem travamentos. Conheça a Ultravelocidade Intertel."
       />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-12 sm:py-16">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
         
@@ -164,12 +162,10 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
         </div>
       </section>
 
-      <VantagensSection />
-      <TestimonialSection />
       <FaqSection category="fibra" onContactSupport={() => startOnboarding(null)} />
 
       {/* CTA Final */}
-      <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950">
+      <section className="py-12 md:py-16 bg-blue-950 dark:bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-white font-display mb-6">
             Pronto para transformar sua conexão?

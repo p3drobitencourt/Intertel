@@ -15,7 +15,7 @@ export default function Lan2Lan() {
         canonical="https://interteltelecom.net.br/lan2lan"
       />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-12 sm:py-16">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop')] opacity-20 bg-cover bg-center mix-blend-luminosity"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
         

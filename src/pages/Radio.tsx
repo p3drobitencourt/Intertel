@@ -1,10 +1,7 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/seo/SEO';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from 'lucide-react';
-import VantagensSection from '../components/home/VantagensSection';
-import TestimonialSection from '../components/home/TestimonialSection';
 
 export default function Radio({ radioPlansData, billingCycle, startOnboarding }: any) {
   useEffect(() => {
@@ -18,7 +15,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
         description="Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade e suporte técnico especializado da Intertel."
       />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-12 sm:py-16">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
         
@@ -72,7 +69,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 justify-center pt-10">
-                {radioPlansData.map((plan) => (
+                {radioPlansData.map((plan: any) => (
                   <div
                     key={plan.id}
                     className={`relative flex flex-col justify-between bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 border transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-amber-500/50 ${
@@ -101,7 +98,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
                         <div className="pt-6 border-t border-slate-100 dark:border-slate-800">
                           <p className="text-[11px] font-mono uppercase tracking-wider text-slate-600 dark:text-slate-300 font-bold mb-3">Serviços Digitais Inclusos:</p>
                           <div className="flex flex-col gap-2">
-                            {plan.svas.map((sva, idx) => (
+                            {plan.svas.map((sva: any, idx: number) => (
                               <Link 
                                 key={idx}
                                 to="/app"
@@ -151,11 +148,8 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
             </div>
           </section>
 
-          <VantagensSection />
-          <TestimonialSection />
-
           {/* CTA Final */}
-          <section className="py-16 md:py-20 bg-blue-950 dark:bg-slate-950">
+          <section className="py-12 md:py-16 bg-blue-950 dark:bg-slate-950">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h2 className="text-3xl font-black text-white font-display mb-6">
                 Leve internet para onde você precisa
