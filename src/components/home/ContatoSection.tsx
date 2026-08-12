@@ -51,11 +51,11 @@ export default function ContatoSection() {
                 </p>
                 <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                   <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">Suporte:</span>
-                  <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:noc@interteltelecom.net.br', '_blank'); }} className="text-blue-600 hover:underline break-all">noc@interteltelecom.net.br</a>
+                  <a href="mailto:noc@interteltelecom.net.br" className="text-blue-600 hover:underline break-all">noc@interteltelecom.net.br</a>
                 </p>
                 <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                   <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">Financeiro:</span>
-                  <a href="#" onClick={(e) => { e.preventDefault(); window.open('mailto:financeiro@interteltelecom.net.br', '_blank'); }} className="text-blue-600 hover:underline break-all">financeiro@interteltelecom.net.br</a>
+                  <a href="mailto:financeiro@interteltelecom.net.br" className="text-blue-600 hover:underline break-all">financeiro@interteltelecom.net.br</a>
                 </p>
               </div>
             </div>
