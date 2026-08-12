@@ -95,7 +95,6 @@ export default function Header() {
             <span className="hidden lg:inline">Área do Cliente</span>
             <span className="lg:hidden">Área Cliente</span>
           </a>
-          </a>
           <button
             onClick={() => startOnboarding()}
             className="flex items-center gap-1.5 px-4 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white dark:text-slate-900 bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95 focus-visible:ring-2 focus-visible:ring-amber-500 whitespace-nowrap"
