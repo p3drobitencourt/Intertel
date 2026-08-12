@@ -56,7 +56,7 @@ export default function AppPromoSection() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
 
             {/* Celular 2: Trás (Faturas) */}
-            <div className="absolute ml-32 sm:ml-48 mt-12 sm:mt-16 w-40 sm:w-56 aspect-[386/799] rounded-[2rem] overflow-hidden border-[6px] border-slate-900 shadow-xl dark:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transform rotate-3 scale-95 opacity-90 z-10 bg-slate-900">
+            <div className="absolute ml-32 sm:ml-48 mt-12 sm:mt-16 w-40 sm:w-56 aspect-[386/799] rounded-[2.5rem] overflow-hidden border-[6px] border-slate-900 shadow-xl dark:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transform rotate-3 scale-95 opacity-90 z-10 bg-slate-900">
               <img
                 src="/app-tela2.png"
                 alt="Faturas do App"
@@ -66,7 +66,7 @@ export default function AppPromoSection() {
             </div>
 
             {/* Celular 1: Frente (Dashboard) */}
-            <div className="relative w-48 sm:w-64 aspect-[386/799] rounded-[2rem] overflow-hidden border-[8px] border-slate-900 shadow-[0_30px_60px_rgba(0,0,0,0.3)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.6)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 z-20 bg-slate-900 mr-20 sm:mr-32">
+            <div className="relative w-48 sm:w-64 aspect-[386/799] rounded-[2.5rem] overflow-hidden border-[8px] border-slate-900 shadow-[0_30px_60px_rgba(0,0,0,0.3)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.6)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 z-20 bg-slate-900 mr-20 sm:mr-32">
               {/* Detalhe da Câmera (Notch) simulado */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-5 bg-slate-900 rounded-b-xl z-30"></div>
               <img

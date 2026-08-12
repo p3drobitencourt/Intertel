@@ -185,7 +185,7 @@ export default function AppPage() {
               <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-12 px-4">
                 <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused]">
                   {[...appScreenshots, ...appScreenshots].map((src, idx) => (
-                    <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 aspect-[386/799] rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-slate-900 dark:border-slate-800 bg-slate-900">
+                    <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 aspect-[386/799] rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-slate-900 dark:border-slate-800 bg-slate-900">
                       {/* Detalhe da Câmera (Notch) simulado */}
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-5 bg-slate-900 rounded-b-xl z-30"></div>
                       <img
