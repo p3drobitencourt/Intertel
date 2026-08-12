@@ -53,8 +53,8 @@ export default function VantagensSection() {
             Conteúdo Provisório
           </div>
           <div className="relative shrink-0">
-            <div className="w-24 h-24 rounded-full border-4 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 flex items-center justify-center shadow-xl">
-              <User className="w-10 h-10 text-slate-400 dark:text-slate-500" />
+            <div className="w-14 h-14 rounded-full border-4 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 flex items-center justify-center shadow-xl">
+              <User className="w-7 h-7 text-slate-400 dark:text-slate-500" />
             </div>
             <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center shadow-lg text-slate-950">
               <Star className="w-5 h-5 text-slate-900 dark:text-white fill-slate-950" />

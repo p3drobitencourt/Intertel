@@ -80,7 +80,7 @@ export default function Header() {
           <Link to="/#faq" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 hidden xl:block">
             FAQ
           </Link>
-          <Link to="/#contato" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 font-semibold text-amber-500">
+          <Link to="/#contato" className="text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors py-2 font-semibold">
             Contato
           </Link>
         </nav>
