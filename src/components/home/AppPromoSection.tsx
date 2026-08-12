@@ -21,35 +21,32 @@ export default function AppPromoSection() {
               Sua conexão na palma da mão. Com o app Intertel Telecom, você tem total autonomia para gerenciar sua internet. Pague faturas com PIX, acompanhe seu consumo diário e utilize o recurso de promessa de pagamento para liberar sua conexão em um clique.
             </p>
 
-            <div className="flex flex-col gap-4 pt-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4 pt-4 items-center">
               <a
                 href="/app"
-                className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-xl hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/20 dark:hover:shadow-white/20 transition-all duration-300 active:scale-95 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-900 dark:focus-visible:ring-white font-bold w-full sm:w-max"
+                className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 sm:px-8 py-3 sm:py-[0.875rem] rounded-xl hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/20 dark:hover:shadow-white/20 transition-all duration-300 active:scale-95 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-900 dark:focus-visible:ring-white font-bold shrink-0"
               >
                 Conhecer o App
               </a>
               
-              {/* Store Buttons Placeholder (Simulating real ones) */}
-              <div className="flex flex-row gap-2 sm:gap-4 justify-start">
-                <a href="#" className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors shrink-0">
-                   <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-6 sm:h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.09 19.98c-.12-.22-.19-.53-.19-.94V4.96c0-.41.07-.72.19-.94l11.45 11.45-11.45 4.51zm.69.41 12.02-4.73 1.98 1.98L5.75 20.4c-.39.22-.76.22-.97-.01zm12.71-6.71L6.04 3.23c-.39-.23-.76-.23-.97 0l12.42 10.45zm1.42 1.42-1.98-1.98 2.54-2.12c.48-.4.76-1.02.76-1.74s-.28-1.34-.76-1.74l-2.54-2.12 1.98-1.98c1.33.66 2.16 2.1 2.16 3.84 0 1.74-.83 3.18-2.16 3.84z"/>
-                   </svg>
-                   <div className="flex flex-col items-start">
-                      <span className="text-[8px] sm:text-[9px] uppercase tracking-wider leading-none text-slate-300">Disponível no</span>
-                      <span className="text-xs sm:text-sm font-bold leading-tight">Google Play</span>
-                   </div>
-                </a>
-                <a href="#" className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors shrink-0">
-                   <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-6 sm:h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
-                   </svg>
-                   <div className="flex flex-col items-start">
-                      <span className="text-[8px] sm:text-[9px] uppercase tracking-wider leading-none text-slate-300">Baixar na</span>
-                      <span className="text-xs sm:text-sm font-bold leading-tight">App Store</span>
-                   </div>
-                </a>
-              </div>
+              <a href="#" className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors shrink-0">
+                 <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-6 sm:h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.09 19.98c-.12-.22-.19-.53-.19-.94V4.96c0-.41.07-.72.19-.94l11.45 11.45-11.45 4.51zm.69.41 12.02-4.73 1.98 1.98L5.75 20.4c-.39.22-.76.22-.97-.01zm12.71-6.71L6.04 3.23c-.39-.23-.76-.23-.97 0l12.42 10.45zm1.42 1.42-1.98-1.98 2.54-2.12c.48-.4.76-1.02.76-1.74s-.28-1.34-.76-1.74l-2.54-2.12 1.98-1.98c1.33.66 2.16 2.1 2.16 3.84 0 1.74-.83 3.18-2.16 3.84z"/>
+                 </svg>
+                 <div className="flex flex-col items-start">
+                    <span className="text-[8px] sm:text-[9px] uppercase tracking-wider leading-none text-slate-300">Disponível no</span>
+                    <span className="text-xs sm:text-sm font-bold leading-tight">Google Play</span>
+                 </div>
+              </a>
+              <a href="#" className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors shrink-0">
+                 <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-6 sm:h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
+                 </svg>
+                 <div className="flex flex-col items-start">
+                    <span className="text-[8px] sm:text-[9px] uppercase tracking-wider leading-none text-slate-300">Baixar na</span>
+                    <span className="text-xs sm:text-sm font-bold leading-tight">App Store</span>
+                 </div>
+              </a>
             </div>
           </div>
 
