@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -16,8 +15,9 @@ export default function Empresas() {
   return (
     <>
       <SEO 
-        title="Soluções Corporativas de Internet e Link Dedicado | Intertel"
-        description="Conectividade de missão crítica para empresas. Trânsito IP, interligação LAN-to-LAN e Internet Corporativa com SLA de 4 horas."
+        title="Intertel Empresas | Soluções Corporativas de Internet"
+        description="Conectividade de missão crítica para sua empresa no Sul de Minas. IP Dedicado, LAN-to-LAN e banda simétrica com SLA garantido."
+        canonical="https://interteltelecom.net.br/empresas"
       />
       <main className="bg-white dark:bg-slate-950">
         {/* Corporate Hero Section */}
@@ -43,7 +43,7 @@ export default function Empresas() {
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
-                Conectividade de missão crítica, Trânsito IP e LAN-to-LAN. Estabilidade inegociável para empresas que não podem parar.
+                Conectividade de missão crítica, IP Dedicado e estabilidade inegociável para empresas no Sul de Minas que não podem parar. Atendimento consultivo para negócios de todos os portes.
               </p>
 
               <div className="flex flex-wrap gap-4">

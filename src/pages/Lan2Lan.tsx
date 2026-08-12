@@ -10,8 +10,9 @@ export default function Lan2Lan() {
   return (
     <>
       <SEO 
-        title="Interligação LAN-to-LAN para Empresas | Intertel Telecom"
-        description="Interligue sua matriz e filiais na camada 2 com segurança total, banda simétrica e alta velocidade. Rede privada corporativa."
+        title="Interligação LAN-to-LAN | Intertel Telecom"
+        description="Conecte matriz e filiais de forma transparente na camada 2 (L2L). Tráfego simétrico, total segurança e latência mínima."
+        canonical="https://interteltelecom.net.br/lan2lan"
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-16 sm:py-20">

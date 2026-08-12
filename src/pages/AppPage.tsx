@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Smartphone, FileText, Headphones } from 'lucide-react';
+import { Smartphone, Download, User, CreditCard, Wrench, Shield, ChevronRight, Apple, Play, FileText, Headphones } from 'lucide-react';
 import { BebancaIcon, BeeducaIcon, bebancaSva, beducaSva } from './Home';
-import SEO from '../components/layout/SEO';
+import SEO from '../components/seo/SEO';
 
 export default function AppPage() {
   useEffect(() => {
@@ -17,8 +17,9 @@ export default function AppPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900 dark:text-white">
       <SEO 
-        title="App Minha Intertel e Serviços Digitais | Intertel Telecom"
-        description="Tenha mais praticidade para cuidar da sua assinatura Intertel. Acesse suas faturas e desbloqueie sua conexão pelo aplicativo."
+        title="App do Assinante | Intertel Telecom"
+        description="Acesse faturas, acompanhe seu consumo e solicite suporte técnico direto pelo aplicativo do assinante da Intertel."
+        canonical="https://interteltelecom.net.br/app"
       />
       <section className="py-12 md:py-16 bg-white dark:bg-slate-900 relative z-10 min-h-[80vh] flex items-center" id="app-intertel">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

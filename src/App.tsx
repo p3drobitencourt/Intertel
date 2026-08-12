@@ -10,6 +10,7 @@ import Fibra from './pages/Fibra';
 import Radio from './pages/Radio';
 import AppPage from './pages/AppPage';
 import NotFound from './pages/NotFound';
+import Contrato from './pages/Contrato';
 import { startOnboarding } from './utils/whatsapp';
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
           <Route path="/fibra" element={<Fibra plansData={plansData} billingCycle="monthly" startOnboarding={startOnboarding} bebancaSva={bebancaSva} beducaSva={beducaSva} />} />
           <Route path="/radio" element={<Radio radioPlansData={radioPlansData} billingCycle="monthly" startOnboarding={startOnboarding} />} />
           <Route path="/app" element={<AppPage />} />
+          <Route path="/contrato" element={<Contrato />} />
         </Route>
 
         {/* B2B Layout (Business) */}

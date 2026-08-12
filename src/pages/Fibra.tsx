@@ -5,7 +5,7 @@ import { BebancaIcon, BeeducaIcon } from './Home';
 import VantagensSection from '../components/home/VantagensSection';
 import TestimonialSection from '../components/home/TestimonialSection';
 import FaqSection from '../components/home/FaqSection';
-import SEO from '../components/layout/SEO';
+import SEO from '../components/seo/SEO';
 
 export default function Fibra({ plansData, billingCycle, startOnboarding, bebancaSva, beducaSva }: any) {
   useEffect(() => {

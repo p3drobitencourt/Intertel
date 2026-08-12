@@ -289,6 +289,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Local SEO Section - Área de Atendimento */}
+      <section className="py-12 bg-zinc-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Área de Atendimento</h3>
+          <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
+            Atendemos clientes residenciais e empresariais em localidades selecionadas da região, incluindo <strong>São João da Mata</strong>, <strong>Carvalhópolis</strong>, <strong>Paiolinho</strong>, <strong>Turvolândia</strong> e <strong>Machado (área rural)</strong>, mediante disponibilidade técnica.
+          </p>
+        </div>
+      </section>
+
       <ContatoSection />
     </>
   );

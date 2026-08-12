@@ -10,8 +10,9 @@ export default function Dedicado() {
   return (
     <>
       <SEO 
-        title="Link Dedicado para Provedores (ISPs) | Intertel Telecom"
-        description="Trânsito IP premium com sessão BGP nativa. Estabilidade absoluta, proteção DDoS e rotas otimizadas para PTTs."
+        title="Link Dedicado de Alta Performance para Provedores (ISPs) | Intertel"
+        description="Trânsito IP premium, SLA de 99,9%, proteção DDoS e banda 100% garantida. Conectividade de missão crítica para escalar o seu provedor."
+        canonical="https://interteltelecom.net.br/dedicado"
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-16 sm:py-20">

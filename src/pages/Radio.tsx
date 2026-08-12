@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/seo/SEO';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from 'lucide-react';
 import VantagensSection from '../components/home/VantagensSection';
 import TestimonialSection from '../components/home/TestimonialSection';
@@ -50,6 +51,13 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
         </div>
       </section>
 
+      <SEO 
+        title="Internet via Rádio | Planos Rurais"
+        description="Internet via rádio para áreas rurais com alta estabilidade. Cobertura estendida para onde você precisar."
+        canonical="https://interteltelecom.net.br/radio"
+      />
+
+      {/* 3. RESIDENTIAL RADIO PLANS SECTION */}
       <section className="py-12 md:py-16 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-radio">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center space-y-3 max-w-3xl mx-auto mb-10">
