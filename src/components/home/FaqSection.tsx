@@ -120,10 +120,12 @@ export default function FaqSection({ onContactSupport, category = 'geral' }: Faq
           </div>
           <button
             onClick={onContactSupport}
+            id="CTA_WHATSAPP_SUPORTE_FAQ"
+            data-tracking="CTA_WHATSAPP_SUPORTE"
             className="w-full sm:w-auto h-11 px-5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366] shadow-sm active:scale-95"
           >
             <MessageSquare className="w-5 h-5 text-white" />
-            Chamar no WhatsApp
+            Solicitar atendimento pelo WhatsApp
           </button>
         </div>
       </div>

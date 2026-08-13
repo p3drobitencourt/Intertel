@@ -281,9 +281,11 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button 
               onClick={() => startOnboarding(null)}
+              id="CTA_CONSULTAR_DISPONIBILIDADE_HOME"
+              data-tracking="CTA_CONSULTAR_DISPONIBILIDADE"
               className="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
             >
-              Falar com especialista
+              Consultar disponibilidade
             </button>
           </div>
         </div>
@@ -292,9 +294,19 @@ export default function Home() {
       {/* Local SEO Section - Área de Atendimento */}
       <section className="py-12 bg-zinc-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Área de Atendimento</h3>
-          <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
-            Atendemos clientes residenciais e empresariais em localidades selecionadas da região, incluindo <strong>São João da Mata</strong>, <strong>Carvalhópolis</strong>, <strong>Paiolinho</strong>, <strong>Turvolândia</strong> e <strong>Machado (área rural)</strong>, mediante disponibilidade técnica.
+          <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Atendemos sua região</h3>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {[ 'São João da Mata', 'Carvalhópolis', 'Paiolinho', 'Turvolândia', 'Machado (área rural)' ].map((cidade) => (
+              <div key={cidade} className="flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm">
+                <svg className="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span className="text-slate-700 dark:text-slate-300 text-sm font-semibold">{cidade}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-slate-500 dark:text-slate-500 text-xs mt-6 max-w-lg mx-auto">
+            O atendimento em cada localidade está sujeito à disponibilidade técnica da nossa rede 100% fibra óptica ou via rádio.
           </p>
         </div>
       </section>

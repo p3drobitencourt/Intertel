@@ -144,6 +144,8 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                         <button 
                           onClick={() => startOnboarding(plan)}
                           aria-label={`Contratar plano ${plan.name}`}
+                          id={`CTA_PLANO_${plan.id.toUpperCase()}`}
+                          data-tracking="CTA_PLANO_RESIDENCIAL"
                           className={`w-full py-3.5 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
                             isPopular
                               ? "bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
@@ -175,9 +177,11 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
           </p>
           <button 
             onClick={() => startOnboarding(null)}
+            id="CTA_CONSULTAR_DISPONIBILIDADE_FIBRA"
+            data-tracking="CTA_CONSULTAR_DISPONIBILIDADE"
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
           >
-            Falar com especialista <ArrowRight className="w-5 h-5" />
+            Consultar disponibilidade <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       </section>

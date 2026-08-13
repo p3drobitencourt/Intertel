@@ -118,6 +118,8 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
                         }
                       }}
                       aria-label={slide.ctaText}
+                      id={`CTA_HERO_${slide.type.toUpperCase()}`}
+                      data-tracking={`CTA_HERO_${slide.type.toUpperCase()}`}
                       className="h-14 px-10 rounded-full bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-slate-900 font-black tracking-wide uppercase text-sm shadow-[0_10px_40px_rgba(23,37,84,0.3)] hover:shadow-[0_15px_50px_rgba(23,37,84,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 shrink-0 flex items-center justify-center gap-3 border border-blue-900/50 dark:border-amber-400/50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
                     >
                       {slide.type === 'corporate' ? (
