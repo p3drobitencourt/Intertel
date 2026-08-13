@@ -53,7 +53,7 @@ export default function Empresas() {
                   rel="noreferrer"
                   id="CTA_EMPRESARIAL_CONSULTOR_HERO"
                   data-tracking="CTA_EMPRESARIAL_CONSULTOR"
-                  className="inline-flex items-center gap-2 bg-blue-950 hover:bg-blue-900 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                  className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
                 >
                   Falar com consultor <ArrowRight className="w-5 h-5" />
                 </a>
