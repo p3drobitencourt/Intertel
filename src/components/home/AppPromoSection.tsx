@@ -58,37 +58,41 @@ export default function AppPromoSection() {
             <div className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[420px] mx-auto pt-10 sm:pt-16">
               
               {/* Celular 2: Trás (Faturas) */}
-              <div className="absolute top-0 right-0 w-[65%] transform rotate-6 origin-bottom-right shadow-xl dark:shadow-[0_15px_35px_rgba(0,0,0,0.5)] rounded-[2rem] sm:rounded-[2.5rem] z-10 transition-transform hover:rotate-12 duration-500">
-                {/* 1. Primeiro a imagem dita o tamanho total */}
-                <img
-                  src="/app-tela2.png"
-                  alt="Faturas do App"
-                  loading="lazy"
-                  className="w-full h-auto block rounded-[2rem] sm:rounded-[2.5rem]"
-                />
-                {/* 2. Depois o Celular (Frame/Bezel) por cima */}
-                <div className="absolute inset-0 pointer-events-none rounded-[2rem] sm:rounded-[2.5rem] border-[4px] sm:border-[6px] border-slate-900 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]"></div>
-                {/* Botões do Celular */}
-                <div className="absolute top-[20%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[8%] bg-slate-900 rounded-l-sm"></div>
-                <div className="absolute top-[32%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[12%] bg-slate-900 rounded-l-sm"></div>
-                <div className="absolute top-[25%] -right-[1px] sm:-right-[2px] w-[2px] sm:w-[3px] h-[15%] bg-slate-900 rounded-r-sm"></div>
+              <div className="absolute top-0 right-0 w-[65%] transform rotate-6 origin-bottom-right z-10 transition-transform hover:rotate-12 duration-500">
+                <div className="relative w-full bg-white dark:bg-slate-200 rounded-[2rem] sm:rounded-[2.5rem] border-[3px] sm:border-[4px] border-slate-900 p-[4px] sm:p-[6px] shadow-xl dark:shadow-[0_15px_35px_rgba(0,0,0,0.5)]">
+                  {/* Tela */}
+                  <div className="relative w-full overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-white">
+                    <img
+                      src="/app-tela2.png"
+                      alt="Faturas do App"
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                  {/* Botões do Celular */}
+                  <div className="absolute top-[20%] -left-[2px] sm:-left-[3px] w-[2px] sm:w-[3px] h-[8%] bg-slate-900 rounded-l-sm"></div>
+                  <div className="absolute top-[32%] -left-[2px] sm:-left-[3px] w-[2px] sm:w-[3px] h-[12%] bg-slate-900 rounded-l-sm"></div>
+                  <div className="absolute top-[25%] -right-[2px] sm:-right-[3px] w-[2px] sm:w-[3px] h-[15%] bg-slate-900 rounded-r-sm"></div>
+                </div>
               </div>
 
               {/* Celular 1: Frente (Dashboard) */}
-              <div className="relative w-[75%] shadow-[0_20px_50px_rgba(0,0,0,0.3)] dark:shadow-[0_25px_50px_rgba(0,0,0,0.6)] rounded-[2rem] sm:rounded-[2.5rem] z-20 transition-transform duration-500 hover:-translate-y-4 mx-0">
-                {/* 1. Primeiro a imagem dita o tamanho total */}
-                <img
-                  src="/app-tela1.png"
-                  alt="Dashboard Principal do App"
-                  loading="lazy"
-                  className="w-full h-auto block rounded-[2rem] sm:rounded-[2.5rem]"
-                />
-                {/* 2. Depois o Celular (Frame/Bezel) por cima */}
-                <div className="absolute inset-0 pointer-events-none rounded-[2rem] sm:rounded-[2.5rem] border-[4px] sm:border-[6px] border-slate-900 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]"></div>
-                {/* Botões do Celular */}
-                <div className="absolute top-[20%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[8%] bg-slate-900 rounded-l-sm"></div>
-                <div className="absolute top-[32%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[12%] bg-slate-900 rounded-l-sm"></div>
-                <div className="absolute top-[25%] -right-[1px] sm:-right-[2px] w-[2px] sm:w-[3px] h-[15%] bg-slate-900 rounded-r-sm"></div>
+              <div className="relative w-[75%] z-20 transition-transform duration-500 hover:-translate-y-4 mx-0">
+                <div className="relative w-full bg-white dark:bg-slate-200 rounded-[2rem] sm:rounded-[2.5rem] border-[3px] sm:border-[4px] border-slate-900 p-[4px] sm:p-[6px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] dark:shadow-[0_25px_50px_rgba(0,0,0,0.6)]">
+                  {/* Tela */}
+                  <div className="relative w-full overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-white">
+                    <img
+                      src="/app-tela1.png"
+                      alt="Dashboard Principal do App"
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                  {/* Botões do Celular */}
+                  <div className="absolute top-[20%] -left-[2px] sm:-left-[3px] w-[2px] sm:w-[3px] h-[8%] bg-slate-900 rounded-l-sm"></div>
+                  <div className="absolute top-[32%] -left-[2px] sm:-left-[3px] w-[2px] sm:w-[3px] h-[12%] bg-slate-900 rounded-l-sm"></div>
+                  <div className="absolute top-[25%] -right-[2px] sm:-right-[3px] w-[2px] sm:w-[3px] h-[15%] bg-slate-900 rounded-r-sm"></div>
+                </div>
               </div>
 
             </div>
