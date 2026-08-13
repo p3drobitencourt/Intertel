@@ -21,7 +21,7 @@ export default function Empresas() {
       />
       <main className="bg-white dark:bg-slate-950">
         {/* Corporate Hero Section */}
-        <section className="relative bg-slate-900 pt-20 pb-10 lg:pt-24 lg:pb-14 overflow-hidden">
+        <section className="relative bg-slate-900 py-10 lg:py-14 overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
