@@ -29,7 +29,7 @@ export default function Contrato() {
         description="Acesse os contratos padrão e termos de uso dos serviços da Intertel Telecom."
         canonical="https://interteltelecom.net.br/contrato"
       />
-      <div className="min-h-screen bg-zinc-50 dark:bg-slate-900 font-sans pt-32 pb-20 selection:bg-amber-500/30 selection:text-amber-900 text-slate-900 dark:text-white">
+      <div className="min-h-[calc(100vh-6rem)] bg-zinc-50 dark:bg-slate-900 font-sans pt-10 md:pt-16 pb-20 selection:bg-amber-500/30 selection:text-amber-900 text-slate-900 dark:text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-12">
