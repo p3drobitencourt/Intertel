@@ -23,9 +23,11 @@ export default function AppPage() {
       />
       <section className="py-12 md:py-20 bg-white dark:bg-slate-900 relative z-10 flex items-center min-h-[50vh]" id="app-intertel">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col md:flex-row items-start gap-12 md:gap-8">
-            <div className="w-full md:w-1/2 space-y-6">
-              <div className="space-y-4">
+          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+            
+            {/* COLUNA ESQUERDA: Textos fixos */}
+            <div className="w-full lg:w-[40%] lg:sticky lg:top-32">
+              <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <img src="/icone-app.png" alt="App Minha Intertel" className="w-16 h-16 rounded-2xl shadow-lg bg-white p-1" />
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">
@@ -33,14 +35,76 @@ export default function AppPage() {
                   </div>
                 </div>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-display tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-                  Resolva tudo sem <br className="hidden md:block" /> <span className="text-blue-600 dark:text-blue-400">ligar no suporte.</span>
+                  Resolva tudo sem <br className="hidden lg:block" /> <span className="text-blue-600 dark:text-blue-400">ligar no suporte.</span>
                 </h1>
                 <p className="text-lg text-slate-600 dark:text-slate-300 font-medium max-w-lg leading-relaxed">
                   Tenha mais praticidade para cuidar dos seus serviços Intertel. Com o nosso aplicativo, você tem total autonomia para resolver as pendências do dia a dia sem filas de atendimento.
                 </p>
               </div>
+            </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            {/* COLUNA DIREITA: Visual, Downloads e Benefícios */}
+            <div className="w-full lg:w-[60%] space-y-12">
+              
+              {/* 1. Celulares (Carrossel) */}
+              <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] pt-2 pb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-blue-500/10 dark:bg-blue-500/20 blur-[100px] rounded-full -z-10" />
+                
+                <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused] items-center">
+                  {[...appScreenshots, ...appScreenshots].map((src, idx) => (
+                    <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 bg-slate-900 shadow-[0_20px_50px_rgba(0,0,0,0.3)] dark:shadow-[0_25px_50px_rgba(0,0,0,0.6)] rounded-[2rem] sm:rounded-[2.5rem]">
+                      {/* 1. Imagem sem cortes */}
+                      <img
+                        src={src}
+                        alt={`Tela do App Intertel ${idx + 1}`}
+                        loading="lazy"
+                        className="w-full h-auto block rounded-[2rem] sm:rounded-[2.5rem]"
+                      />
+                      {/* 2. Moldura overlay */}
+                      <div className="absolute inset-0 pointer-events-none rounded-[2rem] sm:rounded-[2.5rem] border-[4px] sm:border-[5px] border-slate-900 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]"></div>
+                      {/* Botões laterais simulados */}
+                      <div className="absolute top-[20%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[8%] bg-slate-900 rounded-l-sm"></div>
+                      <div className="absolute top-[32%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[12%] bg-slate-900 rounded-l-sm"></div>
+                      <div className="absolute top-[25%] -right-[1px] sm:-right-[2px] w-[2px] sm:w-[3px] h-[15%] bg-slate-900 rounded-r-sm"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 2. Downloads */}
+              <div className="flex flex-col sm:flex-row gap-4 items-center lg:justify-start">
+                <a href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-800 text-white px-8 py-4.5 rounded-full hover:bg-slate-800 dark:hover:bg-slate-700 hover:scale-105 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500 w-full sm:w-auto">
+                  <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 512 512">
+                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
+                  </svg>
+                  <div className="text-left leading-tight mt-0.5">
+                    <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-0.5">Baixar no</p>
+                    <p className="text-base font-black tracking-tight text-white">Google Play</p>
+                  </div>
+                </a>
+                <a href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-800 text-white px-8 py-4.5 rounded-full hover:bg-slate-800 dark:hover:bg-slate-700 hover:scale-105 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500 w-full sm:w-auto">
+                  <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 384 512">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.4-19.1-77.5-19.1-38.2 0-77.5 21.4-97.5 56.5-40.4 71-10.4 175.7 28.7 232.5 19.1 27.5 41.5 58.2 71.3 57.1 29-1.1 40-18.5 75.1-18.5 35 0 45 18.5 75.1 18.5 30.1 1.1 50.4-27.5 69.5-55.1 22.2-32.2 31.2-63.5 31.5-65.1-1.1-.3-60.6-23.2-61.1-92.7zM281.9 83.3c15-18.5 25.8-44.2 23-70.1-23.2 1-51.4 15.5-68.1 35-14.4 16.7-27.2 42.7-24 68.3 25.8 2 52.8-14.7 69.1-33.2z" />
+                  </svg>
+                  <div className="text-left leading-tight mt-0.5">
+                    <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-0.5">Baixar na</p>
+                    <p className="text-base font-black tracking-tight text-white">App Store</p>
+                  </div>
+                </a>
+
+                <div className="hidden xl:flex items-center gap-3 lg:ml-2 bg-white dark:bg-slate-800 p-2.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+                  <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
+                    <img src="/qrcode.png" alt="QR Code App Intertel" loading="lazy" className="w-14 h-14 object-contain" />
+                  </div>
+                  <div className="text-xs pr-2">
+                    <p className="font-bold text-slate-800 dark:text-slate-200">Baixe o App</p>
+                    <p className="text-slate-500 dark:text-slate-400">Escaneie o QR Code</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3. Benefícios */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Benefício 1 */}
                 <div className="flex flex-col gap-3 p-5 rounded-2xl bg-zinc-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-700 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
@@ -90,37 +154,7 @@ export default function AppPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-6 items-center">
-                <a href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-800 text-white px-8 py-4.5 rounded-full hover:bg-slate-800 dark:hover:bg-slate-700 hover:scale-105 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500">
-                  <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 512 512">
-                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
-                  </svg>
-                  <div className="text-left leading-tight mt-0.5">
-                    <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-0.5">Baixar no</p>
-                    <p className="text-base font-black tracking-tight text-white">Google Play</p>
-                  </div>
-                </a>
-                <a href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-800 text-white px-8 py-4.5 rounded-full hover:bg-slate-800 dark:hover:bg-slate-700 hover:scale-105 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500">
-                  <svg className="w-8 h-8 fill-white shrink-0" viewBox="0 0 384 512">
-                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.4-19.1-77.5-19.1-38.2 0-77.5 21.4-97.5 56.5-40.4 71-10.4 175.7 28.7 232.5 19.1 27.5 41.5 58.2 71.3 57.1 29-1.1 40-18.5 75.1-18.5 35 0 45 18.5 75.1 18.5 30.1 1.1 50.4-27.5 69.5-55.1 22.2-32.2 31.2-63.5 31.5-65.1-1.1-.3-60.6-23.2-61.1-92.7zM281.9 83.3c15-18.5 25.8-44.2 23-70.1-23.2 1-51.4 15.5-68.1 35-14.4 16.7-27.2 42.7-24 68.3 25.8 2 52.8-14.7 69.1-33.2z" />
-                  </svg>
-                  <div className="text-left leading-tight mt-0.5">
-                    <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-0.5">Baixar na</p>
-                    <p className="text-base font-black tracking-tight text-white">App Store</p>
-                  </div>
-                </a>
-
-                <div className="hidden lg:flex items-center gap-3 lg:ml-4 bg-white dark:bg-slate-800 p-2.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all cursor-pointer group">
-                  <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
-                    <img src="/qrcode.png" alt="QR Code App Intertel" loading="lazy" className="w-14 h-14 object-contain" />
-                  </div>
-                  <div className="text-xs pr-2">
-                    <p className="font-bold text-slate-800 dark:text-slate-200">Baixe o App Agora</p>
-                    <p className="text-slate-500 dark:text-slate-400">Escaneie o QR Code</p>
-                  </div>
-                </div>
-              </div>
-
+              {/* 4. Como acessar (Passos) */}
               <div className="pt-10 mt-10 border-t border-slate-200 dark:border-slate-800">
                 <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight mb-6">
                   Como acessar seus benefícios
@@ -175,27 +209,6 @@ export default function AppPage() {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full md:w-1/2 relative flex justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000 mt-12 md:mt-0">
-              {/* Decorative Elements */}
-              <div className="absolute inset-0 bg-blue-500/10 dark:bg-blue-500/20 blur-[100px] rounded-full" />
-              <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] pt-6 pb-12 px-4">
-                <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused]">
-                  {[...appScreenshots, ...appScreenshots].map((src, idx) => (
-                    <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 aspect-[386/799] rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-slate-900 dark:border-slate-800 bg-slate-900">
-                      {/* Detalhe da Câmera (Notch) simulado */}
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-5 bg-slate-900 rounded-b-xl z-30"></div>
-                      <img
-                        src={src}
-                        alt={`Tela do App Intertel ${idx + 1}`}
-                        className="w-full h-full object-cover object-top"
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
