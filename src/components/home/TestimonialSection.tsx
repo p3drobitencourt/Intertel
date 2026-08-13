@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
 export default function TestimonialSection() {
   // Conteúdo provisório - será substituído por depoimentos reais posteriormente.
@@ -43,10 +43,8 @@ export default function TestimonialSection() {
           {testimonials.map((t, idx) => (
             <div key={idx} className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 relative">
               <Quote className="absolute top-6 right-6 w-8 h-8 text-blue-100 dark:text-slate-700" />
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(t.stars)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                ))}
+              <div className="flex items-center gap-1 mb-4 text-xs font-semibold text-slate-400">
+                [Exemplo de Relato]
               </div>
               <p className="text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed relative z-10">
                 "{t.text}"

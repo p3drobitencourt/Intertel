@@ -11,6 +11,7 @@ import VantagensSection from "../components/home/VantagensSection";
 import FaqSection from "../components/home/FaqSection";
 import SobreSection from "../components/home/SobreSection";
 import ContatoSection from "../components/home/ContatoSection";
+import TestimonialSection from "../components/home/TestimonialSection";
 
 // Plans Data
 interface Sva {
@@ -268,6 +269,7 @@ export default function Home() {
       <VantagensSection />
       <FaqSection onContactSupport={() => startOnboarding(null)} />
       <SobreSection />
+      <TestimonialSection />
       
       {/* CTA Final da Home */}
       <section className="py-12 md:py-16 bg-blue-950 dark:bg-slate-950">
@@ -306,7 +308,7 @@ export default function Home() {
             ))}
           </div>
           <p className="text-slate-500 dark:text-slate-500 text-xs mt-6 max-w-lg mx-auto">
-            O atendimento em cada localidade está sujeito à disponibilidade técnica da nossa rede 100% fibra óptica ou via rádio.
+            Consulte a disponibilidade exata na sua região com nossos especialistas. Nossa rede 100% fibra óptica ou via rádio está em constante expansão.
           </p>
         </div>
       </section>
