@@ -5,7 +5,7 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
-  schema?: Record<string, any> | Record<string, any>[];
+  schema?: Record<string, unknown> | Record<string, unknown>[];
   ogImage?: string;
   ogType?: 'website' | 'article' | 'profile';
   imageWidth?: string;
@@ -23,8 +23,8 @@ export default function SEO({
   schema, 
   ogImage = DEFAULT_OG_IMAGE,
   ogType = 'website',
-  imageWidth = '1200',
-  imageHeight = '630',
+  imageWidth,
+  imageHeight,
   imageAlt = 'Intertel Telecom',
   noindex = false
 }: SEOProps) {
@@ -48,8 +48,8 @@ export default function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content={imageWidth} />
-      <meta property="og:image:height" content={imageHeight} />
+      {imageWidth && <meta property="og:image:width" content={imageWidth} />}
+      {imageHeight && <meta property="og:image:height" content={imageHeight} />}
       <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:site_name" content={siteName} />
       {canonical && <meta property="og:url" content={canonical} />}
