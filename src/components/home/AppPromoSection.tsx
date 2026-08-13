@@ -51,30 +51,30 @@ export default function AppPromoSection() {
           </div>
 
           {/* Right Column: App Assets overlapping layout */}
-          <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center mt-8 lg:mt-0">
+          <div className="relative w-full py-8 lg:py-0 flex items-center justify-center mt-8 lg:mt-0">
             {/* Decorative background blob */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-md bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-md max-h-[400px] bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
 
-            {/* Celular 2: Trás (Faturas) */}
-            <div className="absolute ml-32 sm:ml-48 mt-12 sm:mt-16 w-40 sm:w-56 aspect-[386/799] rounded-[2.5rem] overflow-hidden border-[6px] border-slate-900 shadow-xl dark:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transform rotate-3 scale-95 opacity-90 z-10 bg-slate-900">
-              <img
-                src="/app-tela2.png"
-                alt="Faturas do App"
-                loading="lazy"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+            <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[450px] mx-auto flex items-center justify-center">
+              {/* Celular 2: Trás (Faturas) */}
+              <div className="absolute right-[5%] sm:right-[10%] top-[10%] w-[55%] rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border-[4px] sm:border-[6px] border-slate-900 shadow-xl dark:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transform rotate-6 scale-95 opacity-90 z-10 bg-slate-900">
+                <img
+                  src="/app-tela2.png"
+                  alt="Faturas do App"
+                  loading="lazy"
+                  className="w-full h-auto block"
+                />
+              </div>
 
-            {/* Celular 1: Frente (Dashboard) */}
-            <div className="relative w-48 sm:w-64 aspect-[386/799] rounded-[2.5rem] overflow-hidden border-[8px] border-slate-900 shadow-[0_30px_60px_rgba(0,0,0,0.3)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.6)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 z-20 bg-slate-900 mr-20 sm:mr-32">
-              {/* Detalhe da Câmera (Notch) simulado */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-5 bg-slate-900 rounded-b-xl z-30"></div>
-              <img
-                src="/app-tela1.png"
-                alt="Dashboard Principal do App"
-                loading="lazy"
-                className="w-full h-full object-cover object-top"
-              />
+              {/* Celular 1: Frente (Dashboard) */}
+              <div className="relative left-[-15%] sm:left-[-10%] w-[65%] rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border-[6px] sm:border-[8px] border-slate-900 shadow-[0_30px_60px_rgba(0,0,0,0.3)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.6)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 z-20 bg-slate-900">
+                <img
+                  src="/app-tela1.png"
+                  alt="Dashboard Principal do App"
+                  loading="lazy"
+                  className="w-full h-auto block"
+                />
+              </div>
             </div>
           </div>
         </div>
