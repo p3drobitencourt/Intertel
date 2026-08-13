@@ -8,18 +8,32 @@ interface SEOProps {
   schema?: Record<string, any> | Record<string, any>[];
   ogImage?: string;
   ogType?: 'website' | 'article' | 'profile';
+  imageWidth?: string;
+  imageHeight?: string;
+  imageAlt?: string;
+  noindex?: boolean;
 }
+
+export const DEFAULT_OG_IMAGE = 'https://interteltelecom.net.br/logo-principal.png';
 
 export default function SEO({ 
   title, 
   description, 
   canonical, 
   schema, 
-  ogImage = 'https://interteltelecom.net.br/logo-principal.png',
-  ogType = 'website'
+  ogImage = DEFAULT_OG_IMAGE,
+  ogType = 'website',
+  imageWidth = '1200',
+  imageHeight = '630',
+  imageAlt = 'Intertel Telecom',
+  noindex = false
 }: SEOProps) {
   const siteName = 'Intertel Telecom';
-  const fullTitle = `${title} | ${siteName}`;
+  // Keep title exactly as passed or append if it's already full?
+  // The prompt says "title atual; se existe duplicidade; se está claro".
+  // The previous implementation appended ` | Intertel Telecom` if we just passed the first part.
+  // We'll keep the previous logic, but let's check if the title already includes Intertel Telecom to avoid "Intertel Telecom | Intertel Telecom | Intertel Telecom".
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
   return (
     <Helmet>
@@ -27,12 +41,16 @@ export default function SEO({
       <meta name="description" content={description} />
       
       {canonical && <link rel="canonical" href={canonical} />}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content={imageWidth} />
+      <meta property="og:image:height" content={imageHeight} />
+      <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:site_name" content={siteName} />
       {canonical && <meta property="og:url" content={canonical} />}
       
@@ -41,6 +59,7 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
 
       {/* JSON-LD Schema */}
       {schema && (

@@ -60,6 +60,7 @@ export default function Home() {
       <SEO 
         title="Intertel Telecom | Internet Fibra Óptica e Soluções B2B"
         description="Conecte-se com a melhor ultravelocidade de ponta a ponta. Tecnologia Wi-Fi 6, planos 100% fibra óptica e suporte premium especializado."
+        canonical="https://interteltelecom.net.br/"
         schema={{
           "@context": "https://schema.org",
           "@type": "Organization",

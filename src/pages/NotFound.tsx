@@ -13,6 +13,7 @@ export default function NotFound() {
       <SEO 
         title="Página não encontrada | Intertel Telecom"
         description="A página que você está procurando não existe ou foi movida."
+        noindex={true}
       />
       <div className="text-center max-w-md w-full space-y-8 animate-in fade-in zoom-in duration-500">
         <div className="flex justify-center">

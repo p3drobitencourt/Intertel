@@ -13,6 +13,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
       <SEO 
         title="Internet Via Rádio para Zonas Rurais | Intertel Telecom"
         description="Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade e suporte técnico especializado da Intertel."
+        canonical="https://interteltelecom.net.br/radio"
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-10 lg:py-14">
@@ -47,11 +48,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
         </div>
       </section>
 
-      <SEO 
-        title="Internet via Rádio | Planos Rurais"
-        description="Internet via rádio para áreas rurais com alta estabilidade. Cobertura estendida para onde você precisar."
-        canonical="https://interteltelecom.net.br/radio"
-      />
+
 
       {/* 3. RESIDENTIAL RADIO PLANS SECTION */}
       <section className="py-12 md:py-16 bg-zinc-50 dark:bg-slate-800 relative z-10" id="planos-radio">
