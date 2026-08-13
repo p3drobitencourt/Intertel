@@ -52,13 +52,17 @@ export default function AppPage() {
                 
                 <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused] items-center">
                   {[...appScreenshots, ...appScreenshots].map((src, idx) => (
-                    <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_25px_50px_rgba(0,0,0,0.5)] border border-slate-200/60 dark:border-slate-700/50 bg-white dark:bg-slate-800">
+                    <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 bg-slate-900 shadow-[0_20px_50px_rgba(0,0,0,0.3)] dark:shadow-[0_25px_50px_rgba(0,0,0,0.6)] rounded-[2rem] sm:rounded-[2.5rem]">
                       <img
                         src={src}
                         alt={`Tela do App Intertel ${idx + 1}`}
                         loading="lazy"
-                        className="w-full h-auto block"
+                        className="w-full h-auto block rounded-[2rem] sm:rounded-[2.5rem]"
                       />
+                      <div className="absolute inset-0 pointer-events-none rounded-[2rem] sm:rounded-[2.5rem] border-[4px] sm:border-[6px] border-slate-900 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]"></div>
+                      <div className="absolute top-[20%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[8%] bg-slate-900 rounded-l-sm"></div>
+                      <div className="absolute top-[32%] -left-[1px] sm:-left-[2px] w-[2px] sm:w-[3px] h-[12%] bg-slate-900 rounded-l-sm"></div>
+                      <div className="absolute top-[25%] -right-[1px] sm:-right-[2px] w-[2px] sm:w-[3px] h-[15%] bg-slate-900 rounded-r-sm"></div>
                     </div>
                   ))}
                 </div>
