@@ -23,7 +23,7 @@ export default function AppPage() {
       />
       <section className="py-12 md:py-20 bg-white dark:bg-slate-900 relative z-10 flex items-center min-h-[50vh]" id="app-intertel">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-8">
+          <div className="flex flex-col md:flex-row items-start gap-12 md:gap-8">
             <div className="w-full md:w-1/2 space-y-6">
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
@@ -182,7 +182,7 @@ export default function AppPage() {
             <div className="w-full md:w-1/2 relative flex justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000 mt-12 md:mt-0">
               {/* Decorative Elements */}
               <div className="absolute inset-0 bg-blue-500/10 dark:bg-blue-500/20 blur-[100px] rounded-full" />
-              <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-12 px-4">
+              <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] pt-6 pb-12 px-4">
                 <div className="flex gap-6 sm:gap-8 w-max motion-safe:animate-marquee hover:[animation-play-state:paused]">
                   {[...appScreenshots, ...appScreenshots].map((src, idx) => (
                     <div key={`app-tela-${idx}`} className="relative w-[180px] sm:w-[220px] shrink-0 hover:-translate-y-4 transition-transform duration-500 aspect-[386/799] rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-slate-900 dark:border-slate-800 bg-slate-900">
