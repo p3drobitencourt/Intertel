@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Star, Wifi, ChevronDown } from 'lucide-react';
-import { BebancaIcon, BeeducaIcon } from './Home';
 import FaqSection from '../components/home/FaqSection';
 import SEO from '../components/seo/SEO';
 

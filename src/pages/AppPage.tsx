@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Smartphone, Download, User, CreditCard, Wrench, Shield, ChevronRight, Apple, Play, FileText, Headphones } from 'lucide-react';
-import { BebancaIcon, BeeducaIcon, bebancaSva, beducaSva } from './Home';
+import { BebancaIcon, BeeducaIcon, bebancaSva, beducaSva } from '../data/plans';
 import SEO from '../components/seo/SEO';
 
 export default function AppPage() {
