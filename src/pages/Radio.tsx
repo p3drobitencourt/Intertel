@@ -17,7 +17,13 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-10 lg:py-14">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop"
+          alt=""
+          fetchPriority="high"
+          loading="eager"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-10 mix-blend-overlay"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
