@@ -27,6 +27,8 @@ export default function Empresas() {
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
               alt="Ambiente Corporativo"
               className="w-full h-full object-cover opacity-20 mix-blend-luminosity"
+              fetchPriority="high"
+              loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
           </div>

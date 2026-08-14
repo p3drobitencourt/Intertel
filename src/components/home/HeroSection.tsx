@@ -71,6 +71,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
               src={isDarkMode ? slide.imageDark : slide.imageLight}
               alt={slide.titleHighlight}
               className="w-full h-full object-cover object-center"
+              {...(idx === 0 ? { fetchPriority: "high", loading: "eager" } : {})}
             />
             <div className="absolute inset-0 bg-slate-900/40 dark:bg-black/70 mix-blend-multiply" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#F4B000] via-[#F4B000]/80 to-transparent dark:from-blue-950 dark:via-blue-950/80 dark:to-transparent" />
