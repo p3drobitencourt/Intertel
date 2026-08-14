@@ -14,7 +14,7 @@ export default function Footer() {
             {/* Col 1: About & Social */}
             <div className="space-y-6 lg:col-span-3">
               <Link to="/" className="block relative h-16 w-48 overflow-hidden dark:bg-slate-900/50 dark:rounded-xl" aria-label="Home">
-                <img src="/logo-principal.png" alt="Intertel Telecom" loading="lazy" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none h-auto object-contain mix-blend-multiply dark:mix-blend-normal" />
+                <img src="/logo-principal.png" alt="Intertel Telecom" loading="lazy" width="1600" height="1600" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none h-auto object-contain mix-blend-multiply dark:mix-blend-normal" />
               </Link>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed pr-4">
                 Operadora de Telecomunicações mineira focada no fornecimento de internet em ultravelocidade 100% fibra óptica com tecnologia Wi-Fi e alta redundância.
@@ -118,7 +118,7 @@ export default function Footer() {
               
               <div className="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 flex flex-col items-center text-center gap-4 w-fit shadow-sm hover:shadow-md transition-shadow">
                 <div className="bg-white p-3 rounded-2xl shadow-sm border border-slate-100">
-                  <img src="/qrcode.png" alt="QR Code WhatsApp" loading="lazy" className="w-24 h-24 sm:w-28 sm:h-28 object-contain" />
+                  <img src="/qrcode.png" alt="QR Code WhatsApp" loading="lazy" width="1040" height="1040" className="w-24 h-24 sm:w-28 sm:h-28 object-contain" />
                 </div>
                 <div>
                   <p className="font-bold text-slate-900 dark:text-white text-sm">Escaneie o QR Code</p>

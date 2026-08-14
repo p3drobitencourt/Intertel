@@ -71,7 +71,9 @@ export default function AppPromoSection() {
                   <div className="rounded-[2.2rem] sm:rounded-[2.7rem] overflow-hidden bg-white">
                     <img
                       src="/app-tela1.png"
-                      alt="Dashboard Principal do App"
+                      alt="Tela do Aplicativo Minha Intertel"
+                      width="386"
+                      height="799"
                       loading="lazy"
                       className="w-full h-auto block"
                     />

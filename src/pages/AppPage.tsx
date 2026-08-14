@@ -29,7 +29,7 @@ export default function AppPage() {
             <div className="w-full lg:w-[40%] lg:sticky lg:top-32">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <img src="/icone-app.png" alt="App Minha Intertel" className="w-16 h-16 rounded-2xl shadow-lg bg-white p-1" />
+                  <img src="/icone-app.png" alt="App Minha Intertel" width="215" height="204" className="w-16 h-16 rounded-2xl shadow-lg bg-white p-1" />
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">
                     <Smartphone className="w-5 h-5" /> App Minha Intertel
                   </div>
@@ -94,7 +94,7 @@ export default function AppPage() {
 
                 <div className="hidden xl:flex items-center gap-3 lg:ml-2 bg-white dark:bg-slate-800 p-2.5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all cursor-pointer group">
                   <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
-                    <img src="/qrcode.png" alt="QR Code App Intertel" loading="lazy" className="w-14 h-14 object-contain" />
+                    <img src="/qrcode.png" alt="QR Code App Intertel" width="1040" height="1040" loading="lazy" className="w-14 h-14 object-contain" />
                   </div>
                   <div className="text-xs pr-2">
                     <p className="font-bold text-slate-800 dark:text-slate-200">Baixe o App</p>
