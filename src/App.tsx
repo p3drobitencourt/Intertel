@@ -1,18 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import BusinessLayout from './components/layout/BusinessLayout';
 import Home from './pages/Home';
 import { plansData, radioPlansData, bebancaSva, beducaSva } from './data/plans';
-import Empresas from './pages/Empresas';
-import Dedicado from './pages/Dedicado';
-import Lan2Lan from './pages/Lan2Lan';
-import Fibra from './pages/Fibra';
-import Radio from './pages/Radio';
-import AppPage from './pages/AppPage';
-import NotFound from './pages/NotFound';
-import Contrato from './pages/Contrato';
 import { startOnboarding } from './utils/whatsapp';
+
+const Empresas = lazy(() => import('./pages/Empresas'));
+const Dedicado = lazy(() => import('./pages/Dedicado'));
+const Lan2Lan = lazy(() => import('./pages/Lan2Lan'));
+const Fibra = lazy(() => import('./pages/Fibra'));
+const Radio = lazy(() => import('./pages/Radio'));
+const AppPage = lazy(() => import('./pages/AppPage'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const Contrato = lazy(() => import('./pages/Contrato'));
 
 export default function App() {
   const location = useLocation();
