@@ -18,6 +18,12 @@ export default function Lan2Lan() {
       <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-10 lg:py-14">
         <img 
           src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop"
+          srcSet="
+            https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=640&auto=format&fit=crop 640w,
+            https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1024&auto=format&fit=crop 1024w,
+            https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1920&auto=format&fit=crop 1920w
+          "
+          sizes="100vw"
           alt=""
           fetchPriority="high"
           loading="eager"

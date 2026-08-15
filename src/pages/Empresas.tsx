@@ -25,6 +25,12 @@ export default function Empresas() {
           <div className="absolute inset-0">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
+              srcSet="
+                https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=640&auto=format&fit=crop 640w,
+                https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1024&auto=format&fit=crop 1024w,
+                https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop 1920w
+              "
+              sizes="100vw"
               alt="Ambiente Corporativo"
               className="w-full h-full object-cover opacity-20 mix-blend-luminosity"
               fetchPriority="high"

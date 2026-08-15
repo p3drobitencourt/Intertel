@@ -18,6 +18,12 @@ export default function Dedicado() {
       <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-10 lg:py-14">
         <img 
           src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
+          srcSet="
+            https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=640&auto=format&fit=crop 640w,
+            https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1024&auto=format&fit=crop 1024w,
+            https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1920&auto=format&fit=crop 1920w
+          "
+          sizes="100vw"
           alt=""
           fetchPriority="high"
           loading="eager"
