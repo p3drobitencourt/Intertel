@@ -17,6 +17,31 @@ export default function Header() {
     }
   };
 
+  const handleMobileMenuKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      setIsMobileMenuOpen(false);
+      document.getElementById('btn-hamburger')?.focus();
+      return;
+    }
+
+    if (e.key === 'Tab') {
+      const menu = e.currentTarget;
+      const focusable = menu.querySelectorAll<HTMLElement>('a[href], button:not([disabled])');
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        last.focus();
+        e.preventDefault();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        first.focus();
+        e.preventDefault();
+      }
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -186,7 +211,11 @@ export default function Header() {
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div id="mobile-menu" className="lg:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+        <div 
+          id="mobile-menu" 
+          onKeyDown={handleMobileMenuKeyDown}
+          className="lg:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200"
+        >
           <div className="px-4 pt-4 pb-6 space-y-3 flex flex-col">
             {location.pathname.includes('/empresas') || location.pathname.includes('/dedicado') || location.pathname.includes('/lan2lan') ? (
               <>
