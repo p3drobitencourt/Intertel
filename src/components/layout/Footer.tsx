@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MessageSquare, MapPin, FileText, Clock, Instagram } from 'lucide-react';
+import { company } from '../../config/company';
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
             {/* Col 1: About & Social */}
             <div className="space-y-6 lg:col-span-3">
               <Link to="/" className="block relative h-16 w-48 overflow-hidden dark:bg-slate-900/50 dark:rounded-xl" aria-label="Home">
-                <img src="/logo-ui.webp" alt="Intertel Telecom" loading="lazy" width="400" height="400" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none h-auto object-contain mix-blend-multiply dark:mix-blend-normal" />
+                <img src="/logo-ui.webp" alt={company.name} loading="lazy" width="400" height="400" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none h-auto object-contain mix-blend-multiply dark:mix-blend-normal" />
               </Link>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed pr-4">
                 Operadora de Telecomunicações mineira focada no fornecimento de internet em ultravelocidade 100% fibra óptica com tecnologia Wi-Fi e alta redundância.
@@ -25,16 +26,16 @@ export default function Footer() {
                   href="https://www.instagram.com/interteltelecom/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram da Intertel"
+                  aria-label={`Instagram da ${company.name}`}
                   className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-amber-500 hover:text-white text-slate-600 dark:text-slate-300 flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>  
                 <a 
-                  href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" 
+                  href={company.whatsappUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  aria-label="WhatsApp da Intertel"
+                  aria-label={`WhatsApp da ${company.name}`}
                   className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-amber-500 hover:text-white text-slate-600 dark:text-slate-300 flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500"
                 >
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -78,7 +79,7 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                   <div>
-                    <a href="tel:+5535999042885" className="block font-bold text-slate-900 dark:text-white hover:text-amber-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm">(35) 99904-2885</a>
+                    <a href={`tel:${company.phone.replace(/[-+() ]/g, '')}`} className="block font-bold text-slate-900 dark:text-white hover:text-amber-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm">{company.phoneDisplay}</a>
                     <p className="text-xs mt-0.5">WhatsApp e Ligação</p>
                   </div>
                 </li>
@@ -99,14 +100,14 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <MessageSquare className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                   <div className="flex flex-col gap-1">
-                    <a href="mailto:noc@interteltelecom.net.br" className="hover:text-amber-500 transition-colors truncate">noc@interteltelecom.net.br</a>
+                    <a href={`mailto:${company.email.noc}`} className="hover:text-amber-500 transition-colors truncate">{company.email.noc}</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-bold text-slate-900 dark:text-white">São João da Mata - MG</p>
-                    <p className="text-xs mt-0.5 leading-relaxed">Rua Maria Onilia Vieira, 249</p>
+                    <p className="font-bold text-slate-900 dark:text-white">{company.address.city} - {company.address.state}</p>
+                    <p className="text-xs mt-0.5 leading-relaxed">{company.address.street.split(' - ')[0]}</p>
                   </div>
                 </li>
               </ul>
@@ -132,7 +133,7 @@ export default function Footer() {
           {/* Legal Notice & Author details */}
           <div className="pt-8 flex flex-col lg:flex-row justify-between items-center text-[11px] text-slate-500 dark:text-slate-400 gap-4 text-center lg:text-left">
             <div>
-              <p>© {new Date().getFullYear()} Intertel Telecom. Todos os direitos reservados.</p>
+              <p>© {new Date().getFullYear()} {company.name}. Todos os direitos reservados.</p>
               <p className="mt-1">Regulamentado pela ANATEL • CNPJ: 30.607.069/0001-49</p>
             </div>
           </div>
@@ -142,7 +143,7 @@ export default function Footer() {
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" 
+        href={company.whatsappUrl} 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:shadow-[0_8px_30px_rgb(37,211,102,0.6)] hover:-translate-y-1 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#25D366] group"

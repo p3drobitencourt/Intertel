@@ -4,6 +4,8 @@ import { ArrowRight, Check, Star, Wifi, ChevronDown } from 'lucide-react';
 import FaqSection from '../components/home/FaqSection';
 import SEO from '../components/seo/SEO';
 
+import { company } from '../config/company';
+
 export default function Fibra({ plansData, billingCycle, startOnboarding, bebancaSva, beducaSva }: any) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,11 +22,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Internet Fibra Óptica Residencial",
-            "provider": {
-              "@type": "Organization",
-              "name": "Intertel Telecom",
-              "url": "https://interteltelecom.net.br"
-            },
+            "provider": { "@id": company.schemaIds.organization },
             "areaServed": {
               "@type": "City",
               "name": "São João da Mata"
@@ -37,7 +35,8 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
             "@type": "WebPage",
             "name": "Internet Fibra Óptica Residencial | Intertel Telecom",
             "description": "Conecte sua casa com planos 100% fibra óptica. Navegação, streaming e jogos sem travamentos. Conheça a Ultravelocidade Intertel.",
-            "url": "https://interteltelecom.net.br/fibra"
+            "url": "https://interteltelecom.net.br/fibra",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />

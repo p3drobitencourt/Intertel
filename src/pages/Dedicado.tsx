@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Network, Shield, Zap, Server, BarChart3, Clock, ChevronRight } from 'lucide-react';
 import SEO from '../components/seo/SEO';
 
+import { company } from '../config/company';
+
 export default function Dedicado() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,11 +20,7 @@ export default function Dedicado() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Link Dedicado para Provedores (ISP)",
-            "provider": {
-              "@type": "Organization",
-              "name": "Intertel Telecom",
-              "url": "https://interteltelecom.net.br"
-            },
+            "provider": { "@id": company.schemaIds.organization },
             "areaServed": {
               "@type": "City",
               "name": "São João da Mata"
@@ -35,7 +33,8 @@ export default function Dedicado() {
             "@type": "WebPage",
             "name": "Link Dedicado de Alta Performance para Provedores | Intertel",
             "description": "Trânsito IP premium, SLA de 99,9%, proteção DDoS e banda 100% garantida. Conectividade de missão crítica para escalar o seu provedor ISP.",
-            "url": "https://interteltelecom.net.br/dedicado"
+            "url": "https://interteltelecom.net.br/dedicado",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />

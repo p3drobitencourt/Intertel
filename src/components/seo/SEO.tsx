@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { company } from '../../config/company';
 
 interface SEOProps {
   title: string;
@@ -35,51 +36,51 @@ export default function SEO({
   // We'll keep the previous logic, but let's check if the title already includes Intertel Telecom to avoid "Intertel Telecom | Intertel Telecom | Intertel Telecom".
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
-  const GLOBAL_ORG_ID = "https://interteltelecom.net.br/#organization";
-  const GLOBAL_WEBSITE_ID = "https://interteltelecom.net.br/#website";
+  const GLOBAL_ORG_ID = company.schemaIds.organization;
+  const GLOBAL_WEBSITE_ID = company.schemaIds.website;
 
   const baseSchemas: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": GLOBAL_ORG_ID,
-      "name": "Intertel Telecom",
-      "url": "https://interteltelecom.net.br",
-      "logo": "https://interteltelecom.net.br/icone-app.png",
-      "telephone": "+55-35-99904-2885",
+      "name": company.name,
+      "url": company.website,
+      "logo": company.logo,
+      "telephone": company.phone,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Maria Onilia Vieira, 249 - Centro",
-        "addressLocality": "São João da Mata",
-        "addressRegion": "MG",
-        "postalCode": "37568-000",
-        "addressCountry": "BR"
+        "streetAddress": company.address.street,
+        "addressLocality": company.address.city,
+        "addressRegion": company.address.state,
+        "postalCode": company.address.postalCode,
+        "addressCountry": company.address.country
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": "https://interteltelecom.net.br/#localbusiness",
-      "name": "Intertel Telecom",
-      "image": "https://interteltelecom.net.br/logo-principal.png",
-      "url": "https://interteltelecom.net.br",
-      "telephone": "+55-35-99904-2885",
+      "@id": company.schemaIds.localBusiness,
+      "name": company.name,
+      "image": company.localBusinessImage,
+      "url": company.website,
+      "telephone": company.phone,
       "parentOrganization": { "@id": GLOBAL_ORG_ID },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Maria Onilia Vieira, 249 - Centro",
-        "addressLocality": "São João da Mata",
-        "addressRegion": "MG",
-        "postalCode": "37568-000",
-        "addressCountry": "BR"
+        "streetAddress": company.address.street,
+        "addressLocality": company.address.city,
+        "addressRegion": company.address.state,
+        "postalCode": company.address.postalCode,
+        "addressCountry": company.address.country
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "@id": GLOBAL_WEBSITE_ID,
-      "name": "Intertel Telecom",
-      "url": "https://interteltelecom.net.br",
+      "name": company.name,
+      "url": company.website,
       "publisher": { "@id": GLOBAL_ORG_ID }
     }
   ];

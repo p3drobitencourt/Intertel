@@ -1,3 +1,5 @@
+import { company } from '../config/company';
+
 export const startOnboarding = (plan: any = null, cepCode?: string) => {
   let msg = "Olá! Gostaria de falar com um atendente sobre os planos de internet.";
   
@@ -7,7 +9,7 @@ export const startOnboarding = (plan: any = null, cepCode?: string) => {
   
   const encodedMsg = encodeURIComponent(msg);
   window.open(
-    `https://api.whatsapp.com/send/?phone=5535999042885&text=${encodedMsg}&type=phone_number&app_absent=0`, 
+    `${company.whatsappUrl}&text=${encodedMsg}&type=phone_number&app_absent=0`, 
     "_blank", 
     "noopener,noreferrer"
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect, ReactNode } from "react";
 import { startOnboarding } from "../utils/whatsapp";
 import { useLocation } from "react-router-dom";
 import SEO from '../components/seo/SEO';
+import { company } from "../config/company";
 
 // Import Extracted Sections
 import MarqueeBanner from "../components/home/MarqueeBanner";
@@ -67,7 +68,8 @@ export default function Home() {
             "@type": "WebPage",
             "name": "Intertel Telecom | Internet Fibra Óptica e Soluções B2B",
             "description": "Conecte-se com a melhor ultravelocidade de ponta a ponta. Tecnologia Wi-Fi 6, planos 100% fibra óptica e suporte premium especializado da Intertel.",
-            "url": "https://interteltelecom.net.br/"
+            "url": "https://interteltelecom.net.br/",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />

@@ -6,6 +6,8 @@ import {
 import SEO from '../components/seo/SEO';
 import FaqSection from '../components/home/FaqSection';
 
+import { company } from '../config/company';
+
 export default function Empresas() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,11 +25,7 @@ export default function Empresas() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Internet Corporativa e Soluções B2B",
-            "provider": {
-              "@type": "Organization",
-              "name": "Intertel Telecom",
-              "url": "https://interteltelecom.net.br"
-            },
+            "provider": { "@id": company.schemaIds.organization },
             "areaServed": {
               "@type": "City",
               "name": "São João da Mata"
@@ -40,7 +38,8 @@ export default function Empresas() {
             "@type": "WebPage",
             "name": "Intertel Empresas | Soluções Corporativas de Internet",
             "description": "Conectividade de missão crítica para sua empresa no Sul de Minas. IP Dedicado, LAN-to-LAN e banda simétrica com SLA garantido pela Intertel Telecom.",
-            "url": "https://interteltelecom.net.br/empresas"
+            "url": "https://interteltelecom.net.br/empresas",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />

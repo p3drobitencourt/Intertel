@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Layers, ShieldCheck, Lock, Activity, RefreshCw, Briefcase, ChevronRight } from 'lucide-react';
 import SEO from '../components/seo/SEO';
 
+import { company } from '../config/company';
+
 export default function Lan2Lan() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,11 +20,7 @@ export default function Lan2Lan() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Interligação LAN-to-LAN (L2L)",
-            "provider": {
-              "@type": "Organization",
-              "name": "Intertel Telecom",
-              "url": "https://interteltelecom.net.br"
-            },
+            "provider": { "@id": company.schemaIds.organization },
             "areaServed": {
               "@type": "City",
               "name": "São João da Mata"
@@ -35,7 +33,8 @@ export default function Lan2Lan() {
             "@type": "WebPage",
             "name": "Interligação LAN-to-LAN | Intertel Telecom",
             "description": "Conecte matriz e filiais de forma transparente na camada 2 (L2L). Tráfego simétrico, total segurança e latência mínima com a Intertel Telecom.",
-            "url": "https://interteltelecom.net.br/lan2lan"
+            "url": "https://interteltelecom.net.br/lan2lan",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />

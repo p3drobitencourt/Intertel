@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Headphones } from "lucide-react";
+import { company } from "../../config/company";
 
 export default function ContatoSection() {
   return (
@@ -20,9 +21,9 @@ export default function ContatoSection() {
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-3">Endereço Matriz</h3>
               <p className="text-slate-600 dark:text-slate-200 text-sm leading-relaxed">
-                Rua Maria Onilia Vieira, 249 - Centro<br />
-                São João da Mata - MG<br />
-                CEP: 37568-000, Brasil
+                {company.address.street.split(' - ')[0]} - {company.address.street.split(' - ')[1]}<br />
+                {company.address.city} - {company.address.state}<br />
+                CEP: {company.address.postalCode}, {company.address.country === 'BR' ? 'Brasil' : company.address.country}
               </p>
 
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mt-8 mb-3">Horário de Atendimento</h3>
@@ -47,15 +48,15 @@ export default function ContatoSection() {
               <div className="space-y-3">
                 <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                   <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">WhatsApp:</span>
-                  <a href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">(35) 99904-2885</a>
+                  <a href={company.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{company.phoneDisplay}</a>
                 </p>
                 <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                   <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">Suporte:</span>
-                  <a href="mailto:noc@interteltelecom.net.br" className="text-blue-600 hover:underline break-all">noc@interteltelecom.net.br</a>
+                  <a href={`mailto:${company.email.noc}`} className="text-blue-600 hover:underline break-all">{company.email.noc}</a>
                 </p>
                 <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                   <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">Financeiro:</span>
-                  <a href="mailto:financeiro@interteltelecom.net.br" className="text-blue-600 hover:underline break-all">financeiro@interteltelecom.net.br</a>
+                  <a href={`mailto:${company.email.financeiro}`} className="text-blue-600 hover:underline break-all">{company.email.financeiro}</a>
                 </p>
               </div>
             </div>

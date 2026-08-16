@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FileText, Download, Shield, Info } from 'lucide-react';
 import SEO from '../components/seo/SEO';
 
+import { company } from '../config/company';
+
 export default function Contrato() {
   const [hasPdf, setHasPdf] = useState<boolean | null>(null);
 
@@ -34,7 +36,8 @@ export default function Contrato() {
             "@type": "WebPage",
             "name": "Contratos e Termos | Intertel Telecom",
             "description": "Acesse os contratos padrão e termos de uso dos serviços da Intertel Telecom.",
-            "url": "https://interteltelecom.net.br/contrato"
+            "url": "https://interteltelecom.net.br/contrato",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />

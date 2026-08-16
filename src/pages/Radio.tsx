@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/seo/SEO';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from 'lucide-react';
 
+import { company } from '../config/company';
+
 export default function Radio({ radioPlansData, billingCycle, startOnboarding }: any) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,11 +21,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Internet Via Rádio",
-            "provider": {
-              "@type": "Organization",
-              "name": "Intertel Telecom",
-              "url": "https://interteltelecom.net.br"
-            },
+            "provider": { "@id": company.schemaIds.organization },
             "areaServed": {
               "@type": "City",
               "name": "São João da Mata"
@@ -36,7 +34,8 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
             "@type": "WebPage",
             "name": "Internet Via Rádio para Zonas Rurais | Intertel Telecom",
             "description": "Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade e suporte técnico especializado da Intertel.",
-            "url": "https://interteltelecom.net.br/radio"
+            "url": "https://interteltelecom.net.br/radio",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />

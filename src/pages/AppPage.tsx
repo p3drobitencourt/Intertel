@@ -3,6 +3,8 @@ import { Smartphone, Download, User, CreditCard, Wrench, Shield, ChevronRight, A
 import { BebancaIcon, BeeducaIcon, bebancaSva, beducaSva } from '../data/plans';
 import SEO from '../components/seo/SEO';
 
+import { company } from '../config/company';
+
 export default function AppPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,7 +28,8 @@ export default function AppPage() {
             "@type": "WebPage",
             "name": "App do Assinante | Intertel Telecom",
             "description": "Acesse faturas, acompanhe seu consumo e solicite suporte técnico direto pelo aplicativo do assinante da Intertel Telecom.",
-            "url": "https://interteltelecom.net.br/app"
+            "url": "https://interteltelecom.net.br/app",
+            "isPartOf": { "@id": company.schemaIds.website }
           }
         ]}
       />
