@@ -64,44 +64,6 @@ export default function Home() {
         schema={[
           {
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Intertel Telecom",
-            "url": "https://interteltelecom.net.br",
-            "logo": "https://interteltelecom.net.br/icone-app.png",
-            "telephone": "+55-35-99904-2885",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Rua Maria Onilia Vieira, 249 - Centro",
-              "addressLocality": "São João da Mata",
-              "addressRegion": "MG",
-              "addressCountry": "BR"
-            }
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Intertel Telecom",
-            "image": "https://interteltelecom.net.br/logo-principal.png",
-            "@id": "https://interteltelecom.net.br",
-            "url": "https://interteltelecom.net.br",
-            "telephone": "+55-35-99904-2885",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Rua Maria Onilia Vieira, 249 - Centro",
-              "addressLocality": "São João da Mata",
-              "addressRegion": "MG",
-              "postalCode": "37568-000",
-              "addressCountry": "BR"
-            }
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Intertel Telecom",
-            "url": "https://interteltelecom.net.br"
-          },
-          {
-            "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Intertel Telecom | Internet Fibra Óptica e Soluções B2B",
             "description": "Conecte-se com a melhor ultravelocidade de ponta a ponta. Tecnologia Wi-Fi 6, planos 100% fibra óptica e suporte premium especializado da Intertel.",

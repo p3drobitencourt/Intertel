@@ -35,6 +35,112 @@ export default function SEO({
   // We'll keep the previous logic, but let's check if the title already includes Intertel Telecom to avoid "Intertel Telecom | Intertel Telecom | Intertel Telecom".
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
+  const GLOBAL_ORG_ID = "https://interteltelecom.net.br/#organization";
+  const GLOBAL_WEBSITE_ID = "https://interteltelecom.net.br/#website";
+
+  const baseSchemas: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": GLOBAL_ORG_ID,
+      "name": "Intertel Telecom",
+      "url": "https://interteltelecom.net.br",
+      "logo": "https://interteltelecom.net.br/icone-app.png",
+      "telephone": "+55-35-99904-2885",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Maria Onilia Vieira, 249 - Centro",
+        "addressLocality": "São João da Mata",
+        "addressRegion": "MG",
+        "postalCode": "37568-000",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://interteltelecom.net.br/#localbusiness",
+      "name": "Intertel Telecom",
+      "image": "https://interteltelecom.net.br/logo-principal.png",
+      "url": "https://interteltelecom.net.br",
+      "telephone": "+55-35-99904-2885",
+      "parentOrganization": { "@id": GLOBAL_ORG_ID },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Maria Onilia Vieira, 249 - Centro",
+        "addressLocality": "São João da Mata",
+        "addressRegion": "MG",
+        "postalCode": "37568-000",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": GLOBAL_WEBSITE_ID,
+      "name": "Intertel Telecom",
+      "url": "https://interteltelecom.net.br",
+      "publisher": { "@id": GLOBAL_ORG_ID }
+    }
+  ];
+
+  // If a canonical URL is provided, generate a BreadcrumbList based on its path.
+  // We can derive the path from the canonical URL, assuming it starts with https://interteltelecom.net.br
+  if (canonical && canonical !== "https://interteltelecom.net.br" && canonical !== "https://interteltelecom.net.br/") {
+    try {
+      const urlObj = new URL(canonical);
+      const pathSegments = urlObj.pathname.split('/').filter(Boolean);
+      
+      if (pathSegments.length > 0) {
+        const itemListElement = [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://interteltelecom.net.br"
+          }
+        ];
+
+        let currentPath = "https://interteltelecom.net.br";
+        pathSegments.forEach((segment, index) => {
+          currentPath += `/${segment}`;
+          
+          // Format the name slightly better (capitalize first letter, replace hyphens)
+          let formattedName = segment.replace(/-/g, ' ');
+          formattedName = formattedName.charAt(0).toUpperCase() + formattedName.slice(1);
+          
+          // Custom overrides for specific paths
+          if (segment === 'lan2lan') formattedName = 'Interligação LAN-to-LAN';
+          if (segment === 'app') formattedName = 'App Intertel';
+          
+          itemListElement.push({
+            "@type": "ListItem",
+            "position": index + 2,
+            "name": formattedName,
+            "item": currentPath
+          });
+        });
+
+        baseSchemas.push({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": itemListElement
+        });
+      }
+    } catch (e) {
+      // Ignore invalid URLs
+    }
+  }
+
+  const userSchemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
+  
+  // Clean user schemas of any Organization, LocalBusiness, WebSite if they match global to prevent duplicates
+  const finalSchemas = [...baseSchemas, ...userSchemas.filter(s => {
+    if (!s) return false;
+    const type = (s as any)['@type'];
+    return type !== 'Organization' && type !== 'LocalBusiness' && type !== 'WebSite';
+  })];
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -66,9 +172,9 @@ export default function SEO({
       <meta name="twitter:image:alt" content={imageAlt} />
 
       {/* JSON-LD Schema */}
-      {schema && (
+      {!noindex && (
         <script type="application/ld+json">
-          {JSON.stringify(schema)}
+          {JSON.stringify(finalSchemas)}
         </script>
       )}
     </Helmet>
