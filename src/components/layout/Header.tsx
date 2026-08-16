@@ -6,7 +6,16 @@ import { ChevronDown, Menu, X, User, Phone } from 'lucide-react';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
+
+  const handleDropdownKeyDown = (e: React.KeyboardEvent, menu: string) => {
+    if (e.key === 'Escape') {
+      setActiveDropdown(null);
+      const triggerButton = e.currentTarget.querySelector('button');
+      if (triggerButton) (triggerButton as HTMLElement).focus();
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,11 +61,26 @@ export default function Header() {
               </Link>
               
               {/* Planos Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 focus:outline-none focus:text-amber-500 transition-colors py-2 cursor-pointer select-none">
-                  Planos Residenciais <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+              <div 
+                className="relative group"
+                onMouseEnter={() => setActiveDropdown('residenciais')}
+                onMouseLeave={() => setActiveDropdown(null)}
+                onFocus={() => setActiveDropdown('residenciais')}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget)) {
+                    setActiveDropdown(null);
+                  }
+                }}
+                onKeyDown={(e) => handleDropdownKeyDown(e, 'residenciais')}
+              >
+                <button 
+                  className="flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 focus:outline-none focus:text-amber-500 transition-colors py-2 cursor-pointer select-none"
+                  aria-haspopup="true"
+                  aria-expanded={activeDropdown === 'residenciais'}
+                >
+                  Planos Residenciais <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${activeDropdown === 'residenciais' ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </button>
-                <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all z-50">
+                <div className={`absolute top-[100%] left-0 pt-2 transition-all z-50 ${activeDropdown === 'residenciais' ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                   <div className="w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
                     <Link to="/fibra" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 focus:bg-slate-50 dark:focus:bg-slate-700/50 focus:text-amber-500 dark:focus:text-amber-400 font-medium transition-colors outline-none">
                       Planos Fibra
@@ -69,11 +93,26 @@ export default function Header() {
               </div>
 
               {/* Empresas Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center gap-1 text-slate-600 dark:text-slate-300 group-hover:text-amber-500 dark:group-hover:text-amber-400 focus:outline-none focus:text-amber-500 transition-colors py-2 cursor-pointer select-none">
-                  Para Empresas <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+              <div 
+                className="relative group"
+                onMouseEnter={() => setActiveDropdown('empresas')}
+                onMouseLeave={() => setActiveDropdown(null)}
+                onFocus={() => setActiveDropdown('empresas')}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget)) {
+                    setActiveDropdown(null);
+                  }
+                }}
+                onKeyDown={(e) => handleDropdownKeyDown(e, 'empresas')}
+              >
+                <button 
+                  className="flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 focus:outline-none focus:text-amber-500 transition-colors py-2 cursor-pointer select-none"
+                  aria-haspopup="true"
+                  aria-expanded={activeDropdown === 'empresas'}
+                >
+                  Para Empresas <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${activeDropdown === 'empresas' ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </button>
-                <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all z-50">
+                <div className={`absolute top-[100%] left-0 pt-2 transition-all z-50 ${activeDropdown === 'empresas' ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                   <div className="w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
                     <Link to="/empresas" className="block px-4 py-3 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-amber-500 dark:hover:text-amber-400 focus:bg-slate-50 dark:focus:bg-slate-700/50 focus:text-amber-500 dark:focus:text-amber-400 font-medium transition-colors outline-none">
                       Planos Empresariais
@@ -136,16 +175,18 @@ export default function Header() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2.5 rounded-lg text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none transition-all"
             aria-label="Toggle Menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
             id="btn-hamburger"
           >
-            {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            {isMobileMenuOpen ? <X className="w-8 h-8" aria-hidden="true" /> : <Menu className="w-8 h-8" aria-hidden="true" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+        <div id="mobile-menu" className="lg:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-top-4 duration-200">
           <div className="px-4 pt-4 pb-6 space-y-3 flex flex-col">
             {location.pathname.includes('/empresas') || location.pathname.includes('/dedicado') || location.pathname.includes('/lan2lan') ? (
               <>
