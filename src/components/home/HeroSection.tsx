@@ -52,10 +52,41 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
   const nextSlide = () => setHeroSlide((prev) => (prev + 1) % heroSlides.length);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 6000);
-    return () => clearInterval(timer);
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    const startTimer = () => {
+      if (!timer) {
+        timer = setInterval(() => {
+          setHeroSlide((prev) => (prev + 1) % heroSlides.length);
+        }, 6000);
+      }
+    };
+
+    const stopTimer = () => {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopTimer();
+      } else {
+        startTimer();
+      }
+    };
+
+    if (!document.hidden) {
+      startTimer();
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      stopTimer();
+    };
   }, [heroSlides.length]);
 
   return (
