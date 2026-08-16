@@ -14,7 +14,7 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-export const DEFAULT_OG_IMAGE = 'https://interteltelecom.net.br/logo-principal.png';
+export const DEFAULT_OG_IMAGE = 'https://interteltelecom.net.br/og-image.jpg';
 
 export default function SEO({ 
   title, 
@@ -23,9 +23,9 @@ export default function SEO({
   schema, 
   ogImage = DEFAULT_OG_IMAGE,
   ogType = 'website',
-  imageWidth,
-  imageHeight,
-  imageAlt = 'Intertel Telecom',
+  imageWidth = '1200',
+  imageHeight = '630',
+  imageAlt = 'Intertel Telecom — Internet Fibra Óptica',
   noindex = false
 }: SEOProps) {
   const siteName = 'Intertel Telecom';
