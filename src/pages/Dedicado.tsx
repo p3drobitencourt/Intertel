@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Network, Shield, Zap, Server, BarChart3, Clock, ChevronRight } from 'lucide-react';
+import { getWhatsappLink } from '../utils/whatsapp';
 import SEO from '../components/seo/SEO';
 
 import { company } from '../config/company';
@@ -69,7 +70,7 @@ export default function Dedicado() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Link+Dedicado+para+provedor&type=phone_number&app_absent=0" 
+                href={getWhatsappLink(null, 'Link Dedicado para provedor')} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 id="CTA_DEDICADO_CONSULTOR_HERO"
@@ -140,7 +141,7 @@ export default function Dedicado() {
           </div>
           <div className="shrink-0">
             <a 
-              href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
+              href={getWhatsappLink(null, 'Link Dedicado')} 
               target="_blank" 
               rel="noopener noreferrer"
               id="CTA_DEDICADO_REUNIAO"

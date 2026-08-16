@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getWhatsappLink } from '../utils/whatsapp';
 import { 
   Briefcase, Globe, Shield, Layers, ArrowRight, CheckCircle2
 } from 'lucide-react';
@@ -80,7 +81,7 @@ export default function Empresas() {
 
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+consultor+sobre+solu%C3%A7%C3%B5es+corporativas&type=phone_number&app_absent=0" 
+                  href={getWhatsappLink(null, 'Internet Corporativa')}
                   target="_blank" 
                   rel="noopener noreferrer"
                   id="CTA_EMPRESARIAL_CONSULTOR_HERO"
@@ -150,7 +151,7 @@ export default function Empresas() {
                 <p className="text-slate-600 dark:text-slate-400 mb-8 flex-grow leading-relaxed">
                   Planos sob medida com IP fixo para empresas que necessitam de estabilidade, suporte técnico VIP e respostas rápidas.
                 </p>
-                <a href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+saber+mais+sobre+Internet+Corporativa&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 dark:text-blue-400 font-bold group-hover:text-blue-700 dark:group-hover:text-blue-300">
+                <a href={getWhatsappLink(null, 'Internet Corporativa')} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 dark:text-blue-400 font-bold group-hover:text-blue-700 dark:group-hover:text-blue-300">
                   Consultar viabilidade <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </div>
@@ -202,7 +203,7 @@ export default function Empresas() {
                   </ul>
                   
                   <a 
-                    href={`https://api.whatsapp.com/send/?phone=5535999042885&text=${encodeURIComponent(`Olá, gostaria de falar com um consultor sobre o plano ${plan.name} (Empresarial)`)}&type=phone_number&app_absent=0`} 
+                    href={getWhatsappLink(plan, 'Internet Corporativa')} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     data-tracking="CTA_EMPRESARIAL_CONSULTOR"
@@ -218,7 +219,7 @@ export default function Empresas() {
 
         <FaqSection 
           category="empresas" 
-          onContactSupport={() => window.open('https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+consultor+sobre+solu%C3%A7%C3%B5es+corporativas&type=phone_number&app_absent=0', '_blank')}
+          onContactSupport={() => window.open(getWhatsappLink(null, 'Internet Corporativa'), '_blank')}
         />
 
         {/* Seção Institucional de Contato */}
@@ -234,7 +235,7 @@ export default function Empresas() {
             </div>
             <div className="shrink-0">
               <a 
-                href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+gostaria+de+falar+com+um+consultor+sobre+solu%C3%A7%C3%B5es+corporativas&type=phone_number&app_absent=0" 
+                href={getWhatsappLink(null, 'Internet Corporativa')} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 id="CTA_EMPRESARIAL_REUNIAO"

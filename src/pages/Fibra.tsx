@@ -178,7 +178,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
                       
                       <div className="mt-auto pt-5 border-t border-slate-100 dark:border-slate-800">
                         <button 
-                          onClick={() => startOnboarding(plan)}
+                          onClick={() => startOnboarding(plan, 'Internet Fibra')}
                           aria-label={`Contratar plano ${plan.name}`}
                           id={`CTA_PLANO_${plan.id.toUpperCase()}`}
                           data-tracking="CTA_PLANO_RESIDENCIAL"
@@ -200,7 +200,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
         </div>
       </section>
 
-      <FaqSection category="fibra" onContactSupport={() => startOnboarding(null)} />
+      <FaqSection category="fibra" onContactSupport={() => startOnboarding(null, 'Internet Fibra')} />
 
       {/* CTA Final */}
       <section className="py-12 md:py-16 bg-blue-950 dark:bg-slate-950">
@@ -212,7 +212,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
             Escolha a estabilidade que a sua casa merece. Converse agora com nossos especialistas e descubra a melhor opção para você.
           </p>
           <button 
-            onClick={() => startOnboarding(null)}
+            onClick={() => startOnboarding(null, 'Internet Fibra')}
             id="CTA_CONSULTAR_DISPONIBILIDADE_FIBRA"
             data-tracking="CTA_CONSULTAR_DISPONIBILIDADE"
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"

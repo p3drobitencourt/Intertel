@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Layers, ShieldCheck, Lock, Activity, RefreshCw, Briefcase, ChevronRight } from 'lucide-react';
+import { getWhatsappLink } from '../utils/whatsapp';
 import SEO from '../components/seo/SEO';
 
 import { company } from '../config/company';
@@ -70,7 +71,7 @@ export default function Lan2Lan() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Interliga%C3%A7%C3%A3o+LAN-to-LAN&type=phone_number&app_absent=0" 
+                href={getWhatsappLink(null, 'Interligação LAN-to-LAN')} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 id="CTA_LAN2LAN_CONSULTOR_HERO"
@@ -140,7 +141,7 @@ export default function Lan2Lan() {
           </div>
           <div className="shrink-0">
             <a 
-              href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+viabilidade+para+LAN-to-LAN&type=phone_number&app_absent=0" 
+              href={getWhatsappLink(null, 'LAN-to-LAN')} 
               target="_blank" 
               rel="noopener noreferrer"
               id="CTA_LAN2LAN_REUNIAO"
