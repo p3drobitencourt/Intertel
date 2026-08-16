@@ -72,7 +72,7 @@ export default function Dedicado() {
               <a 
                 href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Link+Dedicado+para+provedor&type=phone_number&app_absent=0" 
                 target="_blank" 
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 id="CTA_DEDICADO_CONSULTOR_HERO"
                 data-tracking="CTA_EMPRESARIAL_CONSULTOR"
                 className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
@@ -143,7 +143,7 @@ export default function Dedicado() {
             <a 
               href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+Link+Dedicado&type=phone_number&app_absent=0" 
               target="_blank" 
-              rel="noreferrer"
+              rel="noopener noreferrer"
               id="CTA_DEDICADO_REUNIAO"
               data-tracking="CTA_EMPRESARIAL_REUNIAO"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"

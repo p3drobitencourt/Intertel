@@ -47,7 +47,7 @@ export default function ContatoSection() {
               <div className="space-y-3">
                 <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                   <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">WhatsApp:</span>
-                  <a href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">(35) 99904-2885</a>
+                  <a href="https://api.whatsapp.com/send/?phone=5535999042885&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">(35) 99904-2885</a>
                 </p>
                 <p className="text-slate-600 dark:text-slate-200 text-sm flex items-start gap-2">
                   <span className="font-semibold text-slate-800 dark:text-slate-200 shrink-0">Suporte:</span>

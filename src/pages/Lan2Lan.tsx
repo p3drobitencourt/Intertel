@@ -73,7 +73,7 @@ export default function Lan2Lan() {
               <a 
                 href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+tenho+interesse+em+Interliga%C3%A7%C3%A3o+LAN-to-LAN&type=phone_number&app_absent=0" 
                 target="_blank" 
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 id="CTA_LAN2LAN_CONSULTOR_HERO"
                 data-tracking="CTA_EMPRESARIAL_CONSULTOR"
                 className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
@@ -143,7 +143,7 @@ export default function Lan2Lan() {
             <a 
               href="https://api.whatsapp.com/send/?phone=5535999042885&text=Ol%C3%A1%2C+quero+falar+com+um+consultor+sobre+viabilidade+para+LAN-to-LAN&type=phone_number&app_absent=0" 
               target="_blank" 
-              rel="noreferrer"
+              rel="noopener noreferrer"
               id="CTA_LAN2LAN_REUNIAO"
               data-tracking="CTA_EMPRESARIAL_REUNIAO"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"

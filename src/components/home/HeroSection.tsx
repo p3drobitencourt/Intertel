@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Sparkles, Search, Building2, Smartphone } from "lucide-react";
+import { Sparkles, Search, Building2, Smartphone, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
 interface HeroSectionProps {
   isDarkMode: boolean;
@@ -49,9 +49,21 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
     }
   ];
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const [isManuallyPaused, setIsManuallyPaused] = useState(() => 
+    typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
+  );
+
   const nextSlide = () => setHeroSlide((prev) => (prev + 1) % heroSlides.length);
+  const prevSlide = () => setHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  const goToSlide = (idx: number) => setHeroSlide(idx);
+
+  const isAutoPlayPaused = isHovered || isFocused || isManuallyPaused;
 
   useEffect(() => {
+    if (isAutoPlayPaused) return;
+
     let timer: ReturnType<typeof setInterval> | null = null;
 
     const startTimer = () => {
@@ -87,15 +99,39 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       stopTimer();
     };
-  }, [heroSlides.length]);
+  }, [isAutoPlayPaused, heroSlides.length]);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") prevSlide();
+    else if (e.key === "ArrowRight") nextSlide();
+  };
 
   return (
-    <section className="relative w-full min-h-[70vh] py-12 lg:py-16 flex flex-col justify-center overflow-hidden bg-blue-950 group" id="hero-section">
-      {heroSlides.map((slide, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${heroSlide === idx ? 'opacity-100 z-20' : 'opacity-0 z-0 pointer-events-none'}`}
-        >
+    <section 
+      className="relative w-full min-h-[70vh] py-12 lg:py-16 flex flex-col justify-center overflow-hidden bg-blue-950 group outline-none" 
+      id="hero-section"
+      aria-roledescription="carousel"
+      aria-label="Destaques"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
+      onKeyDown={handleKeyDown}
+    >
+      <div 
+        aria-live={isAutoPlayPaused ? "polite" : "off"}
+        aria-atomic="false"
+        className="relative w-full h-full"
+      >
+        {heroSlides.map((slide, idx) => (
+          <div
+            key={idx}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`Slide ${idx + 1} de ${heroSlides.length}`}
+            aria-hidden={heroSlide !== idx}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${heroSlide === idx ? 'opacity-100 z-20' : 'opacity-0 z-0 pointer-events-none'}`}
+          >
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 w-full h-full">
             <img
@@ -120,7 +156,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
             <div className={`w-full ${slide.type === 'app' ? 'lg:w-1/2' : 'lg:w-2/3'} space-y-5 lg:space-y-6 text-left`}>
               {slide.badge && (
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase bg-blue-950/10 border border-blue-950/20 text-blue-950 dark:bg-white/10 dark:border-white/20 dark:text-white backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
-                  <Sparkles className="w-5 h-5 text-blue-950 dark:text-amber-500" />
+                  <Sparkles className="w-5 h-5 text-blue-950 dark:text-amber-500" aria-hidden="true" />
                   {slide.badge}
                 </div>
               )}
@@ -161,11 +197,11 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
                       className="h-14 px-10 rounded-full bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-slate-900 font-black tracking-wide uppercase text-sm shadow-[0_10px_40px_rgba(23,37,84,0.3)] hover:shadow-[0_15px_50px_rgba(23,37,84,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 shrink-0 flex items-center justify-center gap-3 border border-blue-900/50 dark:border-amber-400/50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
                     >
                       {slide.type === 'corporate' ? (
-                        <Building2 className="w-5 h-5" />
+                        <Building2 className="w-5 h-5" aria-hidden="true" />
                       ) : slide.type === 'app' ? (
-                        <Smartphone className="w-5 h-5" />
+                        <Smartphone className="w-5 h-5" aria-hidden="true" />
                       ) : (
-                        <Search className="w-5 h-5" />
+                        <Search className="w-5 h-5" aria-hidden="true" />
                       )}
                       {slide.ctaText}
                     </button>
@@ -184,7 +220,53 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
             )}
           </div>
         </div>
-      ))}
+        ))}
+      </div>
+
+      {/* Carousel Controls */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 lg:gap-4 bg-slate-900/40 dark:bg-slate-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 dark:border-white/5 shadow-xl">
+        <button 
+          onClick={prevSlide}
+          aria-label="Slide anterior"
+          className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
+        >
+          <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" aria-hidden="true" />
+        </button>
+        
+        <div className="flex items-center gap-2">
+          {heroSlides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => goToSlide(idx)}
+              aria-label={`Mostrar slide ${idx + 1}`}
+              aria-current={heroSlide === idx ? "true" : "false"}
+              className={`w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 ${heroSlide === idx ? 'bg-amber-500 w-6 lg:w-8' : 'bg-white/50 hover:bg-white'}`}
+            />
+          ))}
+        </div>
+
+        <button 
+          onClick={nextSlide}
+          aria-label="Próximo slide"
+          className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
+        >
+          <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" aria-hidden="true" />
+        </button>
+
+        <div className="w-[1px] h-5 bg-white/20 mx-1" aria-hidden="true" />
+
+        <button
+          onClick={() => setIsManuallyPaused(!isManuallyPaused)}
+          aria-label={isManuallyPaused ? "Retomar apresentação" : "Pausar apresentação"}
+          className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
+        >
+          {isManuallyPaused ? (
+            <Play className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+          ) : (
+            <Pause className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+          )}
+        </button>
+      </div>
     </section>
   );
 }
