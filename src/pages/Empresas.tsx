@@ -16,8 +16,33 @@ export default function Empresas() {
     <>
       <SEO 
         title="Intertel Empresas | Soluções Corporativas de Internet"
-        description="Conectividade de missão crítica para sua empresa no Sul de Minas. IP Dedicado, LAN-to-LAN e banda simétrica com SLA garantido."
+        description="Conectividade de missão crítica para sua empresa no Sul de Minas. IP Dedicado, LAN-to-LAN e banda simétrica com SLA garantido pela Intertel Telecom."
         canonical="https://interteltelecom.net.br/empresas"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Internet Corporativa e Soluções B2B",
+            "provider": {
+              "@type": "Organization",
+              "name": "Intertel Telecom",
+              "url": "https://interteltelecom.net.br"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "São João da Mata"
+            },
+            "description": "Conectividade de missão crítica para sua empresa no Sul de Minas. IP Dedicado, LAN-to-LAN e banda simétrica com SLA garantido.",
+            "url": "https://interteltelecom.net.br/empresas"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Intertel Empresas | Soluções Corporativas de Internet",
+            "description": "Conectividade de missão crítica para sua empresa no Sul de Minas. IP Dedicado, LAN-to-LAN e banda simétrica com SLA garantido pela Intertel Telecom.",
+            "url": "https://interteltelecom.net.br/empresas"
+          }
+        ]}
       />
       <main className="bg-white dark:bg-slate-950">
         {/* Corporate Hero Section */}

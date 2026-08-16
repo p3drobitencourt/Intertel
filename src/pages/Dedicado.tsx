@@ -10,9 +10,34 @@ export default function Dedicado() {
   return (
     <>
       <SEO 
-        title="Link Dedicado de Alta Performance para Provedores (ISPs) | Intertel"
-        description="Trânsito IP premium, SLA de 99,9%, proteção DDoS e banda 100% garantida. Conectividade de missão crítica para escalar o seu provedor."
+        title="Link Dedicado de Alta Performance para Provedores | Intertel"
+        description="Trânsito IP premium, SLA de 99,9%, proteção DDoS e banda 100% garantida. Conectividade de missão crítica para escalar o seu provedor ISP."
         canonical="https://interteltelecom.net.br/dedicado"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Link Dedicado para Provedores (ISP)",
+            "provider": {
+              "@type": "Organization",
+              "name": "Intertel Telecom",
+              "url": "https://interteltelecom.net.br"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "São João da Mata"
+            },
+            "description": "Trânsito IP premium, SLA de 99,9%, proteção DDoS e banda 100% garantida.",
+            "url": "https://interteltelecom.net.br/dedicado"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Link Dedicado de Alta Performance para Provedores | Intertel",
+            "description": "Trânsito IP premium, SLA de 99,9%, proteção DDoS e banda 100% garantida. Conectividade de missão crítica para escalar o seu provedor ISP.",
+            "url": "https://interteltelecom.net.br/dedicado"
+          }
+        ]}
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-10 lg:py-14">

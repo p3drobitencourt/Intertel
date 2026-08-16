@@ -14,6 +14,31 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
         title="Internet Via Rádio para Zonas Rurais | Intertel Telecom"
         description="Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade e suporte técnico especializado da Intertel."
         canonical="https://interteltelecom.net.br/radio"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Internet Via Rádio",
+            "provider": {
+              "@type": "Organization",
+              "name": "Intertel Telecom",
+              "url": "https://interteltelecom.net.br"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "São João da Mata"
+            },
+            "description": "Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade.",
+            "url": "https://interteltelecom.net.br/radio"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Internet Via Rádio para Zonas Rurais | Intertel Telecom",
+            "description": "Conexão de qualidade via rádio para áreas afastadas e zonas rurais. Planos com alta estabilidade e suporte técnico especializado da Intertel.",
+            "url": "https://interteltelecom.net.br/radio"
+          }
+        ]}
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-10 lg:py-14">

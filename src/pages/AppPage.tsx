@@ -18,8 +18,17 @@ export default function AppPage() {
     <div className="min-h-screen bg-white dark:bg-slate-900 font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900 dark:text-white">
       <SEO 
         title="App do Assinante | Intertel Telecom"
-        description="Acesse faturas, acompanhe seu consumo e solicite suporte técnico direto pelo aplicativo do assinante da Intertel."
+        description="Acesse faturas, acompanhe seu consumo e solicite suporte técnico direto pelo aplicativo do assinante da Intertel Telecom."
         canonical="https://interteltelecom.net.br/app"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "App do Assinante | Intertel Telecom",
+            "description": "Acesse faturas, acompanhe seu consumo e solicite suporte técnico direto pelo aplicativo do assinante da Intertel Telecom.",
+            "url": "https://interteltelecom.net.br/app"
+          }
+        ]}
       />
       <section className="py-12 md:py-20 bg-white dark:bg-slate-900 relative z-10 flex items-center min-h-[50vh]" id="app-intertel">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

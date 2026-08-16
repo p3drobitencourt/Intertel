@@ -15,6 +15,31 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
         title="Internet Fibra Óptica Residencial | Intertel Telecom"
         description="Conecte sua casa com planos 100% fibra óptica. Navegação, streaming e jogos sem travamentos. Conheça a Ultravelocidade Intertel."
         canonical="https://interteltelecom.net.br/fibra"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Internet Fibra Óptica Residencial",
+            "provider": {
+              "@type": "Organization",
+              "name": "Intertel Telecom",
+              "url": "https://interteltelecom.net.br"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "São João da Mata"
+            },
+            "description": "Conecte sua casa com planos 100% fibra óptica. Navegação, streaming e jogos sem travamentos.",
+            "url": "https://interteltelecom.net.br/fibra"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Internet Fibra Óptica Residencial | Intertel Telecom",
+            "description": "Conecte sua casa com planos 100% fibra óptica. Navegação, streaming e jogos sem travamentos. Conheça a Ultravelocidade Intertel.",
+            "url": "https://interteltelecom.net.br/fibra"
+          }
+        ]}
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-blue-950 dark:bg-slate-950 py-10 lg:py-14">

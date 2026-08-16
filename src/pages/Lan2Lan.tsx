@@ -11,8 +11,33 @@ export default function Lan2Lan() {
     <>
       <SEO 
         title="Interligação LAN-to-LAN | Intertel Telecom"
-        description="Conecte matriz e filiais de forma transparente na camada 2 (L2L). Tráfego simétrico, total segurança e latência mínima."
+        description="Conecte matriz e filiais de forma transparente na camada 2 (L2L). Tráfego simétrico, total segurança e latência mínima com a Intertel Telecom."
         canonical="https://interteltelecom.net.br/lan2lan"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Interligação LAN-to-LAN (L2L)",
+            "provider": {
+              "@type": "Organization",
+              "name": "Intertel Telecom",
+              "url": "https://interteltelecom.net.br"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "São João da Mata"
+            },
+            "description": "Conecte matriz e filiais de forma transparente na camada 2 (L2L). Tráfego simétrico, total segurança e latência mínima.",
+            "url": "https://interteltelecom.net.br/lan2lan"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Interligação LAN-to-LAN | Intertel Telecom",
+            "description": "Conecte matriz e filiais de forma transparente na camada 2 (L2L). Tráfego simétrico, total segurança e latência mínima com a Intertel Telecom.",
+            "url": "https://interteltelecom.net.br/lan2lan"
+          }
+        ]}
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-10 lg:py-14">

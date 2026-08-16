@@ -41,7 +41,11 @@ export default function SEO({
       <meta name="description" content={description} />
       
       {canonical && <link rel="canonical" href={canonical} />}
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      {!noindex ? (
+        <meta name="robots" content="index, follow" />
+      ) : (
+        <meta name="robots" content="noindex, nofollow" />
+      )}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
