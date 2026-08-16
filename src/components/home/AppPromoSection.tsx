@@ -69,8 +69,8 @@ export default function AppPromoSection() {
 
                   {/* Tela do App (Container com overflow-hidden para cortar cantos da imagem perfeitamente) */}
                   <div className="rounded-[2.2rem] sm:rounded-[2.7rem] overflow-hidden bg-white">
-                    <img
-                      src="/app-tela1.png"
+                    <img 
+                      src="/app-tela1.webp" 
                       alt="Tela do Aplicativo Minha Intertel"
                       width="386"
                       height="799"
