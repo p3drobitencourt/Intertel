@@ -10,12 +10,6 @@ export default function AppPage() {
  window.scrollTo(0, 0);
  }, []);
 
- const appScreenshots = [
-"/app-tela1.webp",
-"/app-tela2.webp",
-"/app-tela3.webp"
- ];
-
  return (
  <div className="min-h-screen bg-white font-sans selection:bg-amber-500/30 selection:text-amber-900 overflow-x-hidden text-slate-900">
  <SEO 
@@ -102,15 +96,22 @@ export default function AppPage() {
 
   {/* CTAs */}
   <div className="flex flex-col sm:flex-row gap-4 items-center pt-2">
-  <a href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" target="_blank" rel="noopener noreferrer" id="CTA_GOOGLE_PLAY_APP" data-tracking="CTA_GOOGLE_PLAY" className="flex items-center justify-center gap-3 bg-slate-900 text-white px-7 py-3.5 rounded-xl hover:bg-slate-800 hover:-translate-y-1 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 w-full sm:w-auto shrink-0">
-  <svg viewBox="0 0 512 512" className="w-7 h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
-  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
-  </svg>
-  <div className="text-left leading-tight">
-  <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
-  <p className="text-sm font-black tracking-tight text-white">Google Play</p>
-  </div>
-  </a>
+              <a 
+                href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                id="CTA_GOOGLE_PLAY_APP" 
+                data-tracking="CTA_GOOGLE_PLAY" 
+                className="flex items-center justify-center gap-3 bg-slate-900 text-white px-7 py-3.5 rounded-xl hover:bg-slate-800 hover:-translate-y-1 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 w-full sm:w-auto shrink-0"
+              >
+                <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.09 19.98c-.12-.22-.19-.53-.19-.94V4.96c0-.41.07-.72.19-.94l11.45 11.45-11.45 4.51zm.69.41 12.02-4.73 1.98 1.98L5.75 20.4c-.39.22-.76.22-.97-.01zm12.71-6.71L6.04 3.23c-.39-.23-.76-.23-.97 0l12.42 10.45zm1.42 1.42-1.98-1.98 2.54-2.12c.48-.4.76-1.02.76-1.74s-.28-1.34-.76-1.74l-2.54-2.12 1.98-1.98c1.33.66 2.16 2.1 2.16 3.84 0 1.74-.83 3.18-2.16 3.84z"/>
+                </svg>
+                <div className="text-left leading-tight">
+                  <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
+                  <p className="text-sm font-black tracking-tight text-white">Google Play</p>
+                </div>
+              </a>
   <a href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" target="_blank" rel="noopener noreferrer" id="CTA_APP_STORE_APP" data-tracking="CTA_APP_STORE" className="flex items-center justify-center gap-3 bg-slate-900 text-white px-7 py-3.5 rounded-xl hover:bg-slate-800 hover:-translate-y-1 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 w-full sm:w-auto shrink-0">
   <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
   <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
