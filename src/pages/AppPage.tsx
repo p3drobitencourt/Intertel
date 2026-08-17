@@ -125,14 +125,14 @@ export default function AppPage() {
   </section>
 
   {/* 4. Como começar (Passos) */}
-  <section className="py-20 md:py-32 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+  <section className="py-16 md:py-20 bg-slate-50 relative overflow-hidden border-t border-slate-200">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div className="text-center mb-16 md:mb-24">
+      <div className="text-center mb-12 md:mb-16">
         <h2 className="text-sm font-bold text-amber-500 uppercase tracking-widest mb-3">Como começar</h2>
         <h3 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
           Tenha sua Intertel sempre com você
         </h3>
-        <p className="text-slate-600 mt-5 text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-slate-600 mt-4 text-lg max-w-2xl mx-auto leading-relaxed">
           O processo é simples. Baixe o aplicativo, entre na sua conta e gerencie todos os seus serviços de forma rápida e segura.
         </p>
       </div>
@@ -143,13 +143,13 @@ export default function AppPage() {
 
         {/* Step 1 */}
         <div className="relative flex flex-col items-center text-center group">
-          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-8 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
+          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-5 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
             01
           </div>
-          <h4 className="text-xl font-bold text-slate-900 mb-4">Baixe o aplicativo</h4>
-          <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Instale o app Intertel pela loja do seu celular e tenha o controle em suas mãos.</p>
+          <h4 className="text-xl font-bold text-slate-900 mb-3">Baixe o aplicativo</h4>
+          <p className="text-slate-600 leading-relaxed mb-6 max-w-[280px]">Instale o app Intertel pela loja do seu celular e tenha o controle em suas mãos.</p>
           
-          <div className="flex flex-col xl:flex-row gap-4 w-full max-w-[320px] xl:max-w-none mx-auto mt-auto justify-center items-center">
+          <div className="flex flex-col xl:flex-row gap-4 w-full max-w-[320px] xl:max-w-none mx-auto mt-4 justify-center items-center">
             <a 
               href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel" 
               target="_blank" 
@@ -188,15 +188,15 @@ export default function AppPage() {
         {/* Step 2 */}
         <div className="relative flex flex-col items-center text-center group mt-8 md:mt-0">
           {/* Mobile connecting indicator */}
-          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-12 left-1/2 -translate-x-1/2" />
+          <div className="md:hidden w-[2px] h-10 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-10 left-1/2 -translate-x-1/2" />
 
-          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-8 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
+          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-5 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
             02
           </div>
-          <h4 className="text-xl font-bold text-slate-900 mb-4">Acesse sua conta</h4>
-          <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Entre com seus dados para acessar seus serviços. O acesso é feito utilizando o <strong className="text-slate-900">CPF do titular</strong>.</p>
+          <h4 className="text-xl font-bold text-slate-900 mb-3">Acesse sua conta</h4>
+          <p className="text-slate-600 leading-relaxed mb-6 max-w-[280px]">Entre com seus dados para acessar seus serviços. O acesso é feito utilizando o <strong className="text-slate-900">CPF do titular</strong>.</p>
           
-          <div className="w-full max-w-[160px] mx-auto mt-auto opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
+          <div className="w-full max-w-[160px] mx-auto mt-4 opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
             <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10" />
             <img src="/app-tela1.png" alt="Tela de Login do App" className="w-full h-auto rounded-t-xl drop-shadow-xl" loading="lazy" />
           </div>
@@ -205,15 +205,15 @@ export default function AppPage() {
         {/* Step 3 */}
         <div className="relative flex flex-col items-center text-center group mt-8 md:mt-0">
           {/* Mobile connecting indicator */}
-          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-12 left-1/2 -translate-x-1/2" />
+          <div className="md:hidden w-[2px] h-10 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-10 left-1/2 -translate-x-1/2" />
 
-          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-8 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
+          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-5 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
             03
           </div>
-          <h4 className="text-xl font-bold text-slate-900 mb-4">Tenha tudo na palma da mão</h4>
-          <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Consulte planos, faturas, pagamentos e suporte. Tudo organizado no mesmo lugar.</p>
+          <h4 className="text-xl font-bold text-slate-900 mb-3">Tenha tudo na palma da mão</h4>
+          <p className="text-slate-600 leading-relaxed mb-6 max-w-[280px]">Consulte planos, faturas, pagamentos e suporte. Tudo organizado no mesmo lugar.</p>
           
-          <div className="w-full max-w-[160px] mx-auto mt-auto opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
+          <div className="w-full max-w-[160px] mx-auto mt-4 opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
             <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10" />
             <img src="/app-tela2.png" alt="Dashboard do App" className="w-full h-auto rounded-t-xl drop-shadow-xl" loading="lazy" />
           </div>
@@ -222,7 +222,7 @@ export default function AppPage() {
       </div>
 
       {/* Serviços Adicionais Banner */}
-      <div className="mt-20 max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/40">
+      <div className="mt-16 max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/40">
         <div className="flex flex-col md:flex-row items-center gap-8 justify-between">
           <div className="text-center md:text-left">
             <h4 className="text-2xl font-black text-slate-900 mb-2">Serviços adicionais</h4>
