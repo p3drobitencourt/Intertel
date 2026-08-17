@@ -166,7 +166,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  onClick={() => startOnboarding(plan,'Internet via Rádio')}
  aria-label={`Contratar plano ${plan.name}`}
  id={`CTA_PLANO_${plan.id.toUpperCase()}`}
- data-tracking="CTA_PLANO_RESIDENCIAL"
+ data-tracking="CTA_PLANO_RADIO"
  className={`w-full py-3.5 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
  plan.isPopular
  ?"bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"

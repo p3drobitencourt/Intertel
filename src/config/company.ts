@@ -14,6 +14,7 @@ export const company = {
  state:'MG',
  postalCode:'37568-000',
  country:'BR',
+ mapsLink: 'https://www.google.com/maps/dir/?api=1&destination=Intertel+Telecom,+Rua+Maria+Onilia+Vieira,+249+-+Centro,+S%C3%A3o+Jo%C3%A3o+da+Mata+-+MG',
  },
  logo:'https://interteltelecom.net.br/icone-app.png',
  localBusinessImage:'https://interteltelecom.net.br/logo-principal.png',

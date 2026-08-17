@@ -64,7 +64,7 @@ export default function ContatoSection() {
 
  <div 
  className="col-span-1 md:col-span-2 flex h-full relative group cursor-pointer rounded-2xl overflow-hidden" 
- onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=Intertel+Telecom,+Rua+Maria+Onilia+Vieira,+249+-+Centro,+S%C3%A3o+Jo%C3%A3o+da+Mata+-+MG','_blank','noopener,noreferrer')}
+ onClick={() => window.open(company.address.mapsLink, '_blank', 'noopener,noreferrer')}
  >
  <div className="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
  <div className="bg-white text-blue-950 font-bold px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0">
