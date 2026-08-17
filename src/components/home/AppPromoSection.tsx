@@ -59,8 +59,8 @@ export default function AppPromoSection() {
                 data-tracking="CTA_GOOGLE_PLAY" 
                 className="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 transition-all hover:-translate-y-1 active:scale-95 shrink-0"
               >
-                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.09 19.98c-.12-.22-.19-.53-.19-.94V4.96c0-.41.07-.72.19-.94l11.45 11.45-11.45 4.51zm.69.41 12.02-4.73 1.98 1.98L5.75 20.4c-.39.22-.76.22-.97-.01zm12.71-6.71L6.04 3.23c-.39-.23-.76-.23-.97 0l12.42 10.45zm1.42 1.42-1.98-1.98 2.54-2.12c.48-.4.76-1.02.76-1.74s-.28-1.34-.76-1.74l-2.54-2.12 1.98-1.98c1.33.66 2.16 2.1 2.16 3.84 0 1.74-.83 3.18-2.16 3.84z"/>
+                <svg viewBox="0 0 512 512" className="w-6 h-6 sm:w-7 sm:h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
                 </svg>
                 <div className="flex flex-col items-start">
                   <span className="text-[10px] uppercase tracking-wider leading-none text-slate-300">Disponível no</span>
@@ -92,17 +92,12 @@ export default function AppPromoSection() {
             
             {/* Left Phone (Login) */}
             <div className="absolute left-[2%] sm:left-[8%] lg:left-[2%] top-1/2 -translate-y-[45%] w-[35%] max-w-[190px] z-10 -rotate-12 hover:-rotate-6 hover:-translate-y-[48%] transition-all duration-500 ease-out group">
-              <div className="rounded-[1.75rem] sm:rounded-[2rem] overflow-hidden border-[4px] sm:border-[6px] border-slate-800 bg-slate-800 shadow-2xl relative opacity-95 group-hover:opacity-100 transition-opacity">
-                <div className="absolute top-0 inset-x-0 h-4 sm:h-5 bg-slate-800 z-20 flex justify-center rounded-b-xl">
-                  <div className="w-16 sm:w-20 h-3 sm:h-4 bg-black rounded-b-lg"></div>
-                </div>
-                <img 
-                  src="/app-tela1.webp" 
-                  alt="Tela de Login: Minha conta"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
+              <img 
+                src="/app-mockup-1-clean.webp" 
+                alt="Tela de Login: Minha conta"
+                className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
               <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap">
                 Minha conta
               </div>
@@ -110,17 +105,12 @@ export default function AppPromoSection() {
 
             {/* Right Phone (Faturas) */}
             <div className="absolute right-[2%] sm:right-[8%] lg:right-[2%] top-1/2 -translate-y-[45%] w-[35%] max-w-[190px] z-10 rotate-12 hover:rotate-6 hover:-translate-y-[48%] transition-all duration-500 ease-out group">
-              <div className="rounded-[1.75rem] sm:rounded-[2rem] overflow-hidden border-[4px] sm:border-[6px] border-slate-800 bg-slate-800 shadow-2xl relative opacity-95 group-hover:opacity-100 transition-opacity">
-                <div className="absolute top-0 inset-x-0 h-4 sm:h-5 bg-slate-800 z-20 flex justify-center rounded-b-xl">
-                  <div className="w-16 sm:w-20 h-3 sm:h-4 bg-black rounded-b-lg"></div>
-                </div>
-                <img 
-                  src="/app-tela3.webp" 
-                  alt="Tela de Faturas: Minhas faturas"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
+              <img 
+                src="/app-mockup-4-clean.webp" 
+                alt="Tela de Faturas: Minhas faturas"
+                className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
               <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap">
                 Minhas faturas
               </div>
@@ -128,17 +118,12 @@ export default function AppPromoSection() {
 
             {/* Center Phone (Dashboard Principal) */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[48%] w-[45%] max-w-[260px] z-30 hover:-translate-y-[52%] transition-all duration-500 ease-out group scale-105">
-              <div className="rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border-[5px] sm:border-[8px] border-slate-800 bg-slate-800 shadow-2xl shadow-blue-900/30 relative">
-                <div className="absolute top-0 inset-x-0 h-5 sm:h-6 bg-slate-800 z-20 flex justify-center rounded-b-2xl">
-                  <div className="w-20 sm:w-24 h-4 bg-black rounded-b-xl"></div>
-                </div>
-                <img 
-                  src="/app-tela2.webp" 
-                  alt="Tela Principal: Meus planos"
-                  className="w-full h-auto object-cover"
-                  fetchPriority="high"
-                />
-              </div>
+              <img 
+                src="/app-mockup-2-clean.webp" 
+                alt="Tela Principal: Meus planos"
+                className="w-full h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]"
+                fetchPriority="high"
+              />
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full shadow-xl shadow-blue-900/10 border border-slate-100 text-xs sm:text-sm font-bold text-blue-700 opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 Meus planos
