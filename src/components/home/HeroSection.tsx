@@ -1,273 +1,273 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { Sparkles, Search, Building2, Smartphone, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import React, { useState, useEffect } from"react";
+import { useNavigate } from"react-router-dom";
+import { Sparkles, Search, Building2, Smartphone, ChevronLeft, ChevronRight, Pause, Play } from"lucide-react";
 
 export default function HeroSection() {
-  const navigate = useNavigate();
-  const [heroSlide, setHeroSlide] = useState(0);
+ const navigate = useNavigate();
+ const [heroSlide, setHeroSlide] = useState(0);
 
-  const heroSlides = [
-    {
-      title: "Planos que\n",
-      titleHighlight: "combinam com você.",
-      subtitle: "A melhor conexão 100% fibra ótica com estabilidade e velocidade garantidas para a sua casa ou família.",
-      badge: "CONEXÃO RESIDENCIAL",
-      image: "/assets/hero-residential-1920.webp",
-      altText: "Ambiente residencial moderno com equipamento de internet fibra ótica",
-      textClass: "text-white",
-      highlightClass: "text-amber-500 drop-shadow-md",
-      ctaText: "Consultar Planos",
-      type: "residential"
-    },
-    {
-      title: "Baixe\n",
-      titleHighlight: "nosso APP",
-      subtitle: "e pague com mais facilidade. Tenha o controle da sua internet na palma da mão.",
-      badge: "COMODIDADE #feitapravc",
-      image: "/assets/hero-app-1920.webp",
-      altText: "Pessoa segurando smartphone e utilizando o aplicativo de autoatendimento da Intertel",
-      textClass: "text-white",
-      highlightClass: "text-amber-500 drop-shadow-md",
-      ctaText: "Conhecer o App",
-      type: "app"
-    },
-    {
-      title: "Soluções\n",
-      titleHighlight: "Corporativas",
-      subtitle: "IP Dedicado, Suporte Especializado e Monitoramento Proativo que não deixam sua empresa parar.",
-      badge: "ALTA PERFORMANCE",
-      image: "/assets/hero-corporate-1920.webp",
-      altText: "Infraestrutura corporativa premium de servidores e conectividade em alta disponibilidade",
-      textClass: "text-white",
-      highlightClass: "text-amber-500 drop-shadow-md",
-      ctaText: "Conhecer Soluções",
-      type: "corporate"
-    }
-  ];
+ const heroSlides = [
+ {
+ title:"Planos que\n",
+ titleHighlight:"combinam com você.",
+ subtitle:"A melhor conexão 100% fibra ótica com estabilidade e velocidade garantidas para a sua casa ou família.",
+ badge:"CONEXÃO RESIDENCIAL",
+ image:"/assets/hero-residential-1920.webp",
+ altText:"Ambiente residencial moderno com equipamento de internet fibra ótica",
+ textClass:"text-white",
+ highlightClass:"text-amber-500 drop-shadow-md",
+ ctaText:"Consultar Planos",
+ type:"residential"
+ },
+ {
+ title:"Baixe\n",
+ titleHighlight:"nosso APP",
+ subtitle:"e pague com mais facilidade. Tenha o controle da sua internet na palma da mão.",
+ badge:"COMODIDADE #feitapravc",
+ image:"/assets/hero-app-1920.webp",
+ altText:"Pessoa segurando smartphone e utilizando o aplicativo de autoatendimento da Intertel",
+ textClass:"text-white",
+ highlightClass:"text-amber-500 drop-shadow-md",
+ ctaText:"Conhecer o App",
+ type:"app"
+ },
+ {
+ title:"Soluções\n",
+ titleHighlight:"Corporativas",
+ subtitle:"IP Dedicado, Suporte Especializado e Monitoramento Proativo que não deixam sua empresa parar.",
+ badge:"ALTA PERFORMANCE",
+ image:"/assets/hero-corporate-1920.webp",
+ altText:"Infraestrutura corporativa premium de servidores e conectividade em alta disponibilidade",
+ textClass:"text-white",
+ highlightClass:"text-amber-500 drop-shadow-md",
+ ctaText:"Conhecer Soluções",
+ type:"corporate"
+ }
+ ];
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
-  const [isManuallyPaused, setIsManuallyPaused] = useState(() => 
-    typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
-  );
+ const [isHovered, setIsHovered] = useState(false);
+ const [isFocused, setIsFocused] = useState(false);
+ const [isManuallyPaused, setIsManuallyPaused] = useState(() => 
+ typeof window !=='undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
+ );
 
-  const nextSlide = () => setHeroSlide((prev) => (prev + 1) % heroSlides.length);
-  const prevSlide = () => setHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  const goToSlide = (idx: number) => setHeroSlide(idx);
+ const nextSlide = () => setHeroSlide((prev) => (prev + 1) % heroSlides.length);
+ const prevSlide = () => setHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+ const goToSlide = (idx: number) => setHeroSlide(idx);
 
-  const isAutoPlayPaused = isHovered || isFocused || isManuallyPaused;
+ const isAutoPlayPaused = isHovered || isFocused || isManuallyPaused;
 
-  useEffect(() => {
-    if (isAutoPlayPaused) return;
+ useEffect(() => {
+ if (isAutoPlayPaused) return;
 
-    let timer: ReturnType<typeof setInterval> | null = null;
+ let timer: ReturnType<typeof setInterval> | null = null;
 
-    const startTimer = () => {
-      if (!timer) {
-        timer = setInterval(() => {
-          setHeroSlide((prev) => (prev + 1) % heroSlides.length);
-        }, 6000);
-      }
-    };
+ const startTimer = () => {
+ if (!timer) {
+ timer = setInterval(() => {
+ setHeroSlide((prev) => (prev + 1) % heroSlides.length);
+ }, 6000);
+ }
+ };
 
-    const stopTimer = () => {
-      if (timer) {
-        clearInterval(timer);
-        timer = null;
-      }
-    };
+ const stopTimer = () => {
+ if (timer) {
+ clearInterval(timer);
+ timer = null;
+ }
+ };
 
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        stopTimer();
-      } else {
-        startTimer();
-      }
-    };
+ const handleVisibilityChange = () => {
+ if (document.hidden) {
+ stopTimer();
+ } else {
+ startTimer();
+ }
+ };
 
-    if (!document.hidden) {
-      startTimer();
-    }
+ if (!document.hidden) {
+ startTimer();
+ }
 
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+ document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      stopTimer();
-    };
-  }, [isAutoPlayPaused, heroSlides.length]);
+ return () => {
+ document.removeEventListener("visibilitychange", handleVisibilityChange);
+ stopTimer();
+ };
+ }, [isAutoPlayPaused, heroSlides.length]);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowLeft") prevSlide();
-    else if (e.key === "ArrowRight") nextSlide();
-  };
+ const handleKeyDown = (e: React.KeyboardEvent) => {
+ if (e.key ==="ArrowLeft") prevSlide();
+ else if (e.key ==="ArrowRight") nextSlide();
+ };
 
-  return (
-    <section 
-      className="relative w-full min-h-[70vh] py-12 lg:py-16 flex flex-col justify-center overflow-hidden bg-blue-950 group outline-none" 
-      id="hero-section"
-      aria-roledescription="carousel"
-      aria-label="Destaques"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onFocus={() => setIsFocused(true)}
-      onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget)) {
-          setIsFocused(false);
-        }
-      }}
-      onKeyDown={handleKeyDown}
-    >
-      <div 
-        aria-live={isAutoPlayPaused ? "polite" : "off"}
-        aria-atomic="false"
-        className="relative w-full h-full"
-      >
-        {heroSlides.map((slide, idx) => (
-          <div
-            key={idx}
-            role="group"
-            aria-roledescription="slide"
-            aria-label={`Slide ${idx + 1} de ${heroSlides.length}`}
-            aria-hidden={heroSlide !== idx}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${heroSlide === idx ? 'opacity-100 z-20' : 'opacity-0 z-0 pointer-events-none'}`}
-          >
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0 w-full h-full">
-            <img
-              src={slide.image}
-              srcSet={`
-                ${slide.image.replace('-1920', '-640')} 640w,
-                ${slide.image.replace('-1920', '-1024')} 1024w,
-                ${slide.image} 1920w
-              `}
-              sizes="100vw"
-              alt={slide.altText}
-              className="w-full h-full object-cover object-center"
-              {...(idx === 0 ? { fetchPriority: "high", loading: "eager" } : { loading: "lazy" })}
-            />
-            <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
-          </div>
+ return (
+ <section 
+ className="relative w-full min-h-[70vh] py-12 lg:py-16 flex flex-col justify-center overflow-hidden bg-blue-950 group outline-none" 
+ id="hero-section"
+ aria-roledescription="carousel"
+ aria-label="Destaques"
+ onMouseEnter={() => setIsHovered(true)}
+ onMouseLeave={() => setIsHovered(false)}
+ onFocus={() => setIsFocused(true)}
+ onBlur={(e) => {
+ if (!e.currentTarget.contains(e.relatedTarget)) {
+ setIsFocused(false);
+ }
+ }}
+ onKeyDown={handleKeyDown}
+ >
+ <div 
+ aria-live={isAutoPlayPaused ?"polite" :"off"}
+ aria-atomic="false"
+ className="relative w-full h-full"
+ >
+ {heroSlides.map((slide, idx) => (
+ <div
+ key={idx}
+ role="group"
+ aria-roledescription="slide"
+ aria-label={`Slide ${idx + 1} de ${heroSlides.length}`}
+ aria-hidden={heroSlide !== idx}
+ className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${heroSlide === idx ?'opacity-100 z-20' :'opacity-0 z-0 pointer-events-none'}`}
+ >
+ {/* Background Image with Overlay */}
+ <div className="absolute inset-0 w-full h-full">
+ <img
+ src={slide.image}
+ srcSet={`
+ ${slide.image.replace('-1920','-640')} 640w,
+ ${slide.image.replace('-1920','-1024')} 1024w,
+ ${slide.image} 1920w
+`}
+ sizes="100vw"
+ alt={slide.altText}
+ className="w-full h-full object-cover object-center"
+ {...(idx === 0 ? { fetchPriority:"high", loading:"eager" } : { loading:"lazy" })}
+ />
+ <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
+ <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
+ </div>
 
-          {/* Content Container */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full relative z-30 flex flex-col lg:flex-row items-center justify-between">
-            {/* Text Content */}
-            <div className={`w-full ${slide.type === 'app' ? 'lg:w-1/2' : 'lg:w-2/3'} space-y-5 lg:space-y-6 text-left`}>
-              {slide.badge && (
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase bg-white/10 border border-white/20 text-white backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
-                  <Sparkles className="w-5 h-5 text-amber-500" aria-hidden="true" />
-                  {slide.badge}
-                </div>
-              )}
+ {/* Content Container */}
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full relative z-30 flex flex-col lg:flex-row items-center justify-between">
+ {/* Text Content */}
+ <div className={`w-full ${slide.type ==='app' ?'lg:w-1/2' :'lg:w-2/3'} space-y-5 lg:space-y-6 text-left`}>
+ {slide.badge && (
+ <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase bg-white/10 border border-white/20 text-white backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
+ <Sparkles className="w-5 h-5 text-amber-500" aria-hidden="true" />
+ {slide.badge}
+ </div>
+ )}
 
-              <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black font-display tracking-tight leading-[1.1] drop-shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 ${slide.textClass}`}>
-                {slide.title.split('\n').map((line, i) => (
-                  <React.Fragment key={i}>
-                    {line}
-                    {i !== slide.title.split('\n').length - 1 && <br />}
-                  </React.Fragment>
-                ))}
-                <span className={`${slide.highlightClass} block mt-2`}>{slide.titleHighlight}</span>
-              </h1>
+ <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black font-display tracking-tight leading-[1.1] drop-shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 ${slide.textClass}`}>
+ {slide.title.split('\n').map((line, i) => (
+ <React.Fragment key={i}>
+ {line}
+ {i !== slide.title.split('\n').length - 1 && <br />}
+ </React.Fragment>
+ ))}
+ <span className={`${slide.highlightClass} block mt-2`}>{slide.titleHighlight}</span>
+ </h1>
 
-              {slide.subtitle && (
-                <p className={`text-base sm:text-lg md:text-xl max-w-2xl font-medium leading-relaxed drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 text-slate-200`}>
-                  {slide.subtitle}
-                </p>
-              )}
+ {slide.subtitle && (
+ <p className={`text-base sm:text-lg md:text-xl max-w-2xl font-medium leading-relaxed drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 text-slate-200`}>
+ {slide.subtitle}
+ </p>
+ )}
 
-              {/* CTAs */}
-              <div className="pt-4 flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 w-full">
-                {slide.ctaText && (
-                  <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <button
-                      onClick={() => {
-                        if (slide.type === 'corporate') {
-                          navigate("/empresas");
-                        } else if (slide.type === 'app') {
-                          document.getElementById('app-promo')?.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          navigate("/fibra");
-                        }
-                      }}
-                      aria-label={slide.ctaText}
-                      id={`CTA_HERO_${slide.type.toUpperCase()}`}
-                      data-tracking={`CTA_HERO_${slide.type.toUpperCase()}`}
-                      tabIndex={heroSlide === idx ? 0 : -1}
-                      className="h-14 px-10 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-black tracking-wide uppercase text-sm shadow-[0_10px_40px_rgba(23,37,84,0.3)] hover:shadow-[0_15px_50px_rgba(23,37,84,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 shrink-0 flex items-center justify-center gap-3 border border-amber-400/50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
-                    >
-                      {slide.type === 'corporate' ? (
-                        <Building2 className="w-5 h-5" aria-hidden="true" />
-                      ) : slide.type === 'app' ? (
-                        <Smartphone className="w-5 h-5" aria-hidden="true" />
-                      ) : (
-                        <Search className="w-5 h-5" aria-hidden="true" />
-                      )}
-                      {slide.ctaText}
-                    </button>
-                  </div>
-                )}
+ {/* CTAs */}
+ <div className="pt-4 flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 w-full">
+ {slide.ctaText && (
+ <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+ <button
+ onClick={() => {
+ if (slide.type ==='corporate') {
+ navigate("/empresas");
+ } else if (slide.type ==='app') {
+ document.getElementById('app-promo')?.scrollIntoView({ behavior:'smooth' });
+ } else {
+ navigate("/fibra");
+ }
+ }}
+ aria-label={slide.ctaText}
+ id={`CTA_HERO_${slide.type.toUpperCase()}`}
+ data-tracking={`CTA_HERO_${slide.type.toUpperCase()}`}
+ tabIndex={heroSlide === idx ? 0 : -1}
+ className="h-14 px-10 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-black tracking-wide uppercase text-sm shadow-[0_10px_40px_rgba(23,37,84,0.3)] hover:shadow-[0_15px_50px_rgba(23,37,84,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 shrink-0 flex items-center justify-center gap-3 border border-amber-400/50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+ >
+ {slide.type ==='corporate' ? (
+ <Building2 className="w-5 h-5" aria-hidden="true" />
+ ) : slide.type ==='app' ? (
+ <Smartphone className="w-5 h-5" aria-hidden="true" />
+ ) : (
+ <Search className="w-5 h-5" aria-hidden="true" />
+ )}
+ {slide.ctaText}
+ </button>
+ </div>
+ )}
 
 
-              </div>
-            </div>
+ </div>
+ </div>
 
-            {/* Optional Right Side Content (App Preview) */}
-            {slide.type === 'app' && (
-              <div className="w-full lg:w-1/2 h-full items-center justify-center lg:justify-end hidden sm:flex pt-10 lg:pt-0 animate-in fade-in slide-in-from-right-10 duration-1000 delay-300">
-                {/* Removed broken app-preview.png as background image already has a phone */}
-              </div>
-            )}
-          </div>
-        </div>
-        ))}
-      </div>
+ {/* Optional Right Side Content (App Preview) */}
+ {slide.type ==='app' && (
+ <div className="w-full lg:w-1/2 h-full items-center justify-center lg:justify-end hidden sm:flex pt-10 lg:pt-0 animate-in fade-in slide-in-from-right-10 duration-1000 delay-300">
+ {/* Removed broken app-preview.png as background image already has a phone */}
+ </div>
+ )}
+ </div>
+ </div>
+ ))}
+ </div>
 
-      {/* Carousel Controls */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 lg:gap-4 bg-slate-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-xl">
-        <button 
-          onClick={prevSlide}
-          aria-label="Slide anterior"
-          className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
-        >
-          <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" aria-hidden="true" />
-        </button>
-        
-        <div className="flex items-center gap-2">
-          {heroSlides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => goToSlide(idx)}
-              aria-label={`Mostrar slide ${idx + 1}`}
-              aria-current={heroSlide === idx ? "true" : "false"}
-              className={`w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 ${heroSlide === idx ? 'bg-amber-500 w-6 lg:w-8' : 'bg-white/50 hover:bg-white'}`}
-            />
-          ))}
-        </div>
+ {/* Carousel Controls */}
+ <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 lg:gap-4 bg-slate-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-xl">
+ <button 
+ onClick={prevSlide}
+ aria-label="Slide anterior"
+ className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
+ >
+ <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" aria-hidden="true" />
+ </button>
+ 
+ <div className="flex items-center gap-2">
+ {heroSlides.map((_, idx) => (
+ <button
+ key={idx}
+ onClick={() => goToSlide(idx)}
+ aria-label={`Mostrar slide ${idx + 1}`}
+ aria-current={heroSlide === idx ?"true" :"false"}
+ className={`w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 ${heroSlide === idx ?'bg-amber-500 w-6 lg:w-8' :'bg-white/50 hover:bg-white'}`}
+ />
+ ))}
+ </div>
 
-        <button 
-          onClick={nextSlide}
-          aria-label="Próximo slide"
-          className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
-        >
-          <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" aria-hidden="true" />
-        </button>
+ <button 
+ onClick={nextSlide}
+ aria-label="Próximo slide"
+ className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
+ >
+ <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" aria-hidden="true" />
+ </button>
 
-        <div className="w-[1px] h-5 bg-white/20 mx-1" aria-hidden="true" />
+ <div className="w-[1px] h-5 bg-white/20 mx-1" aria-hidden="true" />
 
-        <button
-          onClick={() => setIsManuallyPaused(!isManuallyPaused)}
-          aria-label={isManuallyPaused ? "Retomar apresentação" : "Pausar apresentação"}
-          className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
-        >
-          {isManuallyPaused ? (
-            <Play className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
-          ) : (
-            <Pause className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
-          )}
-        </button>
-      </div>
-    </section>
-  );
+ <button
+ onClick={() => setIsManuallyPaused(!isManuallyPaused)}
+ aria-label={isManuallyPaused ?"Retomar apresentação" :"Pausar apresentação"}
+ className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
+ >
+ {isManuallyPaused ? (
+ <Play className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+ ) : (
+ <Pause className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+ )}
+ </button>
+ </div>
+ </section>
+ );
 }
