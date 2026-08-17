@@ -41,20 +41,18 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  />
  {/* Hero Section */}
  <section className="relative overflow-hidden bg-blue-950 py-10 lg:py-14">
- <img 
- src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop"
- srcSet="
- https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=640&auto=format&fit=crop 640w,
- https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1024&auto=format&fit=crop 1024w,
- https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1920&auto=format&fit=crop 1920w
-"
- sizes="100vw"
- alt=""
- fetchPriority="high"
- loading="eager"
- className="absolute inset-0 w-full h-full object-cover object-center opacity-10 mix-blend-overlay"
- />
- <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-transparent"></div>
+  <picture className="absolute inset-0 w-full h-full">
+  <source media="(min-width: 1024px)" srcSet="/assets/hero-residential-1920.webp" />
+  <source media="(min-width: 640px)" srcSet="/assets/hero-residential-1024.webp" />
+  <img 
+  src="/assets/hero-residential-640.webp"
+  alt="Internet Rural Intertel Telecom"
+  fetchPriority="high"
+  loading="eager"
+  className="w-full h-full object-cover object-[center_30%] opacity-20 mix-blend-overlay"
+  />
+  </picture>
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-blue-950/20"></div>
  
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
  <div className="max-w-3xl">

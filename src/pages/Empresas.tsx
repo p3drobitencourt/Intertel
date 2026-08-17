@@ -48,20 +48,18 @@ export default function Empresas() {
  {/* Corporate Hero Section */}
  <section className="relative bg-slate-900 py-10 lg:py-14 overflow-hidden">
  <div className="absolute inset-0">
- <img 
- src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
- srcSet="
- https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=640&auto=format&fit=crop 640w,
- https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1024&auto=format&fit=crop 1024w,
- https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop 1920w
-"
- sizes="100vw"
- alt="Ambiente Corporativo"
- className="w-full h-full object-cover opacity-20 mix-blend-luminosity"
- fetchPriority="high"
- loading="eager"
- />
- <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
+  <picture className="absolute inset-0 w-full h-full">
+  <source media="(min-width: 1024px)" srcSet="/assets/hero-corporate-1920.webp" />
+  <source media="(min-width: 640px)" srcSet="/assets/hero-corporate-1024.webp" />
+  <img 
+  src="/assets/hero-corporate-640.webp"
+  alt="Ambiente Corporativo de Alta Performance"
+  fetchPriority="high"
+  loading="eager"
+  className="w-full h-full object-cover object-[center_30%] opacity-20 mix-blend-luminosity"
+  />
+  </picture>
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
  </div>
  
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
