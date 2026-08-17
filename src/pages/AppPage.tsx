@@ -1,5 +1,5 @@
 import React, { useEffect } from'react';
-import { Smartphone, Download, User, CreditCard, Wrench, Shield, ChevronRight, Apple, Play, FileText, Headphones } from'lucide-react';
+import { Smartphone, Download, User, CreditCard, Wrench, Shield, ChevronRight, Apple, Play, FileText, Headphones, Unlock, Activity } from'lucide-react';
 import { BebancaIcon, BeeducaIcon, bebancaSva, beducaSva } from'../data/plans';
 import SEO from'../components/seo/SEO';
 
@@ -47,49 +47,45 @@ export default function AppPage() {
   </p>
   </div>
 
-  {/* Benefícios (Movidos para a coluna esquerda) */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div className="flex items-start gap-3">
-  <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center shrink-0">
-  <FileText className="w-5 h-5 text-blue-600" />
+  {/* Benefícios (Refinados) */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+  <div className="flex items-start gap-4">
+  <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 shadow-sm">
+  <FileText className="w-6 h-6 text-blue-600" />
   </div>
   <div>
-  <h4 className="font-bold text-slate-900 text-sm">Faturas e PIX</h4>
-  <p className="text-xs text-slate-600 mt-0.5">Pague contas com rapidez, sem complicação.</p>
+  <h4 className="font-bold text-slate-900 text-[15px] leading-tight">Faturas e PIX</h4>
+  <p className="text-sm text-slate-600 mt-1 leading-relaxed">Pague contas com rapidez, sem complicação.</p>
   </div>
   </div>
   
-  <div className="flex items-start gap-3">
-  <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center shrink-0">
-  <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-  </svg>
+  <div className="flex items-start gap-4">
+  <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 shadow-sm">
+  <Unlock className="w-6 h-6 text-amber-600" />
   </div>
   <div>
-  <h4 className="font-bold text-slate-900 text-sm">Desbloqueio</h4>
-  <p className="text-xs text-slate-600 mt-0.5">Libere sua conexão instantaneamente.</p>
+  <h4 className="font-bold text-slate-900 text-[15px] leading-tight">Desbloqueio</h4>
+  <p className="text-sm text-slate-600 mt-1 leading-relaxed">Libere sua conexão instantaneamente.</p>
   </div>
   </div>
 
-  <div className="flex items-start gap-3">
-  <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center shrink-0">
-  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-  </svg>
+  <div className="flex items-start gap-4">
+  <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 shadow-sm">
+  <Activity className="w-6 h-6 text-emerald-600" />
   </div>
   <div>
-  <h4 className="font-bold text-slate-900 text-sm">Consumo</h4>
-  <p className="text-xs text-slate-600 mt-0.5">Acompanhe seus dados de forma transparente.</p>
+  <h4 className="font-bold text-slate-900 text-[15px] leading-tight">Consumo</h4>
+  <p className="text-sm text-slate-600 mt-1 leading-relaxed">Acompanhe seus dados de forma transparente.</p>
   </div>
   </div>
 
-  <div className="flex items-start gap-3">
-  <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center shrink-0">
-  <Headphones className="w-5 h-5 text-purple-600" />
+  <div className="flex items-start gap-4">
+  <div className="w-12 h-12 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center shrink-0 shadow-sm">
+  <Headphones className="w-6 h-6 text-purple-600" />
   </div>
   <div>
-  <h4 className="font-bold text-slate-900 text-sm">Suporte</h4>
-  <p className="text-xs text-slate-600 mt-0.5">Abra chamados direto pelo app.</p>
+  <h4 className="font-bold text-slate-900 text-[15px] leading-tight">Suporte</h4>
+  <p className="text-sm text-slate-600 mt-1 leading-relaxed">Abra chamados direto pelo app.</p>
   </div>
   </div>
   </div>
@@ -143,32 +139,31 @@ export default function AppPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
         {/* Desktop connecting line */}
-        <div className="hidden md:block absolute top-[2.5rem] left-[16.6%] right-[16.6%] h-[2px] bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 -z-10" />
+        <div className="hidden md:block absolute top-[2.25rem] left-[16.6%] right-[16.6%] h-[2px] bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 -z-10" />
 
         {/* Step 1 */}
         <div className="relative flex flex-col items-center text-center group">
-          <div className="w-20 h-20 rounded-3xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50 flex items-center justify-center text-3xl font-black text-slate-900 mb-8 relative group-hover:-translate-y-1 transition-transform">
+          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-8 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
             01
-            <div className="absolute inset-0 bg-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <h4 className="text-xl font-bold text-slate-900 mb-4">Baixe o aplicativo</h4>
           <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Instale o app Intertel pela loja do seu celular e tenha o controle em suas mãos.</p>
           
-          <div className="flex flex-col xl:flex-row gap-3 w-full max-w-[280px] xl:max-w-none mx-auto mt-auto justify-center items-center">
+          <div className="flex flex-col xl:flex-row gap-4 w-full max-w-[320px] xl:max-w-none mx-auto mt-auto justify-center items-center">
             <a 
               href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel" 
               target="_blank" 
               rel="noopener noreferrer" 
               id="CTA_GOOGLE_PLAY_STEP1" 
               data-tracking="CTA_GOOGLE_PLAY" 
-              className="flex flex-1 items-center justify-center gap-3 bg-slate-900 text-white px-5 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-lg active:scale-95 w-full shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+              className="flex flex-1 items-center justify-center gap-4 bg-slate-900 text-white px-5 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 w-full shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
             >
-              <svg viewBox="0 0 512 512" className="w-7 h-7 fill-current shrink-0 group-hover:scale-105 transition-transform" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 512 512" className="w-8 h-8 fill-current shrink-0 group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
                 <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
               </svg>
-              <div className="text-left leading-tight">
-                <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
-                <p className="text-[15px] font-black tracking-tight text-white">Google Play</p>
+              <div className="flex flex-col items-start leading-none gap-0.5">
+                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Disponível no</span>
+                <span className="text-[16px] font-black tracking-tight text-white">Google Play</span>
               </div>
             </a>
             <a 
@@ -177,14 +172,14 @@ export default function AppPage() {
               rel="noopener noreferrer" 
               id="CTA_APP_STORE_STEP1" 
               data-tracking="CTA_APP_STORE" 
-              className="flex flex-1 items-center justify-center gap-3 bg-slate-900 text-white px-5 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-lg active:scale-95 w-full shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+              className="flex flex-1 items-center justify-center gap-4 bg-slate-900 text-white px-5 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 w-full shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
             >
-              <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current shrink-0 group-hover:scale-105 transition-transform" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current shrink-0 group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
               </svg>
-              <div className="text-left leading-tight">
-                <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Baixar na</p>
-                <p className="text-[15px] font-black tracking-tight text-white">App Store</p>
+              <div className="flex flex-col items-start leading-none gap-0.5">
+                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Baixar na</span>
+                <span className="text-[16px] font-black tracking-tight text-white">App Store</span>
               </div>
             </a>
           </div>
@@ -193,11 +188,10 @@ export default function AppPage() {
         {/* Step 2 */}
         <div className="relative flex flex-col items-center text-center group mt-8 md:mt-0">
           {/* Mobile connecting indicator */}
-          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-14 left-1/2 -translate-x-1/2" />
+          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-12 left-1/2 -translate-x-1/2" />
 
-          <div className="w-20 h-20 rounded-3xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50 flex items-center justify-center text-3xl font-black text-slate-900 mb-8 relative group-hover:-translate-y-1 transition-transform">
+          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-8 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
             02
-            <div className="absolute inset-0 bg-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <h4 className="text-xl font-bold text-slate-900 mb-4">Acesse sua conta</h4>
           <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Entre com seus dados para acessar seus serviços. O acesso é feito utilizando o <strong className="text-slate-900">CPF do titular</strong>.</p>
@@ -211,11 +205,10 @@ export default function AppPage() {
         {/* Step 3 */}
         <div className="relative flex flex-col items-center text-center group mt-8 md:mt-0">
           {/* Mobile connecting indicator */}
-          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-14 left-1/2 -translate-x-1/2" />
+          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-12 left-1/2 -translate-x-1/2" />
 
-          <div className="w-20 h-20 rounded-3xl bg-white border border-amber-200 shadow-lg shadow-amber-200/30 flex items-center justify-center text-3xl font-black text-amber-500 mb-8 relative group-hover:-translate-y-1 transition-transform">
+          <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-2xl font-black text-slate-900 mb-8 relative z-10 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-md transition-all duration-300">
             03
-            <div className="absolute inset-0 bg-amber-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <h4 className="text-xl font-bold text-slate-900 mb-4">Tenha tudo na palma da mão</h4>
           <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Consulte planos, faturas, pagamentos e suporte. Tudo organizado no mesmo lugar.</p>
