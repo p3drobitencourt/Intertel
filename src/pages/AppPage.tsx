@@ -94,34 +94,7 @@ export default function AppPage() {
   </div>
   </div>
 
-  {/* CTAs */}
-  <div className="flex flex-col sm:flex-row gap-4 items-center pt-2">
-              <a 
-                href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                id="CTA_GOOGLE_PLAY_APP" 
-                data-tracking="CTA_GOOGLE_PLAY" 
-                className="flex items-center justify-center gap-3 bg-slate-900 text-white px-7 py-3.5 rounded-xl hover:bg-slate-800 hover:-translate-y-1 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 w-full sm:w-auto shrink-0"
-              >
-                <svg viewBox="0 0 512 512" className="w-6 h-6 sm:w-7 sm:h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
-                </svg>
-                <div className="text-left leading-tight">
-                  <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
-                  <p className="text-sm font-black tracking-tight text-white">Google Play</p>
-                </div>
-              </a>
-  <a href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" target="_blank" rel="noopener noreferrer" id="CTA_APP_STORE_APP" data-tracking="CTA_APP_STORE" className="flex items-center justify-center gap-3 bg-slate-900 text-white px-7 py-3.5 rounded-xl hover:bg-slate-800 hover:-translate-y-1 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 w-full sm:w-auto shrink-0">
-  <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
-  <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
-  </svg>
-  <div className="text-left leading-tight">
-  <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Baixar na</p>
-  <p className="text-sm font-black tracking-tight text-white">App Store</p>
-  </div>
-  </a>
-  </div>
+  {/* CTAs removidos da primeira dobra para focar a conversão no 'Como começar' */}
   </div>
 
   {/* COLUNA DIREITA: Visual Depth Stack Showcase */}
@@ -181,21 +154,21 @@ export default function AppPage() {
           <h4 className="text-xl font-bold text-slate-900 mb-4">Baixe o aplicativo</h4>
           <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Instale o app Intertel pela loja do seu celular e tenha o controle em suas mãos.</p>
           
-          <div className="flex flex-col gap-3 w-full max-w-[220px] mx-auto mt-auto">
+          <div className="flex flex-col xl:flex-row gap-3 w-full max-w-[280px] xl:max-w-none mx-auto mt-auto justify-center items-center">
             <a 
               href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel" 
               target="_blank" 
               rel="noopener noreferrer" 
               id="CTA_GOOGLE_PLAY_STEP1" 
               data-tracking="CTA_GOOGLE_PLAY" 
-              className="flex items-center justify-center gap-3 bg-slate-900 text-white px-5 py-3 rounded-xl hover:bg-slate-800 transition-all shadow-md active:scale-95 w-full shrink-0"
+              className="flex flex-1 items-center justify-center gap-3 bg-slate-900 text-white px-5 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-lg active:scale-95 w-full shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
             >
-              <svg viewBox="0 0 512 512" className="w-6 h-6 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 512 512" className="w-7 h-7 fill-current shrink-0 group-hover:scale-105 transition-transform" xmlns="http://www.w3.org/2000/svg">
                 <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
               </svg>
               <div className="text-left leading-tight">
-                <p className="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
-                <p className="text-sm font-black tracking-tight text-white">Google Play</p>
+                <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
+                <p className="text-[15px] font-black tracking-tight text-white">Google Play</p>
               </div>
             </a>
             <a 
@@ -204,14 +177,14 @@ export default function AppPage() {
               rel="noopener noreferrer" 
               id="CTA_APP_STORE_STEP1" 
               data-tracking="CTA_APP_STORE" 
-              className="flex items-center justify-center gap-3 bg-slate-900 text-white px-5 py-3 rounded-xl hover:bg-slate-800 transition-all shadow-md active:scale-95 w-full shrink-0"
+              className="flex flex-1 items-center justify-center gap-3 bg-slate-900 text-white px-5 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-lg active:scale-95 w-full shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
             >
-              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current shrink-0 group-hover:scale-105 transition-transform" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
               </svg>
               <div className="text-left leading-tight">
-                <p className="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Baixar na</p>
-                <p className="text-sm font-black tracking-tight text-white">App Store</p>
+                <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Baixar na</p>
+                <p className="text-[15px] font-black tracking-tight text-white">App Store</p>
               </div>
             </a>
           </div>
