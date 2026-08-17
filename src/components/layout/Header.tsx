@@ -136,6 +136,9 @@ export default function Header() {
  <Link to="/app" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-medium">
  App Intertel
  </Link>
+ <Link to="/contrato" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-medium">
+ Contrato
+ </Link>
  <Link to="/#contato" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-semibold">
  Contato
  </Link>
@@ -202,6 +205,7 @@ export default function Header() {
  <div className="h-px bg-slate-200 my-2 mx-4" />
  
  <Link to="/app" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all">App Intertel</Link>
+ <Link to="/contrato" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all">Contrato</Link>
  <Link to="/#contato" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-amber-600 hover:bg-amber-50 rounded-xl transition-all">Contato</Link>
  </>
  <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">

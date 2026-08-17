@@ -97,15 +97,15 @@ export default function AppPage() {
   {/* CTAs */}
   <div className="flex flex-col sm:flex-row gap-4 items-center pt-2">
               <a 
-                href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel&hl=pt_BR" 
+                href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 id="CTA_GOOGLE_PLAY_APP" 
                 data-tracking="CTA_GOOGLE_PLAY" 
                 className="flex items-center justify-center gap-3 bg-slate-900 text-white px-7 py-3.5 rounded-xl hover:bg-slate-800 hover:-translate-y-1 transition-all shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 w-full sm:w-auto shrink-0"
               >
-                <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.09 19.98c-.12-.22-.19-.53-.19-.94V4.96c0-.41.07-.72.19-.94l11.45 11.45-11.45 4.51zm.69.41 12.02-4.73 1.98 1.98L5.75 20.4c-.39.22-.76.22-.97-.01zm12.71-6.71L6.04 3.23c-.39-.23-.76-.23-.97 0l12.42 10.45zm1.42 1.42-1.98-1.98 2.54-2.12c.48-.4.76-1.02.76-1.74s-.28-1.34-.76-1.74l-2.54-2.12 1.98-1.98c1.33.66 2.16 2.1 2.16 3.84 0 1.74-.83 3.18-2.16 3.84z"/>
+                <svg viewBox="0 0 512 512" className="w-6 h-6 sm:w-7 sm:h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
                 </svg>
                 <div className="text-left leading-tight">
                   <p className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
@@ -127,8 +127,8 @@ export default function AppPage() {
   {/* COLUNA DIREITA: Visual Depth Stack Showcase */}
   <div className="w-full lg:w-[55%] relative flex justify-center items-center mt-8 lg:mt-0 min-h-[500px] sm:min-h-[600px] xl:min-h-[700px]">
   
-  {/* Magnetic Glow */}
-  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-500/15 blur-[120px] rounded-full -z-20 pointer-events-none" />
+  {/* Magnetic Glow (Subtle) */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-500/5 blur-[100px] rounded-full -z-20 pointer-events-none" />
 
   {/* Depth Stack Container */}
   <div className="relative w-full max-w-lg h-[450px] sm:h-[550px] xl:h-[650px] flex items-center justify-center">
@@ -153,65 +153,75 @@ export default function AppPage() {
  </div>
  </div>
 
- {/* 4. Como acessar (Passos) */}
- <div className="pt-10 mt-10 border-t border-slate-200">
- <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-6">
- Como acessar seus benefícios
- </h3>
+  </section>
 
- <div className="space-y-4">
- {/* Passo 1 */}
- <div className="flex gap-4 items-start p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-shadow">
- <div className="w-14 h-14 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-black text-lg shrink-0 border border-blue-200">1</div>
- <div>
- <h4 className="font-bold text-slate-900 text-lg">Baixe o App</h4>
- <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">Faça o download nas lojas oficiais clicando nos botões acima.</p>
- </div>
- </div>
+  {/* 4. Como acessar (Passos) */}
+  <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h3 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Como começar
+        </h3>
+        <p className="text-slate-600 mt-4 text-lg max-w-2xl mx-auto">
+          Baixe o aplicativo e tenha a Intertel na palma da sua mão em três passos simples.
+        </p>
+      </div>
 
- {/* Passo 2 */}
- <div className="flex gap-4 items-start p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-shadow">
- <div className="w-14 h-14 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-black text-lg shrink-0 border border-blue-200">2</div>
- <div>
- <h4 className="font-bold text-slate-900 text-lg">Faça Login</h4>
- <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">No campo de acesso, digite apenas o <strong className="text-slate-900">CPF do titular</strong> do plano.</p>
- </div>
- </div>
+      <div className="space-y-6">
+        {/* Passo 1 */}
+        <div className="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
+          <div className="text-5xl font-black text-slate-200 shrink-0 leading-none tracking-tighter">01</div>
+          <div className="pt-2">
+            <h4 className="font-bold text-slate-900 text-xl">Baixe o app</h4>
+            <p className="text-slate-600 mt-2 leading-relaxed">Faça o download nas lojas oficiais (Google Play ou App Store) utilizando os links acima.</p>
+          </div>
+        </div>
 
- {/* Passo 3 */}
- <div className="flex gap-4 items-start p-5 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-shadow">
- <div className="w-14 h-14 rounded-full bg-[#F4B000] text-slate-900 flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-amber-500/20 border border-amber-300">3</div>
- <div>
- <h4 className="font-bold text-slate-900 text-base">Aproveite os serviços extras!</h4>
- <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
- <a href={bebancaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-amber-200/50 hover:border-amber-400 shadow-sm hover:shadow-md transition-all group">
- <div className="w-10 h-10 rounded-lg shrink-0 group-hover:scale-110 transition-transform flex items-center justify-center">
- <BebancaIcon />
- </div>
- <div>
- <h5 className="font-bold text-slate-900 text-sm leading-none mb-1">Bebanca</h5>
- <p className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold leading-none">Jornais e Revistas</p>
- </div>
- </a>
- <a href={beducaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-blue-200/50 hover:border-blue-400 shadow-sm hover:shadow-md transition-all group">
- <div className="w-10 h-10 rounded-lg shrink-0 group-hover:scale-110 transition-transform flex items-center justify-center">
- <BeeducaIcon />
- </div>
- <div>
- <h5 className="font-bold text-slate-900 text-sm leading-none mb-1">Beduca</h5>
- <p className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold leading-none">Cursos Online</p>
- </div>
- </a>
- </div>
- <p className="text-sm text-slate-700 mt-4 leading-relaxed">
- Selecione <strong>Intertel Telecom</strong> como provedor nos aplicativos e use o <strong>CPF do titular</strong>.
- </p>
- </div>
- </div>
- </div>
- 
- </div>
- </section>
+        {/* Passo 2 */}
+        <div className="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
+          <div className="text-5xl font-black text-slate-200 shrink-0 leading-none tracking-tighter">02</div>
+          <div className="pt-2">
+            <h4 className="font-bold text-slate-900 text-xl">Faça login</h4>
+            <p className="text-slate-600 mt-2 leading-relaxed">Ao abrir o aplicativo, digite apenas o <strong className="text-slate-900">CPF do titular</strong> do plano para acessar sua conta.</p>
+          </div>
+        </div>
+
+        {/* Passo 3 */}
+        <div className="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
+          <div className="text-5xl font-black text-amber-500 shrink-0 leading-none tracking-tighter">03</div>
+          <div className="pt-2 w-full">
+            <h4 className="font-bold text-slate-900 text-xl">Acesse seus serviços</h4>
+            <p className="text-slate-600 mt-2 leading-relaxed">
+              Consulte seus serviços, acompanhe suas faturas e resolva tudo pelo app. Além disso, aproveite os serviços adicionais incluídos:
+            </p>
+            <div className="mt-6 flex flex-col sm:flex-row gap-4">
+              <a href={bebancaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-amber-50 group-hover:border-amber-200 transition-colors">
+                  <BebancaIcon />
+                </div>
+                <div>
+                  <h5 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Bebanca</h5>
+                  <p className="text-xs text-slate-500 font-medium">Jornais e Revistas</p>
+                </div>
+              </a>
+              <a href={beducaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
+                  <BeeducaIcon />
+                </div>
+                <div>
+                  <h5 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Beduca</h5>
+                  <p className="text-xs text-slate-500 font-medium">Cursos Online</p>
+                </div>
+              </a>
+            </div>
+            <p className="text-xs text-slate-500 mt-6 pt-4 border-t border-slate-100">
+              *Para os aplicativos adicionais, selecione <strong>Intertel Telecom</strong> como provedor e use o CPF do titular.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
  </div>
  );
 }
