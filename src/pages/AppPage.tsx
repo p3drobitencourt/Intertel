@@ -155,68 +155,132 @@ export default function AppPage() {
 
   </section>
 
-  {/* 4. Como acessar (Passos) */}
-  <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-12">
-        <h3 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-          Como começar
+  {/* 4. Como começar (Passos) */}
+  <section className="py-20 md:py-32 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="text-center mb-16 md:mb-24">
+        <h2 className="text-sm font-bold text-amber-500 uppercase tracking-widest mb-3">Como começar</h2>
+        <h3 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+          Tenha sua Intertel sempre com você
         </h3>
-        <p className="text-slate-600 mt-4 text-lg max-w-2xl mx-auto">
-          Baixe o aplicativo e tenha a Intertel na palma da sua mão em três passos simples.
+        <p className="text-slate-600 mt-5 text-lg max-w-2xl mx-auto leading-relaxed">
+          O processo é simples. Baixe o aplicativo, entre na sua conta e gerencie todos os seus serviços de forma rápida e segura.
         </p>
       </div>
 
-      <div className="space-y-6">
-        {/* Passo 1 */}
-        <div className="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
-          <div className="text-5xl font-black text-slate-200 shrink-0 leading-none tracking-tighter">01</div>
-          <div className="pt-2">
-            <h4 className="font-bold text-slate-900 text-xl">Baixe o app</h4>
-            <p className="text-slate-600 mt-2 leading-relaxed">Faça o download nas lojas oficiais (Google Play ou App Store) utilizando os links acima.</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+        {/* Desktop connecting line */}
+        <div className="hidden md:block absolute top-[2.5rem] left-[16.6%] right-[16.6%] h-[2px] bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 -z-10" />
+
+        {/* Step 1 */}
+        <div className="relative flex flex-col items-center text-center group">
+          <div className="w-20 h-20 rounded-3xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50 flex items-center justify-center text-3xl font-black text-slate-900 mb-8 relative group-hover:-translate-y-1 transition-transform">
+            01
+            <div className="absolute inset-0 bg-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+          <h4 className="text-xl font-bold text-slate-900 mb-4">Baixe o aplicativo</h4>
+          <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Instale o app Intertel pela loja do seu celular e tenha o controle em suas mãos.</p>
+          
+          <div className="flex flex-col gap-3 w-full max-w-[220px] mx-auto mt-auto">
+            <a 
+              href="https://play.google.com/store/apps/details?id=br.com.appdoprovedor.intertel" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              id="CTA_GOOGLE_PLAY_STEP1" 
+              data-tracking="CTA_GOOGLE_PLAY" 
+              className="flex items-center justify-center gap-3 bg-slate-900 text-white px-5 py-3 rounded-xl hover:bg-slate-800 transition-all shadow-md active:scale-95 w-full shrink-0"
+            >
+              <svg viewBox="0 0 512 512" className="w-6 h-6 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
+              </svg>
+              <div className="text-left leading-tight">
+                <p className="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Disponível no</p>
+                <p className="text-sm font-black tracking-tight text-white">Google Play</p>
+              </div>
+            </a>
+            <a 
+              href="https://apps.apple.com/br/app/intertel-telecom/id1618099722" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              id="CTA_APP_STORE_STEP1" 
+              data-tracking="CTA_APP_STORE" 
+              className="flex items-center justify-center gap-3 bg-slate-900 text-white px-5 py-3 rounded-xl hover:bg-slate-800 transition-all shadow-md active:scale-95 w-full shrink-0"
+            >
+              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
+              </svg>
+              <div className="text-left leading-tight">
+                <p className="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-0.5">Baixar na</p>
+                <p className="text-sm font-black tracking-tight text-white">App Store</p>
+              </div>
+            </a>
           </div>
         </div>
 
-        {/* Passo 2 */}
-        <div className="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
-          <div className="text-5xl font-black text-slate-200 shrink-0 leading-none tracking-tighter">02</div>
-          <div className="pt-2">
-            <h4 className="font-bold text-slate-900 text-xl">Faça login</h4>
-            <p className="text-slate-600 mt-2 leading-relaxed">Ao abrir o aplicativo, digite apenas o <strong className="text-slate-900">CPF do titular</strong> do plano para acessar sua conta.</p>
+        {/* Step 2 */}
+        <div className="relative flex flex-col items-center text-center group mt-8 md:mt-0">
+          {/* Mobile connecting indicator */}
+          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-14 left-1/2 -translate-x-1/2" />
+
+          <div className="w-20 h-20 rounded-3xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50 flex items-center justify-center text-3xl font-black text-slate-900 mb-8 relative group-hover:-translate-y-1 transition-transform">
+            02
+            <div className="absolute inset-0 bg-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+          <h4 className="text-xl font-bold text-slate-900 mb-4">Acesse sua conta</h4>
+          <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Entre com seus dados para acessar seus serviços. O acesso é feito utilizando o <strong className="text-slate-900">CPF do titular</strong>.</p>
+          
+          <div className="w-full max-w-[160px] mx-auto mt-auto opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10" />
+            <img src="/app-tela1.png" alt="Tela de Login do App" className="w-full h-auto rounded-t-xl drop-shadow-xl" loading="lazy" />
           </div>
         </div>
 
-        {/* Passo 3 */}
-        <div className="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
-          <div className="text-5xl font-black text-amber-500 shrink-0 leading-none tracking-tighter">03</div>
-          <div className="pt-2 w-full">
-            <h4 className="font-bold text-slate-900 text-xl">Acesse seus serviços</h4>
-            <p className="text-slate-600 mt-2 leading-relaxed">
-              Consulte seus serviços, acompanhe suas faturas e resolva tudo pelo app. Além disso, aproveite os serviços adicionais incluídos:
-            </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-4">
-              <a href={bebancaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-amber-50 group-hover:border-amber-200 transition-colors">
-                  <BebancaIcon />
-                </div>
-                <div>
-                  <h5 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Bebanca</h5>
-                  <p className="text-xs text-slate-500 font-medium">Jornais e Revistas</p>
-                </div>
-              </a>
-              <a href={beducaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
-                  <BeeducaIcon />
-                </div>
-                <div>
-                  <h5 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Beduca</h5>
-                  <p className="text-xs text-slate-500 font-medium">Cursos Online</p>
-                </div>
-              </a>
-            </div>
-            <p className="text-xs text-slate-500 mt-6 pt-4 border-t border-slate-100">
-              *Para os aplicativos adicionais, selecione <strong>Intertel Telecom</strong> como provedor e use o CPF do titular.
-            </p>
+        {/* Step 3 */}
+        <div className="relative flex flex-col items-center text-center group mt-8 md:mt-0">
+          {/* Mobile connecting indicator */}
+          <div className="md:hidden w-[2px] h-12 bg-gradient-to-b from-slate-200 to-slate-100 absolute -top-14 left-1/2 -translate-x-1/2" />
+
+          <div className="w-20 h-20 rounded-3xl bg-white border border-amber-200 shadow-lg shadow-amber-200/30 flex items-center justify-center text-3xl font-black text-amber-500 mb-8 relative group-hover:-translate-y-1 transition-transform">
+            03
+            <div className="absolute inset-0 bg-amber-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+          <h4 className="text-xl font-bold text-slate-900 mb-4">Tenha tudo na palma da mão</h4>
+          <p className="text-slate-600 leading-relaxed mb-8 max-w-[280px]">Consulte planos, faturas, pagamentos e suporte. Tudo organizado no mesmo lugar.</p>
+          
+          <div className="w-full max-w-[160px] mx-auto mt-auto opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10" />
+            <img src="/app-tela2.png" alt="Dashboard do App" className="w-full h-auto rounded-t-xl drop-shadow-xl" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+
+      {/* Serviços Adicionais Banner */}
+      <div className="mt-20 max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/40">
+        <div className="flex flex-col md:flex-row items-center gap-8 justify-between">
+          <div className="text-center md:text-left">
+            <h4 className="text-2xl font-black text-slate-900 mb-2">Serviços adicionais</h4>
+            <p className="text-slate-600">Aproveite os aplicativos extras incluídos no seu plano usando o CPF do titular.</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+            <a href={bebancaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-4 rounded-2xl border border-slate-100 hover:border-amber-200 hover:bg-amber-50/50 transition-all bg-slate-50/50">
+              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform">
+                <BebancaIcon />
+              </div>
+              <div>
+                <h5 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight">Bebanca</h5>
+                <p className="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-1">Jornais e Revistas</p>
+              </div>
+            </a>
+            <a href={beducaSva.linkAndroid} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-4 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/50 transition-all bg-slate-50/50">
+              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform">
+                <BeeducaIcon />
+              </div>
+              <div>
+                <h5 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">Beduca</h5>
+                <p className="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-1">Cursos Online</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
