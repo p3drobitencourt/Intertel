@@ -75,8 +75,9 @@ export default function Home() {
  <TestimonialSection />
  
  {/* CTA Final da Home */}
- <section className="py-12 md:py-16 bg-blue-950">
- <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+ <section className="py-12 md:py-16 relative overflow-hidden bg-blue-950">
+ <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-blue-950 to-slate-950 pointer-events-none"></div>
+ <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
  <h2 className="text-3xl font-black text-white font-display mb-6">
  Acelere sua internet hoje mesmo
  </h2>
@@ -88,7 +89,7 @@ export default function Home() {
  onClick={() => startOnboarding(null, "conhecer os planos de internet da Intertel")}
  id="CTA_CONSULTAR_DISPONIBILIDADE_HOME"
  data-tracking="CTA_CONSULTAR_DISPONIBILIDADE"
- className="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+ className="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-amber-500/30 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
  >
  Consultar disponibilidade
  </button>
@@ -97,12 +98,12 @@ export default function Home() {
  </section>
 
  {/* Local SEO Section - Área de Atendimento */}
- <section className="py-12 bg-zinc-50 border-t border-slate-200">
+ <section className="py-12 bg-slate-50 border-t border-slate-200">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
  <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-4">Atendemos sua região</h3>
  <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
  {company.serviceAreas.map((cidade) => (
- <div key={cidade} className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+ <div key={cidade} className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200/60 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all cursor-default">
  <svg className="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
  </svg>
