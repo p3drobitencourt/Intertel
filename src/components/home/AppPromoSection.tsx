@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Check, ShieldCheck, Zap, HelpCircle } from "lucide-react";
 
 export default function AppPromoSection() {
@@ -59,8 +60,8 @@ export default function AppPromoSection() {
                 data-tracking="CTA_GOOGLE_PLAY" 
                 className="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 transition-all hover:-translate-y-1 active:scale-95 shrink-0"
               >
-                <svg viewBox="0 0 512 512" className="w-6 h-6 sm:w-7 sm:h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58-33.4-60.7 60.7 60.8 60.8 57.9-33.4c15-8.8 25-23.9 25-41.3 0-17.4-10-32.5-25-41.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
+                <svg viewBox="0 0 24 24" className="w-6 h-6 sm:w-7 sm:h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.09 19.98c-.12-.22-.19-.53-.19-.94V4.96c0-.41.07-.72.19-.94l11.45 11.45-11.45 4.51zm.69.41 12.02-4.73 1.98 1.98L5.75 20.4c-.39.22-.76.22-.97-.01zm12.71-6.71L6.04 3.23c-.39-.23-.76-.23-.97 0l12.42 10.45zm1.42 1.42-1.98-1.98 2.54-2.12c.48-.4.76-1.02.76-1.74s-.28-1.34-.76-1.74l-2.54-2.12 1.98-1.98c1.33.66 2.16 2.1 2.16 3.84 0 1.74-.83 3.18-2.16 3.84z"/>
                 </svg>
                 <div className="flex flex-col items-start">
                   <span className="text-[10px] uppercase tracking-wider leading-none text-slate-300">Disponível no</span>
@@ -76,7 +77,7 @@ export default function AppPromoSection() {
                 data-tracking="CTA_APP_STORE" 
                 className="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 transition-all hover:-translate-y-1 active:scale-95 shrink-0"
               >
-                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" className="w-6 h-6 sm:w-7 sm:h-7 fill-current shrink-0" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17.05 20.28c-.98.74-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 13.25 3.51 5.96 9.05 5.68c1.23.05 2.22.61 2.92.61.71 0 1.99-.71 3.42-.6 1.48.05 2.76.67 3.55 1.79-3.08 1.83-2.59 5.86.51 7.15-.69 2.05-1.52 4.1-2.4 5.65zm-4.74-15.11c-.04-2.45 1.95-4.52 4.39-4.66.19 2.62-2.14 4.69-4.39 4.66z"/>
                 </svg>
                 <div className="flex flex-col items-start">
@@ -98,9 +99,9 @@ export default function AppPromoSection() {
                 className="w-full h-auto rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap">
-                Minha conta
-              </div>
+              <Link to="/app" className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap hover:bg-white hover:text-amber-500 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+                Minhas contas
+              </Link>
             </div>
 
             {/* Right Phone (Faturas) */}
@@ -111,9 +112,9 @@ export default function AppPromoSection() {
                 className="w-full h-auto rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap">
+              <Link to="/app" className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap hover:bg-white hover:text-amber-500 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
                 Minhas faturas
-              </div>
+              </Link>
             </div>
 
             {/* Center Phone (Dashboard Principal) */}
@@ -124,10 +125,10 @@ export default function AppPromoSection() {
                 className="w-full h-auto rounded-xl drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]"
                 fetchPriority="high"
               />
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full shadow-xl shadow-blue-900/10 border border-slate-100 text-xs sm:text-sm font-bold text-blue-700 opacity-100 group-hover:-translate-y-1 transition-all duration-300 pointer-events-none whitespace-nowrap flex items-center gap-2">
+              <Link to="/fibra" className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full shadow-xl shadow-blue-900/10 border border-slate-100 text-xs sm:text-sm font-bold text-blue-700 opacity-100 group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap flex items-center gap-2 hover:bg-blue-50 hover:text-blue-800 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 Meus planos
-              </div>
+              </Link>
             </div>
 
           </div>

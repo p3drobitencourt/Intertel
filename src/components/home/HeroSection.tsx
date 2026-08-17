@@ -23,7 +23,7 @@ export default function HeroSection() {
  title:"Baixe\n",
  titleHighlight:"nosso APP",
  subtitle:"e pague com mais facilidade. Tenha o controle da sua internet na palma da mão.",
- badge:"COMODIDADE #feitapravc",
+ badge:"COMODIDADE / APP INTERTEL",
  image:"/assets/hero-app-1920.webp",
  altText:"Pessoa segurando smartphone e utilizando o aplicativo de autoatendimento da Intertel",
  textClass:"text-white",
@@ -186,7 +186,7 @@ export default function HeroSection() {
  if (slide.type ==='corporate') {
  navigate("/empresas");
  } else if (slide.type ==='app') {
- document.getElementById('app-promo')?.scrollIntoView({ behavior:'smooth' });
+ navigate("/app");
  } else {
  navigate("/fibra");
  }
