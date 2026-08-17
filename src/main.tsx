@@ -6,6 +6,10 @@ import ScrollToTop from'./components/ScrollToTop';
 import { HelmetProvider } from'react-helmet-async';
 import'./index.css';
 
+import { initAnalytics } from './utils/analytics';
+
+initAnalytics();
+
 createRoot(document.getElementById('root')!).render(
  <StrictMode>
  <HelmetProvider>
