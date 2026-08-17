@@ -134,17 +134,17 @@ export default function AppPage() {
   
   {/* Left Back Phone (Login) */}
   <div className="absolute left-[5%] sm:left-[10%] top-1/2 -translate-y-[45%] w-[45%] max-w-[200px] z-10 opacity-80 scale-90 -rotate-3 hover:opacity-100 hover:-translate-y-[48%] hover:-rotate-1 transition-all duration-700 ease-out">
-    <img src="/app-mockup-1-clean.webp" alt="Tela de Login" className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)]" loading="lazy" />
+    <img src="/app-tela1.webp" alt="Tela de Login" className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)]" loading="lazy" />
   </div>
 
   {/* Right Back Phone (Faturas) */}
   <div className="absolute right-[5%] sm:right-[10%] top-1/2 -translate-y-[45%] w-[45%] max-w-[200px] z-10 opacity-80 scale-90 rotate-3 hover:opacity-100 hover:-translate-y-[48%] hover:rotate-1 transition-all duration-700 ease-out">
-    <img src="/app-mockup-4-clean.webp" alt="Tela de Faturas" className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)]" loading="lazy" />
+    <img src="/app-tela3.webp" alt="Tela de Faturas" className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)]" loading="lazy" />
   </div>
 
   {/* Center Front Phone (Dashboard) */}
   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[50%] w-[55%] max-w-[250px] z-30 scale-100 hover:scale-105 hover:-translate-y-[52%] transition-transform duration-700 ease-out">
-    <img src="/app-mockup-2-clean.webp" alt="Dashboard Principal" className="w-full h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]" fetchPriority="high" />
+    <img src="/app-tela2.webp" alt="Dashboard Principal" className="w-full h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]" fetchPriority="high" />
   </div>
 
   </div>

@@ -93,7 +93,7 @@ export default function AppPromoSection() {
             {/* Left Phone (Login) */}
             <div className="absolute left-[2%] sm:left-[8%] lg:left-[2%] top-1/2 -translate-y-[45%] w-[35%] max-w-[190px] z-10 -rotate-12 hover:-rotate-6 hover:-translate-y-[48%] transition-all duration-500 ease-out group">
               <img 
-                src="/app-mockup-1-clean.webp" 
+                src="/app-tela1.webp" 
                 alt="Tela de Login: Minha conta"
                 className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
                 loading="lazy"
@@ -106,7 +106,7 @@ export default function AppPromoSection() {
             {/* Right Phone (Faturas) */}
             <div className="absolute right-[2%] sm:right-[8%] lg:right-[2%] top-1/2 -translate-y-[45%] w-[35%] max-w-[190px] z-10 rotate-12 hover:rotate-6 hover:-translate-y-[48%] transition-all duration-500 ease-out group">
               <img 
-                src="/app-mockup-4-clean.webp" 
+                src="/app-tela3.webp" 
                 alt="Tela de Faturas: Minhas faturas"
                 className="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
                 loading="lazy"
@@ -119,7 +119,7 @@ export default function AppPromoSection() {
             {/* Center Phone (Dashboard Principal) */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[48%] w-[45%] max-w-[260px] z-30 hover:-translate-y-[52%] transition-all duration-500 ease-out group scale-105">
               <img 
-                src="/app-mockup-2-clean.webp" 
+                src="/app-tela2.webp" 
                 alt="Tela Principal: Meus planos"
                 className="w-full h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]"
                 fetchPriority="high"
