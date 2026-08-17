@@ -80,7 +80,7 @@ export default function Home() {
       <div className="absolute top-[20%] right-[5%] w-96 h-96 rounded-full bg-purple-500/10 blur-[150px] pointer-events-none" />
       
       <MarqueeBanner />
-      <HeroSection isDarkMode={isDarkMode} />
+      <HeroSection />
       <AppPromoSection />
       <VantagensSection />
       <FaqSection onContactSupport={() => startOnboarding(null)} />

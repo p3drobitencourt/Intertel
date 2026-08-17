@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Sparkles, Search, Building2, Smartphone, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
-interface HeroSectionProps {
-  isDarkMode: boolean;
-}
-
-export default function HeroSection({ isDarkMode }: HeroSectionProps) {
+export default function HeroSection() {
   const navigate = useNavigate();
   const [heroSlide, setHeroSlide] = useState(0);
 
@@ -16,10 +12,10 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
       titleHighlight: "combinam com você.",
       subtitle: "A melhor conexão 100% fibra ótica com estabilidade e velocidade garantidas para a sua casa ou família.",
       badge: "CONEXÃO RESIDENCIAL",
-      imageLight: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop", // Glowing network / tech
-      imageDark: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
-      textClass: "text-blue-950 dark:text-white",
-      highlightClass: "text-white dark:text-amber-500 drop-shadow-md dark:drop-shadow-none",
+      image: "/assets/hero-residential-1920.webp",
+      altText: "Ambiente residencial moderno com equipamento de internet fibra ótica",
+      textClass: "text-white",
+      highlightClass: "text-amber-500 drop-shadow-md",
       ctaText: "Consultar Planos",
       type: "residential"
     },
@@ -28,10 +24,10 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
       titleHighlight: "nosso APP",
       subtitle: "e pague com mais facilidade. Tenha o controle da sua internet na palma da mão.",
       badge: "COMODIDADE #feitapravc",
-      imageLight: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop", // Sleek screen data
-      imageDark: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
-      textClass: "text-blue-950 dark:text-white",
-      highlightClass: "text-white dark:text-amber-500 drop-shadow-md dark:drop-shadow-none",
+      image: "/assets/hero-app-1920.webp",
+      altText: "Pessoa segurando smartphone e utilizando o aplicativo de autoatendimento da Intertel",
+      textClass: "text-white",
+      highlightClass: "text-amber-500 drop-shadow-md",
       ctaText: "Conhecer o App",
       type: "app"
     },
@@ -40,10 +36,10 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
       titleHighlight: "Corporativas",
       subtitle: "IP Dedicado, Suporte Especializado e Monitoramento Proativo que não deixam sua empresa parar.",
       badge: "ALTA PERFORMANCE",
-      imageLight: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop", // Datacenter
-      imageDark: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop",
-      textClass: "text-blue-950 dark:text-white",
-      highlightClass: "text-white dark:text-amber-500 drop-shadow-md dark:drop-shadow-none",
+      image: "/assets/hero-corporate-1920.webp",
+      altText: "Infraestrutura corporativa premium de servidores e conectividade em alta disponibilidade",
+      textClass: "text-white",
+      highlightClass: "text-amber-500 drop-shadow-md",
       ctaText: "Conhecer Soluções",
       type: "corporate"
     }
@@ -139,19 +135,19 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 w-full h-full">
             <img
-              src={isDarkMode ? slide.imageDark : slide.imageLight}
+              src={slide.image}
               srcSet={`
-                ${(isDarkMode ? slide.imageDark : slide.imageLight).replace('w=2000', 'w=640')} 640w,
-                ${(isDarkMode ? slide.imageDark : slide.imageLight).replace('w=2000', 'w=1024')} 1024w,
-                ${(isDarkMode ? slide.imageDark : slide.imageLight).replace('w=2000', 'w=1920')} 1920w
+                ${slide.image.replace('-1920', '-640')} 640w,
+                ${slide.image.replace('-1920', '-1024')} 1024w,
+                ${slide.image} 1920w
               `}
               sizes="100vw"
-              alt={slide.titleHighlight}
+              alt={slide.altText}
               className="w-full h-full object-cover object-center"
               {...(idx === 0 ? { fetchPriority: "high", loading: "eager" } : { loading: "lazy" })}
             />
-            <div className="absolute inset-0 bg-slate-900/40 dark:bg-black/70 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F4B000] via-[#F4B000]/80 to-transparent dark:from-blue-950 dark:via-blue-950/80 dark:to-transparent" />
+            <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
           </div>
 
           {/* Content Container */}
@@ -159,13 +155,13 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
             {/* Text Content */}
             <div className={`w-full ${slide.type === 'app' ? 'lg:w-1/2' : 'lg:w-2/3'} space-y-5 lg:space-y-6 text-left`}>
               {slide.badge && (
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase bg-blue-950/10 border border-blue-950/20 text-blue-950 dark:bg-white/10 dark:border-white/20 dark:text-white backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
-                  <Sparkles className="w-5 h-5 text-blue-950 dark:text-amber-500" aria-hidden="true" />
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase bg-white/10 border border-white/20 text-white backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
+                  <Sparkles className="w-5 h-5 text-amber-500" aria-hidden="true" />
                   {slide.badge}
                 </div>
               )}
 
-              <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black font-display tracking-tight leading-[1.1] drop-shadow-sm dark:drop-shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 ${slide.textClass}`}>
+              <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black font-display tracking-tight leading-[1.1] drop-shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 ${slide.textClass}`}>
                 {slide.title.split('\n').map((line, i) => (
                   <React.Fragment key={i}>
                     {line}
@@ -176,7 +172,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
               </h1>
 
               {slide.subtitle && (
-                <p className={`text-base sm:text-lg md:text-xl max-w-2xl font-medium leading-relaxed drop-shadow-sm dark:drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 ${slide.textClass === 'text-white' || slide.textClass === 'text-slate-900 dark:text-white' ? 'text-slate-700 dark:text-slate-200' : slide.textClass}`}>
+                <p className={`text-base sm:text-lg md:text-xl max-w-2xl font-medium leading-relaxed drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 text-slate-200`}>
                   {slide.subtitle}
                 </p>
               )}
@@ -199,7 +195,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
                       id={`CTA_HERO_${slide.type.toUpperCase()}`}
                       data-tracking={`CTA_HERO_${slide.type.toUpperCase()}`}
                       tabIndex={heroSlide === idx ? 0 : -1}
-                      className="h-14 px-10 rounded-full bg-blue-950 hover:bg-blue-900 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-slate-900 font-black tracking-wide uppercase text-sm shadow-[0_10px_40px_rgba(23,37,84,0.3)] hover:shadow-[0_15px_50px_rgba(23,37,84,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 shrink-0 flex items-center justify-center gap-3 border border-blue-900/50 dark:border-amber-400/50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+                      className="h-14 px-10 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-black tracking-wide uppercase text-sm shadow-[0_10px_40px_rgba(23,37,84,0.3)] hover:shadow-[0_15px_50px_rgba(23,37,84,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 shrink-0 flex items-center justify-center gap-3 border border-amber-400/50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
                     >
                       {slide.type === 'corporate' ? (
                         <Building2 className="w-5 h-5" aria-hidden="true" />
@@ -229,7 +225,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
       </div>
 
       {/* Carousel Controls */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 lg:gap-4 bg-slate-900/40 dark:bg-slate-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 dark:border-white/5 shadow-xl">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 lg:gap-4 bg-slate-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-xl">
         <button 
           onClick={prevSlide}
           aria-label="Slide anterior"
