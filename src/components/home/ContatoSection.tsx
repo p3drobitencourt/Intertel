@@ -66,20 +66,20 @@ export default function ContatoSection() {
  className="col-span-1 md:col-span-2 flex h-full relative group cursor-pointer rounded-2xl overflow-hidden" 
  onClick={() => window.open(company.address.mapsLink, '_blank', 'noopener,noreferrer')}
  >
- <div className="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
- <div className="bg-white text-blue-950 font-bold px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0">
- <MapPin className="w-5 h-5 text-amber-500" />
- Traçar Rota até a Intertel
- </div>
- </div>
- <iframe
- title="Mapa de Localização da Intertel Telecom"
- src="https://maps.google.com/maps?q=Rua+Maria+Onilia+Vieira,+249,+S%C3%A3o+Jo%C3%A3o+da+Mata+-+MG&t=&z=16&ie=UTF8&iwloc=&output=embed"
- className="w-full h-full min-h-[300px] shadow-xl border-0 ring-1 ring-slate-900/5 relative z-0 pointer-events-none"
- allowFullScreen={true}
- loading="lazy"
- referrerPolicy="no-referrer-when-downgrade"
- ></iframe>
+  <div className="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+  <div className="bg-white text-blue-950 font-bold px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0">
+  <MapPin className="w-5 h-5 text-amber-500" />
+  Traçar Rota até a Intertel
+  </div>
+  </div>
+  <iframe 
+    title="Localização da Intertel Telecom no Google Maps"
+    src={company.address.mapsEmbedLink}
+    className="w-full h-full min-h-[300px] shadow-xl border-0 ring-1 ring-slate-900/5 relative z-0 pointer-events-none"
+    allowFullScreen={true} 
+    loading="lazy" 
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
  </div>
  </div>
  </div>

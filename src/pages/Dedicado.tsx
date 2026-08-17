@@ -70,7 +70,7 @@ export default function Dedicado() {
  </p>
  <div className="flex flex-wrap gap-4">
  <a 
- href={getWhatsappLink(null,'Link Dedicado para provedor')} 
+ href={getWhatsappLink(null,'Link Dedicado')} 
  target="_blank" 
  rel="noopener noreferrer"
  id="CTA_DEDICADO_CONSULTOR_HERO"

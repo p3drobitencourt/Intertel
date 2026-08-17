@@ -141,7 +141,7 @@ export default function Lan2Lan() {
  </div>
  <div className="shrink-0">
  <a 
- href={getWhatsappLink(null,'LAN-to-LAN')} 
+ href={getWhatsappLink(null,'Interligação LAN-to-LAN')} 
  target="_blank" 
  rel="noopener noreferrer"
  id="CTA_LAN2LAN_REUNIAO"
