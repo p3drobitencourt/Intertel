@@ -1,5 +1,12 @@
-export const initAnalytics = () => {
+export const pushToDataLayer = (payload: IntertelAnalyticsEvent) => {
   if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(payload);
+};
+
+export const initAnalytics = () => {
+  if (typeof window === 'undefined' || window.__INTERTEL_ANALYTICS_INITIALIZED) return;
+  window.__INTERTEL_ANALYTICS_INITIALIZED = true;
 
   window.dataLayer = window.dataLayer || [];
 
@@ -17,11 +24,14 @@ export const initAnalytics = () => {
   }
 
   document.addEventListener('click', (e) => {
-    const target = (e.target as HTMLElement).closest('[data-tracking]');
-    if (target) {
-      const trackingId = target.getAttribute('data-tracking');
+    const target = e.target as HTMLElement;
+    if (!target || !target.closest) return;
+
+    const trackingElement = target.closest('[data-tracking]');
+    if (trackingElement) {
+      const trackingId = trackingElement.getAttribute('data-tracking');
       if (trackingId) {
-        window.dataLayer.push({
+        pushToDataLayer({
           event: 'intertel_cta_click',
           tracking_id: trackingId,
         });
