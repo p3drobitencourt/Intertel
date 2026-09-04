@@ -118,8 +118,8 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  )}
  <div className="space-y-6">
  <div>
- <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wider">{plan.name}</h3>
- <div className="mt-4 flex items-baseline gap-1 text-slate-900">
+ <h3 className="text-xl lg:text-2xl font-black font-display text-slate-900 tracking-tight mb-2 leading-none">{plan.name}</h3>
+ <div className="flex items-baseline gap-1 text-slate-900">
  <span className="text-5xl font-black font-display tracking-tighter">{plan.speed}</span>
  <span className="text-sm font-bold text-slate-500">+ Wi-Fi</span>
  </div>
@@ -160,8 +160,8 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  </ul>
  </div>
  <div className="mt-auto pt-5 border-t border-slate-100">
- <button 
- onClick={() => startOnboarding(plan,'Internet via Rádio')}
+ <Link
+ to="/contrato"
  aria-label={`Contratar plano ${plan.name}`}
  id={`CTA_PLANO_${plan.id.toUpperCase()}`}
  data-tracking="CTA_PLANO_RADIO"
@@ -173,7 +173,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  >
  Quero este plano
  <ArrowRight className="w-4 h-4" />
- </button>
+ </Link>
  </div>
  </div>
  ))}
@@ -190,14 +190,14 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
  Seja no sítio, na fazenda ou em áreas afastadas, nós temos a solução. Fale com um consultor e verifique a viabilidade.
  </p>
- <button 
- onClick={() => startOnboarding(null,'Internet via Rádio')}
+ <Link
+ to="/contrato"
  id="CTA_CONSULTAR_DISPONIBILIDADE_RADIO"
  data-tracking="CTA_CONSULTAR_DISPONIBILIDADE"
  className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
  >
  Consultar Viabilidade <ArrowRight className="w-5 h-5" />
- </button>
+ </Link>
  </div>
  </section>
  </>

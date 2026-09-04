@@ -59,11 +59,11 @@ export const beducaSva: Sva = {
 
 export const radioPlansData: Plan[] = [
  {
- id:"plan-radio-10m",
- name:"Plano Rádio 10M",
+ id:"plan-radio-conecta",
+ name:"Intertel Conecta",
  speed:"10 Mega",
- priceMonthly: 69.90,
- priceYearlyMonthly: 69.90,
+ priceMonthly: 0,
+ priceYearlyMonthly: 0,
  isPopular: false,
  description:"Conexão de entrada via rádio para regiões rurais.",
  features: [
@@ -74,11 +74,11 @@ export const radioPlansData: Plan[] = [
  svas: [bebancaSva, beducaSva]
  },
  {
- id:"plan-radio-15m",
- name:"Plano Rádio 15M",
+ id:"plan-radio-turbo",
+ name:"Intertel Turbo",
  speed:"15 Mega",
- priceMonthly: 89.90,
- priceYearlyMonthly: 89.90,
+ priceMonthly: 0,
+ priceYearlyMonthly: 0,
  isPopular: true,
  description:"Ideal para navegação diária e redes sociais em áreas rurais.",
  features: [
@@ -89,11 +89,11 @@ export const radioPlansData: Plan[] = [
  svas: [bebancaSva, beducaSva]
  },
  {
- id:"plan-radio-20m",
- name:"Plano Rádio 20M",
+ id:"plan-radio-max",
+ name:"Intertel Max",
  speed:"20 Mega",
- priceMonthly: 109.90,
- priceYearlyMonthly: 109.90,
+ priceMonthly: 0,
+ priceYearlyMonthly: 0,
  isPopular: false,
  description:"Máxima performance via rádio.",
  features: [
