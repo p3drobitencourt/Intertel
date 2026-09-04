@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from'react';
 import { Link, useLocation } from'react-router-dom';
-import { startOnboarding } from'../../utils/whatsapp';
+import { getWhatsappLink } from'../../utils/whatsapp';
 import { ChevronDown, Menu, X, User, Phone } from'lucide-react';
 
 export default function Header() {
@@ -139,9 +139,19 @@ export default function Header() {
  <Link to="/contrato" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-medium">
  Contrato
  </Link>
- <Link to="/#contato" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-semibold">
- Contato
- </Link>
+ <a 
+ href={getWhatsappLink()} 
+ target="_blank" 
+ rel="noopener noreferrer"
+ className="ml-2 flex items-center gap-1.5 px-3 py-1.5 bg-green-50/80 text-green-700 hover:bg-green-100 hover:text-green-800 border border-green-200 rounded-full font-bold text-sm transition-colors shadow-sm"
+ title="Falar pelo WhatsApp"
+ >
+ <span className="relative flex h-2 w-2 mr-0.5">
+ <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+ <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+ </span>
+ 35 9904-2885
+ </a>
  </>
  </nav>
 
@@ -158,14 +168,14 @@ export default function Header() {
  <span className="hidden lg:inline">Área do Cliente</span>
  <span className="lg:hidden">Área Cliente</span>
  </a>
- <button
- onClick={() => startOnboarding()}
+ <Link
+ to="/contrato"
  className="flex items-center gap-1.5 px-4 h-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white bg-blue-950 hover:bg-blue-900 rounded-full shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95 focus-visible:ring-2 focus-visible:ring-amber-500 whitespace-nowrap"
  id="btn-nav-hire"
  >
  <Phone className="w-3.5 h-3.5" />
  Assinar Já
- </button>
+ </Link>
  </div>
 
  {/* Mobile Sandwich Button */}
@@ -206,15 +216,27 @@ export default function Header() {
  
  <Link to="/app" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all">App Intertel</Link>
  <Link to="/contrato" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all">Contrato</Link>
- <Link to="/#contato" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-amber-600 hover:bg-amber-50 rounded-xl transition-all">Contato</Link>
+ <a 
+ href={getWhatsappLink()} 
+ target="_blank" 
+ rel="noopener noreferrer"
+ onClick={() => setIsMobileMenuOpen(false)}
+ className="mt-2 mx-4 flex items-center justify-center gap-2 px-4 py-3 bg-green-50 text-green-700 hover:bg-green-100 border border-green-200 rounded-xl font-bold text-lg transition-all active:scale-95 shadow-sm"
+ >
+ <span className="relative flex h-2.5 w-2.5">
+ <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+ <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+ </span>
+ 35 9904-2885
+ </a>
  </>
  <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
  <a href="https://intertel.sgplocal.com.br/accounts/central/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-slate-700 border border-slate-200 bg-white hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-blue-500 rounded-xl transition-all">
  <User className="w-5 h-5" /> Central do Assinante
  </a>
- <button onClick={() => { setIsMobileMenuOpen(false); startOnboarding(); }} className="flex items-center justify-center gap-2 px-4 py-3.5 text-sm font-bold text-white bg-blue-950 hover:bg-blue-900 rounded-xl shadow-md active:scale-95 transition-all focus-visible:ring-2 focus-visible:ring-amber-500">
+ <Link to="/contrato" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 px-4 py-3.5 text-sm font-bold text-white bg-blue-950 hover:bg-blue-900 rounded-xl shadow-md active:scale-95 transition-all focus-visible:ring-2 focus-visible:ring-amber-500">
  <Phone className="w-5 h-5" /> Assinar Já
- </button>
+ </Link>
  </div>
  </div>
  </div>
