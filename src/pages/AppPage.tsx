@@ -5,6 +5,15 @@ import SEO from'../components/seo/SEO';
 
 import { company } from'../config/company';
 
+const PhoneMockup = ({ children, className ="" }: { children: React.ReactNode, className?: string }) => (
+ <div className={`relative mx-auto bg-slate-900 border-[8px] sm:border-[10px] border-slate-900 rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl overflow-hidden ring-1 ring-slate-900/10 ${className}`}>
+ <div className="absolute top-0 inset-x-0 h-4 sm:h-5 bg-slate-900 rounded-b-2xl w-1/3 mx-auto z-20"></div>
+ <div className="w-full h-full bg-white relative rounded-xl sm:rounded-2xl overflow-hidden">
+ {children}
+ </div>
+ </div>
+);
+
 export default function AppPage() {
  useEffect(() => {
  window.scrollTo(0, 0);
@@ -89,8 +98,6 @@ export default function AppPage() {
   </div>
   </div>
   </div>
-
-  {/* CTAs removidos da primeira dobra para focar a conversão no 'Como começar' */}
   </div>
 
   {/* COLUNA DIREITA: Visual Depth Stack Showcase */}
@@ -103,18 +110,24 @@ export default function AppPage() {
   <div className="relative w-full max-w-lg h-[450px] sm:h-[550px] xl:h-[650px] flex items-center justify-center">
   
   {/* Left Back Phone (Login) */}
-  <div className="absolute left-[5%] sm:left-[10%] top-1/2 -translate-y-[45%] w-[45%] max-w-[200px] z-10 opacity-80 scale-90 -rotate-3 hover:opacity-100 hover:-translate-y-[48%] hover:-rotate-1 transition-all duration-700 ease-out">
-    <img src="/app-tela1.png" alt="Tela de Login" className="w-full h-auto rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)]" loading="lazy" />
+  <div className="absolute left-[5%] sm:left-[10%] top-1/2 -translate-y-[45%] w-[45%] max-w-[220px] z-10 opacity-80 scale-90 -rotate-3 hover:opacity-100 hover:-translate-y-[48%] hover:-rotate-1 transition-all duration-700 ease-out">
+    <PhoneMockup>
+      <img src="/app-tela1.png" alt="Tela de Login" className="w-full h-auto" loading="lazy" />
+    </PhoneMockup>
   </div>
 
   {/* Right Back Phone (Faturas) */}
-  <div className="absolute right-[5%] sm:right-[10%] top-1/2 -translate-y-[45%] w-[45%] max-w-[200px] z-10 opacity-80 scale-90 rotate-3 hover:opacity-100 hover:-translate-y-[48%] hover:rotate-1 transition-all duration-700 ease-out">
-    <img src="/app-tela3.png" alt="Tela de Faturas" className="w-full h-auto rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)]" loading="lazy" />
+  <div className="absolute right-[5%] sm:right-[10%] top-1/2 -translate-y-[45%] w-[45%] max-w-[220px] z-10 opacity-80 scale-90 rotate-3 hover:opacity-100 hover:-translate-y-[48%] hover:rotate-1 transition-all duration-700 ease-out">
+    <PhoneMockup>
+      <img src="/app-tela3.png" alt="Tela de Faturas" className="w-full h-auto" loading="lazy" />
+    </PhoneMockup>
   </div>
 
   {/* Center Front Phone (Dashboard) */}
-  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[50%] w-[55%] max-w-[250px] z-30 scale-100 hover:scale-105 hover:-translate-y-[52%] transition-transform duration-700 ease-out">
-    <img src="/app-tela2.png" alt="Dashboard Principal" className="w-full h-auto rounded-xl drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]" fetchPriority="high" />
+  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[50%] w-[55%] max-w-[280px] z-30 scale-100 hover:scale-105 hover:-translate-y-[52%] transition-transform duration-700 ease-out">
+    <PhoneMockup>
+      <img src="/app-tela2.png" alt="Dashboard Principal" className="w-full h-auto" fetchPriority="high" />
+    </PhoneMockup>
   </div>
 
   </div>
@@ -196,9 +209,11 @@ export default function AppPage() {
           <h4 className="text-xl font-bold text-slate-900 mb-3">Acesse sua conta</h4>
           <p className="text-slate-600 leading-relaxed mb-6 max-w-[280px]">Entre com seus dados para acessar seus serviços. O acesso é feito utilizando o <strong className="text-slate-900">CPF do titular</strong>.</p>
           
-          <div className="w-full max-w-[160px] mx-auto mt-4 opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10" />
-            <img src="/app-tela1.png" alt="Tela de Login do App" className="w-full h-auto rounded-t-xl drop-shadow-xl" loading="lazy" />
+          <div className="w-full max-w-[180px] mx-auto mt-4 opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-30" />
+            <PhoneMockup>
+              <img src="/app-tela1.png" alt="Tela de Login do App" className="w-full h-auto" loading="lazy" />
+            </PhoneMockup>
           </div>
         </div>
 
@@ -213,9 +228,11 @@ export default function AppPage() {
           <h4 className="text-xl font-bold text-slate-900 mb-3">Tenha tudo na palma da mão</h4>
           <p className="text-slate-600 leading-relaxed mb-6 max-w-[280px]">Consulte planos, faturas, pagamentos e suporte. Tudo organizado no mesmo lugar.</p>
           
-          <div className="w-full max-w-[160px] mx-auto mt-4 opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10" />
-            <img src="/app-tela2.png" alt="Dashboard do App" className="w-full h-auto rounded-t-xl drop-shadow-xl" loading="lazy" />
+          <div className="w-full max-w-[180px] mx-auto mt-4 opacity-70 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-30" />
+            <PhoneMockup>
+              <img src="/app-tela2.png" alt="Dashboard do App" className="w-full h-auto" loading="lazy" />
+            </PhoneMockup>
           </div>
         </div>
 
