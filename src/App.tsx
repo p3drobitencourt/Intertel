@@ -15,6 +15,7 @@ const Solucoes = lazy(() => import('./pages/Solucoes'));
 const AppPage = lazy(() => import('./pages/AppPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Contrato = lazy(() => import('./pages/Contrato'));
+const Tv = lazy(() => import('./pages/Tv'));
 
 export default function App() {
  const location = useLocation();
@@ -53,6 +54,7 @@ export default function App() {
  <Route path="/solucoes" element={<Solucoes />} />
  <Route path="/app" element={<AppPage />} />
  <Route path="/contrato" element={<Contrato />} />
+ <Route path="/tv" element={<Tv />} />
  </Route>
 
  {/* B2B Layout (Business) */}
