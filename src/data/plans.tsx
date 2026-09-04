@@ -58,57 +58,60 @@ export const beducaSva: Sva = {
 };
 
 export const radioPlansData: Plan[] = [
- {
- id:"plan-radio-conecta",
- name:"Intertel Conecta",
- speed:"10 Mega",
- priceMonthly: 0,
- priceYearlyMonthly: 0,
- isPopular: false,
- description:"Conexão de entrada via rádio para regiões rurais.",
- features: [
-  "Internet Estável via Rádio",
-  "Roteador Wi-Fi Grátis",
-  "InterEduca",
-  "InterBanca",
-  "Suporte Técnico Especializado",
- ],
- svas: [bebancaSva, beducaSva]
- },
- {
- id:"plan-radio-turbo",
- name:"Intertel Turbo",
- speed:"15 Mega",
- priceMonthly: 0,
- priceYearlyMonthly: 0,
- isPopular: true,
- description:"Ideal para navegação diária e redes sociais em áreas rurais.",
- features: [
-  "Internet Estável via Rádio",
-  "Roteador Wi-Fi Grátis",
-  "InterEduca",
-  "InterBanca",
-  "Suporte Técnico Especializado",
- ],
- svas: [bebancaSva, beducaSva]
- },
- {
- id:"plan-radio-max",
- name:"Intertel Max",
- speed:"20 Mega",
- priceMonthly: 0,
- priceYearlyMonthly: 0,
- isPopular: false,
- description:"Máxima performance via rádio.",
- features: [
-  "Internet Estável via Rádio",
-  "Roteador Wi-Fi Grátis",
-  "InterEduca",
-  "InterBanca",
-  "Suporte Técnico Especializado",
- ],
- svas: [bebancaSva, beducaSva]
- }
+  {
+  id:"plan-radio-conecta",
+  name:"Intertel Conecta",
+  speed:"10 Mega",
+  priceMonthly: 0,
+  priceYearlyMonthly: 0,
+  isPopular: false,
+  description:"Conexão estável via rádio para o dia a dia em regiões rurais.",
+  features: [
+    "Internet Estável via Rádio",
+    "Roteador Wi-Fi Grátis",
+    "InterEduca",
+    "InterBanca",
+    "Suporte Técnico Especializado",
+  ],
+  svas: [bebancaSva, beducaSva]
+  },
+  {
+  id:"plan-radio-turbo",
+  name:"Intertel Turbo",
+  speed:"15 Mega",
+  priceMonthly: 0,
+  priceYearlyMonthly: 0,
+  isPopular: true,
+  description:"Mais velocidade para redes sociais, streaming e home office em áreas rurais.",
+  features: [
+    "Internet Estável via Rádio",
+    "Roteador Wi-Fi Grátis",
+    "InterEduca",
+    "InterBanca",
+    "Simetria de Banda (Upload = Download)",
+    "Suporte Técnico Especializado",
+  ],
+  svas: [bebancaSva, beducaSva]
+  },
+  {
+  id:"plan-radio-max",
+  name:"Intertel Max",
+  speed:"20 Mega",
+  priceMonthly: 0,
+  priceYearlyMonthly: 0,
+  isPopular: false,
+  description:"Máxima performance via rádio para múltiplos dispositivos ao mesmo tempo.",
+  features: [
+    "Internet Estável via Rádio",
+    "Roteador Wi-Fi Grátis",
+    "InterEduca",
+    "InterBanca",
+    "Simetria de Banda (Upload = Download)",
+    "Múltiplos Dispositivos Simultâneos",
+    "Suporte Técnico Especializado",
+  ],
+  svas: [bebancaSva, beducaSva]
+  }
 ];
 
 export const plansData: Plan[] = [
@@ -142,6 +145,8 @@ export const plansData: Plan[] = [
       "Roteador Wi-Fi Grátis",
       "InterEduca",
       "InterBanca",
+      "Simetria de Banda (Upload = Download)",
+      "Múltiplos Dispositivos Simultâneos",
       "Instalação Grátis",
     ],
     svas: [bebancaSva, beducaSva]
@@ -159,6 +164,9 @@ export const plansData: Plan[] = [
       "Roteador Wi-Fi 6 Grátis",
       "InterEduca",
       "InterBanca",
+      "Simetria de Banda (Upload = Download)",
+      "Múltiplos Dispositivos Simultâneos",
+      "Streaming 4K sem Travamentos",
       "Instalação Grátis",
     ],
     svas: [bebancaSva, beducaSva]
@@ -176,8 +184,13 @@ export const plansData: Plan[] = [
       "Roteador Wi-Fi 6 Grátis",
       "InterEduca",
       "InterBanca",
+      "Simetria de Banda (Upload = Download)",
+      "Múltiplos Dispositivos Simultâneos",
+      "Streaming 4K/8K sem Travamentos",
+      "Latência Ultra-Baixa para Games",
       "Instalação Grátis",
     ],
     svas: [bebancaSva, beducaSva]
   }
 ];
+
