@@ -2,6 +2,7 @@ import React, { useEffect } from'react';
 import { Link } from'react-router-dom';
 import { ArrowRight, Check, Star, Wifi, ChevronDown } from'lucide-react';
 import FaqSection from'../components/home/FaqSection';
+import SvaBenefitsSection from'../components/home/SvaBenefitsSection';
 import SEO from'../components/seo/SEO';
 
 import { company } from'../config/company';
@@ -138,29 +139,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  <p className="text-[13px] text-slate-600 mt-2 leading-relaxed min-h-[36px]">{plan.description}</p>
  </div>
  
- {/* Value Added Services */}
- {plan.svas && plan.svas.length > 0 && (
- <div className="pt-4 border-t border-slate-100">
- <p className="text-[10px] font-mono uppercase tracking-wider text-slate-600 font-bold mb-2">Serviços Inclusos:</p>
- <div className="flex flex-col gap-1.5">
- {plan.svas.map((sva: any, idx: number) => (
- <Link 
- key={idx}
- to="/app"
- className={`group/sva relative flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-md text-[11px] font-semibold ${sva.bg} hover:brightness-110 transition-all border border-transparent hover:border-current/20`}
- >
- <div className="flex items-center gap-1.5">
- <span>{sva.icon}</span>
- <span>{sva.name}</span>
- </div>
- <span className="opacity-0 group-hover/sva:opacity-100 transition-opacity text-[9px] font-bold uppercase tracking-wider flex items-center gap-0.5">
- Acesse <ArrowRight className="w-2.5 h-2.5" />
- </span>
- </Link>
- ))}
- </div>
- </div>
- )}
+
 
  <ul className="space-y-2 pt-4">
  {plan.features.map((feature: string, idx: number) => (
@@ -197,6 +176,8 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  </div>
  </div>
  </section>
+
+ <SvaBenefitsSection />
 
  <FaqSection category="fibra" onContactSupport={() => startOnboarding(null,'Internet Fibra')} />
 

@@ -2,6 +2,7 @@ import React, { useEffect } from'react';
 import { Link } from'react-router-dom';
 import SEO from'../components/seo/SEO';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from'lucide-react';
+import SvaBenefitsSection from'../components/home/SvaBenefitsSection';
 
 import { company } from'../config/company';
 
@@ -124,29 +125,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  <span className="text-sm font-bold text-slate-500">+ Wi-Fi</span>
  </div>
  </div>
- {/* Value Added Services */}
- {plan.svas && plan.svas.length > 0 && (
- <div className="pt-6 border-t border-slate-100">
- <p className="text-[11px] font-mono uppercase tracking-wider text-slate-600 font-bold mb-3">Serviços Digitais Inclusos:</p>
- <div className="flex flex-col gap-2">
- {plan.svas.map((sva: any, idx: number) => (
- <Link 
- key={idx}
- to="/app"
- className={`group relative flex items-center justify-between gap-2 px-3 py-2 rounded-lg text-xs font-semibold ${sva.bg} hover:brightness-110 transition-all border border-transparent hover:border-current/20`}
- >
- <div className="flex items-center gap-2">
- <span>{sva.name}</span>
- <span>{sva.icon}</span>
- </div>
- <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
- Acesse para saber mais <ArrowRight className="w-3 h-3" />
- </span>
- </Link>
- ))}
- </div>
- </div>
- )}
+
 
  <ul className="space-y-2 pt-4">
  {plan.features.map((feature: string, idx: number) => (
@@ -180,6 +159,8 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  </div>
  </div>
  </section>
+
+ <SvaBenefitsSection />
 
  {/* CTA Final */}
  <section className="py-12 md:py-16 bg-blue-950">
