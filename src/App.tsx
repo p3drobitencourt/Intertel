@@ -17,6 +17,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const Contrato = lazy(() => import('./pages/Contrato'));
 const Tv = lazy(() => import('./pages/Tv'));
 const Cameras = lazy(() => import('./pages/Cameras'));
+const Nobreak = lazy(() => import('./pages/Nobreak'));
 
 export default function App() {
  const location = useLocation();
@@ -57,6 +58,7 @@ export default function App() {
  <Route path="/contrato" element={<Contrato />} />
  <Route path="/tv" element={<Tv />} />
  <Route path="/cameras" element={<Cameras />} />
+ <Route path="/nobreak" element={<Nobreak />} />
  </Route>
 
  {/* B2B Layout (Business) */}
