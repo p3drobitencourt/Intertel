@@ -2,6 +2,7 @@ import React, { useState, useEffect } from'react';
 import { Link, useLocation } from'react-router-dom';
 import { getWhatsappLink } from'../../utils/whatsapp';
 import { ChevronDown, Menu, X, User, Phone } from'lucide-react';
+import { company } from '../../config/company';
 
 export default function Header() {
  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -120,13 +121,13 @@ export default function Header() {
  </button>
  <div className={`absolute top-[100%] left-0 pt-2 transition-all z-50 ${activeDropdown ==='solucoes' ?'opacity-100 visible' :'opacity-0 invisible'}`}>
  <div className="w-56 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
- <Link to="/solucoes#tv" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
+ <Link to="/tv" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
  TV por Assinatura
  </Link>
- <Link to="/solucoes#cameras" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
+ <Link to="/cameras" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
  Câmeras de Segurança
  </Link>
- <Link to="/solucoes#nobreak" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
+ <Link to="/nobreak" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
  Nobreak Residencial
  </Link>
  </div>
@@ -185,7 +186,7 @@ export default function Header() {
  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
  </span>
- 35 9904-2885
+ {company.phoneDisplay}
  </a>
  </>
  </nav>
@@ -243,9 +244,9 @@ export default function Header() {
  <Link to="/radio" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Internet via Rádio</Link>
  
  <div className="px-4 text-xs font-bold uppercase tracking-wider text-slate-400 mt-4">Soluções</div>
- <Link to="/solucoes#tv" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">TV por Assinatura</Link>
- <Link to="/solucoes#cameras" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Câmeras de Segurança</Link>
- <Link to="/solucoes#nobreak" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Nobreak Residencial</Link> 
+ <Link to="/tv" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">TV por Assinatura</Link>
+ <Link to="/cameras" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Câmeras de Segurança</Link>
+ <Link to="/nobreak" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Nobreak Residencial</Link> 
  <div className="px-4 text-xs font-bold uppercase tracking-wider text-slate-400 mt-4">Plano Empresa</div>
  <Link to="/empresas" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Soluções Empresariais</Link>
  <Link to="/dedicado" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Link Dedicado</Link>
@@ -266,7 +267,7 @@ export default function Header() {
  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
  </span>
- 35 9904-2885
+ {company.phoneDisplay}
  </a>
  </>
  <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
