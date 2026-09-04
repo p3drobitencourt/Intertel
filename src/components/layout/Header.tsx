@@ -84,7 +84,7 @@ export default function Header() {
  aria-haspopup="true"
  aria-expanded={activeDropdown ==='residenciais'}
  >
- Plano Residencial <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${activeDropdown ==='residenciais' ?'rotate-180' :''}`} aria-hidden="true" />
+ Internet <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${activeDropdown ==='residenciais' ?'rotate-180' :''}`} aria-hidden="true" />
  </button>
  <div className={`absolute top-[100%] left-0 pt-2 transition-all z-50 ${activeDropdown ==='residenciais' ?'opacity-100 visible' :'opacity-0 invisible'}`}>
  <div className="w-48 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
@@ -93,6 +93,41 @@ export default function Header() {
  </Link>
  <Link to="/radio" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
  Internet via Rádio
+ </Link>
+ </div>
+ </div>
+ </div>
+
+ {/* Solucoes Dropdown */}
+ <div 
+ className="relative group"
+ onMouseEnter={() => setActiveDropdown('solucoes')}
+ onMouseLeave={() => setActiveDropdown(null)}
+ onFocus={() => setActiveDropdown('solucoes')}
+ onBlur={(e) => {
+ if (!e.currentTarget.contains(e.relatedTarget)) {
+ setActiveDropdown(null);
+ }
+ }}
+ onKeyDown={(e) => handleDropdownKeyDown(e,'solucoes')}
+ >
+ <button 
+ className="flex items-center gap-1 text-slate-600 hover:text-amber-500 focus:outline-none focus:text-amber-500 font-medium transition-colors py-2 cursor-pointer select-none"
+ aria-haspopup="true"
+ aria-expanded={activeDropdown ==='solucoes'}
+ >
+ Soluções <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${activeDropdown ==='solucoes' ?'rotate-180' :''}`} aria-hidden="true" />
+ </button>
+ <div className={`absolute top-[100%] left-0 pt-2 transition-all z-50 ${activeDropdown ==='solucoes' ?'opacity-100 visible' :'opacity-0 invisible'}`}>
+ <div className="w-56 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+ <Link to="/solucoes#tv" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
+ TV por Assinatura
+ </Link>
+ <Link to="/solucoes#cameras" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
+ Câmeras de Segurança
+ </Link>
+ <Link to="/solucoes#nobreak" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-amber-500 focus:bg-slate-50 focus:text-amber-500 font-medium transition-colors outline-none">
+ Nobreak Residencial
  </Link>
  </div>
  </div>
@@ -203,10 +238,14 @@ export default function Header() {
  <div className="px-4 pt-4 pb-6 space-y-3 flex flex-col">
  <>
  <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all">Início</Link>
- <div className="px-4 text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Plano Residencial</div>
+ <div className="px-4 text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Internet</div>
  <Link to="/fibra" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Internet Fibra</Link>
  <Link to="/radio" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Internet via Rádio</Link>
  
+ <div className="px-4 text-xs font-bold uppercase tracking-wider text-slate-400 mt-4">Soluções</div>
+ <Link to="/solucoes#tv" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">TV por Assinatura</Link>
+ <Link to="/solucoes#cameras" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Câmeras de Segurança</Link>
+ <Link to="/solucoes#nobreak" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Nobreak Residencial</Link> 
  <div className="px-4 text-xs font-bold uppercase tracking-wider text-slate-400 mt-4">Plano Empresa</div>
  <Link to="/empresas" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Soluções Empresariais</Link>
  <Link to="/dedicado" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all ml-2 border-l-2 border-slate-100">Link Dedicado</Link>

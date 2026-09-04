@@ -11,6 +11,7 @@ const Dedicado = lazy(() => import('./pages/Dedicado'));
 const Lan2Lan = lazy(() => import('./pages/Lan2Lan'));
 const Fibra = lazy(() => import('./pages/Fibra'));
 const Radio = lazy(() => import('./pages/Radio'));
+const Solucoes = lazy(() => import('./pages/Solucoes'));
 const AppPage = lazy(() => import('./pages/AppPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Contrato = lazy(() => import('./pages/Contrato'));
@@ -49,6 +50,7 @@ export default function App() {
  <Route path="/" element={<Home />} />
  <Route path="/fibra" element={<Fibra plansData={plansData} billingCycle="monthly" startOnboarding={startOnboarding} bebancaSva={bebancaSva} beducaSva={beducaSva} />} />
  <Route path="/radio" element={<Radio radioPlansData={radioPlansData} billingCycle="monthly" startOnboarding={startOnboarding} />} />
+ <Route path="/solucoes" element={<Solucoes />} />
  <Route path="/app" element={<AppPage />} />
  <Route path="/contrato" element={<Contrato />} />
  </Route>
