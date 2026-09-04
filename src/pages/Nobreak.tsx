@@ -32,9 +32,11 @@ export default function Nobreak() {
       <section className="relative overflow-hidden bg-blue-950 py-10 lg:py-14">
         <picture className="absolute inset-0 w-full h-full">
           <img 
-            src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80"
-            alt="Soluções Inteligentes Intertel"
-            className="w-full h-full object-cover object-[center_30%] opacity-20 mix-blend-overlay filter blur-sm"
+            src="/assets/hero-nobreak.jpg"
+            alt="Nobreak protegendo equipamentos de rede em home office"
+            fetchPriority="high"
+            loading="eager"
+            className="w-full h-full object-cover object-center opacity-25 mix-blend-overlay"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/95 to-blue-950/40"></div>

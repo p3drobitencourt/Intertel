@@ -32,9 +32,11 @@ export default function Cameras() {
       <section className="relative overflow-hidden bg-blue-950 py-10 lg:py-14">
         <picture className="absolute inset-0 w-full h-full">
           <img 
-            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80"
-            alt="Câmera de segurança em ambiente moderno"
-            className="w-full h-full object-cover object-[center_30%] opacity-20 mix-blend-overlay"
+            src="/assets/hero-cameras.jpg"
+            alt="Câmera de segurança monitorando residência moderna"
+            fetchPriority="high"
+            loading="eager"
+            className="w-full h-full object-cover object-[center_30%] opacity-25 mix-blend-overlay"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-blue-950/20"></div>

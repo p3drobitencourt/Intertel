@@ -31,12 +31,12 @@ export default function Tv() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-blue-950 py-10 lg:py-14">
         <picture className="absolute inset-0 w-full h-full">
-          <source media="(min-width: 1024px)" srcSet="/assets/hero-residential-1920.webp" />
-          <source media="(min-width: 640px)" srcSet="/assets/hero-residential-1024.webp" />
           <img 
-            src="/assets/hero-residential-640.webp"
-            alt="Família assistindo TV"
-            className="w-full h-full object-cover object-[center_30%] opacity-20 mix-blend-overlay"
+            src="/assets/hero-tv.jpg"
+            alt="Família reunida assistindo televisão juntos"
+            fetchPriority="high"
+            loading="eager"
+            className="w-full h-full object-cover object-[center_40%] opacity-25 mix-blend-overlay"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-blue-950/20"></div>
