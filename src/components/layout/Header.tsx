@@ -172,22 +172,19 @@ export default function Header() {
  <Link to="/app" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-medium">
  App Intertel
  </Link>
- <Link to="/contrato" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-medium">
- Contrato
- </Link>
- <a 
- href={getWhatsappLink()} 
- target="_blank" 
- rel="noopener noreferrer"
- className="ml-2 flex items-center gap-1.5 px-3 py-1.5 bg-green-50/80 text-green-700 hover:bg-green-100 hover:text-green-800 border border-green-200 rounded-full font-bold text-sm transition-colors shadow-sm"
- title="Falar pelo WhatsApp"
- >
- <span className="relative flex h-2 w-2 mr-0.5">
- <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
- <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
- </span>
- {company.phoneDisplay}
- </a>
+            <a 
+              href={getWhatsappLink()} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-3 flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 bg-green-50/90 text-green-700 hover:bg-green-100 hover:text-green-800 border border-green-200 rounded-full font-bold text-base lg:text-lg transition-colors shadow-md"
+              title="Falar pelo WhatsApp"
+            >
+              <span className="relative flex h-2.5 w-2.5 mr-1">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+              </span>
+              {company.phoneDisplay}
+            </a>
  </>
  </nav>
 
@@ -255,13 +252,12 @@ export default function Header() {
  <div className="h-px bg-slate-200 my-2 mx-4" />
  
  <Link to="/app" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all">App Intertel</Link>
- <Link to="/contrato" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-3 text-base font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all">Contrato</Link>
  <a 
  href={getWhatsappLink()} 
  target="_blank" 
  rel="noopener noreferrer"
  onClick={() => setIsMobileMenuOpen(false)}
- className="mt-2 mx-4 flex items-center justify-center gap-2 px-4 py-3 bg-green-50 text-green-700 hover:bg-green-100 border border-green-200 rounded-xl font-bold text-lg transition-all active:scale-95 shadow-sm"
+ className="mt-3 mx-4 flex items-center justify-center gap-2.5 px-4 py-4 bg-green-50 text-green-700 hover:bg-green-100 border border-green-200 rounded-xl font-bold text-xl transition-all active:scale-95 shadow-md"
  >
  <span className="relative flex h-2.5 w-2.5">
  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

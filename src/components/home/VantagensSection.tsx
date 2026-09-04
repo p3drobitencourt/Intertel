@@ -49,9 +49,6 @@ export default function VantagensSection() {
 
  {/* Testimonial Section */}
  <div className="mt-6 p-5 sm:p-6 rounded-3xl bg-white border border-slate-200 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 shadow-sm relative hover:shadow-md transition-shadow">
- <div className="absolute top-4 right-4 bg-amber-100 text-amber-700 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">
- Conteúdo Provisório
- </div>
  <div className="relative shrink-0">
  <div className="w-14 h-14 rounded-full border-4 border-slate-300 bg-slate-100 flex items-center justify-center shadow-xl">
  <User className="w-7 h-7 text-slate-400" />
