@@ -2,6 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Check, ShieldCheck, Zap, HelpCircle } from "lucide-react";
 
+const PhoneMockup = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
+  <div className={`relative mx-auto bg-slate-900 border-[8px] sm:border-[10px] border-slate-900 rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl overflow-hidden ring-1 ring-slate-900/10 ${className}`}>
+    <div className="absolute top-0 inset-x-0 h-4 sm:h-5 bg-slate-900 rounded-b-2xl w-1/3 mx-auto z-20"></div>
+    <div className="w-full h-full bg-white relative rounded-xl sm:rounded-2xl overflow-hidden">
+      {children}
+    </div>
+  </div>
+);
+
 export default function AppPromoSection() {
   return (
     <section className="bg-slate-50 py-16 sm:py-24 relative overflow-hidden" id="app-promo">
@@ -93,12 +102,14 @@ export default function AppPromoSection() {
             
             {/* Left Phone (Login) */}
             <div className="absolute left-[2%] sm:left-[8%] lg:left-[2%] top-1/2 -translate-y-[45%] w-[35%] max-w-[190px] z-10 -rotate-12 hover:-rotate-6 hover:-translate-y-[48%] transition-all duration-500 ease-out group">
-              <img 
-                src="/app-tela1.png" 
-                alt="Tela de Login: Minha conta"
-                className="w-full h-auto rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
-                loading="lazy"
-              />
+              <PhoneMockup className="opacity-95 group-hover:opacity-100 transition-opacity">
+                <img 
+                  src="/app-tela1.png" 
+                  alt="Tela de Login: Minha conta"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </PhoneMockup>
               <Link to="/app" className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap hover:bg-white hover:text-amber-500 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
                 Minhas contas
               </Link>
@@ -106,12 +117,14 @@ export default function AppPromoSection() {
 
             {/* Right Phone (Faturas) */}
             <div className="absolute right-[2%] sm:right-[8%] lg:right-[2%] top-1/2 -translate-y-[45%] w-[35%] max-w-[190px] z-10 rotate-12 hover:rotate-6 hover:-translate-y-[48%] transition-all duration-500 ease-out group">
-              <img 
-                src="/app-tela3.png" 
-                alt="Tela de Faturas: Minhas faturas"
-                className="w-full h-auto rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] opacity-95 group-hover:opacity-100 transition-opacity"
-                loading="lazy"
-              />
+              <PhoneMockup className="opacity-95 group-hover:opacity-100 transition-opacity">
+                <img 
+                  src="/app-tela3.png" 
+                  alt="Tela de Faturas: Minhas faturas"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </PhoneMockup>
               <Link to="/app" className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-slate-200/50 text-[10px] sm:text-xs font-bold text-slate-700 opacity-90 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap hover:bg-white hover:text-amber-500 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
                 Minhas faturas
               </Link>
@@ -119,12 +132,14 @@ export default function AppPromoSection() {
 
             {/* Center Phone (Dashboard Principal) */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[48%] w-[45%] max-w-[260px] z-30 hover:-translate-y-[52%] transition-all duration-500 ease-out group scale-105">
-              <img 
-                src="/app-tela2.png" 
-                alt="Tela Principal: Meus planos"
-                className="w-full h-auto rounded-xl drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]"
-                fetchPriority="high"
-              />
+              <PhoneMockup>
+                <img 
+                  src="/app-tela2.png" 
+                  alt="Tela Principal: Meus planos"
+                  className="w-full h-auto"
+                  fetchPriority="high"
+                />
+              </PhoneMockup>
               <Link to="/fibra" className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full shadow-xl shadow-blue-900/10 border border-slate-100 text-xs sm:text-sm font-bold text-blue-700 opacity-100 group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap flex items-center gap-2 hover:bg-blue-50 hover:text-blue-800 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 Meus planos
