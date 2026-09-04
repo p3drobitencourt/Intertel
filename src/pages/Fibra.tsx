@@ -129,18 +129,25 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  </div>
  )}
  
- <div className="space-y-4">
- <div>
- <h3 className="text-xl lg:text-2xl font-black font-display text-slate-900 tracking-tight mb-2 leading-none">{plan.name}</h3>
- <div className="flex items-baseline gap-1 text-slate-900">
- <span className="text-4xl font-black font-display tracking-tighter">{plan.speed}</span>
- <span className="text-sm font-bold text-slate-500">+ Wi-Fi</span>
+ <div className="mb-8 flex-grow">
+ <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">{plan.name}</h3>
+ <div className="flex items-baseline mb-2">
+ {(() => {
+ const [value, unit] = plan.speed.split(' ');
+ return (
+ <>
+ <span className="text-5xl lg:text-6xl font-black tracking-tighter text-slate-900 leading-none">{value}</span>
+ <div className="flex flex-col ml-2 justify-end pb-1">
+ <span className="text-lg font-bold text-slate-500 uppercase leading-none tracking-wider mb-1">{unit}</span>
+ <span className="text-[11px] font-bold text-amber-500 uppercase bg-amber-50 px-2 py-0.5 rounded-full inline-block">+ Wi-Fi</span>
  </div>
- <p className="text-[13px] text-slate-600 mt-2 leading-relaxed min-h-[36px]">{plan.description}</p>
+ </>
+ );
+ })()}
+ </div>
+ <p className="text-sm text-slate-600 mt-4 leading-relaxed min-h-[40px] font-medium">{plan.description}</p>
  </div>
  
-
-
  <ul className="space-y-2 pt-4">
  {plan.features.map((feature: string, idx: number) => (
  <li key={idx} className="flex items-center gap-2.5 text-[13px] text-slate-700 font-medium">
@@ -151,7 +158,6 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  </li>
  ))}
  </ul>
- </div>
  
  <div className="mt-auto pt-5 border-t border-slate-100">
  <Link
@@ -159,15 +165,20 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  aria-label={`Contratar plano ${plan.name}`}
  id={`CTA_PLANO_${plan.id.toUpperCase()}`}
  data-tracking="CTA_PLANO_RESIDENCIAL"
- className={`w-full py-3.5 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
+ className={`w-full py-4 rounded-xl font-bold text-[13px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500 ${
  isPopular
- ?"bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
- :"bg-blue-950 hover:bg-blue-900 text-white active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
+ ?"bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-[0_0_15px_rgba(244,176,0,0.4)] hover:shadow-[0_0_25px_rgba(244,176,0,0.6)] hover:-translate-y-0.5 active:scale-95"
+ :"bg-slate-900 hover:bg-slate-800 text-white active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5"
  }`}
  >
- Quero este plano
- <ArrowRight className="w-4 h-4" />
+ Quero este plano 
+ <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
  </Link>
+ <div className="text-center mt-3">
+ <Link to="/contrato" className="text-[11px] text-slate-400 font-medium hover:text-amber-500 underline underline-offset-2 transition-colors">
+ Consultar regulamento e disponibilidade
+ </Link>
+ </div>
  </div>
  </div>
  );
