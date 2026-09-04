@@ -26,7 +26,7 @@ export default function MarqueeBanner() {
 
  return (
  <div className="overflow-hidden flex whitespace-nowrap w-full relative bg-[#F4B000] border-y border-amber-500/30 py-3 sm:py-3.5 z-30 items-center shadow-md">
- <div className="flex animate-[marquee_20s_linear_infinite] hover:[animation-play-state:paused] items-center text-slate-950 font-black tracking-[0.2em] uppercase text-[10px] sm:text-[11px]">
+ <div className="flex animate-[marquee_40s_linear_infinite] hover:[animation-play-state:paused] items-center text-slate-950 font-black tracking-[0.2em] uppercase text-[10px] sm:text-[11px]">
  <SegmentRenderer />
  <SegmentRenderer />
  </div>

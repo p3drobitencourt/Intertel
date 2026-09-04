@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from"react";
-import { useNavigate } from"react-router-dom";
-import { Sparkles, Search, Building2, Smartphone, ChevronLeft, ChevronRight, Pause, Play } from"lucide-react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Sparkles, Search, Building2, Smartphone, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HeroSection() {
  const navigate = useNavigate();
@@ -47,15 +47,13 @@ export default function HeroSection() {
 
  const [isHovered, setIsHovered] = useState(false);
  const [isFocused, setIsFocused] = useState(false);
- const [isManuallyPaused, setIsManuallyPaused] = useState(() => 
- typeof window !=='undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
- );
+ const prefersReducedMotion = typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
 
  const nextSlide = () => setHeroSlide((prev) => (prev + 1) % heroSlides.length);
  const prevSlide = () => setHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
  const goToSlide = (idx: number) => setHeroSlide(idx);
 
- const isAutoPlayPaused = isHovered || isFocused || isManuallyPaused;
+ const isAutoPlayPaused = isHovered || isFocused || prefersReducedMotion;
 
  useEffect(() => {
  if (isAutoPlayPaused) return;
@@ -66,7 +64,7 @@ export default function HeroSection() {
  if (!timer) {
  timer = setInterval(() => {
  setHeroSlide((prev) => (prev + 1) % heroSlides.length);
- }, 6000);
+ }, 3000);
  }
  };
 
@@ -252,20 +250,6 @@ export default function HeroSection() {
  className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
  >
  <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" aria-hidden="true" />
- </button>
-
- <div className="w-[1px] h-5 bg-white/20 mx-1" aria-hidden="true" />
-
- <button
- onClick={() => setIsManuallyPaused(!isManuallyPaused)}
- aria-label={isManuallyPaused ?"Retomar apresentação" :"Pausar apresentação"}
- className="text-white hover:text-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-full p-1 transition-colors"
- >
- {isManuallyPaused ? (
- <Play className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
- ) : (
- <Pause className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
- )}
  </button>
  </div>
  </section>
