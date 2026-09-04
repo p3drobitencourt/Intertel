@@ -171,14 +171,9 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  :"bg-slate-900 hover:bg-slate-800 text-white active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5"
  }`}
  >
- Quero este plano 
+ ASSINAR JÁ 
  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
  </Link>
- <div className="text-center mt-3">
- <Link to="/contrato" className="text-[11px] text-slate-400 font-medium hover:text-amber-500 underline underline-offset-2 transition-colors">
- Consultar regulamento e disponibilidade
- </Link>
- </div>
  </div>
  </div>
  );
