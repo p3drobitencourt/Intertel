@@ -130,7 +130,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  
  <div className="space-y-4">
  <div>
- <p className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em] mb-1">{plan.name}</p>
+ <h3 className="text-xl lg:text-2xl font-black font-display text-slate-900 tracking-tight mb-2 leading-none">{plan.name}</h3>
  <div className="flex items-baseline gap-1 text-slate-900">
  <span className="text-4xl font-black font-display tracking-tighter">{plan.speed}</span>
  <span className="text-sm font-bold text-slate-500">+ Wi-Fi</span>
@@ -175,8 +175,8 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  </div>
  
  <div className="mt-auto pt-5 border-t border-slate-100">
- <button 
- onClick={() => startOnboarding(plan,'Internet Fibra')}
+ <Link
+ to="/contrato"
  aria-label={`Contratar plano ${plan.name}`}
  id={`CTA_PLANO_${plan.id.toUpperCase()}`}
  data-tracking="CTA_PLANO_RESIDENCIAL"
@@ -188,7 +188,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  >
  Quero este plano
  <ArrowRight className="w-4 h-4" />
- </button>
+ </Link>
  </div>
  </div>
  );
@@ -209,14 +209,14 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
  Escolha a estabilidade que a sua casa merece. Converse agora com nossos especialistas e descubra a melhor opção para você.
  </p>
- <button 
- onClick={() => startOnboarding(null,'Internet Fibra')}
+ <Link
+ to="/contrato"
  id="CTA_CONSULTAR_DISPONIBILIDADE_FIBRA"
  data-tracking="CTA_CONSULTAR_DISPONIBILIDADE"
  className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500"
  >
  Consultar disponibilidade <ArrowRight className="w-5 h-5" />
- </button>
+ </Link>
  </div>
  </section>
  </div>

@@ -106,72 +106,72 @@ export const radioPlansData: Plan[] = [
 ];
 
 export const plansData: Plan[] = [
- {
- id:"plan-300m",
- name:"Plano Conexão Inicial",
- speed:"300 Mega",
- priceMonthly: 79.90,
- priceYearlyMonthly: 79.90,
- isPopular: false,
- description:"Ideal para navegação diária, redes sociais e streaming em qualidade padrão.",
- features: [
-"Velocidade de Download: 300 Mbps",
-"Simetria de Conexão",
-"Roteador Wi-Fi Grátis",
-"Sem Taxa de Instalação",
-"Suporte Técnico Digital",
- ],
- svas: [bebancaSva, beducaSva]
- },
- {
- id:"plan-500m",
- name:"Plano Conexão Família",
- speed:"500 Mega",
- priceMonthly: 89.90,
- priceYearlyMonthly: 89.90,
- isPopular: false,
- description:"Perfeito para múltiplos dispositivos, home office e streaming em HD para toda a família.",
- features: [
-"Velocidade de Download: 500 Mbps",
-"Simetria de Conexão",
-"Roteador Wi-Fi Grátis",
-"Sem Taxa de Instalação",
-"Suporte Técnico Premium",
- ],
- svas: [bebancaSva, beducaSva]
- },
- {
- id:"plan-600m",
- name:"Plano Ultra Performance",
- speed:"600 Mega",
- priceMonthly: 99.90,
- priceYearlyMonthly: 99.90,
- isPopular: true,
- description:"A melhor experiência para alta demanda, jogos online estáveis e streaming 4K.",
- features: [
-"Velocidade de Download: 600 Mbps",
-"Simetria de Conexão",
-"Roteador Wi-Fi Grátis",
-"Sem Taxa de Instalação",
-"Suporte Técnico Prioritário",
- ],
- svas: [bebancaSva, beducaSva]
- },
- {
- id:"plan-900m",
- name:"Plano Gamer",
- speed:"900 Mega",
- priceMonthly: 119.90,
- priceYearlyMonthly: 119.90,
- isPopular: false,
- description:"Desempenho máximo para gamers, baixa latência e streaming 4K/8K sem interrupções.",
- features: [
-"Velocidade de Download: 900 Mbps",
-"Simetria de Conexão",
-"Roteador Wi-Fi Grátis",
-"Sem Taxa de Instalação",
-"Suporte Técnico Prioritário",
- ],
- svas: [bebancaSva, beducaSva]
- }
+  {
+    id: "plan-essencial",
+    name: "Intertel Essencial",
+    speed: "450 Mega",
+    priceMonthly: 0,
+    priceYearlyMonthly: 0,
+    isPopular: false,
+    description: "Ideal para navegação diária, redes sociais e streaming em qualidade padrão.",
+    features: [
+      "Velocidade de Download: 450 Mbps",
+      "Simetria de Conexão",
+      "Roteador Wi-Fi Grátis",
+      "Sem Taxa de Instalação",
+      "Suporte Técnico Digital",
+    ],
+    svas: [bebancaSva, beducaSva]
+  },
+  {
+    id: "plan-familia",
+    name: "Intertel Família",
+    speed: "600 Mega",
+    priceMonthly: 0,
+    priceYearlyMonthly: 0,
+    isPopular: false,
+    description: "Perfeito para múltiplos dispositivos, home office e streaming em HD para toda a família.",
+    features: [
+      "Velocidade de Download: 600 Mbps",
+      "Simetria de Conexão",
+      "Roteador Wi-Fi Grátis",
+      "Sem Taxa de Instalação",
+      "Suporte Técnico Premium",
+    ],
+    svas: [bebancaSva, beducaSva]
+  },
+  {
+    id: "plan-ultra",
+    name: "Intertel Ultra",
+    speed: "800 Mega",
+    priceMonthly: 0,
+    priceYearlyMonthly: 0,
+    isPopular: true,
+    description: "A melhor experiência para alta demanda, jogos online estáveis e streaming 4K.",
+    features: [
+      "Velocidade de Download: 800 Mbps",
+      "Simetria de Conexão",
+      "Roteador Wi-Fi Grátis",
+      "Sem Taxa de Instalação",
+      "Suporte Técnico Prioritário",
+    ],
+    svas: [bebancaSva, beducaSva]
+  },
+  {
+    id: "plan-gamer",
+    name: "Intertel Gamer",
+    speed: "1 Giga",
+    priceMonthly: 0,
+    priceYearlyMonthly: 0,
+    isPopular: false,
+    description: "Desempenho máximo para gamers, baixa latência e streaming 4K/8K sem interrupções.",
+    features: [
+      "Velocidade de Download: 1 Gbps",
+      "Simetria de Conexão",
+      "Roteador Wi-Fi Grátis",
+      "Sem Taxa de Instalação",
+      "Suporte Técnico Prioritário",
+    ],
+    svas: [bebancaSva, beducaSva]
+  }
 ];
