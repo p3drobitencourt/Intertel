@@ -7,7 +7,7 @@ export default function SvaBenefitsSection() {
   const benefits = [
     {
       id: "bebanca",
-      name: "Bebanca",
+      name: "InterBanca",
       icon: <BebancaIcon />,
       description: "Tenha acesso a milhares de jornais e revistas digitais para ler quando e onde quiser. Informação de qualidade na palma da sua mão.",
       bg: "bg-amber-100/50",
@@ -16,7 +16,7 @@ export default function SvaBenefitsSection() {
     },
     {
       id: "beeduca",
-      name: "Beeduca",
+      name: "InterEduca",
       icon: <BeeducaIcon />,
       description: "Plataforma completa de educação e cursos profissionalizantes online. Invista no seu futuro sem pagar nada a mais por isso.",
       bg: "bg-slate-100/50",

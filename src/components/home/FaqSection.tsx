@@ -32,8 +32,8 @@ export default function FaqSection({ onContactSupport, category ='geral' }: FaqS
  },
  {
  categories: ['geral','fibra'],
- q:"Como funcionam os aplicativos de serviços inclusos (Bebanca e Beduca)?",
- a:"Nossos planos acompanham o Bebanca (app de notícias e biblioteca de livros) e Beduca (vídeo aulas para aperfeiçoamento técnico). Para utilizá-los, basta baixar o aplicativo correspondente na sua loja de aplicativos, selecionar a Intertel Telecom como provedor e fazer o login utilizando o seu CPF."
+ q:"Como funcionam os aplicativos de serviços inclusos (InterBanca e InterEduca)?",
+ a:"Nossos planos acompanham o InterBanca (app de notícias e biblioteca de livros) e InterEduca (vídeo aulas para aperfeiçoamento técnico). Para utilizá-los, basta baixar o aplicativo correspondente na sua loja de aplicativos, selecionar a Intertel Telecom como provedor e fazer o login utilizando o seu CPF."
  },
  {
  categories: ['geral','fibra','empresas'],

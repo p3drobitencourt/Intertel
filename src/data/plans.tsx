@@ -42,7 +42,7 @@ export const BeeducaIcon = () => (
 );
 
 export const bebancaSva: Sva = {
- name:"Bebanca",
+ name:"InterBanca",
  icon: <BebancaIcon />,
  bg:"bg-amber-100 text-amber-700 border border-amber-200",
  linkApple:"https://apps.apple.com/br/app/bebanca/id1349933503",
@@ -50,7 +50,7 @@ export const bebancaSva: Sva = {
 };
 
 export const beducaSva: Sva = {
- name:"Beduca",
+ name:"InterEduca",
  icon: <BeeducaIcon />,
  bg:"bg-slate-100 text-slate-800 border border-slate-200",
  linkApple:"https://apps.apple.com/br/app/beeduca/id6477542668",

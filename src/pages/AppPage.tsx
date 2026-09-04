@@ -251,7 +251,7 @@ export default function AppPage() {
                 <BebancaIcon />
               </div>
               <div>
-                <h5 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight">Bebanca</h5>
+                <h5 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight">InterBanca</h5>
                 <p className="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-1">Jornais e Revistas</p>
               </div>
             </a>
@@ -260,7 +260,7 @@ export default function AppPage() {
                 <BeeducaIcon />
               </div>
               <div>
-                <h5 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">Beduca</h5>
+                <h5 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">InterEduca</h5>
                 <p className="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-1">Cursos Online</p>
               </div>
             </a>
