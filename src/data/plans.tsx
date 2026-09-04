@@ -68,7 +68,6 @@ export const radioPlansData: Plan[] = [
   description:"Conexão estável via rádio para o dia a dia em regiões rurais.",
   features: [
     "Internet Estável via Rádio",
-    "Roteador Wi-Fi Grátis",
     "InterEduca",
     "InterBanca",
     "Suporte Técnico Especializado",
@@ -85,7 +84,6 @@ export const radioPlansData: Plan[] = [
   description:"Mais velocidade para redes sociais, streaming e home office em áreas rurais.",
   features: [
     "Internet Estável via Rádio",
-    "Roteador Wi-Fi Grátis",
     "InterEduca",
     "InterBanca",
     "Simetria de Banda (Upload = Download)",
