@@ -2,7 +2,7 @@ import React, { useEffect } from'react';
 import { Link } from'react-router-dom';
 import { ArrowRight, Check, Star, Wifi, ChevronDown } from'lucide-react';
 import FaqSection from'../components/home/FaqSection';
-import SvaBenefitsSection from'../components/home/SvaBenefitsSection';
+import PlanBenefitsSection from '../components/home/PlanBenefitsSection';
 import SEO from'../components/seo/SEO';
 
 import { company } from'../config/company';
@@ -183,7 +183,7 @@ export default function Fibra({ plansData, billingCycle, startOnboarding, bebanc
  </div>
  </section>
 
- <SvaBenefitsSection />
+ <PlanBenefitsSection isRadio={false} />
 
  <FaqSection category="fibra" onContactSupport={() => startOnboarding(null,'Internet Fibra')} />
 

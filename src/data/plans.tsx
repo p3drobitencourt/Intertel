@@ -67,9 +67,11 @@ export const radioPlansData: Plan[] = [
  isPopular: false,
  description:"Conexão de entrada via rádio para regiões rurais.",
  features: [
-"Velocidade de Download: 10 Mbps",
-"Roteador Wi-Fi Grátis",
-"Suporte Técnico Especializado",
+  "Internet Estável via Rádio",
+  "Roteador Wi-Fi Grátis",
+  "InterEduca",
+  "InterBanca",
+  "Suporte Técnico Especializado",
  ],
  svas: [bebancaSva, beducaSva]
  },
@@ -82,9 +84,11 @@ export const radioPlansData: Plan[] = [
  isPopular: true,
  description:"Ideal para navegação diária e redes sociais em áreas rurais.",
  features: [
-"Velocidade de Download: 15 Mbps",
-"Roteador Wi-Fi Grátis",
-"Suporte Técnico Especializado",
+  "Internet Estável via Rádio",
+  "Roteador Wi-Fi Grátis",
+  "InterEduca",
+  "InterBanca",
+  "Suporte Técnico Especializado",
  ],
  svas: [bebancaSva, beducaSva]
  },
@@ -97,9 +101,11 @@ export const radioPlansData: Plan[] = [
  isPopular: false,
  description:"Máxima performance via rádio.",
  features: [
-"Velocidade de Download: 20 Mbps",
-"Roteador Wi-Fi Grátis",
-"Suporte Técnico Especializado",
+  "Internet Estável via Rádio",
+  "Roteador Wi-Fi Grátis",
+  "InterEduca",
+  "InterBanca",
+  "Suporte Técnico Especializado",
  ],
  svas: [bebancaSva, beducaSva]
  }
@@ -115,11 +121,11 @@ export const plansData: Plan[] = [
     isPopular: false,
     description: "Ideal para navegação diária, redes sociais e streaming em qualidade padrão.",
     features: [
-      "Velocidade de Download: 450 Mbps",
-      "Simetria de Conexão",
+      "Internet 100% Fibra Óptica",
       "Roteador Wi-Fi Grátis",
-      "Sem Taxa de Instalação",
-      "Suporte Técnico Digital",
+      "InterEduca",
+      "InterBanca",
+      "Instalação Grátis",
     ],
     svas: [bebancaSva, beducaSva]
   },
@@ -132,11 +138,11 @@ export const plansData: Plan[] = [
     isPopular: false,
     description: "Perfeito para múltiplos dispositivos, home office e streaming em HD para toda a família.",
     features: [
-      "Velocidade de Download: 600 Mbps",
-      "Simetria de Conexão",
+      "Internet 100% Fibra Óptica",
       "Roteador Wi-Fi Grátis",
-      "Sem Taxa de Instalação",
-      "Suporte Técnico Premium",
+      "InterEduca",
+      "InterBanca",
+      "Instalação Grátis",
     ],
     svas: [bebancaSva, beducaSva]
   },
@@ -149,11 +155,11 @@ export const plansData: Plan[] = [
     isPopular: true,
     description: "A melhor experiência para alta demanda, jogos online estáveis e streaming 4K.",
     features: [
-      "Velocidade de Download: 800 Mbps",
-      "Simetria de Conexão",
-      "Roteador Wi-Fi Grátis",
-      "Sem Taxa de Instalação",
-      "Suporte Técnico Prioritário",
+      "Internet 100% Fibra Óptica",
+      "Roteador Wi-Fi 6 Grátis",
+      "InterEduca",
+      "InterBanca",
+      "Instalação Grátis",
     ],
     svas: [bebancaSva, beducaSva]
   },
@@ -166,11 +172,11 @@ export const plansData: Plan[] = [
     isPopular: false,
     description: "Desempenho máximo para gamers, baixa latência e streaming 4K/8K sem interrupções.",
     features: [
-      "Velocidade de Download: 1 Gbps",
-      "Simetria de Conexão",
-      "Roteador Wi-Fi Grátis",
-      "Sem Taxa de Instalação",
-      "Suporte Técnico Prioritário",
+      "Internet 100% Fibra Óptica",
+      "Roteador Wi-Fi 6 Grátis",
+      "InterEduca",
+      "InterBanca",
+      "Instalação Grátis",
     ],
     svas: [bebancaSva, beducaSva]
   }

@@ -8,7 +8,7 @@ import { company } from"../config/company";
 import MarqueeBanner from"../components/home/MarqueeBanner";
 import HeroSection from"../components/home/HeroSection";
 import AppPromoSection from"../components/home/AppPromoSection";
-import VantagensSection from"../components/home/VantagensSection";
+import VantagensSection from "../components/home/VantagensSection";
 import FaqSection from"../components/home/FaqSection";
 import SobreSection from"../components/home/SobreSection";
 import ContatoSection from"../components/home/ContatoSection";

@@ -2,7 +2,7 @@ import React, { useEffect } from'react';
 import { Link } from'react-router-dom';
 import SEO from'../components/seo/SEO';
 import { ArrowRight, Check, Star, Radio as RadioIcon, ChevronDown } from'lucide-react';
-import SvaBenefitsSection from'../components/home/SvaBenefitsSection';
+import PlanBenefitsSection from '../components/home/PlanBenefitsSection';
 
 import { company } from'../config/company';
 
@@ -167,7 +167,7 @@ export default function Radio({ radioPlansData, billingCycle, startOnboarding }:
  </div>
  </section>
 
- <SvaBenefitsSection />
+ <PlanBenefitsSection isRadio={true} />
 
  {/* CTA Final */}
  <section className="py-12 md:py-16 bg-blue-950">
