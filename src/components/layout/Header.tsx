@@ -61,7 +61,7 @@ export default function Header() {
  </Link>
 
  {/* Desktop Navigation Links */}
- <nav className="hidden lg:flex items-center gap-2 xl:gap-4 text-xs xl:text-[13px] font-semibold z-50 whitespace-nowrap">
+ <nav className="hidden lg:flex flex-1 items-center gap-5 xl:gap-8 ml-4 lg:ml-8 text-sm lg:text-[15px] xl:text-base font-semibold z-50 whitespace-nowrap">
  <>
  <Link to="/" className="text-slate-600 hover:text-amber-500 transition-colors py-2 font-medium">
  Início
@@ -176,7 +176,7 @@ export default function Header() {
               href={getWhatsappLink()} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="ml-3 flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 bg-green-50/90 text-green-700 hover:bg-green-100 hover:text-green-800 border border-green-200 rounded-full font-bold text-base lg:text-lg transition-colors shadow-md"
+              className="ml-auto flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 bg-green-50/90 text-green-700 hover:bg-green-100 hover:text-green-800 border border-green-200 rounded-full font-bold text-base lg:text-lg transition-colors shadow-md"
               title="Falar pelo WhatsApp"
             >
               <span className="relative flex h-2.5 w-2.5 mr-1">
