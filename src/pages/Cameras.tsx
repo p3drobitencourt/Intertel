@@ -71,7 +71,7 @@ export default function Cameras() {
 
       {/* Plans/Solution Section */}
       <section className="py-16 md:py-20 bg-zinc-50 relative z-10" id="solucao-cameras">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-slate-900">
@@ -82,49 +82,64 @@ export default function Cameras() {
             </p>
           </div>
 
-          <div className="max-w-lg mx-auto">
-            {/* Card: Solução de Câmeras */}
-            <div className="bg-white rounded-3xl p-8 border-2 border-[#F4B000] shadow-[0_10px_40px_rgb(244,176,0,0.15)] transition-all duration-300 flex flex-col h-full group relative hover:scale-105 z-10">
-              <div className="absolute -top-4 inset-x-0 flex justify-center">
-                <span className="bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 font-black text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg border border-amber-300">
-                  Mais Segurança
-                </span>
-              </div>
-
-              <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                <Camera className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2">Câmeras de Segurança</h3>
-              <p className="text-slate-500 mb-8 min-h-[48px]">
-                Monitoramento completo para residências e comércios com alta qualidade visual.
-              </p>
-              
-              <ul className="space-y-4 mb-8 flex-grow">
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong>Acesso via Aplicativo</strong> celular e tablet</span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong>Gravação em Nuvem</strong> segura</span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong>Visão Noturna</strong> Avançada</span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong>Instalação Especializada</strong> Intertel</span>
-                </li>
-              </ul>
-              
-              <button
-                onClick={() => startOnboarding(null, undefined, "Olá! Tenho interesse na solução de Câmeras da Intertel.")}
-                className="w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 transition-all shadow-[0_0_15px_rgba(244,176,0,0.4)] group-hover:-translate-y-0.5"
-              >
-                Solicitar Cotação
-              </button>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            {/* Image Column */}
+            <div className="order-1 lg:order-2 relative rounded-[2rem] overflow-hidden shadow-2xl w-full aspect-[4/3] lg:aspect-square">
+              <img 
+                src="/assets/hero-cameras.jpg" 
+                alt="Solução de câmeras de segurança da Intertel" 
+                loading="lazy" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent pointer-events-none"></div>
             </div>
+
+            {/* Card Column */}
+            <div className="order-2 lg:order-1 w-full max-w-lg mx-auto lg:max-w-none">
+              <div className="bg-white rounded-3xl p-8 border-2 border-[#F4B000] shadow-[0_10px_40px_rgb(244,176,0,0.15)] transition-all duration-300 flex flex-col h-full group relative hover:scale-105 z-10">
+                <div className="absolute -top-4 inset-x-0 flex justify-center">
+                  <span className="bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 font-black text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg border border-amber-300">
+                    Mais Segurança
+                  </span>
+                </div>
+
+                <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                  <Camera className="w-7 h-7" />
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2">Câmeras de Segurança</h3>
+                <p className="text-slate-500 mb-8 min-h-[48px]">
+                  Monitoramento completo para residências e comércios com alta qualidade visual.
+                </p>
+                
+                <ul className="space-y-4 mb-8 flex-grow">
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                    <span><strong>Acesso via Aplicativo</strong> celular e tablet</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                    <span><strong>Gravação em Nuvem</strong> segura</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                    <span><strong>Visão Noturna</strong> Avançada</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                    <span><strong>Instalação Especializada</strong> Intertel</span>
+                  </li>
+                </ul>
+                
+                <button
+                  onClick={() => startOnboarding(null, undefined, "Olá! Tenho interesse na solução de Câmeras da Intertel.")}
+                  className="w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 transition-all shadow-[0_0_15px_rgba(244,176,0,0.4)] group-hover:-translate-y-0.5"
+                >
+                  Solicitar Cotação
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

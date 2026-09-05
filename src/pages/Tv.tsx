@@ -82,86 +82,104 @@ export default function Tv() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* Card 1: TV App */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full group">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <TvIcon className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl font-black text-slate-900 mb-2">Intertel TV App</h3>
-              <p className="text-slate-500 mb-8 min-h-[48px]">
-                A forma mais simples de assistir. Aplicativo instalado direto na sua Smart TV.
-              </p>
-              
-              <ul className="space-y-4 mb-8 flex-grow">
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                  <span><strong>187 canais</strong> abertos e fechados</span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                  <span>Catálogo de <strong>filmes e séries</strong></span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                  <span>Assista em até <strong>3 TVs simultaneamente</strong></span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                  <span>Exclusivo para TVs Smart compatíveis</span>
-                </li>
-              </ul>
-              
-              <button
-                onClick={() => startOnboarding(null, undefined, "Olá! Tenho interesse no plano de TV da Intertel.")}
-                className="w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-white transition-all shadow-md group-hover:-translate-y-0.5"
-              >
-                Assinar TV App
-              </button>
+            {/* Image Column */}
+            <div className="order-1 lg:order-2 lg:col-span-5 relative rounded-[2rem] overflow-hidden shadow-2xl w-full aspect-[4/3] lg:aspect-[4/5]">
+              <img 
+                src="/assets/hero-tv.jpg" 
+                alt="Família reunida assistindo televisão juntos" 
+                loading="lazy" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent pointer-events-none"></div>
             </div>
 
-            {/* Card 2: TV + Box */}
-            <div className="bg-white rounded-3xl p-8 border-2 border-[#F4B000] shadow-[0_10px_40px_rgb(244,176,0,0.15)] md:scale-105 z-10 transition-all duration-300 flex flex-col h-full group relative">
-              <div className="absolute -top-4 inset-x-0 flex justify-center">
-                <span className="bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 font-black text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg border border-amber-300">
-                  Solução Completa
-                </span>
-              </div>
+            {/* Cards Column */}
+            <div className="order-2 lg:order-1 lg:col-span-7">
+              <div className="grid sm:grid-cols-2 gap-6 items-stretch">
+                
+                {/* Card 1: TV App */}
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full group">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                    <TvIcon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-2">Intertel TV App</h3>
+                  <p className="text-slate-500 text-sm mb-6 min-h-[40px]">
+                    A forma mais simples de assistir. Aplicativo instalado direto na sua Smart TV.
+                  </p>
+                  
+                  <ul className="space-y-3 mb-8 flex-grow text-sm">
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                      <span><strong>187 canais</strong> abertos e fechados</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                      <span>Catálogo de <strong>filmes e séries</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                      <span>Assista em até <strong>3 TVs</strong> simultaneamente</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                      <span>Exclusivo para TVs Smart compatíveis</span>
+                    </li>
+                  </ul>
+                  
+                  <button
+                    onClick={() => startOnboarding(null, undefined, "Olá! Tenho interesse no plano de TV da Intertel.")}
+                    className="w-full py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-white transition-all shadow-md group-hover:-translate-y-0.5"
+                  >
+                    Assinar TV App
+                  </button>
+                </div>
 
-              <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                <MonitorPlay className="w-7 h-7" />
+                {/* Card 2: TV + Box */}
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#F4B000] shadow-[0_10px_30px_rgb(244,176,0,0.15)] sm:scale-105 z-10 transition-all duration-300 flex flex-col h-full group relative">
+                  <div className="absolute -top-3 inset-x-0 flex justify-center">
+                    <span className="bg-gradient-to-r from-[#F4B000] to-orange-500 text-slate-950 font-black text-[9px] sm:text-[10px] tracking-widest uppercase px-3 py-1 rounded-full shadow-lg border border-amber-300">
+                      Solução Completa
+                    </span>
+                  </div>
+
+                  <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                    <MonitorPlay className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-2">Intertel TV + Box</h3>
+                  <p className="text-slate-500 text-sm mb-6 min-h-[40px]">
+                    Transforme qualquer TV em Smart. Inclui o equipamento Box comodato.
+                  </p>
+                  
+                  <ul className="space-y-3 mb-8 flex-grow text-sm">
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                      <span><strong>187 canais</strong> abertos e fechados</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                      <span>Catálogo de <strong>filmes e séries</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                      <span>Aparelho <strong>Box em comodato</strong> incluso</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-slate-700">
+                      <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                      <span>Ideal para TVs antigas ou incompatíveis com o app</span>
+                    </li>
+                  </ul>
+                  
+                  <button
+                    onClick={() => startOnboarding(null, undefined, "Olá! Tenho interesse no plano de TV da Intertel com Box.")}
+                    className="w-full py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 transition-all shadow-[0_0_15px_rgba(244,176,0,0.4)] group-hover:-translate-y-0.5"
+                  >
+                    Assinar TV + Box
+                  </button>
+                </div>
+
               </div>
-              <h3 className="text-2xl font-black text-slate-900 mb-2">Intertel TV + Box</h3>
-              <p className="text-slate-500 mb-8 min-h-[48px]">
-                Transforme qualquer TV em Smart. Inclui o equipamento Box comodato.
-              </p>
-              
-              <ul className="space-y-4 mb-8 flex-grow">
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong>187 canais</strong> abertos e fechados</span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span>Catálogo de <strong>filmes e séries</strong></span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span>Aparelho <strong>Box em comodato</strong> incluso</span>
-                </li>
-                <li className="flex items-start gap-3 text-slate-700">
-                  <Check className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <span>Ideal para TVs antigas ou incompatíveis com o app</span>
-                </li>
-              </ul>
-              
-              <button
-                onClick={() => startOnboarding(null, undefined, "Olá! Tenho interesse no plano de TV da Intertel com Box.")}
-                className="w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider bg-gradient-to-r from-[#F4B000] to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 transition-all shadow-[0_0_15px_rgba(244,176,0,0.4)] group-hover:-translate-y-0.5"
-              >
-                Assinar TV + Box
-              </button>
             </div>
 
           </div>

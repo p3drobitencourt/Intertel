@@ -88,11 +88,12 @@ export default function Nobreak() {
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-amber-500/20 rounded-[2rem] transform rotate-3 scale-105 transition-transform duration-500 group-hover:rotate-6 opacity-70 blur-lg"></div>
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/50 bg-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1588508065123-287b28e01397?auto=format&fit=crop&q=80" 
+                  src="/assets/hero-nobreak.jpg" 
                   alt="Nobreak Intertel"
-                  className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover object-center filter contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs font-bold uppercase tracking-wider mb-2">
                     <Shield className="w-3.5 h-3.5" /> Equipamento Homologado
