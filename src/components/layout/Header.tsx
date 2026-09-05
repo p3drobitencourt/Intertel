@@ -176,7 +176,7 @@ export default function Header() {
               href={getWhatsappLink()} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="ml-auto flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 bg-green-50/90 text-green-700 hover:bg-green-100 hover:text-green-800 border border-green-200 rounded-full font-bold text-base lg:text-lg transition-colors shadow-md"
+              className="ml-auto mr-6 lg:mr-10 xl:mr-12 flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 bg-green-50/90 text-green-700 hover:bg-green-100 hover:text-green-800 border border-green-200 rounded-full font-bold text-base lg:text-lg transition-colors shadow-md"
               title="Falar pelo WhatsApp"
             >
               <span className="relative flex h-2.5 w-2.5 mr-1">
